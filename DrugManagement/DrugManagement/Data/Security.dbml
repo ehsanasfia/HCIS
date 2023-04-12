@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SecurityControl" Class="SecurityDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=172.30.1.145;Initial Catalog=SecurityControl;Persist Security Info=True;User ID=artp" SettingsObjectName="DrugManagement.Properties.Settings" SettingsPropertyName="SecurityControlConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblUsers" Member="tblUsers">
+    <Type Name="tblUser">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.Data.Linq.Binary" DbType="Binary(32)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Disabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PersonalNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Descriptions" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ApplicationID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SystemDescriptions" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Sex" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsNurse" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="shshGroup" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RoleID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tblUser_tblUserAccessibleDepartment" Member="tblUserAccessibleDepartments" ThisKey="UserID" OtherKey="UserID" Type="tblUserAccessibleDepartment" />
+      <Association Name="tblApplication_tblUser" Member="tblApplication" ThisKey="ApplicationID" OtherKey="ApplicationID" Type="tblApplication" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblApplications" Member="tblApplications">
+    <Type Name="tblApplication">
+      <Column Name="ApplicationID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ApplicationName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="tblApplication_tblUser" Member="tblUsers" ThisKey="ApplicationID" OtherKey="ApplicationID" Type="tblUser" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblApplicationDepartments" Member="tblApplicationDepartments">
+    <Type Name="tblApplicationDepartment">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AppID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DepID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="tblApplicationDepartment_tblUserAccessibleDepartment" Member="tblUserAccessibleDepartments" ThisKey="ID" OtherKey="AppAccessibleID" Type="tblUserAccessibleDepartment" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblUserAccessibleDepartments" Member="tblUserAccessibleDepartments">
+    <Type Name="tblUserAccessibleDepartment">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AppAccessibleID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="tblApplicationDepartment_tblUserAccessibleDepartment" Member="tblApplicationDepartment" ThisKey="AppAccessibleID" OtherKey="ID" Type="tblApplicationDepartment" IsForeignKey="true" />
+      <Association Name="tblUser_tblUserAccessibleDepartment" Member="tblUser" ThisKey="UserID" OtherKey="UserID" Type="tblUser" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

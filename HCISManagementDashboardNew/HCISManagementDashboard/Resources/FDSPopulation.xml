@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="شاخص جمعیت شرکتی و بازنشسته" />
+  <DataSources>
+    <SqlDataSource ComponentName="dashboardSqlDataSource1">
+      <Name>SQL Data Source 1</Name>
+      <Connection Name="172.30.1.145_HCIS_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="172.30.1.145" />
+          <Parameter Name="database" Value="HCIS" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="artp" />
+          <Parameter Name="password" Value="506070" />
+        </Parameters>
+      </Connection>
+      <Query Type="SelectQuery" Name="Vw_FDSSherkatiIndicator">
+        <Tables>
+          <Table Name="Vw_FDSSherkatiIndicator" Meta="0|0|125|100" />
+        </Tables>
+        <Columns>
+          <AllColumns Table="Vw_FDSSherkatiIndicator" />
+        </Columns>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="Vw_FDSSherkatiIndicator">
+            <Field Name="ValidCenterCity" Type="String" />
+            <Field Name="InsureName" Type="String" />
+            <Field Name="C" Type="Double" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <Grid ComponentName="gridDashboardItem1" Name="شاخص" DataSource="dashboardSqlDataSource1" DataMember="Vw_FDSSherkatiIndicator">
+      <DataItems>
+        <Dimension DataMember="ValidCenterCity" UniqueName="DataItem1" />
+        <Measure DataMember="C" UniqueName="DataItem2">
+          <NumericFormat FormatType="Percent" />
+        </Measure>
+      </DataItems>
+      <FormatRules>
+        <GridItemFormatRule Name="FormatRule 1" DataItem="DataItem2">
+          <FormatConditionRangeSet ValueType="Percent">
+            <RangeSet>
+              <Ranges>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="0" />
+                  <AppearanceSettings AppearanceType="Red" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="55" />
+                  <AppearanceSettings AppearanceType="PaleYellow" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="67" />
+                  <AppearanceSettings AppearanceType="Green" />
+                </RangeInfo>
+              </Ranges>
+            </RangeSet>
+          </FormatConditionRangeSet>
+        </GridItemFormatRule>
+      </FormatRules>
+      <GridColumns>
+        <GridDimensionColumn Name="منظقه" Weight="83.0773460410557">
+          <Dimension UniqueName="DataItem1" />
+        </GridDimensionColumn>
+        <GridMeasureColumn Name="شاخص" Weight="81.333593650388877">
+          <Measure UniqueName="DataItem2" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions ColumnWidthMode="Manual" />
+    </Grid>
+    <ListBox ComponentName="listBoxDashboardItem1" Name="شرکتی / بازنشسته" DataSource="dashboardSqlDataSource1" DataMember="Vw_FDSSherkatiIndicator">
+      <DataItems>
+        <Dimension DataMember="InsureName" UniqueName="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+    <ListBox ComponentName="listBoxDashboardItem2" Name="منطقه" DataSource="dashboardSqlDataSource1" DataMember="Vw_FDSSherkatiIndicator">
+      <DataItems>
+        <Dimension DataMember="ValidCenterCity" UniqueName="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="gridDashboardItem1" Weight="90.440677966101688" />
+      <LayoutGroup Orientation="Vertical" Weight="9.5593220338983045">
+        <LayoutItem DashboardItem="listBoxDashboardItem1" Weight="10.987654320987655" />
+        <LayoutItem DashboardItem="listBoxDashboardItem2" Weight="89.012345679012341" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

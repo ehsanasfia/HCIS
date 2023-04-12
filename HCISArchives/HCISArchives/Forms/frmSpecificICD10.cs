@@ -1,0 +1,82 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Linq;
+using System.Windows.Forms;
+using DevExpress.XtraEditors;
+using HCISArchives.Data;
+using HCISArchives.Classes;
+namespace HCISArchives.Forms
+{
+    public partial class frmSpecificICD10 : DevExpress.XtraEditors.XtraForm
+    {
+        HCISDataContext dc = new HCISDataContext();
+        List<ICD10> lstICD10 = new List<ICD10>();
+
+        public frmSpecificICD10()
+        {
+            InitializeComponent();
+        }
+
+        private void frmWardPatinetList_Load(object sender, EventArgs e)
+        {
+            txtFrom.Text = txtTo.Text = MainModule.GetPersianDate(DateTime.Now);
+            lstICD10 = MainModule.lstICD10;
+            iCD10BindingSource.DataSource = lstICD10;
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            var icd = lookUpEdit1.EditValue as ICD10;
+            if (icd == null)
+                return;
+
+            spuArchiveSpecificICD10ResultBindingSource.DataSource = dc.Spu_ArchiveSpecificICD10(txtFrom.Text.Trim(), txtTo.Text.Trim(), icd.ICDCode);
+            gridControl1.RefreshDataSource();
+        }
+
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Close();
+        }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (lookUpEdit1.EditValue == null)
+                return;
+
+            var icd = lookUpEdit1.EditValue as ICD10;
+
+            printableComponentLink1.ClearDocument();
+            ((DevExpress.XtraPrinting.PageHeaderFooter)printableComponentLink1.PageHeaderFooter).Header.Content[1] = String.Format("گزارش بیماری خاص {2} از تاریخ {0} لغایت {1}", txtFrom.Text, txtTo.Text, icd.ICDCode);
+            printableComponentLink1.CreateDocument();
+
+            printableComponentLink1.ShowRibbonPreviewDialog(DevExpress.LookAndFeel.UserLookAndFeel.Default);
+        }
+
+        private void btnExportToExcel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var dialog = new SaveFileDialog() { DefaultExt = "xlsx", Filter = "Excel Files (*.xlsx)|*.xlsx", InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) };
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                gridControl1.ExportToXlsx(dialog.FileName, new DevExpress.XtraPrinting.XlsxExportOptions() { RightToLeftDocument = DevExpress.Utils.DefaultBoolean.True });
+                System.Diagnostics.Process.Start(dialog.FileName);
+            }
+        }
+
+        private void btn35form_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var cur = spuArchiveSpecificICD10ResultBindingSource.Current as Spu_ArchiveSpecificICD10Result;
+            if (cur == null)
+                return;
+
+            var dlg = new Dialogs.dlg35form();
+            dlg.dc = dc;
+            dlg.dosID = (int)cur.dossid;
+            dlg.ShowDialog();
+        }
+    }
+}

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.75, 15" name="IMPHO">
+  <DataContextMoniker Name="/IMPHODataContext" />
+  <nestedChildShapes>
+    <classShape Id="c53f7c6d-dfd4-4aa5-bb6d-b9615a0eb0b1" absoluteBounds="9.5, 7.125, 2, 7.3476383463541666">
+      <DataClassMoniker Name="/IMPHODataContext/Member" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c58bca24-02f7-497b-afe3-398f37e2b37a" absoluteBounds="9.515, 7.585, 1.9700000000000002, 6.7876383463541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ca8fef47-e173-41b2-94f7-87eedc85feea" absoluteBounds="3.5, 1.25, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/IMPHODataContext/Tbl_Company" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ba4dcf27-be32-4134-bde2-541dbc31fdfd" absoluteBounds="3.5150000000000006, 1.71, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="726ffbb5-6d7b-483d-90c7-600646c92768" absoluteBounds="6.25, 1, 2, 3.6939111328124987">
+      <DataClassMoniker Name="/IMPHODataContext/Tbl_SubCompany" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2d6c892e-8dea-4abc-b14c-caba903502a7" absoluteBounds="6.2650000000000006, 1.46, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 2.90465413411458); (6.25 : 2.90465413411458)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/IMPHODataContext/Tbl_Company/Tbl_Company_Tbl_SubCompany" />
+      <nodes>
+        <classShapeMoniker Id="ca8fef47-e173-41b2-94f7-87eedc85feea" />
+        <classShapeMoniker Id="726ffbb5-6d7b-483d-90c7-600646c92768" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="46204d86-813d-46f0-af64-c814faee1894" absoluteBounds="0.75, 1.25, 2, 3.1170068359375">
+      <DataClassMoniker Name="/IMPHODataContext/Tbl_Management" />
+      <nestedChildShapes>
+        <elementListCompartment Id="068d2643-fc1b-46b2-b973-254d059177b7" absoluteBounds="0.76500000000000057, 1.71, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.80850341796875); (3.5 : 2.80850341796875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/IMPHODataContext/Tbl_Management/Tbl_Management_Tbl_Company" />
+      <nodes>
+        <classShapeMoniker Id="46204d86-813d-46f0-af64-c814faee1894" />
+        <classShapeMoniker Id="ca8fef47-e173-41b2-94f7-87eedc85feea" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="893841a6-2169-4ddc-9d0c-509ca8688b9a" absoluteBounds="3.5, 6, 2, 3.6939111328124987">
+      <DataClassMoniker Name="/IMPHODataContext/Tbl_ValidCenter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="92cebd3e-d819-487d-a7e8-256e898a8371" absoluteBounds="3.515, 6.46, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="370e28f7-89ed-4f87-8d40-698db33db49c" absoluteBounds="8.75, 0.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/IMPHODataContext/Tbl_ValidCenterType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="84112042-1f4e-42c4-ba81-9cd3e7cf9efe" absoluteBounds="8.765, 1.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="02b325af-a639-4ff8-aade-43dd5b3dd616" absoluteBounds="0.75, 6.25, 2, 3.1170068359374996">
+      <DataClassMoniker Name="/IMPHODataContext/Tbl_ValidCenterZone" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e8884b36-620d-408a-8e72-cdc161efe85b" absoluteBounds="0.76500000000000012, 6.71, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 7.80850341796875); (3.5 : 7.80850341796875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/IMPHODataContext/Tbl_ValidCenterZone/Tbl_ValidCenterZone_Tbl_ValidCenter" />
+      <nodes>
+        <classShapeMoniker Id="02b325af-a639-4ff8-aade-43dd5b3dd616" />
+        <classShapeMoniker Id="893841a6-2169-4ddc-9d0c-509ca8688b9a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="43364599-54b0-4eec-855b-466a7f4327ce" absoluteBounds="6.375, 5.5, 2, 9.2706526692708326">
+      <DataClassMoniker Name="/IMPHODataContext/Person1" />
+      <nestedChildShapes>
+        <elementListCompartment Id="990d874f-14e0-4778-bb75-2aa0d3e66e67" absoluteBounds="6.39, 5.96, 1.9700000000000002, 8.7106526692708321" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.375 : 10.7988191731771); (9.5 : 10.7988191731771)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/IMPHODataContext/Person1/Person_Member" />
+      <nodes>
+        <classShapeMoniker Id="43364599-54b0-4eec-855b-466a7f4327ce" />
+        <classShapeMoniker Id="c53f7c6d-dfd4-4aa5-bb6d-b9615a0eb0b1" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Jamiat" Class="JamiatDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=172.30.1.145;Initial Catalog=Jamiat;Persist Security Info=True;User ID=artp" SettingsObjectName="HCISAdmission.Properties.Settings" SettingsPropertyName="JamiatConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.MemberPhoto" Member="MemberPhotos">
+    <Type Name="MemberPhoto">
+      <Column Name="IDPerson" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Photo" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="IDOpr1" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="IDOpr2" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="OprDate1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OprDate2" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OprTime1" Type="System.String" DbType="NVarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="OprTime2" Type="System.String" DbType="NVarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="IDPersonOld" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

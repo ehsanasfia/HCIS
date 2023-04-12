@@ -1,0 +1,62 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Linq;
+using System.Windows.Forms;
+using DevExpress.XtraEditors;
+using HCISManagementDashboard.Data;
+
+namespace HCISManagementDashboard.Forms
+{
+    public partial class frmNurseAction : DevExpress.XtraEditors.XtraForm
+    {
+        HCISDataClassesDataContext dc = new HCISDataClassesDataContext();
+        List<Vw_DoctorInstructionPerson> lst;
+
+        public frmNurseAction()
+        {
+            InitializeComponent();
+        }
+
+        private void frmNurseAction_Load(object sender, EventArgs e)
+        {
+            txtFrom.Text = MainModule.GetPersianDate(DateTime.Now);
+            txtTo.Text = MainModule.GetPersianDate(DateTime.Now);
+            if (lst == null)
+            {
+                lst = new List<Vw_DoctorInstructionPerson>();
+            }
+            btnSearch_Click(null, null);
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            lst = dc.Vw_DoctorInstructionPersons.Where(x =>
+            x.AdmitDate.CompareTo(txtFrom.Text) >= 0
+            && x.AdmitDate.CompareTo(txtTo.Text) <= 0).ToList();
+            vwDoctorInstructionPersonBindingSource.DataSource = lst;
+        }
+
+        private void btnPrint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            stiReport1.Dictionary.Variables.Add("FromDate", txtFrom.Text ?? "");
+            stiReport1.Dictionary.Variables.Add("ToDate", txtTo.Text ?? "");
+            MainModule.GetClientConfig(stiReport1);
+            stiReport1.Dictionary.Synchronize();
+
+            stiReport1.RegData("MyData", lst);
+
+            //stiReport1.Design();
+            stiReport1.Compile();
+            stiReport1.CompiledReport.ShowWithRibbonGUI();
+        }
+
+        private void btnClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Close();
+        }
+    }
+}

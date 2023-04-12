@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.625, 8.5" name="image">
+  <DataContextMoniker Name="/imageDataContext" />
+  <nestedChildShapes>
+    <classShape Id="dd398e2a-30f1-4aeb-8fd7-a246d62a8a16" absoluteBounds="6, 2.125, 2, 5.4246240234375">
+      <DataClassMoniker Name="/imageDataContext/Study" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8362a0c7-7e79-4c8b-9952-eaf0e99783c6" absoluteBounds="6.015, 2.585, 1.9700000000000002, 4.8646240234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="48072b6e-f35c-4c34-aa2b-0b19ad41ce3e" absoluteBounds="9.375, 2.125, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/imageDataContext/StudySerial" />
+      <nestedChildShapes>
+        <elementListCompartment Id="91dcb596-a348-48ae-a497-390679054a6f" absoluteBounds="9.39, 2.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8 : 2.72199625651042); (9.375 : 2.72199625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/imageDataContext/Study/Study_StudySerial" />
+      <nodes>
+        <classShapeMoniker Id="dd398e2a-30f1-4aeb-8fd7-a246d62a8a16" />
+        <classShapeMoniker Id="48072b6e-f35c-4c34-aa2b-0b19ad41ce3e" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

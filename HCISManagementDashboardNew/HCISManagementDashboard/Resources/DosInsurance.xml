@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="گزارش پذیرش به تفکیک بیمه" IncludeMasterFilterState="false" />
+  <DataSources>
+    <SqlDataSource ComponentName="dashboardSqlDataSource1">
+      <Name>SQL Data Source 1</Name>
+      <Connection Name="172.30.1.145_HCIS_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="172.30.1.145" />
+          <Parameter Name="database" Value="HCIS" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="artp" />
+          <Parameter Name="password" Value="506070" />
+        </Parameters>
+      </Connection>
+      <Query Type="SelectQuery" Name="Vw_DossierInsuranceDep">
+        <Parameter Name="FromDate" Type="DevExpress.DataAccess.Expression">(System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)([Parameters.FromDate])</Parameter>
+        <Parameter Name="ToDate" Type="DevExpress.DataAccess.Expression">(System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)([Parameters.ToDate])</Parameter>
+        <Tables>
+          <Table Name="Vw_DossierInsuranceDep" Meta="0|0|125|160" />
+        </Tables>
+        <Columns>
+          <Column Table="Vw_DossierInsuranceDep" Name="io" />
+          <Column Table="Vw_DossierInsuranceDep" Name="Date" />
+          <Column Table="Vw_DossierInsuranceDep" Name="Name" />
+          <Column Table="Vw_DossierInsuranceDep" Name="DepName" />
+          <Column Table="Vw_DossierInsuranceDep" Name="DepParentName" />
+          <Column Table="Vw_DossierInsuranceDep" Name="Cat" />
+        </Columns>
+        <Filter>[Vw_DossierInsuranceDep.Date] &gt;= ?FromDate And [Vw_DossierInsuranceDep.Date] &lt;= ?ToDate</Filter>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="Vw_DossierInsuranceDep">
+            <Field Name="io" Type="String" />
+            <Field Name="Date" Type="String" />
+            <Field Name="Name" Type="String" />
+            <Field Name="DepName" Type="String" />
+            <Field Name="DepParentName" Type="String" />
+            <Field Name="Cat" Type="String" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+      <CalculatedFields>
+        <CalculatedField Name="Calculated Field 1" Expression="Count()" DataType="Auto" DataMember="Vw_DossierInsuranceDep" />
+      </CalculatedFields>
+    </SqlDataSource>
+  </DataSources>
+  <Parameters>
+    <Parameter Name="FromDate" Value="1400/02/01" />
+    <Parameter Name="ToDate" Value="1400/02/20" />
+  </Parameters>
+  <Items>
+    <Chart ComponentName="chartDashboardItem1" Name="نمودار" ShowCaption="false" DataSource="dashboardSqlDataSource1" DataMember="Vw_DossierInsuranceDep">
+      <DataItems>
+        <Measure DataMember="DepName" SummaryType="Count" UniqueName="DataItem1">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+        <Dimension DataMember="Name" ColoringMode="Hue" UniqueName="DataItem0" />
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem0" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" />
+          <Series>
+            <Simple Name="تعداد">
+              <Value UniqueName="DataItem1" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend Visible="false" />
+      <AxisX EnableZooming="true" LimitVisiblePoints="true" />
+    </Chart>
+    <TreeView ComponentName="treeViewDashboardItem1" Name="بخش ها" DataSource="dashboardSqlDataSource1" DataMember="Vw_DossierInsuranceDep">
+      <DataItems>
+        <Dimension DataMember="DepParentName" UniqueName="DataItem0" />
+        <Dimension DataMember="DepName" UniqueName="DataItem1" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+        <Dimension UniqueName="DataItem1" />
+      </FilterDimensions>
+    </TreeView>
+    <ListBox ComponentName="listBoxDashboardItem1" Name="بیمه ها" DataSource="dashboardSqlDataSource1" DataMember="Vw_DossierInsuranceDep">
+      <DataItems>
+        <Dimension DataMember="Name" UniqueName="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+    <ListBox ComponentName="listBoxDashboardItem2" Name="نوع پذیرش" DataSource="dashboardSqlDataSource1" DataMember="Vw_DossierInsuranceDep">
+      <DataItems>
+        <Dimension DataMember="io" UniqueName="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+    <Pie ComponentName="pieDashboardItem1" Name="" ShowCaption="false" DataSource="dashboardSqlDataSource1" DataMember="Vw_DossierInsuranceDep" ContentLineCount="4" ShowPieCaptions="false">
+      <DataItems>
+        <Measure DataMember="DepName" SummaryType="Count" UniqueName="DataItem1" />
+        <Dimension DataMember="Name" TopNEnabled="true" TopNShowOthers="true" TopNMeasure="DataItem1" UniqueName="DataItem0" />
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem0" />
+      </Arguments>
+      <Values>
+        <Value UniqueName="DataItem1" />
+      </Values>
+    </Pie>
+    <Grid ComponentName="gridDashboardItem1" Name="" DataSource="dashboardSqlDataSource1" DataMember="Vw_DossierInsuranceDep">
+      <DataItems>
+        <Measure DataMember="Calculated Field 1" UniqueName="DataItem1">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+        <Dimension DataMember="Cat" Name="دسته بندی خدمات" UniqueName="DataItem3" />
+      </DataItems>
+      <GridColumns>
+        <GridDimensionColumn>
+          <Dimension UniqueName="DataItem3" />
+        </GridDimensionColumn>
+        <GridMeasureColumn Name="تعداد">
+          <Measure UniqueName="DataItem1" />
+          <Totals>
+            <Total Type="Sum" />
+          </Totals>
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions EnableBandedRows="true" ColumnWidthMode="AutoFitToContents" />
+    </Grid>
+    <ListBox ComponentName="listBoxDashboardItem3" Name="دسته بندی خدمات" DataSource="dashboardSqlDataSource1" DataMember="Vw_DossierInsuranceDep">
+      <DataItems>
+        <Dimension DataMember="Cat" UniqueName="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+    <Chart ComponentName="chartDashboardItem2" Name="Chart 1" ShowCaption="false" DataSource="dashboardSqlDataSource1" DataMember="Vw_DossierInsuranceDep">
+      <DataItems>
+        <Dimension DataMember="Cat" ColoringMode="Hue" UniqueName="DataItem0" />
+        <Measure DataMember="Name" Name="دسته بندی" SummaryType="Count" UniqueName="DataItem3">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem0" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" />
+          <Series>
+            <Simple>
+              <Value UniqueName="DataItem3" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend Visible="false" />
+      <AxisX EnableZooming="true" LimitVisiblePoints="true" />
+    </Chart>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutGroup Orientation="Vertical" Weight="83.981900452488688">
+        <LayoutGroup Weight="47.009966777408636">
+          <LayoutItem DashboardItem="chartDashboardItem2" Weight="51.939655172413794" />
+          <LayoutItem DashboardItem="gridDashboardItem1" Weight="48.060344827586206" />
+        </LayoutGroup>
+        <LayoutGroup Weight="52.990033222591364">
+          <LayoutItem DashboardItem="pieDashboardItem1" Weight="46.982758620689658" />
+          <LayoutItem DashboardItem="chartDashboardItem1" Weight="53.017241379310342" />
+        </LayoutGroup>
+      </LayoutGroup>
+      <LayoutGroup Orientation="Vertical" Weight="16.018099547511312">
+        <LayoutItem DashboardItem="treeViewDashboardItem1" Weight="26.910299003322258" />
+        <LayoutItem DashboardItem="listBoxDashboardItem1" Weight="33.056478405315616" />
+        <LayoutItem DashboardItem="listBoxDashboardItem3" Weight="25.083056478405314" />
+        <LayoutItem DashboardItem="listBoxDashboardItem2" Weight="14.950166112956811" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

@@ -1,0 +1,606 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B4A2EAB6-D0C4-4B51-B096-EF57178C8654}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HCIS</RootNamespace>
+    <AssemblyName>HCIS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\Publish\His\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\172.30.1.30\AsfiyaProjects\NewHIS\HISG\</InstallUrl>
+    <ProductName>HIS</ProductName>
+    <PublisherName>HIS</PublisherName>
+    <SuiteName>HIS</SuiteName>
+    <ApplicationRevision>827</ApplicationRevision>
+    <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>hospital %281%29.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>567A39AAAB2C0ADDBC20DE9A978CB7D695F3AD67</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>HCIS_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v16.1" />
+    <Reference Include="DevExpress.Data.v16.1" />
+    <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v16.1" />
+    <Reference Include="DevExpress.Sparkline.v16.1.Core" />
+    <Reference Include="DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v16.1" />
+    <Reference Include="DevExpress.XtraGrid.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Stimulsoft.Base, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls.Win, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Controls.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Design, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Editor, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Check, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Report.Check.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Design, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Report.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Helper, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Report.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Win, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Report.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Xbap, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Report.Xbap.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Xbap.Design, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Report.Xbap.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Classes\MainModule.cs" />
+    <Compile Include="Data\DataClasses111.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses11.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTileMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTileMain.designer.cs">
+      <DependentUpon>frmTileMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTileMainNaghes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTileMainNaghes.Designer.cs">
+      <DependentUpon>frmTileMainNaghes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="app.config" />
+    <None Include="Data\DataClasses11.dbml.layout">
+      <DependentUpon>DataClasses11.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Forms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTileMain.resx">
+      <DependentUpon>frmTileMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTileMainNaghes.resx">
+      <DependentUpon>frmTileMainNaghes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Data\DataClasses11.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DataClasses111.designer.cs</LastGenOutput>
+    </None>
+    <None Include="HCIS_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Bloodbank\BloodBank\BloodBank.csproj">
+      <Project>{6cc43d8f-908e-484b-8c6f-2bc461039e63}</Project>
+      <Name>BloodBank</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DrugManagement\DrugManagement\DrugManagement.csproj">
+      <Project>{1ae5bdca-e67e-4925-84ce-713302bffc1a}</Project>
+      <Name>DrugManagement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HCISAdmissionNew\HCISAdmission\HCISAdmission.csproj">
+      <Project>{dd8ddf04-3b29-4ebe-9949-3b21d27f7515}</Project>
+      <Name>HCISAdmission</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HCISAngio\HCISAngio\HCISAngio.csproj">
+      <Project>{83ea3f97-1510-497a-8711-ac9c5608aa97}</Project>
+      <Name>HCISAngio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HCISArchives\HCISArchives\HCISArchives.csproj">
+      <Project>{b682c4e9-b479-408e-af7d-44aa9848e6e4}</Project>
+      <Name>HCISArchives</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HCISCash\HCISCash\HCISCash.csproj">
+      <Project>{a9839a99-4752-4103-9b15-26b8687303c7}</Project>
+      <Name>HCISCash</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HCISContracts\HCISContracts\HCISContracts.csproj">
+      <Project>{0fa8e9c0-538a-4158-979d-c3c506e7d164}</Project>
+      <Name>HCISContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HCISDefinitions\HCISDefinitions\HCISDefinitions.csproj">
+      <Project>{a09f9cfb-81c7-45eb-b8bd-1ebbb5830a12}</Project>
+      <Name>HCISDefinitions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HCISDentist1\HCISDentist\HCISDentist.csproj">
+      <Project>{0b6d6408-b6ef-45ef-a0d5-4d887f4c69e8}</Project>
+      <Name>HCISDentist</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HCISDiagnosticServices\HCISDiagnosticServices\HCISDiagnosticServices.csproj">
+      <Project>{0e8772d1-08c4-4690-b10d-c2831a9e910f}</Project>
+      <Name>HCISDiagnosticServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HCISDrugStore\HCISDrugStore\HCISDrugStore.csproj">
+      <Project>{7701cd35-ab11-4ed1-b359-40321b6358be}</Project>
+      <Name>HCISDrugStore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HCISEmergency\HCISEmergency\HCISEmergency.csproj">
+      <Project>{cb964730-6027-493a-8c07-ea2ff2cfa748}</Project>
+      <Name>HCISEmergency</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HCISFinance\HCISFinance\HCISFinance.csproj">
+      <Project>{0b9c68a0-91b3-4259-a0dc-a931c9982010}</Project>
+      <Name>HCISFinance</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HCISHealth\HCISHealth\HCISHealth.csproj">
+      <Project>{6dac25e6-48ce-4cc3-ad98-e09213fd0605}</Project>
+      <Name>HCISHealth</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HCISInsurance\HCISInsurance\HCISInsurance.csproj">
+      <Project>{5f5df949-9295-4b2d-beae-bdb161c83a3c}</Project>
+      <Name>HCISInsurance</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HCISLab\HCISLab\HCISLab.csproj">
+      <Project>{d88a7b96-a9b6-4c3a-987a-9f484934834f}</Project>
+      <Name>HCISLab</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HCISLaundry\HCISLaundry\HCISLaundry.csproj">
+      <Project>{22f4c562-6239-4809-bd52-d97231e0078b}</Project>
+      <Name>HCISLaundry</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HCISManagementDashboardNew\HCISManagementDashboard\HCISManagementDashboard.csproj">
+      <Project>{258d6425-d673-4f1c-88df-d0a465356a53}</Project>
+      <Name>HCISManagementDashboard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HCISNurse\HCISNurse\HCISNurse.csproj">
+      <Project>{7619cc42-3d07-4a1c-b37b-221b2f96485d}</Project>
+      <Name>HCISNurse</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HCISOnCall\HCISOnCall\HCISOnCall.csproj">
+      <Project>{81404a88-59a5-48df-b9cd-a63c51c345ca}</Project>
+      <Name>HCISOnCall</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HCISPathology\HCISPathology\HCISPathology.csproj">
+      <Project>{7d3f92c2-de71-4c97-92fa-6975ca0010c7}</Project>
+      <Name>HCISPathology</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HCISPhysiotherapy\HCISPhysiotherapy\HCISPhysiotherapy.csproj">
+      <Project>{571e038b-9574-4ee3-a87e-b2565a495ac8}</Project>
+      <Name>HCISPhysiotherapy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HCISPsychology\HCISPsychology\HCISPsychology.csproj">
+      <Project>{dd473c2f-76c8-430e-8dbb-32ebf1ab4e3a}</Project>
+      <Name>HCISPsychology</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HCISSata\SATAService\SATAService.csproj">
+      <Project>{aa923a46-9c80-456f-8dd3-85163da45cd3}</Project>
+      <Name>SATAService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HCISSecretary\HCISSecretary\HCISSecretary.csproj">
+      <Project>{3b8021bd-c8e0-44a2-b6ec-5ccb481fae65}</Project>
+      <Name>HCISSecretary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\hcissharelibrary\HCISShareLibrary\HCISShareLibrary.csproj">
+      <Project>{ff99fffe-8eb9-4240-ba94-fdbf0a7086a6}</Project>
+      <Name>HCISShareLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HCISSpecialist\HCISSpecialist\HCISSpecialist.csproj">
+      <Project>{e4201b8c-e65a-4307-99c4-944d2615dfba}</Project>
+      <Name>HCISSpecialist</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HCISSurgery\HCISSurgery\HCISSurgery.csproj">
+      <Project>{e71ee8aa-49ce-4dcd-b494-797a90f6a2e6}</Project>
+      <Name>HCISSurgery</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HCISThirdWard\HCISSecondWard\HCISSecondWard.csproj">
+      <Project>{13a224bb-a382-4225-8473-889248f0fb81}</Project>
+      <Name>HCISSecondWard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HCISTriage\HCISTriage\HCISTriage.csproj">
+      <Project>{2f0c53bb-dfa0-4343-91b5-f156523adebb}</Project>
+      <Name>HCISTriage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Inventory1\Inventory\Inventory.csproj">
+      <Project>{10b4b188-6100-4d8c-b362-cb9d6fdedb7c}</Project>
+      <Name>Inventory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OfferAndRequest\OfferAndRequest\OfferAndRequest.csproj">
+      <Project>{0a34d4f3-38d3-4bcc-9aab-3fd5f9ceec0a}</Project>
+      <Name>OfferAndRequest</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OMO\OMOApp\OMOApp.csproj">
+      <Project>{fc0895be-7b9b-4b1d-9645-81677f7d914c}</Project>
+      <Name>OMOApp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SecurityLoginsAndAccessControl\SecurityLoginsAndAccessControl\SecurityLoginsAndAccessControl.vbproj">
+      <Project>{b07c6401-2d8d-4c7c-b785-2de29800a45f}</Project>
+      <Name>SecurityLoginsAndAccessControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Telecomunication\TeleComunication\TeleComunication.csproj">
+      <Project>{edd18c8b-8574-4b4a-bd98-0143021e3e07}</Project>
+      <Name>TeleComunication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Transport -Final03 - Copy\Transport\Transport.csproj">
+      <Project>{48bb8477-3e71-46ff-afae-cba50f4c3c3f}</Project>
+      <Name>Transport</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="hospital %281%29.ico" />
+    <Content Include="hospital.ico" />
+    <Content Include="Resources\apple_aurora_blue-wide.jpg" />
+    <None Include="Resources\cardiogram.png" />
+    <None Include="Resources\hospital.png" />
+    <None Include="Resources\loop.png" />
+    <None Include="Resources\emergency-kit.png" />
+    <None Include="Resources\hospital1.png" />
+    <Content Include="Resources\Stimulsoft.Base.dll" />
+    <Content Include="Resources\Stimulsoft.Controls.dll" />
+    <Content Include="Resources\Stimulsoft.Controls.Win.dll" />
+    <Content Include="Resources\Stimulsoft.Design.dll" />
+    <Content Include="Resources\Stimulsoft.Editor.dll" />
+    <Content Include="Resources\Stimulsoft.Report.Check.dll" />
+    <Content Include="Resources\Stimulsoft.Report.Design.dll" />
+    <Content Include="Resources\Stimulsoft.Report.dll" />
+    <Content Include="Resources\Stimulsoft.Report.Helper.dll" />
+    <Content Include="Resources\Stimulsoft.Report.Win.dll" />
+    <Content Include="Resources\Stimulsoft.Report.Xbap.Design.dll" />
+    <Content Include="Resources\Stimulsoft.Report.Xbap.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="HCIS.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="HCISAdmission.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="HCISCash.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="HCISDentist.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="HCISDiagnosticServices.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="HCISDrugStore.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="HCISFinance.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="HCISInsurance.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="HCISManagementDashboard.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="HCISPhysiotherapy.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="HCISSecretary.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="HCISSpecialist.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Diagnostics.STrace">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Management.SmoMetadataProvider">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Management.SqlParser">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.SqlClrProvider">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="SecurityLoginsAndAccessControl.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

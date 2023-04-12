@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="IMPHO" Class="IMPHODataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=172.30.1.145;Initial Catalog=IMPHO;Persist Security Info=True;User ID=artp" SettingsObjectName="HealthAndFamilyReportHCIS.Properties.Settings" SettingsPropertyName="IMPHOConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Tbl_ValidCenter" Member="Tbl_ValidCenterIMPHOs">
+    <Type Name="Tbl_ValidCenterIMPHO">
+      <Column Name="IDValidCenter" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDValidCenterZone" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDValidCenterType" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(70) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="NewIDValidCenter" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NewIDValidCenterZone" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Association Name="Tbl_ValidCenterZone_Tbl_ValidCenter" Member="Tbl_ValidCenterZoneIMPHO" ThisKey="IDValidCenterZone" OtherKey="IDValidCenterZone" Type="Tbl_ValidCenterZoneIMPHO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_ValidCenterZone" Member="Tbl_ValidCenterZoneIMPHOs">
+    <Type Name="Tbl_ValidCenterZoneIMPHO">
+      <Column Name="IDValidCenterZone" Type="System.Byte" DbType="TinyInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(70) NOT NULL" CanBeNull="false" />
+      <Column Name="Access" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="NewIDValidCenterZone" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Association Name="Tbl_ValidCenterZone_Tbl_ValidCenter" Member="Tbl_ValidCenterIMPHOs" ThisKey="IDValidCenterZone" OtherKey="IDValidCenterZone" Type="Tbl_ValidCenterIMPHO" />
+    </Type>
+  </Table>
+</Database>

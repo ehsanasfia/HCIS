@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="EmailDB" Class="EmaildbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=EmailDB;Integrated Security=True" SettingsObjectName="HCISEmail.Properties.Settings" SettingsPropertyName="EmailDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Attachment" Member="Attachments">
+    <Type Name="Attachment">
+      <Column Name="IDAttachment" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmailID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FileAddress" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="Size" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Association Name="Email_Attachment" Member="Email" ThisKey="EmailID" OtherKey="IDEmail" Type="Email" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserFolder" Member="UserFolders">
+    <Type Name="UserFolder">
+      <Column Name="IDUserFolder" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FolderID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Association Name="Folder_UserFolder" Member="Folder" ThisKey="FolderID" OtherKey="IDFolder" Type="Folder" IsForeignKey="true" />
+      <Association Name="User_UserFolder" Member="User" ThisKey="UserID" OtherKey="IDUser" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.City" Member="Cities">
+    <Type Name="City">
+      <Column Name="IDCity" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StateID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="City_User" Member="Users" ThisKey="IDCity" OtherKey="CityID" Type="User" />
+      <Association Name="State_City" Member="State" ThisKey="StateID" OtherKey="IDState" Type="State" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DefaultText" Member="DefaultTexts">
+    <Type Name="DefaultText">
+      <Column Name="IDDefaultText" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="Text" Type="System.String" DbType="NVarChar(3000)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Association Name="User_DefaultText" Member="User" ThisKey="UserID" OtherKey="IDUser" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Definition" Member="Definitions">
+    <Type Name="Definition">
+      <Column Name="IDDefinition" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Definition_EmailUser" Member="EmailUsers" ThisKey="IDDefinition" OtherKey="Priority" Type="EmailUser" />
+      <Association Name="Definition_User" Member="Users" ThisKey="IDDefinition" OtherKey="GenderID" Type="User" />
+      <Association Name="Definition_User1" Member="Users1" ThisKey="IDDefinition" OtherKey="EducationID" Type="User" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Department" Member="Departments">
+    <Type Name="Department">
+      <Column Name="IDDepartment" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDParent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Association Name="Department_Department" Member="Departments" ThisKey="IDDepartment" OtherKey="IDParent" Type="Department" />
+      <Association Name="Department_Role" Member="Roles" ThisKey="IDDepartment" OtherKey="DepartmentID" Type="Role" />
+      <Association Name="Department_Department" Member="Department1" ThisKey="IDParent" OtherKey="IDDepartment" Type="Department" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Email" Member="Emails">
+    <Type Name="Email">
+      <Column Name="IDEmail" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Subject" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Error" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Readed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Replay" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Forward" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PrivacyLevel" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Association Name="Email_Attachment" Member="Attachments" ThisKey="IDEmail" OtherKey="EmailID" Type="Attachment" />
+      <Association Name="Email_Email" Member="Emails" ThisKey="IDEmail" OtherKey="Replay" Type="Email" />
+      <Association Name="Email_EmailUser" Member="EmailUsers" ThisKey="IDEmail" OtherKey="EmailID" Type="EmailUser" />
+      <Association Name="Email_Email" Member="Email1" ThisKey="Replay" OtherKey="IDEmail" Type="Email" IsForeignKey="true" />
+      <Association Name="User_Email" Member="User" ThisKey="UserID" OtherKey="IDUser" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmailUser" Member="EmailUsers">
+    <Type Name="EmailUser">
+      <Column Name="IDEmailUser" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmailID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ToUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FolderID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Seen" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Priority" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Association Name="Definition_EmailUser" Member="Definition" ThisKey="Priority" OtherKey="IDDefinition" Type="Definition" IsForeignKey="true" />
+      <Association Name="Email_EmailUser" Member="Email" ThisKey="EmailID" OtherKey="IDEmail" Type="Email" IsForeignKey="true" />
+      <Association Name="Folder_EmailUser" Member="Folder" ThisKey="FolderID" OtherKey="IDFolder" Type="Folder" IsForeignKey="true" />
+      <Association Name="User_EmailUser" Member="User" ThisKey="ToUserID" OtherKey="IDUser" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Folder" Member="Folders">
+    <Type Name="Folder">
+      <Column Name="IDFolder" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DefaultFolder" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IconAddress" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Association Name="Folder_UserFolder" Member="UserFolders" ThisKey="IDFolder" OtherKey="FolderID" Type="UserFolder" />
+      <Association Name="Folder_EmailUser" Member="EmailUsers" ThisKey="IDFolder" OtherKey="FolderID" Type="EmailUser" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Permission" Member="Permissions">
+    <Type Name="Permission">
+      <Column Name="IDPermission" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FromRoleID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ToRoleID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Role_Permission" Member="Role" ThisKey="FromRoleID" OtherKey="IDRole" Type="Role" IsForeignKey="true" />
+      <Association Name="Role_Permission1" Member="Role1" ThisKey="ToRoleID" OtherKey="IDRole" Type="Role" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Role" Member="Roles">
+    <Type Name="Role">
+      <Column Name="IDRole" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DepartmentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Association Name="Role_Permission" Member="Permissions" ThisKey="IDRole" OtherKey="FromRoleID" Type="Permission" />
+      <Association Name="Role_Permission1" Member="Permissions1" ThisKey="IDRole" OtherKey="ToRoleID" Type="Permission" />
+      <Association Name="Role_RoleUser" Member="RoleUsers" ThisKey="IDRole" OtherKey="RoleID" Type="RoleUser" />
+      <Association Name="Department_Role" Member="Department" ThisKey="DepartmentID" OtherKey="IDDepartment" Type="Department" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RoleUser" Member="RoleUsers">
+    <Type Name="RoleUser">
+      <Column Name="IDRoleUser" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RoleID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Association Name="Role_RoleUser" Member="Role" ThisKey="RoleID" OtherKey="IDRole" Type="Role" IsForeignKey="true" />
+      <Association Name="User_RoleUser" Member="User" ThisKey="UserID" OtherKey="IDUser" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.State" Member="States">
+    <Type Name="State">
+      <Column Name="IDState" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="State_City" Member="Cities" ThisKey="IDState" OtherKey="StateID" Type="City" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[User]" Member="Users">
+    <Type Name="User">
+      <Column Name="IDUser" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NationalCode" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="FName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="LName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="BirthDay" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="GenderID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CityID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="Char(11)" CanBeNull="true" />
+      <Column Name="EducationID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SecurityUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="Avatar" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="User_UserFolder" Member="UserFolders" ThisKey="IDUser" OtherKey="UserID" Type="UserFolder" />
+      <Association Name="User_DefaultText" Member="DefaultTexts" ThisKey="IDUser" OtherKey="UserID" Type="DefaultText" />
+      <Association Name="User_Email" Member="Emails" ThisKey="IDUser" OtherKey="UserID" Type="Email" />
+      <Association Name="User_EmailUser" Member="EmailUsers" ThisKey="IDUser" OtherKey="ToUserID" Type="EmailUser" />
+      <Association Name="User_RoleUser" Member="RoleUsers" ThisKey="IDUser" OtherKey="UserID" Type="RoleUser" />
+      <Association Name="City_User" Member="City" ThisKey="CityID" OtherKey="IDCity" Type="City" IsForeignKey="true" />
+      <Association Name="Definition_User" Member="Definition" ThisKey="GenderID" OtherKey="IDDefinition" Type="Definition" IsForeignKey="true" />
+      <Association Name="Definition_User1" Member="Definition1" ThisKey="EducationID" OtherKey="IDDefinition" Type="Definition" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.sp_Show_Sended_Emails" Method="sp_Show_Sended_Emails">
+    <Parameter Name="CurentIDUser" Parameter="curentIDUser" Type="System.Int32" DbType="Int" />
+    <ElementType Name="sp_Show_Sended_EmailsResult">
+      <Column Name="IDUser" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="LName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Subject" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(3000)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="IDEmail" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_Show_Deleted_Emails" Method="sp_Show_Deleted_Emails">
+    <Parameter Name="CurentIDUser" Parameter="curentIDUser" Type="System.Int32" DbType="Int" />
+    <ElementType Name="sp_Show_Deleted_EmailsResult">
+      <Column Name="IDUser" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="LName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Subject" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(3000)" CanBeNull="true" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_Show_Privacy_Emails" Method="sp_Show_Privacy_Emails">
+    <Parameter Name="CurentIDUser" Parameter="curentIDUser" Type="System.Int32" DbType="Int" />
+    <ElementType Name="sp_Show_Privacy_EmailsResult">
+      <Column Name="IDUser" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="LName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IDEmail" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Subject" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(3000)" CanBeNull="true" />
+      <Column Name="PrivacyLevel" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_Show_Received_Emails" Method="sp_Show_Received_Emails">
+    <Parameter Name="CurentIDUser" Parameter="curentIDUser" Type="System.Int32" DbType="Int" />
+    <ElementType Name="sp_Show_Received_EmailsResult">
+      <Column Name="IDUser" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="LName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Subject" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(3000)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_Email_Data_Recovery" Method="sp_Email_Data_Recovery">
+    <Parameter Name="CurentIDUser" Parameter="curentIDUser" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Role" Parameter="role" Type="System.Int32" DbType="Int" />
+    <ElementType Name="sp_Email_Data_RecoveryResult">
+      <Column Name="FName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="LName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Subject" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="Seen" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IDEmailUser" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Priority" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FolderName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PrivacyLevel" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

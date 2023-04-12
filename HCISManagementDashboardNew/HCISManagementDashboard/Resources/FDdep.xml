@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="گزارشات پزشک خانواده" />
+  <DataSources>
+    <SqlDataSource ComponentName="dashboardSqlDataSource1">
+      <Name>SQL Data Source 1</Name>
+      <Connection Name="172.30.1.145_HCIS_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="172.30.1.145" />
+          <Parameter Name="database" Value="HCIS" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="artp" />
+          <Parameter Name="password" Value="506070" />
+        </Parameters>
+      </Connection>
+      <Query Type="StoredProcQuery" Name="spu_FamilyDoc">
+        <Parameter Name="@S" Type="DevExpress.DataAccess.Expression">(System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)([Parameters.FromDate])</Parameter>
+        <Parameter Name="@E" Type="DevExpress.DataAccess.Expression">(System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)([Parameters.ToDate])</Parameter>
+        <ProcName>spu_FamilyDoc</ProcName>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="spu_FamilyDoc">
+            <Field Name="Name" Type="String" />
+            <Field Name="P1" Type="String" />
+            <Field Name="P2" Type="String" />
+            <Field Name="P3" Type="String" />
+            <Field Name="P4" Type="String" />
+            <Field Name="Dep" Type="String" />
+            <Field Name="C" Type="Int32" />
+            <Field Name="InsurName" Type="String" />
+            <Field Name="Company" Type="String" />
+            <Field Name="Sex" Type="String" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+    </SqlDataSource>
+  </DataSources>
+  <Parameters>
+    <Parameter Name="FromDate" Value="1397/01/01" />
+    <Parameter Name="ToDate" Value="1397/12/29" />
+  </Parameters>
+  <Items>
+    <Chart ComponentName="chartDashboardItem1" Name="گزارش" DataSource="dashboardSqlDataSource1" DataMember="spu_FamilyDoc">
+      <ColoringOptions UseGlobalColors="false" />
+      <DataItems>
+        <Dimension DataMember="Name" ColoringMode="Hue" UniqueName="DataItem0" />
+        <Measure DataMember="C" Name="تعداد" UniqueName="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem0" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple Name="تعداد">
+              <Value UniqueName="DataItem1" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend Visible="false" />
+    </Chart>
+    <TreeView ComponentName="treeViewDashboardItem1" Name="جستجو بر اساس گروه" DataSource="dashboardSqlDataSource1" DataMember="spu_FamilyDoc">
+      <DataItems>
+        <Dimension DataMember="P2" UniqueName="DataItem1" />
+        <Dimension DataMember="P1" UniqueName="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem1" />
+        <Dimension UniqueName="DataItem0" />
+      </FilterDimensions>
+    </TreeView>
+    <ListBox ComponentName="listBoxDashboardItem1" Name="جستجو بر اساس درمانگاه" DataSource="dashboardSqlDataSource1" DataMember="spu_FamilyDoc">
+      <DataItems>
+        <Dimension DataMember="Dep" UniqueName="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="chartDashboardItem1" Weight="79.004524886877832" />
+      <LayoutGroup Orientation="Vertical" Weight="20.995475113122172">
+        <LayoutItem DashboardItem="treeViewDashboardItem1" Weight="49.003322259136212" />
+        <LayoutItem DashboardItem="listBoxDashboardItem1" Weight="50.996677740863788" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="IMPHO" Class="IMPHODataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=172.30.1.145;Initial Catalog=IMPHO;Persist Security Info=True;User ID=artp" SettingsObjectName="HCISDrugStore.Properties.Settings" SettingsPropertyName="IMPHOConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Person" Member="Person1s">
+    <Type Name="Person1">
+      <Column Name="IDPerson" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IsLocal" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDPersonType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="MedicalID" Type="System.String" DbType="NChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="NationalCode" Type="System.String" DbType="NChar(12)" CanBeNull="true" />
+      <Column Name="UpdatedNationalCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Lastname" Type="System.String" DbType="NVarChar(35)" CanBeNull="true" />
+      <Column Name="Firstname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FatherName" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="Sex" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="BirthDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="BirthPlace" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="IdentityNo" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="IdentityDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="IdentityPlace" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="IDMaritalStatus" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="IDReligion" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="HomePhone" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="WorkPhone" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="PostCode" Type="System.String" DbType="NVarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="EMail" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(1024) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="IsPrivate" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="idp" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreationDateTime" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MedicalID_BAK" Type="System.String" DbType="NChar(13)" CanBeNull="true" />
+      <Column Name="uniq" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Insure" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="InsuranceNo" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="NewIDPerson" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LetterNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreationIP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CellPhone" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Hospital" Class="hospitalDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=Hospital;Integrated Security=True" SettingsObjectName="OMOApp.Properties.Settings" SettingsPropertyName="HospitalConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.vw_labHospitalMaping" Member="vw_labHospitalMapings">
+    <Type Name="vw_labHospitalMaping">
+      <Column Name="SerialNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReqDate" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="MedicalID" Type="System.String" DbType="NChar(13)" CanBeNull="true" />
+      <Column Name="RelationOrderNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NationalCode" Type="System.String" DbType="NChar(12)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.labPrescriptionD" Member="labPrescriptionDs">
+    <Type Name="labPrescriptionD">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SerialNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Test_ID" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Normal" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="[Confirm]" Member="Confirm" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DepID" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="[Print]" Member="Print" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LastAccessOperation" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Delete]" Member="Delete" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

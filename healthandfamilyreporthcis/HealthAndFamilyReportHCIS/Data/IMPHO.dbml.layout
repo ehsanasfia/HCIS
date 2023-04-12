@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.75, 8.5" name="IMPHO">
+  <DataContextMoniker Name="/IMPHODataContext" />
+  <nestedChildShapes>
+    <classShape Id="619ebaab-15db-4f68-b19a-02f18320bcb4" absoluteBounds="6.125, 2.125, 2, 3.6939111328124996">
+      <DataClassMoniker Name="/IMPHODataContext/Tbl_ValidCenterIMPHO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ec750ba0-5ce8-40b7-81df-06e1cc70a068" absoluteBounds="6.14, 2.585, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c39fbc03-4b6a-40a5-81aa-fc92667c7c8d" absoluteBounds="9.5, 2.25, 2, 3.1170068359375">
+      <DataClassMoniker Name="/IMPHODataContext/Tbl_ValidCenterZoneIMPHO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="070094fa-c777-4de7-9762-d3cf061ef89d" absoluteBounds="9.515, 2.71, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9.5 : 3.80850341796875); (8.125 : 3.80850341796875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/IMPHODataContext/Tbl_ValidCenterZoneIMPHO/Tbl_ValidCenterZone_Tbl_ValidCenter" />
+      <nodes>
+        <classShapeMoniker Id="c39fbc03-4b6a-40a5-81aa-fc92667c7c8d" />
+        <classShapeMoniker Id="619ebaab-15db-4f68-b19a-02f18320bcb4" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

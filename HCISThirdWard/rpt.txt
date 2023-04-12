@@ -1,0 +1,21 @@
+
+            var Instraction = from c in dc.VwDoctorInstractions.Where(x => x.DossierID == CheckUp.DossierID)
+                              select new
+                              { Name = c.CatName, c.Date, c.Time };
+
+            rptDoctorInstraction.Dictionary.Variables.Add("Date", CheckUp.Date);
+            rptDoctorInstraction.Dictionary.Variables.Add("NationalCode", CheckUp.Person.NationalCode);
+            rptDoctorInstraction.Dictionary.Variables.Add("LastName", CheckUp.Person.LastName??"");
+            rptDoctorInstraction.Dictionary.Variables.Add("FirstName", CheckUp.Person.FirstName);
+            rptDoctorInstraction.Dictionary.Variables.Add("Bed", CheckUp.Bed.BedNumber);
+            rptDoctorInstraction.Dictionary.Variables.Add("Doctor", CheckUp.Staff.Person.FullName);
+            rptDoctorInstraction.Dictionary.Variables.Add("Department", CheckUp.Department.Name);
+            rptDoctorInstraction.Dictionary.Variables.Add("FatherName", CheckUp.Person.FatherName);
+            rptDoctorInstraction.Dictionary.Variables.Add("BirthDay", CheckUp.Person.BirthDate);
+            rptDoctorInstraction.Dictionary.Variables.Add("room", CheckUp.Bed.RoomNumber);
+            rptDoctorInstraction.Dictionary.Variables.Add("PersonelNumber", CheckUp.Person.PersonalCode);
+            rptDoctorInstraction.Dictionary.Variables.Add("PrimDiag", "");
+            rptDoctorInstraction.RegData("Instraction", Instraction);
+            rptDoctorInstraction.Dictionary.Synchronize();
+            rptDoctorInstraction.Compile();
+            rptDoctorInstraction.CompiledReport.ShowWithRibbonGUI();

@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="گزارشات پزشک خانواده" />
+  <DataSources>
+    <SqlDataSource ComponentName="dashboardSqlDataSource1">
+      <Name>SQL Data Source 1</Name>
+      <Connection Name="172.30.1.145_HCIS_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="172.30.1.145" />
+          <Parameter Name="database" Value="HCIS" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="artp" />
+          <Parameter Name="password" Value="506070" />
+        </Parameters>
+      </Connection>
+      <Query Type="SelectQuery" Name="spu_FamilyDoc">
+        <Parameter Name="FromDate" Type="DevExpress.DataAccess.Expression">(System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)([Parameters.FromDate])</Parameter>
+        <Parameter Name="ToDate" Type="DevExpress.DataAccess.Expression">(System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)([Parameters.ToDate])</Parameter>
+        <Tables>
+          <Table Name="Vw_FamilyDoc" Meta="0|0|125|260" />
+        </Tables>
+        <Columns>
+          <Column Table="Vw_FamilyDoc" Name="Name" />
+          <Column Table="Vw_FamilyDoc" Name="P1" />
+          <Column Table="Vw_FamilyDoc" Name="P2" />
+          <Column Table="Vw_FamilyDoc" Name="P3" />
+          <Column Table="Vw_FamilyDoc" Name="P4" />
+          <Column Table="Vw_FamilyDoc" Name="Dep" />
+          <Column Table="Vw_FamilyDoc" Name="C" />
+          <Column Table="Vw_FamilyDoc" Name="InsurName" />
+          <Column Table="Vw_FamilyDoc" Name="Company" />
+          <Column Table="Vw_FamilyDoc" Name="Sex" />
+          <Column Table="Vw_FamilyDoc" Name="CreationDate" />
+        </Columns>
+        <Filter>[Vw_FamilyDoc.CreationDate] &gt;= ?FromDate And [Vw_FamilyDoc.CreationDate] &lt;= ?ToDate And [Vw_FamilyDoc.Dep] = 'درمانگاه کارون'</Filter>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="spu_FamilyDoc">
+            <Field Name="Name" Type="String" />
+            <Field Name="P1" Type="String" />
+            <Field Name="P2" Type="String" />
+            <Field Name="P3" Type="String" />
+            <Field Name="P4" Type="String" />
+            <Field Name="Dep" Type="String" />
+            <Field Name="C" Type="Int32" />
+            <Field Name="InsurName" Type="String" />
+            <Field Name="Company" Type="String" />
+            <Field Name="Sex" Type="String" />
+            <Field Name="CreationDate" Type="String" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+    </SqlDataSource>
+  </DataSources>
+  <Parameters>
+    <Parameter Name="FromDate" Value="1397/01/01" />
+    <Parameter Name="ToDate" Value="1397/12/29" />
+  </Parameters>
+  <Items>
+    <Chart ComponentName="chartDashboardItem1" Name="نمودار میله ای" DataSource="dashboardSqlDataSource1" DataMember="spu_FamilyDoc">
+      <DataItems>
+        <Measure DataMember="C" Name="تعداد" UniqueName="DataItem1" />
+        <Dimension DataMember="P1" ColoringMode="Hue" UniqueName="DataItem0" />
+        <Dimension DataMember="Company" UniqueName="DataItem2" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension UniqueName="DataItem2" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument UniqueName="DataItem0" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple Name="تعداد">
+              <Value UniqueName="DataItem1" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend Visible="false" />
+      <AxisX EnableZooming="true" />
+    </Chart>
+    <TreeView ComponentName="treeViewDashboardItem1" Name="جستجو بر اساس گروه" DataSource="dashboardSqlDataSource1" DataMember="spu_FamilyDoc">
+      <DataItems>
+        <Dimension DataMember="P2" UniqueName="DataItem1" />
+        <Dimension DataMember="P1" UniqueName="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem1" />
+        <Dimension UniqueName="DataItem0" />
+      </FilterDimensions>
+    </TreeView>
+    <ListBox ComponentName="listBoxDashboardItem1" Name="جستجو بر اساس شرکت" DataSource="dashboardSqlDataSource1" DataMember="spu_FamilyDoc">
+      <DataItems>
+        <Dimension DataMember="Company" UniqueName="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+    <Pie ComponentName="pieDashboardItem1" Name="نمودار کیکی" DataSource="dashboardSqlDataSource1" DataMember="spu_FamilyDoc" LabelContentType="ArgumentAndValue" ContentArrangementMode="FixedRowCount" ShowPieCaptions="false">
+      <DataItems>
+        <Measure DataMember="C" Name="تعداد" UniqueName="DataItem0" />
+        <Dimension DataMember="P1" UniqueName="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem1" />
+      </Arguments>
+      <Values>
+        <Value UniqueName="DataItem0" />
+      </Values>
+    </Pie>
+    <ComboBox ComponentName="comboBoxDashboardItem1" Name="درمانگاه" DataSource="dashboardSqlDataSource1" DataMember="spu_FamilyDoc">
+      <DataItems>
+        <Dimension DataMember="Dep" UniqueName="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+      </FilterDimensions>
+    </ComboBox>
+  </Items>
+  <ColorScheme>
+    <Entry DataSource="dashboardSqlDataSource1" DataMember="spu_FamilyDoc" Color="-5482852">
+      <DimensionKeys>
+        <DimensionKey>
+          <Definition DataMember="P1" />
+          <Value Type="System.String" Value="IHD وجود ریسک فاکتور" />
+        </DimensionKey>
+      </DimensionKeys>
+    </Entry>
+  </ColorScheme>
+  <LayoutTree>
+    <LayoutGroup Orientation="Vertical">
+      <LayoutGroup Weight="52.990033222591364">
+        <LayoutItem DashboardItem="chartDashboardItem1" Weight="79.004524886877832" />
+        <LayoutGroup Orientation="Vertical" Weight="20.995475113122172">
+          <LayoutItem DashboardItem="comboBoxDashboardItem1" Weight="15.987460815047022" />
+          <LayoutItem DashboardItem="treeViewDashboardItem1" Weight="84.012539184952985" />
+        </LayoutGroup>
+      </LayoutGroup>
+      <LayoutGroup Weight="47.009966777408636">
+        <LayoutItem DashboardItem="pieDashboardItem1" Weight="79.004524886877832" />
+        <LayoutItem DashboardItem="listBoxDashboardItem1" Weight="20.995475113122172" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

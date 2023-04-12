@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="سن - جنسیت" />
+  <DataSources>
+    <SqlDataSource ComponentName="dashboardSqlDataSource1">
+      <Name>SQL Data Source 1</Name>
+      <Connection Name="172.30.1.145_HCIS_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="172.30.1.145" />
+          <Parameter Name="database" Value="HCIS" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="artp" />
+          <Parameter Name="password" Value="506070" />
+        </Parameters>
+      </Connection>
+      <Query Type="SelectQuery" Name="tmpSexPyramid">
+        <Tables>
+          <Table Name="tmpSexPyramid" Meta="0|0|125|140" />
+        </Tables>
+        <Columns>
+          <Column Table="tmpSexPyramid" Name="SexStr" />
+          <Column Table="tmpSexPyramid" Name="AgeSTR" />
+          <Column Table="tmpSexPyramid" Name="Expr1" />
+          <Column Table="tmpSexPyramid" Name="Zone" />
+        </Columns>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="tmpSexPyramid">
+            <Field Name="SexStr" Type="String" />
+            <Field Name="AgeSTR" Type="String" />
+            <Field Name="Expr1" Type="Int32" />
+            <Field Name="Zone" Type="String" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <Chart ComponentName="chartDashboardItem1" Name="هرم سن - جنسیت" DataSource="dashboardSqlDataSource1" DataMember="tmpSexPyramid" Rotated="true">
+      <DataItems>
+        <Dimension DataMember="SexStr" UniqueName="DataItem1" />
+        <Measure DataMember="Expr1" Name="تعداد به نفر" UniqueName="DataItem2">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+        <Dimension DataMember="AgeSTR" UniqueName="DataItem0" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension UniqueName="DataItem1" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument UniqueName="DataItem0" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY LogarithmicBase="Base2" />
+          <Series>
+            <Simple SeriesType="StackedBar">
+              <Value UniqueName="DataItem2" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <AxisX EnableZooming="true" />
+    </Chart>
+    <ListBox ComponentName="listBoxDashboardItem1" Name="مناطق" DataSource="dashboardSqlDataSource1" DataMember="tmpSexPyramid">
+      <DataItems>
+        <Dimension DataMember="Zone" UniqueName="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="chartDashboardItem1" Weight="81.216648879402342" />
+      <LayoutItem DashboardItem="listBoxDashboardItem1" Weight="18.783351120597651" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

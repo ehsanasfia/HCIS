@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="GetPatientAdmission">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="headerDto" type="tns:AdtHeaderDto" />
+            <s:element minOccurs="0" maxOccurs="1" name="listServiceDetail" type="tns:ArrayOfAdtDetailDto" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AdtHeaderDto">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdHeaderAdmission" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReceptionNo" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="RowSequence" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NationalCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PersonInsuranceNo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdRelation" type="s:unsignedByte" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateOne" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdWardRef" nillable="true" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateTwo" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdHeaderState" type="s:unsignedByte" />
+          <s:element minOccurs="0" maxOccurs="1" name="MedicalRecordNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdPersonCase" type="s:unsignedByte" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdHeaderType" type="s:unsignedByte" />
+          <s:element minOccurs="1" maxOccurs="1" name="HeRequestPrice" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="HeConfirmPrice" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdDeductionTypeRef" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="Note" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdUser" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdUserEdit" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="Relation" type="tns:RefrenceTblDto" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ward" type="tns:RefrenceTblDto" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeductionType" type="tns:RefrenceTblDto" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdCauseRefer" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TimeOne" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TimeTwo" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="MobileNumber" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="PhoneNumber" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RefrenceTblDto">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdReference" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReferenceName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdReferenceParent" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdReferenceGroup" type="s:short" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAdtDetailDto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AdtDetailDto" nillable="true" type="tns:AdtDetailDto" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AdtDetailDto">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdServiceDetail" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdHeaderAdmission" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdServiceTotal" nillable="true" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdServiceGroup" type="s:unsignedByte" />
+          <s:element minOccurs="1" maxOccurs="1" name="ServiceCode" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TadilCode" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TadilName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ServiceTime" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdSurgeryNo" type="s:unsignedByte" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdTadilPercent" type="s:unsignedByte" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdTadilArea" type="s:unsignedByte" />
+          <s:element minOccurs="1" maxOccurs="1" name="DetailKValue" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="DeRequestCount" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="DeConfirmCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DeRequestPrice" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="DeRequestPerson" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="DeConfirmPrice" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdDeductionType" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdProfessionType" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="DrNo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdUser" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdUserEdit" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="Deleted" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Index" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdDevice" nillable="true" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdShift" nillable="true" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdLocation" nillable="true" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdUnit" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DrFirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DrLastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DrNationalCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DrPersonNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ICD10Final" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdDiseaseType" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPatientAdmissionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPatientAdmissionResult" type="tns:Response" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Response">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LogMessages" type="tns:ArrayOfString" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsSuccessful" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetReceptionNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="reception" type="tns:AdtReceptionDto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AdtReceptionDto">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdReception" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdContractSide" nillable="true" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="ContractSideCode" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdBillType" type="s:unsignedByte" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdState" type="s:unsignedByte" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReceptionNo" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReceptionDate" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FromDate" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TillDate" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReRequestCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReRequestPrice" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdUser" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdUserEdit" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="CenterCode" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdDarman" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdBillTypeRef" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdInvestigationTypeRef" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="DarmanType" type="tns:DarmanTbl" />
+          <s:element minOccurs="0" maxOccurs="1" name="InvestigationType" type="tns:RefrenceTblDto" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillType" type="tns:RefrenceTblDto" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DarmanTbl">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdDarman" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DarmanName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetReceptionNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReceptionNumberResult" type="tns:Response" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAll">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="reception" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="headerDto" type="tns:AdtHeaderDto" />
+            <s:element minOccurs="0" maxOccurs="1" name="listServiceDetail" type="tns:ArrayOfAdtDetailDto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllResult" type="tns:Response" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetPatientAdmissionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPatientAdmission" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientAdmissionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPatientAdmissionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReceptionNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReceptionNumber" />
+  </wsdl:message>
+  <wsdl:message name="GetReceptionNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReceptionNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAll" />
+  </wsdl:message>
+  <wsdl:message name="GetAllSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllResponse" />
+  </wsdl:message>
+  <wsdl:portType name="HospitalServiceSoap">
+    <wsdl:operation name="GetPatientAdmission">
+      <wsdl:input message="tns:GetPatientAdmissionSoapIn" />
+      <wsdl:output message="tns:GetPatientAdmissionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReceptionNumber">
+      <wsdl:input message="tns:GetReceptionNumberSoapIn" />
+      <wsdl:output message="tns:GetReceptionNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAll">
+      <wsdl:input message="tns:GetAllSoapIn" />
+      <wsdl:output message="tns:GetAllSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HospitalServiceSoap" type="tns:HospitalServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPatientAdmission">
+      <soap:operation soapAction="http://tempuri.org/GetPatientAdmission" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReceptionNumber">
+      <soap:operation soapAction="http://tempuri.org/GetReceptionNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAll">
+      <soap:operation soapAction="http://tempuri.org/GetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="HospitalServiceSoap12" type="tns:HospitalServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPatientAdmission">
+      <soap12:operation soapAction="http://tempuri.org/GetPatientAdmission" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReceptionNumber">
+      <soap12:operation soapAction="http://tempuri.org/GetReceptionNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAll">
+      <soap12:operation soapAction="http://tempuri.org/GetAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HospitalService">
+    <wsdl:port name="HospitalServiceSoap" binding="tns:HospitalServiceSoap">
+      <soap:address location="http://10.70.70.40/AggregationService/HospitalService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="HospitalServiceSoap12" binding="tns:HospitalServiceSoap12">
+      <soap12:address location="http://10.70.70.40/AggregationService/HospitalService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

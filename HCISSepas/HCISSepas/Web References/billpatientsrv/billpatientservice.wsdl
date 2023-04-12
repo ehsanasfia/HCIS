@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://sepas.behdasht.gov.ir/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s1="http://thrita.behdasht.gov.ir/VM/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://sepas.behdasht.gov.ir/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://sepas.behdasht.gov.ir/">
+      <s:import namespace="http://thrita.behdasht.gov.ir/VM/" />
+      <s:element name="SavePatientBill">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PatientBill" type="s1:PatientBillMessageVO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SavePatientBillResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SavePatientBillResult" type="s1:ResultVO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HeaderMessageVO" type="s1:HeaderMessageVO" />
+      <s:element name="SavePatientBillSecure">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SavePatientBillSecureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SavePatientBillSecureResult" type="s1:ResultVO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://thrita.behdasht.gov.ir/VM/">
+      <s:complexType name="PatientBillMessageVO">
+        <s:annotation>
+          <s:appinfo>
+            <keepNamespaceDeclarations>xmlns</keepNamespaceDeclarations>
+          </s:appinfo>
+        </s:annotation>
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Person" type="s1:PersonInfoVO" />
+          <s:element minOccurs="0" maxOccurs="1" name="MsgID" type="s1:MessageIdentifierVO" />
+          <s:element minOccurs="0" maxOccurs="1" name="Composition" type="s1:BillPatientCompositionVO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PersonInfoVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="OtherIdentifier" type="s1:ArrayOfDO_IDENTIFIER" />
+          <s:element minOccurs="0" maxOccurs="1" name="BirthPlaceArea" type="s1:HighLevelAreaVO" />
+          <s:element minOccurs="0" maxOccurs="1" name="Religion" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaritalStatus" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nationality" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="BirthDate" type="s1:DO_DATE" />
+          <s:element minOccurs="0" maxOccurs="1" name="BirthTime" type="s1:DO_TIME" />
+          <s:element minOccurs="0" maxOccurs="1" name="BirthdateAccuracy" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="Father_FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Father_LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mother_FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mother_LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FullName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PostalCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Gender" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="Job" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="JobDescribtion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FullAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LivingPlaceArea" type="s1:HighLevelAreaVO" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDCardNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDIssueArea" type="s1:HighLevelAreaVO" />
+          <s:element minOccurs="0" maxOccurs="1" name="HomeTel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MobileNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EducationLevel" type="s1:DO_CODED_TEXT" />
+        </s:sequence>
+        <s:attribute name="FirstName" type="s:string" />
+        <s:attribute name="LastName" type="s:string" />
+        <s:attribute name="NationalCode" type="s:string" />
+      </s:complexType>
+      <s:complexType name="ArrayOfDO_IDENTIFIER">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DO_IDENTIFIER" nillable="true" type="s1:DO_IDENTIFIER" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DO_IDENTIFIER">
+        <s:attribute name="Issuer" type="s:string" />
+        <s:attribute name="Assigner" type="s:string" />
+        <s:attribute name="ID" type="s:string" />
+        <s:attribute name="Type" type="s:string" />
+      </s:complexType>
+      <s:complexType name="HighLevelAreaVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NationalAreaCode" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="Province" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="Town" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="District" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="RuralArea" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="Village" type="s1:DO_CODED_TEXT" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DO_CODED_TEXT">
+        <s:attribute name="Value" type="s:string" />
+        <s:attribute name="Terminology_id" type="s:string" />
+        <s:attribute name="Coded_string" type="s:string" />
+      </s:complexType>
+      <s:complexType name="DO_DATE">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Year" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Month" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Day" nillable="true" type="s:int" />
+        </s:sequence>
+        <s:attribute name="ISOString" type="s:string" />
+      </s:complexType>
+      <s:complexType name="DO_TIME">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ISOString" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Hour" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Minute" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Second" nillable="true" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MessageIdentifierVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="VersionLifecycleState" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="1" maxOccurs="1" name="IS_Queriable" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompositionSignature" type="s1:SignatureVO" />
+          <s:element minOccurs="0" maxOccurs="1" name="SystemID" type="s1:DO_IDENTIFIER" />
+          <s:element minOccurs="0" maxOccurs="1" name="HealthCareFacilityID" type="s1:DO_IDENTIFIER" />
+          <s:element minOccurs="0" maxOccurs="1" name="PatientUID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompositionUID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Committer" type="s1:ProviderInfoVO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SignatureVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SignatureValue" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="SignatureMethod" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TimeStamp" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Certificate" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubjectDN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Thumbprint" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SignerRole" type="s1:DO_CODED_TEXT" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProviderInfoVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Identifier" type="s1:DO_IDENTIFIER" />
+        </s:sequence>
+        <s:attribute name="FirstName" type="s:string" />
+        <s:attribute name="LastName" type="s:string" />
+        <s:attribute name="FullName" type="s:string" />
+      </s:complexType>
+      <s:complexType name="BillPatientCompositionVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Admission" type="s1:AdmissionVO" />
+          <s:element minOccurs="0" maxOccurs="1" name="Discharge" type="s1:DischargeVO" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillSummary" type="s1:BillSummaryVO" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillServices" type="s1:ArrayOfServiceDetailsVO1" />
+          <s:element minOccurs="0" maxOccurs="1" name="Insurance" type="s1:ArrayOfInsuranceVO" />
+          <s:element minOccurs="0" maxOccurs="1" name="Death" type="s1:BasicDeathDetailsVO" />
+          <s:element minOccurs="0" maxOccurs="1" name="Diagnosis" type="s1:ArrayOfDiagnosisVO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AdmissionVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EMSID" type="s1:DO_IDENTIFIER" />
+          <s:element minOccurs="0" maxOccurs="1" name="OtherDateTime" type="s1:ArrayOfDateTimePointVO" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdmissionDate" type="s1:DO_DATE" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdmissionTime" type="s1:DO_TIME" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdmissionType" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="MedicalRecordNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Institute" type="s1:OrganizationVO" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReasonForEncounter" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdmittingDoctor" type="s1:HealthcareProviderVO" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReferringDoctor" type="s1:HealthcareProviderVO" />
+          <s:element minOccurs="0" maxOccurs="1" name="AttendingDoctor" type="s1:HealthcareProviderVO" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdmissionWard" type="s1:HospitalWardVO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDateTimePointVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DateTimePointVO" nillable="true" type="s1:DateTimePointVO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DateTimePointVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Point" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="PointDate" type="s1:DO_DATE" />
+          <s:element minOccurs="0" maxOccurs="1" name="PointTime" type="s1:DO_TIME" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OrganizationVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ID" type="s1:DO_IDENTIFIER" />
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="Location" type="s1:HighLevelAreaVO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="HealthcareProviderVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Specialty" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="Identifier" type="s1:DO_IDENTIFIER" />
+          <s:element minOccurs="0" maxOccurs="1" name="Role" type="s1:DO_CODED_TEXT" />
+        </s:sequence>
+        <s:attribute name="FirstName" type="s:string" />
+        <s:attribute name="LastName" type="s:string" />
+        <s:attribute name="FullName" type="s:string" />
+      </s:complexType>
+      <s:complexType name="HospitalWardVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="Room" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Bed" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DischargeVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DischargeTime" type="s1:DO_TIME" />
+          <s:element minOccurs="0" maxOccurs="1" name="DischargeDate" type="s1:DO_DATE" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConditionOnDischarge" type="s1:DO_CODED_TEXT" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BillSummaryVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TotalOtherCosts" type="s1:ArrayOfQuantitiesVO" />
+          <s:element minOccurs="0" maxOccurs="1" name="Insurer" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="InsurerBox" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="TotalBasicInsuranceContribution" type="s1:DO_QUANTITY" />
+          <s:element minOccurs="1" maxOccurs="1" name="HospitalAccreditation" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MedicalRecordType" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="GlobalPackage" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="TotalPatientContribution" type="s1:DO_QUANTITY" />
+          <s:element minOccurs="0" maxOccurs="1" name="TotalCharge" type="s1:DO_QUANTITY" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceGroupRow" type="s1:ArrayOfServiceGroupRowVO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfQuantitiesVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="QuantitiesVO" nillable="true" type="s1:QuantitiesVO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="QuantitiesVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s1:DO_QUANTITY" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DO_QUANTITY">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Magnitude" nillable="true" type="s:double" />
+        </s:sequence>
+        <s:attribute name="Unit" type="s:string" />
+      </s:complexType>
+      <s:complexType name="ArrayOfServiceGroupRowVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ServiceGroupRowVO" type="s1:ServiceGroupRowVO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ServiceGroupRowVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PatientContribution" type="s1:DO_QUANTITY" />
+          <s:element minOccurs="0" maxOccurs="1" name="OtherCosts" type="s1:ArrayOfQuantitiesVO" />
+          <s:element minOccurs="0" maxOccurs="1" name="BasicInsuranceContribution" type="s1:DO_QUANTITY" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCount" type="s1:DO_QUANTITY" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceType" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="TotalCharge" type="s1:DO_QUANTITY" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfServiceDetailsVO1">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ServiceDetailsVO" type="s1:ServiceDetailsVO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ServiceDetailsVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExtraLocation" type="s1:OrganizationVO" />
+          <s:element minOccurs="0" maxOccurs="1" name="RelatedService" type="s1:ArrayOfServiceDetailsVO" />
+          <s:element minOccurs="0" maxOccurs="1" name="PKID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RelativeCost" type="s1:ArrayOfRelativeCostVO" />
+          <s:element minOccurs="0" maxOccurs="1" name="OtherCosts" type="s1:ArrayOfQuantitiesVO" />
+          <s:element minOccurs="0" maxOccurs="1" name="BasicInsuranceContribution" type="s1:DO_QUANTITY" />
+          <s:element minOccurs="0" maxOccurs="1" name="Bed" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCount" type="s1:DO_QUANTITY" />
+          <s:element minOccurs="0" maxOccurs="1" name="PatientContribution" type="s1:DO_QUANTITY" />
+          <s:element minOccurs="0" maxOccurs="1" name="Room" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Service" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="StartDate" type="s1:DO_DATE" />
+          <s:element minOccurs="0" maxOccurs="1" name="StartTime" type="s1:DO_TIME" />
+          <s:element minOccurs="0" maxOccurs="1" name="EndDate" type="s1:DO_DATE" />
+          <s:element minOccurs="0" maxOccurs="1" name="EndTime" type="s1:DO_TIME" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceType" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="TotalCharge" type="s1:DO_QUANTITY" />
+          <s:element minOccurs="0" maxOccurs="1" name="WardType" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="WardName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceProvider" type="s1:HealthcareProviderVO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfServiceDetailsVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ServiceDetailsVO" nillable="true" type="s1:ServiceDetailsVO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRelativeCostVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RelativeCostVO" nillable="true" type="s1:RelativeCostVO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RelativeCostVO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="KValue" nillable="true" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="KType" type="s1:DO_CODED_TEXT" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfInsuranceVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="InsuranceVO" type="s1:InsuranceVO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="InsuranceVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="InsuranceContribution" type="s1:DO_QUANTITY" />
+          <s:element minOccurs="0" maxOccurs="1" name="InsuranceOtherCosts" type="s1:ArrayOfQuantitiesVO" />
+          <s:element minOccurs="0" maxOccurs="1" name="Insurer" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="InsuranceBox" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="InsuranceBookletSerialNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InsuranceExpirationDate" type="s1:DO_DATE" />
+          <s:element minOccurs="0" maxOccurs="1" name="InsuredNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SHEBAD" type="s1:DO_IDENTIFIER" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BasicDeathDetailsVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeathDate" type="s1:DO_DATE" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeathTime" type="s1:DO_TIME" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeathLocation" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="HospitalWard" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cause" type="s1:ArrayOfCauseVO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCauseVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CauseVO" type="s1:CauseVO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CauseVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Cause" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s1:DO_CODED_TEXT" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDiagnosisVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DiagnosisVO" nillable="true" type="s1:DiagnosisVO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DiagnosisVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Diagnosis" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comment" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiagnosisDate" type="s1:DO_DATE" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiagnosisTime" type="s1:DO_TIME" />
+          <s:element minOccurs="0" maxOccurs="1" name="Severity" type="s1:DO_ORDINAL" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DO_ORDINAL">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Symbol" type="s1:DO_CODED_TEXT" />
+          <s:element minOccurs="1" maxOccurs="1" name="Value" nillable="true" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ResultVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MessageUID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompositionUID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="patientUID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="HeaderMessageVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Sender" type="s1:SystemSenderVO" />
+          <s:element minOccurs="0" maxOccurs="1" name="SenderList" type="s1:ArrayOfSystemSenderVO" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:complexType name="SystemSenderVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SystemID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocationID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="URL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Proof" type="s1:SignatureVO" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateTimeStamp" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSystemSenderVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SystemSenderVO" nillable="true" type="s1:SystemSenderVO" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SavePatientBillSoapIn">
+    <wsdl:part name="parameters" element="tns:SavePatientBill" />
+  </wsdl:message>
+  <wsdl:message name="SavePatientBillSoapOut">
+    <wsdl:part name="parameters" element="tns:SavePatientBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="SavePatientBillHeaderMessageVO">
+    <wsdl:part name="HeaderMessageVO" element="tns:HeaderMessageVO" />
+  </wsdl:message>
+  <wsdl:message name="SavePatientBillSecureSoapIn">
+    <wsdl:part name="parameters" element="tns:SavePatientBillSecure" />
+  </wsdl:message>
+  <wsdl:message name="SavePatientBillSecureSoapOut">
+    <wsdl:part name="parameters" element="tns:SavePatientBillSecureResponse" />
+  </wsdl:message>
+  <wsdl:message name="SavePatientBillSecureHeaderMessageVO">
+    <wsdl:part name="HeaderMessageVO" element="tns:HeaderMessageVO" />
+  </wsdl:message>
+  <wsdl:portType name="BillPatientServiceSoap">
+    <wsdl:operation name="SavePatientBill">
+      <wsdl:input message="tns:SavePatientBillSoapIn" />
+      <wsdl:output message="tns:SavePatientBillSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePatientBillSecure">
+      <wsdl:input message="tns:SavePatientBillSecureSoapIn" />
+      <wsdl:output message="tns:SavePatientBillSecureSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BillPatientServiceSoap" type="tns:BillPatientServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SavePatientBill">
+      <soap:operation soapAction="http://sepas.behdasht.gov.ir/SavePatientBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SavePatientBillHeaderMessageVO" part="HeaderMessageVO" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavePatientBillSecure">
+      <soap:operation soapAction="http://sepas.behdasht.gov.ir/SavePatientBillSecure" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SavePatientBillSecureHeaderMessageVO" part="HeaderMessageVO" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BillPatientServiceSoap12" type="tns:BillPatientServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SavePatientBill">
+      <soap12:operation soapAction="http://sepas.behdasht.gov.ir/SavePatientBill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SavePatientBillHeaderMessageVO" part="HeaderMessageVO" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavePatientBillSecure">
+      <soap12:operation soapAction="http://sepas.behdasht.gov.ir/SavePatientBillSecure" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SavePatientBillSecureHeaderMessageVO" part="HeaderMessageVO" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BillPatientService">
+    <wsdl:port name="BillPatientServiceSoap" binding="tns:BillPatientServiceSoap">
+      <soap:address location="http://ehrreptest.behdasht.gov.ir/billpatientservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="BillPatientServiceSoap12" binding="tns:BillPatientServiceSoap12">
+      <soap12:address location="http://ehrreptest.behdasht.gov.ir/billpatientservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

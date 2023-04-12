@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="داشبورد مدیریتی" />
+  <DataSources>
+    <SqlDataSource ComponentName="dashboardSqlDataSource1">
+      <Name>SQL Data Source 1</Name>
+      <Connection Name="localhost_MedicalDoc_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="localhost" />
+          <Parameter Name="database" Value="MedicalDoc" />
+          <Parameter Name="useIntegratedSecurity" Value="True" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="" />
+          <Parameter Name="password" Value="" />
+        </Parameters>
+      </Connection>
+      <Query Type="SelectQuery" Name="Vw_MainFinance">
+        <Tables>
+          <Table Name="Vw_MainFinance" Meta="0|0|125|340" />
+        </Tables>
+        <Columns>
+          <Column Table="Vw_MainFinance" Name="ID" />
+          <Column Table="Vw_MainFinance" Name="PersonalNo" />
+          <Column Table="Vw_MainFinance" Name="NationalCode" />
+          <Column Table="Vw_MainFinance" Name="FirstName" />
+          <Column Table="Vw_MainFinance" Name="LastName" />
+          <Column Table="Vw_MainFinance" Name="Company" />
+          <Column Table="Vw_MainFinance" Name="SubCompany" />
+          <Column Table="Vw_MainFinance" Name="Service" />
+          <Column Table="Vw_MainFinance" Name="Cat" />
+          <Column Table="Vw_MainFinance" Name="Name" />
+          <Column Table="Vw_MainFinance" Name="CreationDate" />
+          <Column Table="Vw_MainFinance" Name="Year" />
+          <Column Table="Vw_MainFinance" Name="Month" />
+          <Column Table="Vw_MainFinance" Name="Price" />
+          <Column Table="Vw_MainFinance" Name="Amount" />
+        </Columns>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="Vw_MainFinance">
+            <Field Name="ID" Type="Int32" />
+            <Field Name="PersonalNo" Type="Int32" />
+            <Field Name="NationalCode" Type="String" />
+            <Field Name="FirstName" Type="String" />
+            <Field Name="LastName" Type="String" />
+            <Field Name="Company" Type="String" />
+            <Field Name="SubCompany" Type="String" />
+            <Field Name="Service" Type="String" />
+            <Field Name="Cat" Type="String" />
+            <Field Name="Name" Type="String" />
+            <Field Name="CreationDate" Type="String" />
+            <Field Name="Year" Type="String" />
+            <Field Name="Month" Type="String" />
+            <Field Name="Price" Type="Decimal" />
+            <Field Name="Amount" Type="Int32" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <TreeView ComponentName="treeViewDashboardItem1" Name="تاریخ" DataSource="dashboardSqlDataSource1" DataMember="Vw_MainFinance">
+      <DataItems>
+        <Dimension DataMember="Year" UniqueName="DataItem0" />
+        <Dimension DataMember="Month" UniqueName="DataItem1" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+        <Dimension UniqueName="DataItem1" />
+      </FilterDimensions>
+    </TreeView>
+    <TreeView ComponentName="treeViewDashboardItem2" Name="خدمت" DataSource="dashboardSqlDataSource1" DataMember="Vw_MainFinance">
+      <DataItems>
+        <Dimension DataMember="Cat" UniqueName="DataItem0" />
+        <Dimension DataMember="Service" UniqueName="DataItem1" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+        <Dimension UniqueName="DataItem1" />
+      </FilterDimensions>
+    </TreeView>
+    <TreeView ComponentName="treeViewDashboardItem3" Name="شرکت" DataSource="dashboardSqlDataSource1" DataMember="Vw_MainFinance">
+      <DataItems>
+        <Dimension DataMember="Company" UniqueName="DataItem0" />
+        <Dimension DataMember="SubCompany" UniqueName="DataItem1" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem1" />
+        <Dimension UniqueName="DataItem0" />
+      </FilterDimensions>
+    </TreeView>
+    <Pie ComponentName="pieDashboardItem1" Name="نمودار کیکی" DataSource="dashboardSqlDataSource1" DataMember="Vw_MainFinance" LabelContentType="ArgumentAndValue" ContentArrangementMode="FixedColumnCount">
+      <DataItems>
+        <Dimension DataMember="Service" ColoringMode="Hue" UniqueName="DataItem0" />
+        <Measure DataMember="Price" Name="به تفکیک خدمات" UniqueName="DataItem1">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+        <Dimension DataMember="Cat" UniqueName="DataItem2" />
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem2" />
+        <Argument UniqueName="DataItem0" />
+      </Arguments>
+      <Values>
+        <Value UniqueName="DataItem1" />
+      </Values>
+    </Pie>
+    <Chart ComponentName="chartDashboardItem1" Name="نمودار میله ای به تفکیک شرکت ها" DataSource="dashboardSqlDataSource1" DataMember="Vw_MainFinance">
+      <DataItems>
+        <Dimension DataMember="Company" UniqueName="DataItem0" />
+        <Dimension DataMember="SubCompany" ColoringMode="Hue" UniqueName="DataItem1" />
+        <Measure DataMember="Price" Name="مبلغ" UniqueName="DataItem2">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem1" />
+        <Argument UniqueName="DataItem0" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple Name="هزینه ها">
+              <Value UniqueName="DataItem2" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutGroup Orientation="Vertical" Weight="72.040072859745">
+        <LayoutItem DashboardItem="pieDashboardItem1" Weight="59.634551495016609" />
+        <LayoutItem DashboardItem="chartDashboardItem1" Weight="40.365448504983391" />
+      </LayoutGroup>
+      <LayoutGroup Orientation="Vertical" Weight="27.959927140255008">
+        <LayoutItem DashboardItem="treeViewDashboardItem1" Weight="23.920265780730897" />
+        <LayoutItem DashboardItem="treeViewDashboardItem2" Weight="34.053156146179404" />
+        <LayoutItem DashboardItem="treeViewDashboardItem3" Weight="42.0265780730897" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

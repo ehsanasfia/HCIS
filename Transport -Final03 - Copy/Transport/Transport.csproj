@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{48BB8477-3E71-46FF-AFAE-CBA50F4C3C3F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Transport</RootNamespace>
+    <AssemblyName>Transport</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.BonusSkins.v16.1" />
+    <Reference Include="DevExpress.Data.v16.1" />
+    <Reference Include="DevExpress.Printing.v16.1.Core" />
+    <Reference Include="DevExpress.Utils.v16.1" />
+    <Reference Include="DevExpress.XtraBars.v16.1" />
+    <Reference Include="DevExpress.Sparkline.v16.1.Core" />
+    <Reference Include="DevExpress.XtraEditors.v16.1" />
+    <Reference Include="DevExpress.XtraGrid.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\HealthDataClasses.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HealthDataClasses.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgCarDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgCarDetails.Designer.cs">
+      <DependentUpon>dlgCarDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgDriverstable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgDriverstable.designer.cs">
+      <DependentUpon>dlgDriverstable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgPhonBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgPhonBill.designer.cs">
+      <DependentUpon>dlgPhonBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCivilCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCivilCar.designer.cs">
+      <DependentUpon>frmCivilCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCPR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCPR.designer.cs">
+      <DependentUpon>FrmCPR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDailyRep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDailyRep.Designer.cs">
+      <DependentUpon>frmDailyRep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDrivers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDrivers.Designer.cs">
+      <DependentUpon>frmDrivers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMain.designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOutcall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOutcall.designer.cs">
+      <DependentUpon>frmOutcall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPath.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPath.Designer.cs">
+      <DependentUpon>frmPath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPersonelMokhaberat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPersonelMokhaberat.designer.cs">
+      <DependentUpon>frmPersonelMokhaberat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPhoneList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPhoneList.designer.cs">
+      <DependentUpon>frmPhoneList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProfile.Designer.cs">
+      <DependentUpon>frmProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmNotresunit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNotresunit.designer.cs">
+      <DependentUpon>frmNotresunit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTelephoneBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTelephoneBill.designer.cs">
+      <DependentUpon>frmTelephoneBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainModule.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Data\HealthDataClasses.dbml.layout">
+      <DependentUpon>HealthDataClasses.dbml</DependentUpon>
+    </None>
+    <None Include="app.config" />
+    <EmbeddedResource Include="Dialogs\dlgCarDetails.resx">
+      <DependentUpon>dlgCarDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgDriverstable.resx">
+      <DependentUpon>dlgDriverstable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgPhonBill.resx">
+      <DependentUpon>dlgPhonBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCivilCar.resx">
+      <DependentUpon>frmCivilCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCPR.resx">
+      <DependentUpon>FrmCPR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDailyRep.resx">
+      <DependentUpon>frmDailyRep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDrivers.resx">
+      <DependentUpon>frmDrivers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOutcall.resx">
+      <DependentUpon>frmOutcall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPath.resx">
+      <DependentUpon>frmPath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPersonelMokhaberat.resx">
+      <DependentUpon>frmPersonelMokhaberat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPhoneList.resx">
+      <DependentUpon>frmPhoneList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProfile.resx">
+      <DependentUpon>frmProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmNotresunit.resx">
+      <DependentUpon>frmNotresunit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTelephoneBill.resx">
+      <DependentUpon>frmTelephoneBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Data\HealthDataClasses.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>HealthDataClasses.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\DataSources\ONCall.Data.Definition.datasource" />
+    <None Include="Properties\DataSources\ONCall.Data.Shift.datasource" />
+    <None Include="Properties\DataSources\ONCall.Data.tblAllPhoneNumber.datasource" />
+    <None Include="Properties\DataSources\ONCall.Data.tblMngCarDriver.datasource" />
+    <None Include="Properties\DataSources\ONCall.Data.tblMngCarInsurance.datasource" />
+    <None Include="Properties\DataSources\ONCall.Data.tblMngCivilCar.datasource" />
+    <None Include="Properties\DataSources\ONCall.Data.tblMngCprGroup.datasource" />
+    <None Include="Properties\DataSources\ONCall.Data.tblMngDailyOperationCivilianCar.datasource" />
+    <None Include="Properties\DataSources\ONCall.Data.tblMngDirectionCar.datasource" />
+    <None Include="Properties\DataSources\ONCall.Data.tblMngFactorRepair.datasource" />
+    <None Include="Properties\DataSources\ONCall.Data.tblMngFuelCar.datasource" />
+    <None Include="Properties\DataSources\ONCall.Data.tblMngLeaseDriver.datasource" />
+    <None Include="Properties\DataSources\ONCall.Data.tblMngNotResponse.datasource" />
+    <None Include="Properties\DataSources\ONCall.Data.tblMngOut_of_CareCall.datasource" />
+    <None Include="Properties\DataSources\ONCall.Data.tblMngTelecommunicationPersonnel.datasource" />
+    <None Include="Properties\DataSources\ONCall.Data.tblMngTicketPhone.datasource" />
+    <None Include="Properties\DataSources\ONCall.Data.tblMngtransportPerson.datasource" />
+    <None Include="Properties\DataSources\ONCall.Data.tblWoman.datasource" />
+    <None Include="Properties\DataSources\Transport.Data.tblMngDailyRep.datasource" />
+    <None Include="Properties\DataSources\Transport.Data.tblMngtransportPersonel.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SecurityLoginsAndAccessControl\SecurityLoginsAndAccessControl\SecurityLoginsAndAccessControl.vbproj">
+      <Project>{b07c6401-2d8d-4c7c-b785-2de29800a45f}</Project>
+      <Name>SecurityLoginsAndAccessControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

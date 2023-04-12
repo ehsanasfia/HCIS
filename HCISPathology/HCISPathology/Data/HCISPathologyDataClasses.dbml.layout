@@ -1,0 +1,512 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 24.25, 22.75" name="HCISPathologyDataClasses">
+  <DataContextMoniker Name="/HCISPathologyDataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="ff834f13-77ac-4591-8aef-a8b40d6dab05" absoluteBounds="9, 3.875, 2, 5.6169254557291666">
+      <DataClassMoniker Name="/HCISPathologyDataClassesDataContext/GivenServiceD" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d6f0203e-b992-45ab-9612-209b896b9cd2" absoluteBounds="9.015, 4.335, 1.9700000000000002, 5.0569254557291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9cf5bbb7-2cc9-44b8-9dbe-e5e65fd678b2" absoluteBounds="6.25, 0.75, 2, 11.770571289062502">
+      <DataClassMoniker Name="/HCISPathologyDataClassesDataContext/GivenServiceM" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3fe52b18-1fb5-452c-b0f4-e21b6dcb2ee4" absoluteBounds="6.265, 1.21, 1.9700000000000002, 11.2105712890625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.25 : 6.68346272786458); (9 : 6.68346272786458)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/GivenServiceM/GivenServiceM_GivenServiceD" />
+      <nodes>
+        <classShapeMoniker Id="9cf5bbb7-2cc9-44b8-9dbe-e5e65fd678b2" />
+        <classShapeMoniker Id="ff834f13-77ac-4591-8aef-a8b40d6dab05" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.25 : 12.5205712890625); (7.25 : 12.7705712890625); (7.69307692307692 : 12.7705712890625); (7.69307692307692 : 12.5205712890625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/GivenServiceM/GivenServiceM_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="9cf5bbb7-2cc9-44b8-9dbe-e5e65fd678b2" />
+        <classShapeMoniker Id="9cf5bbb7-2cc9-44b8-9dbe-e5e65fd678b2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="03912ee1-23db-4a60-9056-467ed7240ed0" absoluteBounds="6.375, 14.375, 2, 4.2708154296875005">
+      <DataClassMoniker Name="/HCISPathologyDataClassesDataContext/Service" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c52ae79c-20e9-443c-b6a1-98ffa3e03f57" absoluteBounds="6.39, 14.835, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="82c92a3a-2fe5-4026-9c77-838d089df7f0" absoluteBounds="3.625, 15.5, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/HCISPathologyDataClassesDataContext/ServiceCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="70f3ac03-7860-45a5-9e74-260249466b0c" absoluteBounds="3.64, 15.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.375 : 16.3181469726563); (8.79166666666667 : 16.3181469726563 : JumpStart); (8.95833333333333 : 16.3181469726563 : JumpEnd); (9.1562505 : 16.3181469726563); (9.1562505 : 9.49192545572917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Service/Service_GivenServiceD" />
+      <nodes>
+        <classShapeMoniker Id="03912ee1-23db-4a60-9056-467ed7240ed0" />
+        <classShapeMoniker Id="ff834f13-77ac-4591-8aef-a8b40d6dab05" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.08423076923077 : 18.6458154296875); (7.08423076923077 : 18.8958154296875); (7.67961538461539 : 18.8958154296875); (7.67961538461539 : 18.6458154296875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Service/Service_Service" />
+      <nodes>
+        <classShapeMoniker Id="03912ee1-23db-4a60-9056-467ed7240ed0" />
+        <classShapeMoniker Id="03912ee1-23db-4a60-9056-467ed7240ed0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.625 : 15.5); (6 : 15.125); (6 : 12.8955712890625); (5.91744558013797 : 12.8955712890625); (6.28384515384615 : 12.5205712890625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/ServiceCategory/ServiceCategory_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="82c92a3a-2fe5-4026-9c77-838d089df7f0" />
+        <classShapeMoniker Id="9cf5bbb7-2cc9-44b8-9dbe-e5e65fd678b2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.66375 : 16.6939925130208); (3.66375 : 18.5664697265625); (6.375 : 18.5664697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/ServiceCategory/ServiceCategory_Service" />
+      <nodes>
+        <classShapeMoniker Id="82c92a3a-2fe5-4026-9c77-838d089df7f0" />
+        <classShapeMoniker Id="03912ee1-23db-4a60-9056-467ed7240ed0" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="476229a8-6f6d-4413-b987-ad25e08e5319" absoluteBounds="11, 9.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/HCISPathologyDataClassesDataContext/SampleAnswer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="60beb6e0-e569-4af2-8d3d-a3e8613f7091" absoluteBounds="11.015, 10.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.375 : 18.4223046875); (12.21875 : 18.4223046875); (12.21875 : 11.4535953776042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Service/Service_SampleAnswer" />
+      <nodes>
+        <classShapeMoniker Id="03912ee1-23db-4a60-9056-467ed7240ed0" />
+        <classShapeMoniker Id="476229a8-6f6d-4413-b987-ad25e08e5319" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6b8f9f63-d701-459a-81ac-89f9b697f6d8" absoluteBounds="12.25, 4.875, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/HCISPathologyDataClassesDataContext/Tariff" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7e2ca038-13d7-499d-a314-b55dc18fb8a0" absoluteBounds="12.265, 5.335, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.375 : 18.5881168619792); (13.1875 : 18.5881168619792); (13.1875 : 7.60740397135417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Service/Service_Tariff" />
+      <nodes>
+        <classShapeMoniker Id="03912ee1-23db-4a60-9056-467ed7240ed0" />
+        <classShapeMoniker Id="6b8f9f63-d701-459a-81ac-89f9b697f6d8" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a9c6cf94-6c4b-4b1a-90e6-c91d60c1ff5f" absoluteBounds="13.875, 8.375, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/HCISPathologyDataClassesDataContext/ViewTariffMaxDateFull" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bb034e86-8617-45eb-a5d1-e0fc9198a00e" absoluteBounds="13.89, 8.835, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cf325a47-fa14-47ad-8185-b92c7f96eefd" absoluteBounds="11.75, 2, 2, 1.3862939453125003">
+      <DataClassMoniker Name="/HCISPathologyDataClassesDataContext/GivenDiagnosticServiceD" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8f10b2e0-328d-4d34-88d7-9ec4ae1903d6" absoluteBounds="11.765, 2.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11 : 8.58091471354167); (11.96875 : 8.58091471354167); (11.96875 : 3.3862939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/GivenServiceD/GivenServiceD_GivenDiagnosticServiceD" />
+      <nodes>
+        <classShapeMoniker Id="ff834f13-77ac-4591-8aef-a8b40d6dab05" />
+        <classShapeMoniker Id="cf325a47-fa14-47ad-8185-b92c7f96eefd" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="62cca2fe-6ea4-45e7-8ef3-c3d980e6cdd8" absoluteBounds="1, 1, 2, 1.3862939453125">
+      <DataClassMoniker Name="/HCISPathologyDataClassesDataContext/Insurance" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3c2d98ad-5fd0-46ca-b562-ab2d546fbb48" absoluteBounds="1.0150000000000001, 1.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3 : 1.69314697265625); (4.41666666666667 : 1.69314697265625 : JumpStart); (4.58333333333333 : 1.69314697265625 : JumpEnd); (4.94791866666667 : 1.69314697265625 : JumpStart); (5.11458533333333 : 1.69314697265625 : JumpEnd); (5.54166416666667 : 1.69314697265625 : JumpStart); (5.83333333333333 : 1.69314697265625 : JumpEnd); (6.25 : 1.69314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Insurance/Insurance_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="62cca2fe-6ea4-45e7-8ef3-c3d980e6cdd8" />
+        <classShapeMoniker Id="9cf5bbb7-2cc9-44b8-9dbe-e5e65fd678b2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3 : 2.07097245898438); (4.41666666666667 : 2.07097245898437 : JumpStart); (4.58333333333333 : 2.07097245898438 : JumpEnd); (4.94791866666667 : 2.07097245898437 : JumpStart); (5.11458533333333 : 2.07097245898438 : JumpEnd); (5.54166416666667 : 2.07097245898437 : JumpStart); (5.70833083333333 : 2.07097245898438 : JumpEnd); (5.75 : 2.07097245898438); (5.75 : 0.25); (14 : 0.25); (14 : 4.5); (13.25 : 4.5); (13.25 : 4.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Insurance/Insurance_Tariff" />
+      <nodes>
+        <classShapeMoniker Id="62cca2fe-6ea4-45e7-8ef3-c3d980e6cdd8" />
+        <classShapeMoniker Id="6b8f9f63-d701-459a-81ac-89f9b697f6d8" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1643ea88-6990-446c-9b3b-cc73d05f6c53" absoluteBounds="9.375, 14.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/HCISPathologyDataClassesDataContext/DiagnosticServiceDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="adebb23a-842e-42dc-8288-53dbb2dacec6" absoluteBounds="9.39, 14.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.375 : 15.1931469726562); (9.375 : 15.1931469726562)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Service/Service_DiagnosticServiceDetail" />
+      <nodes>
+        <classShapeMoniker Id="03912ee1-23db-4a60-9056-467ed7240ed0" />
+        <classShapeMoniker Id="1643ea88-6990-446c-9b3b-cc73d05f6c53" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="7a766aee-e72f-445c-b1d8-8d7e8f4adf10" absoluteBounds="13.375, 13.625, 2, 4.6554182942708326">
+      <DataClassMoniker Name="/HCISPathologyDataClassesDataContext/Payment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c3c72768-ee4f-498e-886c-683ddc046086" absoluteBounds="13.39, 14.085, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.4996153846154 : 18.2804182942708); (14.4996153846154 : 18.5304182942708); (14.8180769230769 : 18.5304182942708); (14.8180769230769 : 18.2804182942708)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Payment/Payment_Payment" />
+      <nodes>
+        <classShapeMoniker Id="7a766aee-e72f-445c-b1d8-8d7e8f4adf10" />
+        <classShapeMoniker Id="7a766aee-e72f-445c-b1d8-8d7e8f4adf10" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="abe4b7d1-923b-4163-b3bc-cce40aa60688" absoluteBounds="15.125, 3.375, 2, 4.0785139973958326">
+      <DataClassMoniker Name="/HCISPathologyDataClassesDataContext/Agenda" />
+      <nestedChildShapes>
+        <elementListCompartment Id="39cd4548-14fd-4019-a0ab-6df41fa8f627" absoluteBounds="15.14, 3.835, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1e20c1f3-1b21-4b34-a7c1-1262174aa10c" absoluteBounds="9.125, 16.75, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/HCISPathologyDataClassesDataContext/FavoriteService" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cf9b17d0-d869-4ce2-9a1e-417643dc63d8" absoluteBounds="9.14, 17.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(16.6562525 : 7.45351399739583); (16.6562525 : 12.4221419270833); (16.4739595833333 : 12.4221419270833 : JumpStart); (16.3072929166667 : 12.4221419270833 : JumpEnd); (16.2083333333333 : 12.4221419270833 : JumpStart); (16.0416666666667 : 12.4221419270833 : JumpEnd); (13.2708333333333 : 12.4221419270833 : JumpStart); (13.1041666666667 : 12.4221419270833 : JumpEnd); (12.3020833333333 : 12.4221419270833 : JumpStart); (12.1354166666667 : 12.4221419270833 : JumpEnd); (9.23958383333333 : 12.4221419270833 : JumpStart); (9.07291716666667 : 12.4221419270833 : JumpEnd); (8.25 : 12.4221419270833)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Agenda/Agenda_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="abe4b7d1-923b-4163-b3bc-cce40aa60688" />
+        <classShapeMoniker Id="9cf5bbb7-2cc9-44b8-9dbe-e5e65fd678b2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.375 : 18.3910521875); (13.1041666666667 : 18.3910521875 : JumpStart); (13.2708333333333 : 18.3910521875 : JumpEnd); (14.4162820512821 : 18.3910521875 : JumpStart); (14.5829487179487 : 18.3910521875 : JumpEnd); (14.7347435897436 : 18.3910521875 : JumpStart); (14.9014102564102 : 18.3910521875 : JumpEnd); (16.39062625 : 18.3910521875); (16.39062625 : 7.45351399739583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Service/Service_Agenda" />
+      <nodes>
+        <classShapeMoniker Id="03912ee1-23db-4a60-9056-467ed7240ed0" />
+        <classShapeMoniker Id="abe4b7d1-923b-4163-b3bc-cce40aa60688" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.375 : 17.4431469726563); (9.125 : 17.4431469726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Service/Service_FavoriteService" />
+      <nodes>
+        <classShapeMoniker Id="03912ee1-23db-4a60-9056-467ed7240ed0" />
+        <classShapeMoniker Id="1e20c1f3-1b21-4b34-a7c1-1262174aa10c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6cd1fe4c-337b-457c-9dc2-e91bee8b0f6c" absoluteBounds="19.25, 8, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/HCISPathologyDataClassesDataContext/Department" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2b470efd-08fc-475f-91ef-25dd66e4ad86" absoluteBounds="19.265, 8.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(20.25 : 10.1554996744792); (20.25 : 12.3908894270833); (16.4739595833333 : 12.3908894270833 : JumpStart); (16.3072929166667 : 12.3908894270833 : JumpEnd); (16.2083333333333 : 12.3908894270833 : JumpStart); (16.0416666666667 : 12.3908894270833 : JumpEnd); (13.2708333333333 : 12.3908894270833 : JumpStart); (13.1041666666667 : 12.3908894270833 : JumpEnd); (12.3020833333333 : 12.3908894270833 : JumpStart); (12.1354166666667 : 12.3908894270833 : JumpEnd); (9.23958383333333 : 12.3908894270833 : JumpStart); (9.07291716666667 : 12.3908894270833 : JumpEnd); (8.25 : 12.3908894270833)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Department/Department_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="6cd1fe4c-337b-457c-9dc2-e91bee8b0f6c" />
+        <classShapeMoniker Id="9cf5bbb7-2cc9-44b8-9dbe-e5e65fd678b2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(19.25 : 9.07774983723958); (16.7395858333333 : 9.07774983723958 : JumpStart); (16.5729191666667 : 9.07774983723958 : JumpEnd); (16.4739595833333 : 9.07774983723958 : JumpStart); (16.3072929166667 : 9.07774983723958 : JumpEnd); (16.125 : 9.07774983723958); (16.125 : 7.45351399739583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Department/Department_Agenda" />
+      <nodes>
+        <classShapeMoniker Id="6cd1fe4c-337b-457c-9dc2-e91bee8b0f6c" />
+        <classShapeMoniker Id="abe4b7d1-923b-4163-b3bc-cce40aa60688" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(19.9592307692308 : 8); (19.9592307692308 : 7.75); (20.5546153846154 : 7.75); (20.5546153846154 : 8)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Department/Department_Department" />
+      <nodes>
+        <classShapeMoniker Id="6cd1fe4c-337b-457c-9dc2-e91bee8b0f6c" />
+        <classShapeMoniker Id="6cd1fe4c-337b-457c-9dc2-e91bee8b0f6c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="731051c7-f812-4b2c-892d-2dc732378944" absoluteBounds="17.625, 0.5, 2, 4.2708154296875">
+      <DataClassMoniker Name="/HCISPathologyDataClassesDataContext/Reference" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5bb7636c-bfa0-462a-b243-46251079c648" absoluteBounds="17.64, 0.96, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(20.9335601923077 : 8); (20.9335601923077 : 2.63540771484375); (19.625 : 2.63540771484375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Department/Department_Reference" />
+      <nodes>
+        <classShapeMoniker Id="6cd1fe4c-337b-457c-9dc2-e91bee8b0f6c" />
+        <classShapeMoniker Id="731051c7-f812-4b2c-892d-2dc732378944" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(20.2569230769231 : 8); (20.2569230769231 : 3.73436407226562); (19.625 : 3.73436407226562)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Department/Department_Reference1" />
+      <nodes>
+        <classShapeMoniker Id="6cd1fe4c-337b-457c-9dc2-e91bee8b0f6c" />
+        <classShapeMoniker Id="731051c7-f812-4b2c-892d-2dc732378944" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 1.15625); (9.35416666666667 : 1.15625 : JumpStart); (9.52083333333333 : 1.15625 : JumpEnd); (13.9166666666667 : 1.15625 : JumpStart); (14.0833333333333 : 1.15625 : JumpEnd); (14.6666666666667 : 1.15625 : JumpStart); (14.8333333333333 : 1.15625 : JumpEnd); (17.625 : 1.15625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/GivenServiceM/GivenServiceM_Reference" />
+      <nodes>
+        <classShapeMoniker Id="9cf5bbb7-2cc9-44b8-9dbe-e5e65fd678b2" />
+        <classShapeMoniker Id="731051c7-f812-4b2c-892d-2dc732378944" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2ed76973-44f2-4541-b7fe-683748218fb1" absoluteBounds="3.5, 7.125, 2, 2.5401025390624996">
+      <DataClassMoniker Name="/HCISPathologyDataClassesDataContext/Staff" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c9265a23-e765-4ff5-97ae-a41459ac3c0e" absoluteBounds="3.515, 7.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="46d37a0d-5b9a-4686-b3f1-ae71015871a4" absoluteBounds="0.75, 14.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/HCISPathologyDataClassesDataContext/Speciality" />
+      <nestedChildShapes>
+        <elementListCompartment Id="35a69237-2a24-42a1-be4c-e0dccc1de8a7" absoluteBounds="0.765, 15.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 8.39505126953125); (5.54166416666667 : 8.39505126953125 : JumpStart); (5.70833083333333 : 8.39505126953125 : JumpEnd); (5.79166666666667 : 8.39505126953125 : JumpStart); (5.95833333333333 : 8.39505126953125 : JumpEnd); (6.1875 : 8.39505126953125); (6.1875 : 0.6875); (9.4375 : 0.6875); (9.4375 : 3.78125); (10 : 3.78125); (10 : 3.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Staff/Staff_GivenServiceD" />
+      <nodes>
+        <classShapeMoniker Id="2ed76973-44f2-4541-b7fe-683748218fb1" />
+        <classShapeMoniker Id="ff834f13-77ac-4591-8aef-a8b40d6dab05" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 7.69752563476562); (5.54166416666667 : 7.69752563476562 : JumpStart); (5.70833083333333 : 7.69752563476562 : JumpEnd); (6.25 : 7.69752563476562)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Staff/Staff_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="2ed76973-44f2-4541-b7fe-683748218fb1" />
+        <classShapeMoniker Id="9cf5bbb7-2cc9-44b8-9dbe-e5e65fd678b2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 9.09257690429687); (5.54166416666667 : 9.09257690429687 : JumpStart); (5.70833083333333 : 9.09257690429687 : JumpEnd); (5.79166666666667 : 9.09257690429687 : JumpStart); (5.95833333333333 : 9.09257690429687 : JumpEnd); (6.25 : 9.09257690429687)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Staff/Staff_GivenServiceM1" />
+      <nodes>
+        <classShapeMoniker Id="2ed76973-44f2-4541-b7fe-683748218fb1" />
+        <classShapeMoniker Id="9cf5bbb7-2cc9-44b8-9dbe-e5e65fd678b2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 8.74381408691406); (5.54166416666667 : 8.74381408691406 : JumpStart); (5.70833083333333 : 8.74381408691406 : JumpEnd); (5.79166666666667 : 8.74381408691406 : JumpStart); (5.95833333333333 : 8.74381408691406 : JumpEnd); (6.25 : 8.74381408691406)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Staff/Staff_GivenServiceM2" />
+      <nodes>
+        <classShapeMoniker Id="2ed76973-44f2-4541-b7fe-683748218fb1" />
+        <classShapeMoniker Id="9cf5bbb7-2cc9-44b8-9dbe-e5e65fd678b2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 9.06132890429688); (5.54166416666667 : 9.06132890429688 : JumpStart); (5.70833083333333 : 9.06132890429688 : JumpEnd); (5.79166666666667 : 9.06132890429688 : JumpStart); (5.95833333333333 : 9.06132890429688 : JumpEnd); (6.125 : 9.06132890429688); (6.125 : 12.6455712890625); (7.16666666666667 : 12.6455712890625 : JumpStart); (7.33333333333333 : 12.6455712890625 : JumpEnd); (7.60974358974359 : 12.6455712890625 : JumpStart); (7.77641025641025 : 12.6455712890625 : JumpEnd); (9.07291716666667 : 12.6455712890625 : JumpStart); (9.23958383333333 : 12.6455712890625 : JumpEnd); (12.1354166666667 : 12.6455712890625 : JumpStart); (12.3020833333333 : 12.6455712890625 : JumpEnd); (13.1041666666667 : 12.6455712890625 : JumpStart); (13.2708333333333 : 12.6455712890625 : JumpEnd); (14.375 : 12.6455712890625); (14.375 : 13.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Staff/Staff_Payment" />
+      <nodes>
+        <classShapeMoniker Id="2ed76973-44f2-4541-b7fe-683748218fb1" />
+        <classShapeMoniker Id="7a766aee-e72f-445c-b1d8-8d7e8f4adf10" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.031252 : 7.125); (5.031252 : 0.5); (5.66666666666667 : 0.499999999999999 : JumpStart); (5.83333333333333 : 0.5 : JumpEnd); (13.9166666666667 : 0.499999999999999 : JumpStart); (14.0833333333333 : 0.5 : JumpEnd); (14.75 : 0.5); (14.75 : 5.41425699869792); (15.125 : 5.41425699869792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Staff/Staff_Agenda" />
+      <nodes>
+        <classShapeMoniker Id="2ed76973-44f2-4541-b7fe-683748218fb1" />
+        <classShapeMoniker Id="abe4b7d1-923b-4163-b3bc-cce40aa60688" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 7.72877363476563); (5.54166416666667 : 7.72877363476563 : JumpStart); (5.70833083333333 : 7.72877363476563 : JumpEnd); (5.875 : 7.72877363476563); (5.875 : 12.8330712890625); (5.89517884242267 : 12.8330712890625 : JumpStart); (6.06184550908933 : 12.8330712890625 : JumpEnd); (8.875 : 12.8330712890625); (8.875 : 16.5); (10.125 : 16.5); (10.125 : 16.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Staff/Staff_FavoriteService" />
+      <nodes>
+        <classShapeMoniker Id="2ed76973-44f2-4541-b7fe-683748218fb1" />
+        <classShapeMoniker Id="1e20c1f3-1b21-4b34-a7c1-1262174aa10c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 7.125); (4.5 : 0.59375); (4.94791866666667 : 0.593749999999999 : JumpStart); (5.11458533333333 : 0.59375 : JumpEnd); (5.66666666666667 : 0.593749999999999 : JumpStart); (5.83333333333333 : 0.59375 : JumpEnd); (13.9166666666667 : 0.593749999999999 : JumpStart); (14.0833333333333 : 0.59375 : JumpEnd); (14.6666666666667 : 0.593749999999999 : JumpStart); (14.8333333333333 : 0.59375 : JumpEnd); (17.625 : 0.59375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Staff/Staff_Reference" />
+      <nodes>
+        <classShapeMoniker Id="2ed76973-44f2-4541-b7fe-683748218fb1" />
+        <classShapeMoniker Id="731051c7-f812-4b2c-892d-2dc732378944" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 15.3469962565104); (3.29166666666667 : 15.3469962565104 : JumpStart); (3.45833333333333 : 15.3469962565104 : JumpEnd); (3.5 : 15.3469962565104); (3.5 : 12.75); (4.1874975 : 12.75); (4.1874975 : 9.6651025390625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Speciality/Speciality_Staff" />
+      <nodes>
+        <classShapeMoniker Id="46d37a0d-5b9a-4686-b3f1-ae71015871a4" />
+        <classShapeMoniker Id="2ed76973-44f2-4541-b7fe-683748218fb1" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="f3b8121a-9b65-44a7-a7a1-a12f2c10c238" absoluteBounds="1.125, 3.75, 2, 8.6937483723958326">
+      <DataClassMoniker Name="/HCISPathologyDataClassesDataContext/Person" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0348a28b-6349-41cf-8f3d-40d06ccc52a6" absoluteBounds="1.1400000000000001, 4.21, 1.9700000000000002, 8.1337483723958321" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.125 : 5.40625); (4.41666666666667 : 5.40625 : JumpStart); (4.58333333333333 : 5.40625 : JumpEnd); (4.94791866666667 : 5.40625 : JumpStart); (5.11458533333333 : 5.40625 : JumpEnd); (5.54166416666667 : 5.40625 : JumpStart); (5.70833083333333 : 5.40625 : JumpEnd); (6.25 : 5.40625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Person/Person_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="f3b8121a-9b65-44a7-a7a1-a12f2c10c238" />
+        <classShapeMoniker Id="9cf5bbb7-2cc9-44b8-9dbe-e5e65fd678b2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.125 : 12.4437483723958); (2.125 : 14.5); (3.375 : 14.5); (3.375 : 18.9246240234375); (6.125 : 18.9246240234375); (6.125 : 14.125); (9.07291716666667 : 14.125 : JumpStart); (9.23958383333333 : 14.125 : JumpEnd); (12.1354166666667 : 14.125 : JumpStart); (12.3020833333333 : 14.125 : JumpEnd); (12.75 : 14.125); (12.75 : 16.1558361471354); (13.1041666666667 : 16.1558361471354 : JumpStart); (13.2708333333333 : 16.1558361471354 : JumpEnd); (13.375 : 16.1558361471354)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Person/Person_Payment" />
+      <nodes>
+        <classShapeMoniker Id="f3b8121a-9b65-44a7-a7a1-a12f2c10c238" />
+        <classShapeMoniker Id="7a766aee-e72f-445c-b1d8-8d7e8f4adf10" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.125 : 8.39505126953125); (3.5 : 8.39505126953125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Person/Person_Staff" />
+      <nodes>
+        <classShapeMoniker Id="f3b8121a-9b65-44a7-a7a1-a12f2c10c238" />
+        <classShapeMoniker Id="2ed76973-44f2-4541-b7fe-683748218fb1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.83423076923077 : 3.75); (1.83423076923077 : 3.5); (2.42961538461538 : 3.5); (2.42961538461538 : 3.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Person/Person_Person" />
+      <nodes>
+        <classShapeMoniker Id="f3b8121a-9b65-44a7-a7a1-a12f2c10c238" />
+        <classShapeMoniker Id="f3b8121a-9b65-44a7-a7a1-a12f2c10c238" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.125 : 6.72480714142628); (0.875 : 6.72480714142628); (0.875 : 9.53427775691106); (1.125 : 9.53427775691106)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Person/Person_Person1" />
+      <nodes>
+        <classShapeMoniker Id="f3b8121a-9b65-44a7-a7a1-a12f2c10c238" />
+        <classShapeMoniker Id="f3b8121a-9b65-44a7-a7a1-a12f2c10c238" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ed72bc19-358f-4d78-85b4-e977b2b84120" absoluteBounds="9.5, 1.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/HCISPathologyDataClassesDataContext/GivenDiagnosticServiceM" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d7e0e6ed-bbff-43eb-a1ab-75ff3c7fc08d" absoluteBounds="9.515, 2.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.25 : 2.70274983723958); (9.5 : 2.70274983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/GivenServiceM/GivenServiceM_GivenDiagnosticServiceM" />
+      <nodes>
+        <classShapeMoniker Id="9cf5bbb7-2cc9-44b8-9dbe-e5e65fd678b2" />
+        <classShapeMoniker Id="ed72bc19-358f-4d78-85b4-e977b2b84120" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3ed09949-0819-4910-b8ce-0e89d82cc96b" absoluteBounds="3.75, 13, 2, 5.4246240234375023">
+      <DataClassMoniker Name="/HCISPathologyDataClassesDataContext/Dossier" />
+      <nestedChildShapes>
+        <elementListCompartment Id="19bdabc5-979a-47d4-8551-97337bada8ca" absoluteBounds="3.765, 13.46, 1.9700000000000002, 4.8646240234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.75 : 13); (6.25 : 12.5205712890625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Dossier/Dossier_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="3ed09949-0819-4910-b8ce-0e89d82cc96b" />
+        <classShapeMoniker Id="9cf5bbb7-2cc9-44b8-9dbe-e5e65fd678b2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 13.8125); (9.07291716666667 : 13.8125 : JumpStart); (9.23958383333333 : 13.8125 : JumpEnd); (13.375 : 13.8125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Dossier/Dossier_Payment" />
+      <nodes>
+        <classShapeMoniker Id="3ed09949-0819-4910-b8ce-0e89d82cc96b" />
+        <classShapeMoniker Id="7a766aee-e72f-445c-b1d8-8d7e8f4adf10" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(19.25 : 9.64787675585938); (16.7395858333333 : 9.64787675585938 : JumpStart); (16.5729191666667 : 9.64787675585938 : JumpEnd); (16.4739595833333 : 9.64787675585938 : JumpStart); (16.3072929166667 : 9.64787675585938 : JumpEnd); (16.125 : 9.64787675585938); (16.125 : 12.71875); (13.2708333333333 : 12.71875 : JumpStart); (13.1041666666667 : 12.71875 : JumpEnd); (12.3020833333333 : 12.71875 : JumpStart); (12.1354166666667 : 12.71875 : JumpEnd); (9.23958383333333 : 12.71875 : JumpStart); (9.07291716666667 : 12.71875 : JumpEnd); (6.17354489996472 : 12.71875 : JumpStart); (5.95998451933555 : 12.71875 : JumpEnd); (5.95833333333333 : 12.71875 : JumpStart); (5.79166666666667 : 12.71875 : JumpEnd); (5.70833083333333 : 12.71875 : JumpStart); (5.54166416666667 : 12.71875 : JumpEnd); (4.96874825 : 12.71875); (4.96874825 : 13)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Department/Department_Dossier" />
+      <nodes>
+        <classShapeMoniker Id="6cd1fe4c-337b-457c-9dc2-e91bee8b0f6c" />
+        <classShapeMoniker Id="3ed09949-0819-4910-b8ce-0e89d82cc96b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3 : 1.31532098632813); (4.41666666666667 : 1.31532098632812 : JumpStart); (4.58333333333333 : 1.31532098632813 : JumpEnd); (4.94791866666667 : 1.31532098632812 : JumpStart); (5.11458533333333 : 1.31532098632813 : JumpEnd); (5.6249975 : 1.31532098632813); (5.6249975 : 13)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Insurance/Insurance_Dossier" />
+      <nodes>
+        <classShapeMoniker Id="62cca2fe-6ea4-45e7-8ef3-c3d980e6cdd8" />
+        <classShapeMoniker Id="3ed09949-0819-4910-b8ce-0e89d82cc96b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.125 : 11.0856754557292); (4.10416416666667 : 11.0856754557292 : JumpStart); (4.27083083333333 : 11.0856754557292 : JumpEnd); (4.96874825 : 11.0856754557292); (4.96874825 : 13)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Person/Person_Dossier" />
+      <nodes>
+        <classShapeMoniker Id="f3b8121a-9b65-44a7-a7a1-a12f2c10c238" />
+        <classShapeMoniker Id="3ed09949-0819-4910-b8ce-0e89d82cc96b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.90624875 : 9.6651025390625); (4.90624875 : 13)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Staff/Staff_Dossier" />
+      <nodes>
+        <classShapeMoniker Id="2ed76973-44f2-4541-b7fe-683748218fb1" />
+        <classShapeMoniker Id="3ed09949-0819-4910-b8ce-0e89d82cc96b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9f8e6020-fb21-4bef-96f1-bf2540ec46ca" absoluteBounds="20.25, 13, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/HCISPathologyDataClassesDataContext/LabWorksheet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a2068431-979e-41f7-a18a-800e71de6108" absoluteBounds="20.265, 13.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f5b87d9e-ceef-404c-a533-3ace475a2bb3" absoluteBounds="19.5, 15.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/HCISPathologyDataClassesDataContext/LabGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="29d3c89c-3978-45ca-9a59-dd1f734dc270" absoluteBounds="19.515, 15.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7250ffa1-6597-4366-81ee-37aebe83288b" absoluteBounds="22, 14.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/HCISPathologyDataClassesDataContext/LabSubGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6e00043e-6021-433e-beea-39f49ebc7a02" absoluteBounds="22.015, 14.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(21.5 : 15.6017976888021); (21.5104166666667 : 15.6017976888021 : JumpStart); (21.6770833333333 : 15.6017976888021 : JumpEnd); (22 : 15.6017976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/LabGroup/LabGroup_LabSubGroup" />
+      <nodes>
+        <classShapeMoniker Id="f5b87d9e-ceef-404c-a533-3ace475a2bb3" />
+        <classShapeMoniker Id="7250ffa1-6597-4366-81ee-37aebe83288b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ae7d8fb9-8bd7-4319-9cb5-6d85ef49a006" absoluteBounds="17.125, 13.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/HCISPathologyDataClassesDataContext/LabTestGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e9e4d0da-0163-40e3-b60f-c71dfa4901dd" absoluteBounds="17.14, 13.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(23 : 14.5); (23 : 14.25); (21.75 : 14.25); (21.75 : 14.4439925130208); (21.6770833333333 : 14.4439925130208 : JumpStart); (21.5104166666667 : 14.4439925130208 : JumpEnd); (19.5 : 14.4439925130208); (19.5 : 13.9142976888021); (19.125 : 13.9142976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/LabSubGroup/LabSubGroup_LabTestGroup" />
+      <nodes>
+        <classShapeMoniker Id="7250ffa1-6597-4366-81ee-37aebe83288b" />
+        <classShapeMoniker Id="ae7d8fb9-8bd7-4319-9cb5-6d85ef49a006" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.375 : 18.4535571875); (13.1041666666667 : 18.4535571875 : JumpStart); (13.2708333333333 : 18.4535571875 : JumpEnd); (18.125 : 18.4535571875); (18.125 : 14.7035953776042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Service/Service_LabTestGroup" />
+      <nodes>
+        <classShapeMoniker Id="03912ee1-23db-4a60-9056-467ed7240ed0" />
+        <classShapeMoniker Id="ae7d8fb9-8bd7-4319-9cb5-6d85ef49a006" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="206d490c-0900-4db5-8cb4-a854cbec2df1" absoluteBounds="20.25, 17.375, 2, 1.3862939453125">
+      <DataClassMoniker Name="/HCISPathologyDataClassesDataContext/LabWorksheetService" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3a2fae03-f7f0-41a2-ac2b-984d6a29d912" absoluteBounds="20.265, 17.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(21.59375 : 14.1939925130208); (21.59375 : 17.375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/LabWorksheet/LabWorksheet_LabWorksheetService" />
+      <nodes>
+        <classShapeMoniker Id="9f8e6020-fb21-4bef-96f1-bf2540ec46ca" />
+        <classShapeMoniker Id="206d490c-0900-4db5-8cb4-a854cbec2df1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.375 : 18.644275968149); (8.75 : 19.019275968149); (8.75 : 19.1362939453125); (19.875 : 19.1362939453125); (20.25 : 18.7612939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Service/Service_LabWorksheetService" />
+      <nodes>
+        <classShapeMoniker Id="03912ee1-23db-4a60-9056-467ed7240ed0" />
+        <classShapeMoniker Id="206d490c-0900-4db5-8cb4-a854cbec2df1" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6e9d698f-22e8-4c91-bcf7-dfc0ebfb8dda" absoluteBounds="21.125, 19.25, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/HCISPathologyDataClassesDataContext/LaboratoryServiceDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="060ba4c0-a602-4a69-89f0-621fdcb5ed6f" absoluteBounds="21.14, 19.71, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(19.84375 : 16.7035953776042); (19.84375 : 20.9046541341146); (21.125 : 20.9046541341146)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/LabGroup/LabGroup_LaboratoryServiceDetail" />
+      <nodes>
+        <classShapeMoniker Id="f5b87d9e-ceef-404c-a533-3ace475a2bb3" />
+        <classShapeMoniker Id="6e9d698f-22e8-4c91-bcf7-dfc0ebfb8dda" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.69836288461538 : 18.6458154296875); (6.69836288461538 : 20.0460745670573); (19.7604166666667 : 20.0460745670573 : JumpStart); (19.9270833333333 : 20.0460745670573 : JumpEnd); (21.125 : 20.0460745670573)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HCISPathologyDataClassesDataContext/Service/Service_LaboratoryServiceDetail" />
+      <nodes>
+        <classShapeMoniker Id="03912ee1-23db-4a60-9056-467ed7240ed0" />
+        <classShapeMoniker Id="6e9d698f-22e8-4c91-bcf7-dfc0ebfb8dda" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

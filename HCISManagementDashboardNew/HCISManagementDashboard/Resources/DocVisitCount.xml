@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="گزارش تعداد ویزیت پزشکان" />
+  <DataSources>
+    <SqlDataSource ComponentName="dashboardSqlDataSource1">
+      <Name>SQL Data Source 1</Name>
+      <Connection Name="172.30.1.145_HCIS_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="172.30.1.145" />
+          <Parameter Name="database" Value="HCIS" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="artp" />
+          <Parameter Name="password" Value="506070" />
+        </Parameters>
+      </Connection>
+      <Query Type="SelectQuery" Name="Vw_DocVisitCount">
+        <Parameter Name="FromDate" Type="DevExpress.DataAccess.Expression">(System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)([Parameters.FromDate])</Parameter>
+        <Parameter Name="ToDate" Type="DevExpress.DataAccess.Expression">(System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)([Parameters.ToDate])</Parameter>
+        <Tables>
+          <Table Name="Vw_DocVisitCount" Meta="0|0|125|140" />
+        </Tables>
+        <Columns>
+          <Column Table="Vw_DocVisitCount" Name="Date" />
+          <Column Table="Vw_DocVisitCount" Name="Dep" />
+          <Column Table="Vw_DocVisitCount" Name="DpeParent" />
+          <Column Table="Vw_DocVisitCount" Name="Doc" />
+          <Column Table="Vw_DocVisitCount" Name="Speciality" />
+        </Columns>
+        <Filter>[Vw_DocVisitCount.Date] &gt;= ?FromDate And [Vw_DocVisitCount.Date] &lt;= ?ToDate</Filter>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="Vw_DocVisitCount">
+            <Field Name="Date" Type="String" />
+            <Field Name="Dep" Type="String" />
+            <Field Name="DpeParent" Type="String" />
+            <Field Name="Doc" Type="String" />
+            <Field Name="Speciality" Type="String" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+      <CalculatedFields>
+        <CalculatedField Name="Calculated Field 1" Expression="Count()" DataType="Auto" DataMember="Vw_DocVisitCount" />
+        <CalculatedField Name="Calculated Field 2" Expression="[Doc] + ' ' + '([Speciality])'" DataType="Auto" DataMember="Vw_DocVisitCount" />
+      </CalculatedFields>
+    </SqlDataSource>
+  </DataSources>
+  <Parameters>
+    <Parameter Name="FromDate" Value="1400/02/01" />
+    <Parameter Name="ToDate" Value="1400/02/19" />
+  </Parameters>
+  <Items>
+    <TreeView ComponentName="treeViewDashboardItem1" Name="کلینیک" DataSource="dashboardSqlDataSource1" DataMember="Vw_DocVisitCount">
+      <DataItems>
+        <Dimension DataMember="DpeParent" UniqueName="DataItem0" />
+        <Dimension DataMember="Dep" UniqueName="DataItem1" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+        <Dimension UniqueName="DataItem1" />
+      </FilterDimensions>
+    </TreeView>
+    <TreeView ComponentName="treeViewDashboardItem2" Name="پزشکان" DataSource="dashboardSqlDataSource1" DataMember="Vw_DocVisitCount">
+      <DataItems>
+        <Dimension DataMember="Doc" UniqueName="DataItem0" />
+        <Dimension DataMember="Speciality" UniqueName="DataItem1" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem1" />
+        <Dimension UniqueName="DataItem0" />
+      </FilterDimensions>
+    </TreeView>
+    <Chart ComponentName="chartDashboardItem1" Name="Chart 1" ShowCaption="false" DataSource="dashboardSqlDataSource1" DataMember="Vw_DocVisitCount">
+      <ColoringOptions MeasuresColoringMode="Hue" />
+      <DataItems>
+        <Dimension DataMember="Doc" ColoringMode="Hue" TopNCount="10" TopNMeasure="DataItem0" UniqueName="DataItem1" />
+        <Measure DataMember="Calculated Field 1" Name="تعداد ویزیت شده ها" UniqueName="DataItem0">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+        <Dimension DataMember="Speciality" UniqueName="DataItem2" />
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem1" />
+        <Argument UniqueName="DataItem2" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" />
+          <Series>
+            <Simple>
+              <Value UniqueName="DataItem0" />
+              <PointLabelOptions Visible="true" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend Visible="false" />
+      <AxisX EnableZooming="true" LimitVisiblePoints="true" />
+    </Chart>
+    <Grid ComponentName="gridDashboardItem1" Name="" ShowCaption="false" DataSource="dashboardSqlDataSource1" DataMember="Vw_DocVisitCount">
+      <DataItems>
+        <Dimension DataMember="Doc" UniqueName="DataItem0" />
+        <Measure DataMember="Calculated Field 1" UniqueName="DataItem1">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+        <Dimension DataMember="Speciality" UniqueName="DataItem2" />
+      </DataItems>
+      <FormatRules>
+        <GridItemFormatRule Name="FormatRule 1" DataItem="DataItem1">
+          <FormatConditionColorRangeBar ValueType="Percent">
+            <RangeSet>
+              <Ranges>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="0" />
+                  <BarStyleSettings PredefinedColor="Red" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="33" />
+                  <BarStyleSettings PredefinedColor="Blue" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="67" />
+                  <BarStyleSettings PredefinedColor="Green" />
+                </RangeInfo>
+              </Ranges>
+            </RangeSet>
+            <BarOptions />
+          </FormatConditionColorRangeBar>
+        </GridItemFormatRule>
+      </FormatRules>
+      <GridColumns>
+        <GridDimensionColumn Name="پزشک">
+          <Dimension UniqueName="DataItem0" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="تخصص">
+          <Dimension UniqueName="DataItem2" />
+        </GridDimensionColumn>
+        <GridMeasureColumn Name="تعداد">
+          <Measure UniqueName="DataItem1" />
+          <Totals>
+            <Total Type="Sum" />
+          </Totals>
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions EnableBandedRows="true" ColumnWidthMode="AutoFitToContents" />
+    </Grid>
+    <Pie ComponentName="pieDashboardItem1" Name="Pies 1" ShowCaption="false" DataSource="dashboardSqlDataSource1" DataMember="Vw_DocVisitCount" ShowPieCaptions="false">
+      <InteractivityOptions TargetDimensions="Points" />
+      <DataItems>
+        <Measure DataMember="Calculated Field 1" UniqueName="DataItem0">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" />
+        </Measure>
+        <Dimension DataMember="Doc" TopNEnabled="true" TopNCount="10" TopNMeasure="DataItem0" UniqueName="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem1" />
+      </Arguments>
+      <Values>
+        <Value UniqueName="DataItem0" />
+      </Values>
+    </Pie>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="chartDashboardItem1" Weight="36.990027198549413" />
+      <LayoutGroup Orientation="Vertical" Weight="63.009972801450587">
+        <LayoutGroup Weight="38.079470198675494">
+          <LayoutItem DashboardItem="gridDashboardItem1" Weight="76.402877697841731" />
+          <LayoutItem DashboardItem="treeViewDashboardItem1" Weight="23.597122302158272" />
+        </LayoutGroup>
+        <LayoutGroup Weight="61.920529801324506">
+          <LayoutItem DashboardItem="pieDashboardItem1" Weight="76.402877697841731" />
+          <LayoutItem DashboardItem="treeViewDashboardItem2" Weight="23.597122302158272" />
+        </LayoutGroup>
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

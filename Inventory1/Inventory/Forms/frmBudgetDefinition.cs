@@ -1,0 +1,97 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using DevExpress.XtraEditors;
+using Inventory.Data;
+using Inventory.Forms;
+using Inventory.Dialogs;
+
+namespace Inventory.Forms
+{
+    public partial class frmBudgetDefinition : DevExpress.XtraEditors.XtraForm
+    {
+        DataClassesDataContext dc = new DataClassesDataContext();
+        public frmBudgetDefinition()
+        {
+            InitializeComponent();
+        }
+
+        private void frmBudgetDefinition_Load(object sender, EventArgs e)
+        {
+            GetData();
+        }
+        private void GetData()
+        {
+            budgetBindingSource.DataSource = dc.Budgets.ToList();
+          
+        }
+
+        private void btnNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var dlg = new dlgBudgetDefinition();
+            dlg.Text = "جدید";
+            dlg.dc = dc;
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+
+                dc.SubmitChanges();
+                GetData();
+            }
+        }
+
+        private void btnEdit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var current = budgetBindingSource.Current as Budget;
+            if (current == null)
+            {
+                MessageBox.Show("لطفا یک مورد را انتخاب کنید.", "توجه", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign | MessageBoxOptions.RtlReading);
+                return;
+            }
+            var a = new dlgBudgetDefinition();
+            a.dc = dc;
+            a.isEdit = true;
+            a.PHT = current;
+            a.Text = "ویرایش";
+            if (a.ShowDialog() == DialogResult.OK)
+            {
+                dc.SubmitChanges();
+                GetData();
+            }
+            else
+            {
+                dc.Dispose();
+                dc = new DataClassesDataContext();
+                GetData();
+            }
+        }
+
+        private void btnClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Close();
+        }
+
+        private void btnDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var row = budgetBindingSource.Current as Budget;
+            dc.Dispose();
+            dc = new DataClassesDataContext();
+            row = dc.Budgets.FirstOrDefault(x => x.ID == row.ID);
+
+            if (MessageBox.Show("آیا از حذف اطمینان دارید ؟", "توجه", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign | MessageBoxOptions.RtlReading) != DialogResult.Yes)
+                return;
+
+
+
+            dc.Budgets.DeleteOnSubmit(row);
+
+            dc.SubmitChanges();
+            GetData();
+        }
+    }
+}

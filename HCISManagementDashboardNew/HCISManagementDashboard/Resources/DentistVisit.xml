@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="آمار ویزیت دندانپزشک" />
+  <DataSources>
+    <SqlDataSource ComponentName="dashboardSqlDataSource1">
+      <Name>SQL Data Source 1</Name>
+      <Connection Name="172.30.1.145_HCIS_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="172.30.1.145" />
+          <Parameter Name="database" Value="HCIS" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="artp" />
+          <Parameter Name="password" Value="506070" />
+        </Parameters>
+      </Connection>
+      <Query Type="StoredProcQuery" Name="Spu_DentistVisitIndicator">
+        <Parameter Name="@FDate" Type="DevExpress.DataAccess.Expression">(System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)([Parameters.FromDate])</Parameter>
+        <Parameter Name="@TDate" Type="DevExpress.DataAccess.Expression">(System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)([Parameters.ToDate])</Parameter>
+        <ProcName>Spu_DentistVisitIndicator</ProcName>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="Spu_DentistVisitIndicator">
+            <Field Name="Cnt" Type="Int32" />
+            <Field Name="Zone" Type="String" />
+            <Field Name="Population" Type="Int32" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+      <CalculatedFields>
+        <CalculatedField Name="درصد" Expression="ToDouble(Iif([Population] = 0, 0, [Cnt] * 1.0 / [Population]))" DataType="Auto" DataMember="Spu_DentistVisitIndicator" />
+        <CalculatedField Name="ویزیت نشده" Expression="[Population] - [Cnt]" DataType="Auto" DataMember="Spu_DentistVisitIndicator" />
+      </CalculatedFields>
+    </SqlDataSource>
+  </DataSources>
+  <Parameters>
+    <Parameter Name="FromDate" Value="1397/04/01" />
+    <Parameter Name="ToDate" Value="1397/04/31" />
+  </Parameters>
+  <Items>
+    <Grid ComponentName="gridDashboardItem1" Name="آمار ویزیت دندانپزشک" DataSource="dashboardSqlDataSource1" DataMember="Spu_DentistVisitIndicator">
+      <DataItems>
+        <Dimension DataMember="Zone" Name="منطقه" UniqueName="DataItem0" />
+        <Measure DataMember="Cnt" Name="ویزیت شده ها" UniqueName="DataItem1">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+        <Measure DataMember="Population" Name="جمعیت تحت پوشش" UniqueName="DataItem2">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+        <Measure DataMember="درصد" Name="درصد" UniqueName="DataItem3">
+          <NumericFormat FormatType="Percent" />
+        </Measure>
+      </DataItems>
+      <GridColumns>
+        <GridDimensionColumn>
+          <Dimension UniqueName="DataItem0" />
+        </GridDimensionColumn>
+        <GridMeasureColumn>
+          <Measure UniqueName="DataItem1" />
+        </GridMeasureColumn>
+        <GridMeasureColumn>
+          <Measure UniqueName="DataItem2" />
+        </GridMeasureColumn>
+        <GridMeasureColumn>
+          <Measure UniqueName="DataItem3" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions />
+    </Grid>
+    <ListBox ComponentName="listBoxDashboardItem1" Name="منطقه ها" DataSource="dashboardSqlDataSource1" DataMember="Spu_DentistVisitIndicator">
+      <DataItems>
+        <Dimension DataMember="Zone" UniqueName="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="gridDashboardItem1" Weight="74.009402283411688" />
+      <LayoutItem DashboardItem="listBoxDashboardItem1" Weight="25.990597716588315" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

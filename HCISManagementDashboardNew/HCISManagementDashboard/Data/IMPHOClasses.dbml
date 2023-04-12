@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="IMPHO" Class="IMPHOClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=172.30.1.145;Initial Catalog=IMPHO;Persist Security Info=True;User ID=artp" SettingsObjectName="HCISManagementDashboard.Properties.Settings" SettingsPropertyName="IMPHOConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Tbl_Company" Member="Tbl_Companies">
+    <Type Name="Tbl_Company">
+      <Column Name="IDCompany" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDManagement" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="IDCo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDMg" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Tbl_Company_Tbl_SubCompany" Member="Tbl_SubCompanies" ThisKey="IDCompany" OtherKey="IDCompany" Type="Tbl_SubCompany" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_SubCompany" Member="Tbl_SubCompanies">
+    <Type Name="Tbl_SubCompany">
+      <Column Name="IDSubCompany" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDManagement" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDCompany" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="IDco" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDMg" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDOrgan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Tbl_Company_Tbl_SubCompany" Member="Tbl_Company" ThisKey="IDCompany" OtherKey="IDCompany" Type="Tbl_Company" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="HCIS" Class="HealthDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=172.30.1.145;Initial Catalog=HCIS;User ID=artp" SettingsObjectName="Transport.Properties.Settings" SettingsPropertyName="TransportConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblWoman" Member="tblWomans">
+    <Type Name="tblWoman">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VisitID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VisitDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CatServiceID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ServiceID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Result" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ResultCheckBOX" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblQuestionnaire" Member="tblQuestionnaires">
+    <Type Name="tblQuestionnaire">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Parent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Question" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="value" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblAllPhoneNumbers" Member="tblAllPhoneNumbers">
+    <Type Name="tblAllPhoneNumber">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Interal" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PhoneType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DeliveryDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="[Date Received]" Member="Date_Received" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="LocationGroup" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Responsible" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Department" Member="Departments">
+    <Type Name="Department">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDInt" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDIntParent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Parent" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Department_Department" Member="Departments" ThisKey="ID" OtherKey="Parent" Type="Department" />
+      <Association Name="Department_Department" Member="Department1" ThisKey="Parent" OtherKey="ID" Type="Department" IsForeignKey="true" />
+      <Association Name="Definition_Department" Member="Definition" ThisKey="TypeID" OtherKey="ID" Type="Definition" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblMngTicketPhone" Member="tblMngTicketPhones">
+    <Type Name="tblMngTicketPhone">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TicketNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblMngNotResponse" Member="tblMngNotResponses">
+    <Type Name="tblMngNotResponse">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="RelatedUnit" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InteralNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NotResponseNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblMngTelecommunicationPersonnel" Member="tblMngTelecommunicationPersonnels">
+    <Type Name="tblMngTelecommunicationPersonnel">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EmploymentType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="tblMngTelecommunicationPersonnel_tblMngOut_of_CareCall" Member="tblMngOut_of_CareCalls" ThisKey="ID" OtherKey="TelecommunicationsEmployee" Type="tblMngOut_of_CareCall" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Definition" Member="Definitions">
+    <Type Name="Definition">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Parent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Definition_Department" Member="Departments" ThisKey="ID" OtherKey="TypeID" Type="Department" />
+      <Association Name="Definition_Definition" Member="Definitions" ThisKey="ID" OtherKey="Parent" Type="Definition" />
+      <Association Name="Definition_Definition" Member="Definition1" ThisKey="Parent" OtherKey="ID" Type="Definition" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Shift" Member="Shifts">
+    <Type Name="Shift">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ShiftName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ToTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreationUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Shift_tblMngCprGroup" Member="tblMngCprGroups" ThisKey="ID" OtherKey="Shift" Type="tblMngCprGroup" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[tblMngOut-of-CareCalls]" Member="tblMngOut_of_CareCalls">
+    <Type Name="tblMngOut_of_CareCall">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ConversationType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ReqName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InteralNO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Result" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ReservationTime" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="CallTime" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="TelecommunicationsEmployee" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CreationUserID" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="tblMngTelecommunicationPersonnel_tblMngOut_of_CareCall" Member="tblMngTelecommunicationPersonnel" ThisKey="TelecommunicationsEmployee" OtherKey="ID" Type="tblMngTelecommunicationPersonnel" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblMngCprGroup" Member="tblMngCprGroups">
+    <Type Name="tblMngCprGroup">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Shift" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Requster" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RequsterDepartment" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RequstTimePage" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="TimeWarningPage" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="NumberOfPaging" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CteationUserID" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="Shift_tblMngCprGroup" Member="Shift1" ThisKey="Shift" OtherKey="ID" Type="Shift" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblMngDirectionCar" Member="tblMngDirectionCars">
+    <Type Name="tblMngDirectionCar">
+      <Column Name="ID_Direction" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Direction_name" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Kind_Direction" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="tblMngDirectionCar_tblMngDailyRep" Member="tblMngDailyReps" ThisKey="ID_Direction" OtherKey="IDPath" Type="tblMngDailyRep" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblMngtransportPersonel" Member="tblMngtransportPersonels">
+    <Type Name="tblMngtransportPersonel">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Lname" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Date_Hired" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CarType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WorkTime" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="StiNum" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="WorkPlace" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="tblMngtransportPersonel_tblMngDailyRep" Member="tblMngDailyReps" ThisKey="ID" OtherKey="IDDriver" Type="tblMngDailyRep" />
+      <Association Name="tblMngtransportPersonel_tblMngFactorRepair" Member="tblMngFactorRepairs" ThisKey="ID" OtherKey="IDDriver" Type="tblMngFactorRepair" />
+      <Association Name="tblMngtransportPersonel_tblMngCarDriver" Member="tblMngCarDrivers" ThisKey="ID" OtherKey="Driver_ID" Type="tblMngCarDriver" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblMngDailyRep" Member="tblMngDailyReps">
+    <Type Name="tblMngDailyRep">
+      <Column Name="ID_Function" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDDriver" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDCar" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ExitDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ExitTime" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="IDPath" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OtherWork" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Mission" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ExtraMission" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TypeMission" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="carType" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CreationUserID" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="tblMngDirectionCar_tblMngDailyRep" Member="tblMngDirectionCar" ThisKey="IDPath" OtherKey="ID_Direction" Type="tblMngDirectionCar" IsForeignKey="true" />
+      <Association Name="tblMngtransportPersonel_tblMngDailyRep" Member="tblMngtransportPersonel" ThisKey="IDDriver" OtherKey="ID" Type="tblMngtransportPersonel" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblMngCarInsurance" Member="tblMngCarInsurances">
+    <Type Name="tblMngCarInsurance">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDCar" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Date_Insurance" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="InsurNO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Kind_INsurance" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="tblMngCivilCar_tblMngCarInsurance" Member="tblMngCivilCar" ThisKey="IDCar" OtherKey="ID_Car" Type="tblMngCivilCar" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblMngCivilCar" Member="tblMngCivilCars">
+    <Type Name="tblMngCivilCar">
+      <Column Name="ID_Car" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Kind_Car" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Car_No" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Captives_No" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CCar" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Model" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Color" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Engine_No" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Chassis_No" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Date_DeliveryDepartment" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Date_DeliveryDriver" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreationUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="tblMngCivilCar_tblMngCarInsurance" Member="tblMngCarInsurances" ThisKey="ID_Car" OtherKey="IDCar" Type="tblMngCarInsurance" />
+      <Association Name="tblMngCivilCar_tblMngFuelCar" Member="tblMngFuelCars" ThisKey="ID_Car" OtherKey="IDCar" Type="tblMngFuelCar" />
+      <Association Name="tblMngCivilCar_tblMngFactorRepair" Member="tblMngFactorRepairs" ThisKey="ID_Car" OtherKey="IDCar" Type="tblMngFactorRepair" />
+      <Association Name="tblMngCivilCar_tblMngCarDriver" Member="tblMngCarDrivers" ThisKey="ID_Car" OtherKey="IDCar" Type="tblMngCarDriver" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblMngFuelCar" Member="tblMngFuelCars">
+    <Type Name="tblMngFuelCar">
+      <Column Name="ID_Fuel" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Time_fuel" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="Date_Fuel" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Kilometer_No" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="driverID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="IDCar" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tblMngCivilCar_tblMngFuelCar" Member="tblMngCivilCar" ThisKey="IDCar" OtherKey="ID_Car" Type="tblMngCivilCar" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblMngFactorRepair" Member="tblMngFactorRepairs">
+    <Type Name="tblMngFactorRepair">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ServiceOrDevice" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Repairman" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="FactorID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Addres" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Date_Repairer" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Date_Failure" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="failureOrProblem" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CreationUserID" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="IDCar" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDDriver" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tblMngCivilCar_tblMngFactorRepair" Member="tblMngCivilCar" ThisKey="IDCar" OtherKey="ID_Car" Type="tblMngCivilCar" IsForeignKey="true" />
+      <Association Name="tblMngtransportPersonel_tblMngFactorRepair" Member="tblMngtransportPersonel" ThisKey="IDDriver" OtherKey="ID" Type="tblMngtransportPersonel" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblMngCarDriver" Member="tblMngCarDrivers">
+    <Type Name="tblMngCarDriver">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Driver_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Date_Delivery" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="IDCar" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tblMngCivilCar_tblMngCarDriver" Member="tblMngCivilCar" ThisKey="IDCar" OtherKey="ID_Car" Type="tblMngCivilCar" IsForeignKey="true" />
+      <Association Name="tblMngtransportPersonel_tblMngCarDriver" Member="tblMngtransportPersonel" ThisKey="Driver_ID" OtherKey="ID" Type="tblMngtransportPersonel" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

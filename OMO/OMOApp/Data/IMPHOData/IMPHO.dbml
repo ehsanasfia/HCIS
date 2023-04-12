@@ -1,0 +1,1090 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="IMPHO" Class="IMPHODataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=172.30.1.145;Initial Catalog=IMPHO;Persist Security Info=True;User ID=artp" SettingsObjectName="OMOApp.Properties.Settings" SettingsPropertyName="IMPHOConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.aper" Member="apers">
+    <Type Name="aper">
+      <Column Name="IDPerson" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="uniq" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserAlert" Member="UserAlerts">
+    <Type Name="UserAlert">
+      <Column Name="IDUserAlert" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDPerson" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDMessage" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Base" Member="Bases">
+    <Type Name="Base">
+      <Column Name="IDPerson" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OIDSponsor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NIDSponsor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Booklet" Member="Booklets">
+    <Type Name="Booklet">
+      <Column Name="IDBooklet" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDPerson" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDValidCenterZone" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDBookletReason" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDBookletType" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Pages" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDExport" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDMemberStatus" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="SerialNo" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ExpDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="SentToDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="SentTo" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DeliveryDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="DeliveryTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="DeliveryOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmployeeInfo" Member="EmployeeInfos">
+    <Type Name="EmployeeInfo">
+      <Column Name="IDPerson" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDValidCenterZone2" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDValidCenter2" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="ShiftStatus" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDEmployeeType" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDGrade" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDWorkType" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="EduField" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Job" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Unit" Type="System.String" DbType="NVarChar(70) NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDateTime" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Person_EmployeeInfo" Member="Person" ThisKey="IDPerson" OtherKey="IDPerson" Type="Person" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Tbl_EmployeeType_EmployeeInfo" Member="Tbl_EmployeeType" ThisKey="IDEmployeeType" OtherKey="IDEmployeeType" Type="Tbl_EmployeeType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmployeePregLeave" Member="EmployeePregLeaves">
+    <Type Name="EmployeePregLeave">
+      <Column Name="IDEmployeePregLeave" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDPerson" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDValidCenterZone" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="StartDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Duration" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="LetterTo" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LetterDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="LetterNo" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Export" Member="Exports">
+    <Type Name="Export">
+      <Column Name="IDExport" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDValidCenterZone" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="ExportDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.his_web_pass" Member="his_web_passes">
+    <Type Name="his_web_pass">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PersonID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Pass" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Person_his_web_pass" Member="Person" ThisKey="PersonID" OtherKey="IDPerson" Type="Person" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.IDPersonPersonnelNo" Member="IDPersonPersonnelNos">
+    <Type Name="IDPersonPersonnelNo">
+      <Column Name="IDPerson" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PersonnelNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.InvalidSponsor" Member="InvalidSponsors">
+    <Type Name="InvalidSponsor">
+      <Column Name="IDPerson" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDSponsor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PersonnelNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Member" Member="Members">
+    <Type Name="Member">
+      <Column Name="IDPerson" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDSponsor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PersonnelNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDRelation" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="RelationOrderNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDJobRelated" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDManagement" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDCompany" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDSubCompany" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDValidCenterZone" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDValidCenter" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="EntryDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ExpDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CancelDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="IDChangeReason" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDEduDegree" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="AlertCount" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDMemberStatus" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="RecomLetterDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="RecomLetterNo" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Recommender" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ChangeReasonNote" Type="System.String" DbType="NVarChar(1024) NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="IDEmployeeType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="IDEmployeeType_" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="CreationDateTime" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IDManagementOld" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="IDCompanyOld" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="IDSubCompanyOld" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="IDManagementOld2" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="IDCompanyOld2" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="IDSubCompanyOld2" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="LetterNo" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="CreationIP" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Association Name="Person_Member" Member="Person" ThisKey="IDPerson" OtherKey="IDPerson" Type="Person" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Member2" Member="Member2s">
+    <Type Name="Member2">
+      <Column Name="IDPerson" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDSponsor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PersonnelNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDRelation" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDJobRelated" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDManagement" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDCompany" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDSubCompany" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDValidCenterZone" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDValidCenter" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="EntryDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ExpDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CancelDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="IDChangeReason" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDEduDegree" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="AlertCount" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDMemberStatus" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="RecomLetterDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="RecomLetterNo" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Recommender" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ChangeReasonNote" Type="System.String" DbType="NVarChar(1024) NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="IDEmployeeType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="IDEmployeeType_" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="CreationDateTime" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IDManagementOld" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="IDCompanyOld" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="IDSubCompanyOld" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="IDManagementOld2" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="IDCompanyOld2" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="IDSubCompanyOld2" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MemberAlert" Member="MemberAlerts">
+    <Type Name="MemberAlert">
+      <Column Name="IDMemberAlert" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDPerson" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Message" Type="System.String" DbType="NVarChar(512) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MemberContinuation" Member="MemberContinuations">
+    <Type Name="MemberContinuation">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MedicalID" Type="System.String" DbType="NChar(13)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Cost" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LetterNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreationIP" Type="System.String" DbType="NChar(25)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MemberPhoto" Member="MemberPhotos">
+    <Type Name="MemberPhoto">
+      <Column Name="IDPerson" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Photo" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MemberProsthesis" Member="MemberProsthesis">
+    <Type Name="MemberProsthesi">
+      <Column Name="IDMemberProsthesis" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDPerson" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDValidCenterZone" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDProsthesis" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Num" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="SerialNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDMemberReceiver" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReceivedDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="Warning" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Person" Member="Persons">
+    <Type Name="Person">
+      <Column Name="IDPerson" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IsLocal" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDPersonType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="MedicalID" Type="System.String" DbType="NChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="NationalCode" Type="System.String" DbType="NChar(12)" CanBeNull="true" />
+      <Column Name="UpdatedNationalCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Lastname" Type="System.String" DbType="NVarChar(35)" CanBeNull="true" />
+      <Column Name="Firstname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FatherName" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="Sex" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="BirthDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="BirthPlace" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="IdentityNo" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="IdentityDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="IdentityPlace" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="IDMaritalStatus" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="IDReligion" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="HomePhone" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="WorkPhone" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="PostCode" Type="System.String" DbType="NVarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="EMail" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(1024) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="IsPrivate" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="idp" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreationDateTime" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MedicalID_BAK" Type="System.String" DbType="NChar(13)" CanBeNull="true" />
+      <Column Name="uniq" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Insure" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="InsuranceNo" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="NewIDPerson" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LetterNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreationIP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CellPhone" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="MainAddress" Type="System.String" DbType="NVarChar(600)" CanBeNull="true" />
+      <Association Name="Person_EmployeeInfo" Member="EmployeeInfo" ThisKey="IDPerson" OtherKey="IDPerson" Type="EmployeeInfo" Cardinality="One" />
+      <Association Name="Person_his_web_pass" Member="his_web_passes" ThisKey="IDPerson" OtherKey="PersonID" Type="his_web_pass" />
+      <Association Name="Person_Member" Member="Member" ThisKey="IDPerson" OtherKey="IDPerson" Type="Member" Cardinality="One" />
+      <Association Name="Person_PersonAddress" Member="PersonAddress" ThisKey="IDPerson" OtherKey="IDPerson" Type="PersonAddress" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PersonAddress" Member="PersonAddresses">
+    <Type Name="PersonAddress">
+      <Column Name="IDPerson" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HomeCountry" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="HomeCity" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="HomePostCode" Type="System.String" DbType="NVarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="HomeFax" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="HomeAddress" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="WorkCountry" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="WorkCity" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="WorkPostCode" Type="System.String" DbType="NVarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="WorkFax" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="WorkAddress" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="Person_PersonAddress" Member="Person" ThisKey="IDPerson" OtherKey="IDPerson" Type="Person" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PersonHNIOC" Member="PersonHNIOCs">
+    <Type Name="PersonHNIOC">
+      <Column Name="IDPrsn" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PersonnelNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NationalCode" Type="System.String" DbType="NChar(12)" CanBeNull="true" />
+      <Column Name="Lastname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Firstname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FatherName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Sex" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="BirthDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="BirthPlace" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IdentityNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Table_1" Member="Table_1s">
+    <Type Name="Table_1">
+      <Column Name="id" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="info" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="test" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_AlertMessage" Member="Tbl_AlertMessages">
+    <Type Name="Tbl_AlertMessage">
+      <Column Name="IDAlertMessage" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AlertMessage" Type="System.String" DbType="NVarChar(512) NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Base" Member="Tbl_Bases">
+    <Type Name="Tbl_Base">
+      <Column Name="IDP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OIDS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NIDS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_BookletPages" Member="Tbl_BookletPages">
+    <Type Name="Tbl_BookletPage">
+      <Column Name="IDBookletPages" Type="System.Byte" DbType="TinyInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_BookletReason" Member="Tbl_BookletReasons">
+    <Type Name="Tbl_BookletReason">
+      <Column Name="IDBookletReason" Type="System.Byte" DbType="TinyInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_BookletType" Member="Tbl_BookletTypes">
+    <Type Name="Tbl_BookletType">
+      <Column Name="IDBookletType" Type="System.Byte" DbType="TinyInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_ChangeReason" Member="Tbl_ChangeReasons">
+    <Type Name="Tbl_ChangeReason">
+      <Column Name="IDChangeReason" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_City" Member="Tbl_Cities">
+    <Type Name="Tbl_City">
+      <Column Name="IDCity" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Company" Member="Tbl_Companies">
+    <Type Name="Tbl_Company">
+      <Column Name="IDCompany" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDManagement" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="IDCo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDMg" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Tbl_Company_Tbl_SubCompany" Member="Tbl_SubCompanies" ThisKey="IDCompany" OtherKey="IDCompany" Type="Tbl_SubCompany" />
+      <Association Name="Tbl_Management_Tbl_Company" Member="Tbl_Management" ThisKey="IDManagement" OtherKey="IDManagement" Type="Tbl_Management" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_CompanyNotNIOC" Member="Tbl_CompanyNotNIOCs">
+    <Type Name="Tbl_CompanyNotNIOC">
+      <Column Name="IDManagement" Type="System.Byte" DbType="TinyInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="IDCo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Configuration" Member="Tbl_Configurations">
+    <Type Name="Tbl_Configuration">
+      <Column Name="IDConfiguration" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Val" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Country" Member="Tbl_Countries">
+    <Type Name="Tbl_Country">
+      <Column Name="IDCountry" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_EduDegree" Member="Tbl_EduDegrees">
+    <Type Name="Tbl_EduDegree">
+      <Column Name="IDEduDegree" Type="System.Byte" DbType="TinyInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_EmployeeType" Member="Tbl_EmployeeTypes">
+    <Type Name="Tbl_EmployeeType">
+      <Column Name="IDEmployeeType" Type="System.Byte" DbType="TinyInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="Tbl_EmployeeType_EmployeeInfo" Member="EmployeeInfos" ThisKey="IDEmployeeType" OtherKey="IDEmployeeType" Type="EmployeeInfo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Field" Member="Tbl_Fields">
+    <Type Name="Tbl_Field">
+      <Column Name="IDField" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Job" Member="Tbl_Jobs">
+    <Type Name="Tbl_Job">
+      <Column Name="IDJob" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_JobRelated" Member="Tbl_JobRelateds">
+    <Type Name="Tbl_JobRelated">
+      <Column Name="IDJobRelated" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Management" Member="Tbl_Managements">
+    <Type Name="Tbl_Management">
+      <Column Name="IDManagement" Type="System.Byte" DbType="TinyInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="IDCo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Tbl_Management_Tbl_Company" Member="Tbl_Companies" ThisKey="IDManagement" OtherKey="IDManagement" Type="Tbl_Company" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_MaritalStatus" Member="Tbl_MaritalStatus">
+    <Type Name="Tbl_MaritalStatus">
+      <Column Name="IDMaritalStatus" Type="System.Byte" DbType="TinyInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_MemberStatus" Member="Tbl_MemberStatus">
+    <Type Name="Tbl_MemberStatus">
+      <Column Name="IDMemberStatus" Type="System.Byte" DbType="TinyInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_PersonType" Member="Tbl_PersonTypes">
+    <Type Name="Tbl_PersonType">
+      <Column Name="IDPersonType" Type="System.Byte" DbType="TinyInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Prosthesis" Member="Tbl_Prosthesis">
+    <Type Name="Tbl_Prosthesi">
+      <Column Name="IDProsthesis" Type="System.Byte" DbType="TinyInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="HasReceiver" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="ValidNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Relation" Member="Tbl_Relations">
+    <Type Name="Tbl_Relation">
+      <Column Name="IDRelation" Type="System.Byte" DbType="TinyInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="RelationOrderNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Religion" Member="Tbl_Religions">
+    <Type Name="Tbl_Religion">
+      <Column Name="IDReligion" Type="System.Byte" DbType="TinyInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_ReportGroups" Member="Tbl_ReportGroups">
+    <Type Name="Tbl_ReportGroup">
+      <Column Name="IDReportGroup" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GroupName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Reports" Member="Tbl_Reports">
+    <Type Name="Tbl_Report">
+      <Column Name="IDReport" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDReportGroup" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReportName" Type="System.String" DbType="NVarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="ReportDesc" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="ReportPath" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="HasDate" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="HasNum" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="HasAge" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="NumDesc" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CanDrillDown" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Security_User" Member="Tbl_Security_Users">
+    <Type Name="Tbl_Security_User">
+      <Column Name="IDUser" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username2" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="AccessValue" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_SerialNo" Member="Tbl_SerialNos">
+    <Type Name="Tbl_SerialNo">
+      <Column Name="LastPersonID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_SubCompany" Member="Tbl_SubCompanies">
+    <Type Name="Tbl_SubCompany">
+      <Column Name="IDSubCompany" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDManagement" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDCompany" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="IDco" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDMg" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDOrgan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Tbl_SubCompany_Tbl_Unit" Member="Tbl_Units" ThisKey="IDSubCompany" OtherKey="IDSubCompany" Type="Tbl_Unit" />
+      <Association Name="Tbl_Company_Tbl_SubCompany" Member="Tbl_Company" ThisKey="IDCompany" OtherKey="IDCompany" Type="Tbl_Company" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Table" Member="Tbl_Tables">
+    <Type Name="Tbl_Table">
+      <Column Name="IDTable" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Unit" Member="Tbl_Units">
+    <Type Name="Tbl_Unit">
+      <Column Name="IDUnit" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDManagement" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDCompany" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDSubCompany" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(70) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="IDco" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDMg" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDOrgan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDUnitNew" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Tbl_SubCompany_Tbl_Unit" Member="Tbl_SubCompany" ThisKey="IDSubCompany" OtherKey="IDSubCompany" Type="Tbl_SubCompany" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_ValidCenter" Member="Tbl_ValidCenters">
+    <Type Name="Tbl_ValidCenter">
+      <Column Name="IDValidCenter" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDValidCenterZone" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDValidCenterType" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(70) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="NewIDValidCenter" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NewIDValidCenterZone" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Association Name="Tbl_ValidCenterZone_Tbl_ValidCenter" Member="Tbl_ValidCenterZone" ThisKey="IDValidCenterZone" OtherKey="IDValidCenterZone" Type="Tbl_ValidCenterZone" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_ValidCenterType" Member="Tbl_ValidCenterTypes">
+    <Type Name="Tbl_ValidCenterType">
+      <Column Name="IDValidCenterType" Type="System.Byte" DbType="TinyInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_ValidCenterZone" Member="Tbl_ValidCenterZones">
+    <Type Name="Tbl_ValidCenterZone">
+      <Column Name="IDValidCenterZone" Type="System.Byte" DbType="TinyInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(70) NOT NULL" CanBeNull="false" />
+      <Column Name="Access" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="NewIDValidCenterZone" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Association Name="Tbl_ValidCenterZone_Tbl_ValidCenter" Member="Tbl_ValidCenters" ThisKey="IDValidCenterZone" OtherKey="IDValidCenterZone" Type="Tbl_ValidCenter" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_WorkType" Member="Tbl_WorkTypes">
+    <Type Name="Tbl_WorkType">
+      <Column Name="IDWorkType" Type="System.Byte" DbType="TinyInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblEducationRequest" Member="tblEducationRequests">
+    <Type Name="tblEducationRequest">
+      <Column Name="ReqID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PersonNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tarikh" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="saat" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="TargetGroup" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Subject" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="des" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FillDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="University" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ConferanceName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UniversityTele" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KindConferance" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UnitBoss" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HospitalBoss" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EduBoss" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="YourTele" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tmp1" Member="tmp1s">
+    <Type Name="tmp1">
+      <Column Name="IDPerson" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="IDPersonold" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PersonnelNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RelationOrderNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDRelation" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="NationalCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Lastname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Firstname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FatherName" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="Sex" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BirthDate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDBirthPlace" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdentityNo" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="IdentityDate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdentityPlace" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDMaritalStatus" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="HomePhone" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="PostCode" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="EMail" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IDValidCenterCity" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDValidCenter" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EntryDate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ExpDate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDEduDegree" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="AlertCount" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDHomeCity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HomeFax" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="HomeAddress" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IDOpr1" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="OprDate1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OprTime1" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="IDOpr2" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="OprDate2" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OprTime2" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TBirthPlace" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TIdentityPlace" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TIdHomeCity" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="KindPeople" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NationalCodeBigInt" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tmp2" Member="tmp2s">
+    <Type Name="tmp2">
+      <Column Name="IDPerson" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IsLocal" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDPersonType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="MedicalID" Type="System.String" DbType="NChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="NationalCode" Type="System.String" DbType="NChar(12)" CanBeNull="true" />
+      <Column Name="NationalCodeBigInt" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Lastname" Type="System.String" DbType="NVarChar(35)" CanBeNull="true" />
+      <Column Name="Firstname" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="FatherName" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="Sex" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="BirthDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="BirthPlace" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="IdentityNo" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="IdentityDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="IdentityPlace" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="IDMaritalStatus" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="IDReligion" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="HomePhone" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="WorkPhone" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="PostCode" Type="System.String" DbType="NVarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="EMail" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(1024) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="IsPrivate" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="idp" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreationDateTime" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MedicalID_BAK" Type="System.String" DbType="NChar(13)" CanBeNull="true" />
+      <Column Name="uniq" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Insure" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="InsuranceNo" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="NewIDPerson" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tmpMedicalIDs" Member="tmpMedicalIDs">
+    <Type Name="tmpMedicalID">
+      <Column Name="MedicalID" Type="System.String" DbType="NChar(13) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tmpMedid" Member="tmpMedids">
+    <Type Name="tmpMedid">
+      <Column Name="MedicalID" Type="System.String" DbType="NChar(13) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tmpMember" Member="tmpMembers">
+    <Type Name="tmpMember">
+      <Column Name="IDPerson" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDSponsor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PersonnelNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDRelation" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDJobRelated" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDManagement" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDCompany" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDSubCompany" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDValidCenterZone" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDValidCenter" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="EntryDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ExpDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CancelDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="IDChangeReason" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDEduDegree" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="AlertCount" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDMemberStatus" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="RecomLetterDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="RecomLetterNo" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Recommender" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ChangeReasonNote" Type="System.String" DbType="NVarChar(1024) NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="IDEmployeeType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="IDEmployeeType_" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="CreationDateTime" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tmpMember1" Member="tmpMember1s">
+    <Type Name="tmpMember1">
+      <Column Name="IDPerson" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDSponsor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PersonnelNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDRelation" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDJobRelated" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDManagement" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDCompany" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDSubCompany" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDValidCenterZone" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDValidCenter" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="EntryDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ExpDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CancelDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="IDChangeReason" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDEduDegree" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="AlertCount" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDMemberStatus" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="RecomLetterDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="RecomLetterNo" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Recommender" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ChangeReasonNote" Type="System.String" DbType="NVarChar(1024) NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="IDEmployeeType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="IDEmployeeType_" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="CreationDateTime" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tmpMember2" Member="tmpMember2s">
+    <Type Name="tmpMember2">
+      <Column Name="IDPerson" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDSponsor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PersonnelNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDRelation" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDJobRelated" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDManagement" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDCompany" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDSubCompany" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDValidCenterZone" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDValidCenter" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="EntryDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ExpDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CancelDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="IDChangeReason" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDEduDegree" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="AlertCount" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDMemberStatus" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="RecomLetterDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="RecomLetterNo" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Recommender" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ChangeReasonNote" Type="System.String" DbType="NVarChar(1024) NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="IDEmployeeType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="IDEmployeeType_" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="CreationDateTime" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tmpMember4" Member="tmpMember4s">
+    <Type Name="tmpMember4">
+      <Column Name="IDPerson" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDSponsor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PersonnelNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDRelation" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDJobRelated" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDManagement" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDCompany" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDSubCompany" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDValidCenterZone" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDValidCenter" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="EntryDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ExpDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CancelDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="IDChangeReason" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDEduDegree" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="AlertCount" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IDMemberStatus" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="RecomLetterDate" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="RecomLetterNo" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Recommender" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ChangeReasonNote" Type="System.String" DbType="NVarChar(1024) NOT NULL" CanBeNull="false" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="IDEmployeeType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="IDEmployeeType_" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="CreationDateTime" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ttMember" Member="ttMembers">
+    <Type Name="ttMember">
+      <Column Name="IDPerson" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDSponsor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PersonnelNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDRelation" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="IDJobRelated" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="IDManagement" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="IDCompany" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="IDSubCompany" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="IDValidCenterZone" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="IDValidCenter" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="EntryDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="ExpDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CancelDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="IDChangeReason" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="IDEduDegree" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AlertCount" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="IDMemberStatus" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="RecomLetterDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="RecomLetterNo" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="Recommender" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ChangeReasonNote" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UpdateConfig" Member="UpdateConfigs">
+    <Type Name="UpdateConfig">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Selected" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DaysCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UpdateLog" Member="UpdateLogs">
+    <Type Name="UpdateLog">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="State" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FailureText" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UpgradeConflict" Member="UpgradeConflicts">
+    <Type Name="UpgradeConflict">
+      <Column Name="IDPerson" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MedicalID" Type="System.String" DbType="NChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="IDValidCenterZone" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

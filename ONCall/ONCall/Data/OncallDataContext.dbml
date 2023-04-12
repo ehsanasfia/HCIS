@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="HCIS" Class="OncallDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=172.30.1.145;Initial Catalog=HCIS;User ID=artp" SettingsObjectName="ONCall.Properties.Settings" SettingsPropertyName="ONCallConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Person" Member="Persons">
+    <Type Name="Person">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NationalCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="PersonalCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Sex" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IdentityNumber" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="FatherName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BirthDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="Photo" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="InsuranceName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InsuranceNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MaritalStatus" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastModificator" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="BookletExpireDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="AllowInstallment" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="NotUse" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Visibel" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Death" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DeathTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="DeathDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Religion" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CurrentJob" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DialectLanguage" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Forieng" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Nationality" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PassportNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Person_Staff" Member="Staff" ThisKey="ID" OtherKey="ID" Type="Staff" Cardinality="One" />
+      <Association Name="Person_ONcall" Member="ONcalls" ThisKey="ID" OtherKey="PersonGID" Type="ONcall" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Staff" Member="Staffs">
+    <Type Name="Staff">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MedicalSystemCode" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Position" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RoomNumber" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SpecialityID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SpecialityDegree" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="Person_Staff" Member="Person" ThisKey="ID" OtherKey="ID" Type="Person" IsForeignKey="true" />
+      <Association Name="Speciality_Staff" Member="Speciality" ThisKey="SpecialityID" OtherKey="ID" Type="Speciality" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Speciality" Member="Specialities">
+    <Type Name="Speciality">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Speciality" Member="Speciality1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HeadUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Speciality_Staff" Member="Staffs" ThisKey="ID" OtherKey="SpecialityID" Type="Staff" />
+      <Association Name="Speciality_ONcall" Member="ONcalls" ThisKey="ID" OtherKey="GroupID" Type="ONcall" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwSecUserApp" Member="vwSecUserApps">
+    <Type Name="vwSecUserApp">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ApplicationID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Shift" Member="Shifts">
+    <Type Name="Shift">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ShiftName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ToTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreationUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Shift_ONcall" Member="ONcalls" ThisKey="ID" OtherKey="ShiftID" Type="ONcall" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwSTPerson" Member="vwSTPersons">
+    <Type Name="vwSTPerson">
+      <Column Name="SpecialityID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NationalCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="PersonalCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Sex" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FatherName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BirthDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Holiday" Member="Holidays">
+    <Type Name="Holiday">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Holiday" Member="Holiday1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Cermony" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreationUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ONcall" Member="ONcalls">
+    <Type Name="ONcall">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ONCall" Member="ONCall1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PersonelORDoctor" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ShiftID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="History" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="[Confirm]" Member="Confirm" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ConfirmUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreationUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PersonGID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Day" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsHoliday" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Shift_ONcall" Member="Shift" ThisKey="ShiftID" OtherKey="ID" Type="Shift" IsForeignKey="true" />
+      <Association Name="Person_ONcall" Member="Person" ThisKey="PersonGID" OtherKey="ID" Type="Person" IsForeignKey="true" />
+      <Association Name="Speciality_ONcall" Member="Speciality" ThisKey="GroupID" OtherKey="ID" Type="Speciality" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwMemGroup" Member="vwMemGroups">
+    <Type Name="vwMemGroup">
+      <Column Name="NationalCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="PersonalCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Expr1" Type="System.String" DbType="NVarChar(201)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Speciality" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HeadUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwONCall" Member="vwONCalls">
+    <Type Name="vwONCall">
+      <Column Name="Date" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="Speciality" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(201)" CanBeNull="true" />
+      <Column Name="ONCall" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Day" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Holiday" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="ShiftName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

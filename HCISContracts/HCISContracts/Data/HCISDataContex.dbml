@@ -1,0 +1,902 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="HCIS" Class="HCISDataContexDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=HCIS;Integrated Security=True" SettingsObjectName="HCISContracts.Properties.Settings" SettingsPropertyName="HCISConnectionString2" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Agenda" Member="Agendas">
+    <Type Name="Agenda">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PeriodicCalenderID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="StaffID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ShiftID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Capacity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BeginTime" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="EndTime" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DepartmentID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ServiceID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Agenda_GivenServiceM" Member="GivenServiceMs" ThisKey="ID" OtherKey="AgendaID" Type="GivenServiceM" />
+      <Association Name="Definition_Agenda" Member="Definition" ThisKey="ShiftID" OtherKey="ID" Type="Definition" IsForeignKey="true" />
+      <Association Name="Department_Agenda" Member="Department" ThisKey="DepartmentID" OtherKey="ID" Type="Department" IsForeignKey="true" />
+      <Association Name="PeriodicCalender_Agenda" Member="PeriodicCalender" ThisKey="PeriodicCalenderID" OtherKey="ID" Type="PeriodicCalender" IsForeignKey="true" />
+      <Association Name="Staff_Agenda" Member="Staff" ThisKey="StaffID" OtherKey="ID" Type="Staff" IsForeignKey="true" />
+      <Association Name="Service_Agenda" Member="Service" ThisKey="ServiceID" OtherKey="ID" Type="Service" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Visit" Member="Visits">
+    <Type Name="Visit">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ChiefComplaint" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ago" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Since" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="AccompanyingDocument" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="RO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IMP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DDx1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DDx2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="GivenServiceM_Visit" Member="GivenServiceM" ThisKey="ID" OtherKey="ID" Type="GivenServiceM" IsForeignKey="true" />
+      <Association Name="ICD10_Visit" Member="ICD10" ThisKey="IMP" OtherKey="ID" Type="ICD10" IsForeignKey="true" />
+      <Association Name="ICD10_Visit1" Member="ICD101" ThisKey="DDx1" OtherKey="ID" Type="ICD10" IsForeignKey="true" />
+      <Association Name="ICD10_Visit2" Member="ICD102" ThisKey="DDx2" OtherKey="ID" Type="ICD10" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Definition" Member="Definitions">
+    <Type Name="Definition">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Parent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Definition_Agenda" Member="Agendas" ThisKey="ID" OtherKey="ShiftID" Type="Agenda" />
+      <Association Name="Definition_Definition" Member="Definitions" ThisKey="ID" OtherKey="Parent" Type="Definition" />
+      <Association Name="Definition_GivenServiceM" Member="GivenServiceMs" ThisKey="ID" OtherKey="ShiftID" Type="GivenServiceM" />
+      <Association Name="Definition_PeriodicCalender" Member="PeriodicCalenders" ThisKey="ID" OtherKey="ShiftID" Type="PeriodicCalender" />
+      <Association Name="Definition_Definition" Member="Definition1" ThisKey="Parent" OtherKey="ID" Type="Definition" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Department" Member="Departments">
+    <Type Name="Department">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TypeName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Department_Agenda" Member="Agendas" ThisKey="ID" OtherKey="DepartmentID" Type="Agenda" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DiagnosticServiceDetail" Member="DiagnosticServiceDetails">
+    <Type Name="DiagnosticServiceDetail">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Service_DiagnosticServiceDetail" Member="Service" ThisKey="ID" OtherKey="ID" Type="Service" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DoctorInsurance" Member="DoctorInsurances">
+    <Type Name="DoctorInsurance">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="InsuranceID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StaffID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="Insurance_DoctorInsurance" Member="Insurance" ThisKey="InsuranceID" OtherKey="ID" Type="Insurance" IsForeignKey="true" />
+      <Association Name="Staff_DoctorInsurance" Member="Staff" ThisKey="StaffID" OtherKey="ID" Type="Staff" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FavoriteICD10" Member="FavoriteICD10s">
+    <Type Name="FavoriteICD10">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ICD10ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StaffID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="ICD10_FavoriteICD10" Member="ICD10" ThisKey="ICD10ID" OtherKey="ID" Type="ICD10" IsForeignKey="true" />
+      <Association Name="Staff_FavoriteICD10" Member="Staff" ThisKey="StaffID" OtherKey="ID" Type="Staff" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FavoriteService" Member="FavoriteServices">
+    <Type Name="FavoriteService">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StaffID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ServiceID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="Staff_FavoriteService" Member="Staff" ThisKey="StaffID" OtherKey="ID" Type="Staff" IsForeignKey="true" />
+      <Association Name="Service_FavoriteService" Member="Service" ThisKey="ServiceID" OtherKey="ID" Type="Service" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GivenDiagnosticServiceD" Member="GivenDiagnosticServiceDs">
+    <Type Name="GivenDiagnosticServiceD">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Position" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="GivenServiceD_GivenDiagnosticServiceD" Member="GivenServiceD" ThisKey="ID" OtherKey="ID" Type="GivenServiceD" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GivenDiagnosticServiceM" Member="GivenDiagnosticServiceMs">
+    <Type Name="GivenDiagnosticServiceM">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Result" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TechnecianID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AnsweringDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="AnswerTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Association Name="GivenServiceM_GivenDiagnosticServiceM" Member="GivenServiceM" ThisKey="ID" OtherKey="ID" Type="GivenServiceM" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GivenLaboratoryServiceD" Member="GivenLaboratoryServiceDs">
+    <Type Name="GivenLaboratoryServiceD">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Result" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NormalRange" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="GetSampel" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SampelCounter" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="GivenServiceD_GivenLaboratoryServiceD" Member="GivenServiceD" ThisKey="ID" OtherKey="ID" Type="GivenServiceD" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GivenServiceD" Member="GivenServiceDs">
+    <Type Name="GivenServiceD">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GivenServiceMID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ServiceID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="TariffID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="TotalPrice" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="PatientShare" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="InsuranceShare" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="PayedPrice" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Payed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PaymentPrice" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="FunctorID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="[Confirm]" Member="Confirm" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="LastModificator" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Association Name="GivenServiceD_GivenDiagnosticServiceD" Member="GivenDiagnosticServiceD" ThisKey="ID" OtherKey="ID" Type="GivenDiagnosticServiceD" Cardinality="One" />
+      <Association Name="GivenServiceD_GivenLaboratoryServiceD" Member="GivenLaboratoryServiceD" ThisKey="ID" OtherKey="ID" Type="GivenLaboratoryServiceD" Cardinality="One" />
+      <Association Name="GivenServiceM_GivenServiceD" Member="GivenServiceM" ThisKey="GivenServiceMID" OtherKey="ID" Type="GivenServiceM" IsForeignKey="true" />
+      <Association Name="Staff_GivenServiceD" Member="Staff" ThisKey="FunctorID" OtherKey="ID" Type="Staff" IsForeignKey="true" />
+      <Association Name="Service_GivenServiceD" Member="Service" ThisKey="ServiceID" OtherKey="ID" Type="Service" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GivenServiceM" Member="GivenServiceMs">
+    <Type Name="GivenServiceM">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PersonID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="RequestStaffID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="InsuranceID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ParentID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ShiftID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AgendaID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="PeriodicCalendeID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ServiceCategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FunctorID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="TechnicianID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="PaymentID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="SerialNumber" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Time" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="InsuranceNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RequestDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="RequestTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="AdmitDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="AdmitTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="BookletType" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="BookletDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="BookletExpireDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="AnsweringDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="TurningDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="TurningTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="BookletSerialNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BookletPageNumber" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="PayedPrice" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="PaymentPrice" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="SendToDrTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="SendToDr" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Admitted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="[Confirm]" Member="Confirm" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Payed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Priority" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RemissionStatus" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DailySN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatorUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="LastModificator" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="ComplementInsurance" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ComplementInsuranceNO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="GivenServiceM_Visit" Member="Visit" ThisKey="ID" OtherKey="ID" Type="Visit" Cardinality="One" />
+      <Association Name="GivenServiceM_GivenDiagnosticServiceM" Member="GivenDiagnosticServiceM" ThisKey="ID" OtherKey="ID" Type="GivenDiagnosticServiceM" Cardinality="One" />
+      <Association Name="GivenServiceM_GivenServiceD" Member="GivenServiceDs" ThisKey="ID" OtherKey="GivenServiceMID" Type="GivenServiceD" />
+      <Association Name="GivenServiceM_GivenServiceM" Member="GivenServiceMs" ThisKey="ID" OtherKey="ParentID" Type="GivenServiceM" />
+      <Association Name="GivenServiceM_Payment" Member="Payments" ThisKey="ID" OtherKey="GivenServiceMID" Type="Payment" />
+      <Association Name="GivenServiceM_Reference" Member="References" ThisKey="ID" OtherKey="GivenServiceMID" Type="Reference" />
+      <Association Name="Agenda_GivenServiceM" Member="Agenda" ThisKey="AgendaID" OtherKey="ID" Type="Agenda" IsForeignKey="true" />
+      <Association Name="Definition_GivenServiceM" Member="Definition" ThisKey="ShiftID" OtherKey="ID" Type="Definition" IsForeignKey="true" />
+      <Association Name="GivenServiceM_GivenServiceM" Member="GivenServiceM1" ThisKey="ParentID" OtherKey="ID" Type="GivenServiceM" IsForeignKey="true" />
+      <Association Name="Insurance_GivenServiceM" Member="Insurance" ThisKey="InsuranceID" OtherKey="ID" Type="Insurance" IsForeignKey="true" />
+      <Association Name="PeriodicCalender_GivenServiceM" Member="PeriodicCalender" ThisKey="PeriodicCalendeID" OtherKey="ID" Type="PeriodicCalender" IsForeignKey="true" />
+      <Association Name="ServiceCategory_GivenServiceM" Member="ServiceCategory" ThisKey="ServiceCategoryID" OtherKey="ID" Type="ServiceCategory" IsForeignKey="true" />
+      <Association Name="Person_GivenServiceM" Member="Person" ThisKey="PersonID" OtherKey="ID" Type="Person" IsForeignKey="true" />
+      <Association Name="Staff_GivenServiceM" Member="Staff" ThisKey="RequestStaffID" OtherKey="ID" Type="Staff" IsForeignKey="true" />
+      <Association Name="Staff_GivenServiceM1" Member="Staff1" ThisKey="FunctorID" OtherKey="ID" Type="Staff" IsForeignKey="true" />
+      <Association Name="Staff_GivenServiceM2" Member="Staff2" ThisKey="TechnicianID" OtherKey="ID" Type="Staff" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ICD10" Member="ICD10s">
+    <Type Name="ICD10">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDParent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NameF" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="NameE" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ICDCode" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CodeType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Association Name="ICD10_Visit" Member="Visits" ThisKey="ID" OtherKey="IMP" Type="Visit" />
+      <Association Name="ICD10_Visit1" Member="Visits1" ThisKey="ID" OtherKey="DDx1" Type="Visit" />
+      <Association Name="ICD10_Visit2" Member="Visits2" ThisKey="ID" OtherKey="DDx2" Type="Visit" />
+      <Association Name="ICD10_FavoriteICD10" Member="FavoriteICD10s" ThisKey="ID" OtherKey="ICD10ID" Type="FavoriteICD10" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Insurance" Member="Insurances">
+    <Type Name="Insurance">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="Insurance_DoctorInsurance" Member="DoctorInsurances" ThisKey="ID" OtherKey="InsuranceID" Type="DoctorInsurance" />
+      <Association Name="Insurance_GivenServiceM" Member="GivenServiceMs" ThisKey="ID" OtherKey="InsuranceID" Type="GivenServiceM" />
+      <Association Name="Insurance_Tariff" Member="Tariffs" ThisKey="ID" OtherKey="InsuranceID" Type="Tariff" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LaboratoryServiceDetail" Member="LaboratoryServiceDetails">
+    <Type Name="LaboratoryServiceDetail">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TestCode" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TestOnly" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TestNo" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="MeasurementUnit" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AbbreviationName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TestType" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="UpperBound" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LowerBound" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NormalRange" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Association Name="Service_LaboratoryServiceDetail" Member="Service" ThisKey="ID" OtherKey="ID" Type="Service" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Payment" Member="Payments">
+    <Type Name="Payment">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StaffID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="PersonID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="PayBack" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Time" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="TransactionID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreatorUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatorFullName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ModificatorUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModificatorFullName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PayBackID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="SerialNumber" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PayBackType" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="GivenServiceMID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="InstallMent" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Payment_Payment" Member="Payments" ThisKey="ID" OtherKey="PayBackID" Type="Payment" />
+      <Association Name="GivenServiceM_Payment" Member="GivenServiceM" ThisKey="GivenServiceMID" OtherKey="ID" Type="GivenServiceM" IsForeignKey="true" />
+      <Association Name="Payment_Payment" Member="Payment1" ThisKey="PayBackID" OtherKey="ID" Type="Payment" IsForeignKey="true" />
+      <Association Name="Person_Payment" Member="Person" ThisKey="PersonID" OtherKey="ID" Type="Person" IsForeignKey="true" />
+      <Association Name="Staff_Payment" Member="Staff" ThisKey="StaffID" OtherKey="ID" Type="Staff" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PeriodicCalender" Member="PeriodicCalenders">
+    <Type Name="PeriodicCalender">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ShiftID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ServiceCategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Capacity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FromDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ToDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="FromClock" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="ToClock" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="Shanbeh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="YekShanbeh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DoShanbeh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SeShanbeh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ChaharShanbeh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PanjShanbeh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Jomeh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="PeriodicCalender_Agenda" Member="Agendas" ThisKey="ID" OtherKey="PeriodicCalenderID" Type="Agenda" />
+      <Association Name="PeriodicCalender_GivenServiceM" Member="GivenServiceMs" ThisKey="ID" OtherKey="PeriodicCalendeID" Type="GivenServiceM" />
+      <Association Name="Definition_PeriodicCalender" Member="Definition" ThisKey="ShiftID" OtherKey="ID" Type="Definition" IsForeignKey="true" />
+      <Association Name="ServiceCategory_PeriodicCalender" Member="ServiceCategory" ThisKey="ServiceCategoryID" OtherKey="ID" Type="ServiceCategory" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PhysiotherapyOrderD" Member="PhysiotherapyOrderDs">
+    <Type Name="PhysiotherapyOrderD">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PhysiotherapyOrderMID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ServiceID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Position" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Commnet" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="LastModificator" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Association Name="PhysiotherapyOrderM_PhysiotherapyOrderD" Member="PhysiotherapyOrderM" ThisKey="PhysiotherapyOrderMID" OtherKey="ID" Type="PhysiotherapyOrderM" IsForeignKey="true" />
+      <Association Name="Service_PhysiotherapyOrderD" Member="Service" ThisKey="ServiceID" OtherKey="ID" Type="Service" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PhysiotherapyOrderM" Member="PhysiotherapyOrderMs">
+    <Type Name="PhysiotherapyOrderM">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PersonID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="RequestStaffID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="RequestedTime" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Time" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="RequestDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="RequestTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="CreatorUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="LastModificator" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Association Name="PhysiotherapyOrderM_PhysiotherapyOrderD" Member="PhysiotherapyOrderDs" ThisKey="ID" OtherKey="PhysiotherapyOrderMID" Type="PhysiotherapyOrderD" />
+      <Association Name="Person_PhysiotherapyOrderM" Member="Person" ThisKey="PersonID" OtherKey="ID" Type="Person" IsForeignKey="true" />
+      <Association Name="Staff_PhysiotherapyOrderM" Member="Staff" ThisKey="RequestStaffID" OtherKey="ID" Type="Staff" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Reference" Member="References">
+    <Type Name="Reference">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GivenServiceMID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="SpecialityID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StaffID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="SuggestedDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="CreatorUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="LastModificator" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Association Name="GivenServiceM_Reference" Member="GivenServiceM" ThisKey="GivenServiceMID" OtherKey="ID" Type="GivenServiceM" IsForeignKey="true" />
+      <Association Name="Staff_Reference" Member="Staff" ThisKey="StaffID" OtherKey="ID" Type="Staff" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SampleAnswer" Member="SampleAnswers">
+    <Type Name="SampleAnswer">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GroupServiceID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Service_SampleAnswer" Member="Service" ThisKey="GroupServiceID" OtherKey="ID" Type="Service" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ServiceCategory" Member="ServiceCategories">
+    <Type Name="ServiceCategory">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="ServiceCategory_GivenServiceM" Member="GivenServiceMs" ThisKey="ID" OtherKey="ServiceCategoryID" Type="GivenServiceM" />
+      <Association Name="ServiceCategory_PeriodicCalender" Member="PeriodicCalenders" ThisKey="ID" OtherKey="ServiceCategoryID" Type="PeriodicCalender" />
+      <Association Name="ServiceCategory_Service" Member="Services" ThisKey="ID" OtherKey="CategoryID" Type="Service" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tariff" Member="Tariffs">
+    <Type Name="Tariff">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="InsuranceID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ServiceID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="PatientShare" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="OrganizationShare" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="FreePrice" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="GovernmentalPrice" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="TotalPrice" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Lock" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Insurance_Tariff" Member="Insurance" ThisKey="InsuranceID" OtherKey="ID" Type="Insurance" IsForeignKey="true" />
+      <Association Name="Service_Tariff" Member="Service" ThisKey="ServiceID" OtherKey="ID" Type="Service" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DoctorContract" Member="DoctorContracts">
+    <Type Name="DoctorContract">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ServiceID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="StaffID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Payment" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Time" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="CreatorUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="NVarChar(12)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Association Name="Staff_DoctorContract" Member="Staff" ThisKey="StaffID" OtherKey="ID" Type="Staff" IsForeignKey="true" />
+      <Association Name="Service_DoctorContract" Member="Service" ThisKey="ServiceID" OtherKey="ID" Type="Service" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Person" Member="Persons">
+    <Type Name="Person">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MedicalID" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+      <Column Name="FamilyNumber" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="FamilyDoctor" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="FamilyNurse" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="NationalCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="PersonalCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Sex" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IdentityNumber" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="IdentityPlace" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FatherName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BirthDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="BirthPlace" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="CellularPhone" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="WorkPhone" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="Photo" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="WorkAddress" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="InsuranceName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InsuranceNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Education" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MaritalStatus" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Religion" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CurrentJob" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="BloodType" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Weight" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Height" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Barcode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatorUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="LastModificator" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="BookletExpireDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="AllowInstallment" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="NotUse" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Visibel" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Death" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DeathTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="DeathDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DialectLanguage" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Forieng" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Nationality" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PassportNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Person_GivenServiceM" Member="GivenServiceMs" ThisKey="ID" OtherKey="PersonID" Type="GivenServiceM" />
+      <Association Name="Person_Payment" Member="Payments" ThisKey="ID" OtherKey="PersonID" Type="Payment" />
+      <Association Name="Person_PhysiotherapyOrderM" Member="PhysiotherapyOrderMs" ThisKey="ID" OtherKey="PersonID" Type="PhysiotherapyOrderM" />
+      <Association Name="Person_Person" Member="Persons" ThisKey="ID" OtherKey="FamilyDoctor" Type="Person" />
+      <Association Name="Person_Person1" Member="Persons1" ThisKey="ID" OtherKey="FamilyNurse" Type="Person" />
+      <Association Name="Person_Staff" Member="Staff" ThisKey="ID" OtherKey="ID" Type="Staff" Cardinality="One" />
+      <Association Name="Person_Person" Member="Person1" ThisKey="FamilyDoctor" OtherKey="ID" Type="Person" IsForeignKey="true" />
+      <Association Name="Person_Person1" Member="Person2" ThisKey="FamilyNurse" OtherKey="ID" Type="Person" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vwMemGroup" Member="vwMemGroups">
+    <Type Name="vwMemGroup">
+      <Column Name="NationalCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="PersonalCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Expr1" Type="System.String" DbType="NVarChar(201)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Speciality" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HeadUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Staff" Member="Staffs">
+    <Type Name="Staff">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MedicalSystemCode" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Position" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RoomNumber" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserType" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UserTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SpecialityID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SpecialityDegree" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="OrganizationLevel" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Hide" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ShowInMonitor" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ExternalID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Offical" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PositionID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Staff_Agenda" Member="Agendas" ThisKey="ID" OtherKey="StaffID" Type="Agenda" />
+      <Association Name="Staff_DoctorInsurance" Member="DoctorInsurances" ThisKey="ID" OtherKey="StaffID" Type="DoctorInsurance" />
+      <Association Name="Staff_FavoriteICD10" Member="FavoriteICD10s" ThisKey="ID" OtherKey="StaffID" Type="FavoriteICD10" />
+      <Association Name="Staff_FavoriteService" Member="FavoriteServices" ThisKey="ID" OtherKey="StaffID" Type="FavoriteService" />
+      <Association Name="Staff_GivenServiceD" Member="GivenServiceDs" ThisKey="ID" OtherKey="FunctorID" Type="GivenServiceD" />
+      <Association Name="Staff_GivenServiceM" Member="GivenServiceMs" ThisKey="ID" OtherKey="RequestStaffID" Type="GivenServiceM" />
+      <Association Name="Staff_GivenServiceM1" Member="GivenServiceMs1" ThisKey="ID" OtherKey="FunctorID" Type="GivenServiceM" />
+      <Association Name="Staff_GivenServiceM2" Member="GivenServiceMs2" ThisKey="ID" OtherKey="TechnicianID" Type="GivenServiceM" />
+      <Association Name="Staff_Payment" Member="Payments" ThisKey="ID" OtherKey="StaffID" Type="Payment" />
+      <Association Name="Staff_PhysiotherapyOrderM" Member="PhysiotherapyOrderMs" ThisKey="ID" OtherKey="RequestStaffID" Type="PhysiotherapyOrderM" />
+      <Association Name="Staff_Reference" Member="References" ThisKey="ID" OtherKey="StaffID" Type="Reference" />
+      <Association Name="Staff_DoctorContract" Member="DoctorContracts" ThisKey="ID" OtherKey="StaffID" Type="DoctorContract" />
+      <Association Name="Staff_QualitativePoint" Member="QualitativePoints" ThisKey="ID" OtherKey="StaffID" Type="QualitativePoint" />
+      <Association Name="Staff_DoctorFunction" Member="DoctorFunctions" ThisKey="ID" OtherKey="StaffID" Type="DoctorFunction" />
+      <Association Name="Staff_DoctorSalaryParam" Member="DoctorSalaryParams" ThisKey="ID" OtherKey="StaffID" Type="DoctorSalaryParam" />
+      <Association Name="Staff_DoctorContractM" Member="DoctorContractMs" ThisKey="ID" OtherKey="StaffID" Type="DoctorContractM" />
+      <Association Name="Person_Staff" Member="Person" ThisKey="ID" OtherKey="ID" Type="Person" IsForeignKey="true" />
+      <Association Name="Speciality_Staff" Member="Speciality" ThisKey="SpecialityID" OtherKey="ID" Type="Speciality" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DoctorPaymentsAndDeductions" Member="DoctorPaymentsAndDeductions">
+    <Type Name="DoctorPaymentsAndDeduction">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Percentage" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="LowOff" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ForOffical" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DoctorContractD" Member="DoctorContractDs">
+    <Type Name="DoctorContractD">
+      <Column Name="ID" AutoSync="OnInsert" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ContractID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ServiceID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Multiplier" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CreatorUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="CreatorUserFullname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="DoctorPaymentCategory_DoctorContractD" Member="DoctorPaymentCategory" ThisKey="ServiceID" OtherKey="ID" Type="DoctorPaymentCategory" IsForeignKey="true" />
+      <Association Name="DoctorContractM_DoctorContractD" Member="DoctorContractM" ThisKey="ContractID" OtherKey="ID" Type="DoctorContractM" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DoctorSalaryAdditionalItem" Member="DoctorSalaryAdditionalItems">
+    <Type Name="DoctorSalaryAdditionalItem">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FromDate" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ToDate" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Weather" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SuperSpecial" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Deprivation" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SuperWorkshop" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SuperAbsorption" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifactorUserFullName" Type="System.String" DbType="NVarChar(70)" CanBeNull="true" />
+      <Column Name="LastModifctionDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="LastModifictionTIme" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DoctorServiceCategoryTariff" Member="DoctorServiceCategoryTariffs">
+    <Type Name="DoctorServiceCategoryTariff">
+      <Column Name="ID" AutoSync="OnInsert" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DSServiceID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Year" Type="System.String" DbType="NChar(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Dolati" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="QeyreDolati" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Khososi" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Association Name="DoctorPaymentCategory_DoctorServiceCategoryTariff" Member="DoctorPaymentCategory" ThisKey="DSServiceID" OtherKey="ID" Type="DoctorPaymentCategory" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Service" Member="Services">
+    <Type Name="Service">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OldID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OldParentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Name_En" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CaliforniaCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SalamatBookletCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SpecialityID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ParentID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Shape" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MESCCode_No" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NIS" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EmergencyFav" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="HIXCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="K" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="BasicK" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SupplementBasicK" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Value" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ResultType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FinanceConfirm" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="RetireeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DoctorK" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="IDMeasurement" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastMUserIFullName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="LastModificator" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreationUserIFullName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="CreatorUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DrugCount" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DrugDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Hide" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SATACode" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="IDint" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AllowedAmount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TimeSpan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CheckValidation" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DocPaymentCatOffical" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DocPaymentCatNonOffical" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Service_Agenda" Member="Agendas" ThisKey="ID" OtherKey="ServiceID" Type="Agenda" />
+      <Association Name="Service_DiagnosticServiceDetail" Member="DiagnosticServiceDetail" ThisKey="ID" OtherKey="ID" Type="DiagnosticServiceDetail" Cardinality="One" />
+      <Association Name="Service_FavoriteService" Member="FavoriteServices" ThisKey="ID" OtherKey="ServiceID" Type="FavoriteService" />
+      <Association Name="Service_GivenServiceD" Member="GivenServiceDs" ThisKey="ID" OtherKey="ServiceID" Type="GivenServiceD" />
+      <Association Name="Service_LaboratoryServiceDetail" Member="LaboratoryServiceDetail" ThisKey="ID" OtherKey="ID" Type="LaboratoryServiceDetail" Cardinality="One" />
+      <Association Name="Service_PhysiotherapyOrderD" Member="PhysiotherapyOrderDs" ThisKey="ID" OtherKey="ServiceID" Type="PhysiotherapyOrderD" />
+      <Association Name="Service_SampleAnswer" Member="SampleAnswers" ThisKey="ID" OtherKey="GroupServiceID" Type="SampleAnswer" />
+      <Association Name="Service_Tariff" Member="Tariffs" ThisKey="ID" OtherKey="ServiceID" Type="Tariff" />
+      <Association Name="Service_DoctorContract" Member="DoctorContracts" ThisKey="ID" OtherKey="ServiceID" Type="DoctorContract" />
+      <Association Name="Service_Service" Member="Services" ThisKey="ID" OtherKey="ParentID" Type="Service" />
+      <Association Name="Service_DoctorFunction" Member="DoctorFunctions" ThisKey="ID" OtherKey="ServiceID" Type="DoctorFunction" />
+      <Association Name="Service_Service" Member="Service1" ThisKey="ParentID" OtherKey="ID" Type="Service" IsForeignKey="true" />
+      <Association Name="ServiceCategory_Service" Member="ServiceCategory" ThisKey="CategoryID" OtherKey="ID" Type="ServiceCategory" IsForeignKey="true" />
+      <Association Name="Speciality_Service" Member="Speciality" ThisKey="SpecialityID" OtherKey="ID" Type="Speciality" IsForeignKey="true" />
+      <Association Name="DoctorPaymentCategory_Service" Member="DoctorPaymentCategory" ThisKey="DocPaymentCatNonOffical" OtherKey="ID" Type="DoctorPaymentCategory" IsForeignKey="true" />
+      <Association Name="DoctorPaymentCategory_Service1" Member="DoctorPaymentCategory1" ThisKey="DocPaymentCatOffical" OtherKey="ID" Type="DoctorPaymentCategory" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QualitativePoints" Member="QualitativePoints">
+    <Type Name="QualitativePoint">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StaffID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Education" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WorkExperience" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PhysicalPresence" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ResponsibleTheory" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WorkQuality" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Patientdissatisfaction" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Nosave" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Total" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalPoint" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CreatorUserFullName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Association Name="Staff_QualitativePoint" Member="Staff" ThisKey="StaffID" OtherKey="ID" Type="Staff" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DoctorFunction" Member="DoctorFunctions">
+    <Type Name="DoctorFunction">
+      <Column Name="ID" AutoSync="OnInsert" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StaffID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ServiceID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.String" DbType="NChar(7) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="TotalK" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="JozeHerfeyi" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UnitPrice" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Multiplier" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StandardAmount" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="ConfirmedAmount" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="ClinicalOfficerConfirm" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TimeOfExist" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalPrice" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PayedConfirm" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="DoctorFunction_DoctorFunction" Member="DoctorFunction2" ThisKey="StaffID,ServiceID,Date" OtherKey="StaffID,ServiceID,Date" Type="DoctorFunction" Cardinality="One" />
+      <Association Name="DoctorFunction_DoctorFunction" Member="DoctorFunction1" ThisKey="StaffID,ServiceID,Date" OtherKey="StaffID,ServiceID,Date" Type="DoctorFunction" IsForeignKey="true" />
+      <Association Name="Service_DoctorFunction" Member="Service" ThisKey="ServiceID" OtherKey="ID" Type="Service" IsForeignKey="true" />
+      <Association Name="Staff_DoctorFunction" Member="Staff" ThisKey="StaffID" OtherKey="ID" Type="Staff" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DoctorSalaryParams" Member="DoctorSalaryParams">
+    <Type Name="DoctorSalaryParam">
+      <Column Name="PKID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StaffID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.String" DbType="NChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="ParamName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ParamValue" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="CreatorUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ConfirmPayment" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SortCol" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Staff_DoctorSalaryParam" Member="Staff" ThisKey="StaffID" OtherKey="ID" Type="Staff" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Speciality" Member="Specialities">
+    <Type Name="Speciality">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OldID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Speciality" Member="Speciality1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HeadUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SepasID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SATAIdProfessionType" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="HideInDocPayemnt" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Speciality_Staff" Member="Staffs" ThisKey="ID" OtherKey="SpecialityID" Type="Staff" />
+      <Association Name="Speciality_Service" Member="Services" ThisKey="ID" OtherKey="SpecialityID" Type="Service" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Vw_DocContractHe32" Member="Vw_DocContractHe32s">
+    <Type Name="Vw_DocContractHe32">
+      <Column Name="Doc" Type="System.String" DbType="NVarChar(218)" CanBeNull="true" />
+      <Column Name="ParamValue" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="PersonalCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="NChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="StringValue" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="n1" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="n2" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="n3" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="n4" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="n5" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="n6" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="n7" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="n8" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="P1" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="P2" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="P3" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="P4" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="P5" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="P6" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RVU" Member="RVUs">
+    <Type Name="RVU">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Dastgah" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Sarfasl_Khedmati" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Gorooh_Khedmati" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Khosoosiat_Code" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Code_Melli" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Code_Namayande" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Sayer_Codaye_Tajmi_Shode" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Sharhe_Codaye_Tajmi_Shode" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Arzesh_Nesbi" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Joze_Herfeyi_26" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Joze_Fanni_27" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Arzesh_Paye_Bihooshi" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="NationalID" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="RelativeValue" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="Version" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TerminologyId" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DoctorPaymentCategory" Member="DoctorPaymentCategories">
+    <Type Name="DoctorPaymentCategory">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CatName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ForOffical" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ForNonOffical" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Hide" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DefultRatio" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PayWithK" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="DoctorPaymentCategory_DoctorContractD" Member="DoctorContractDs" ThisKey="ID" OtherKey="ServiceID" Type="DoctorContractD" />
+      <Association Name="DoctorPaymentCategory_DoctorServiceCategoryTariff" Member="DoctorServiceCategoryTariffs" ThisKey="ID" OtherKey="DSServiceID" Type="DoctorServiceCategoryTariff" />
+      <Association Name="DoctorPaymentCategory_Service" Member="Services" ThisKey="ID" OtherKey="DocPaymentCatNonOffical" Type="Service" />
+      <Association Name="DoctorPaymentCategory_Service1" Member="Services1" ThisKey="ID" OtherKey="DocPaymentCatOffical" Type="Service" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DoctorContractM" Member="DoctorContractMs">
+    <Type Name="DoctorContractM">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StaffID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ContractNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StartDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Rasmi" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SalaryBase" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="PositionPercentage" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TotalK" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatorUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="CreatorUserFullname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AbsorptionPercentage" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TaxesPercentage" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UseDolatiTariff" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UseKhososiTariff" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UseQeyreDolatiTariff" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="DoctorContractM_DoctorContractD" Member="DoctorContractDs" ThisKey="ID" OtherKey="ContractID" Type="DoctorContractD" />
+      <Association Name="Staff_DoctorContractM" Member="Staff" ThisKey="StaffID" OtherKey="ID" Type="Staff" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.CreateDoctorFunctions" Method="CreateDoctorFunctions">
+    <Parameter Name="Date" Parameter="date" Type="System.String" DbType="NChar(7)" />
+    <Parameter Name="StaffID" Parameter="staffID" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Spu_DentistServiceCount" Method="Spu_DentistServiceCount">
+    <Parameter Name="F" Parameter="f" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="T" Parameter="t" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="Doc" Parameter="doc" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="Spu_DentistServiceCountResult">
+      <Column Name="Count" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ServiceID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="JozeHrefyi" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TotalK" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Spu_DocAngiosCount" Method="Spu_DocAngiosCount">
+    <Parameter Name="F" Parameter="f" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="T" Parameter="t" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="Doc" Parameter="doc" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="Spu_DocAngiosCountResult">
+      <Column Name="ServiceID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="count" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalK" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="JozeHefreyi" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Spu_DocDiagnosticCount" Method="Spu_DocDiagnosticCount">
+    <Parameter Name="F" Parameter="f" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="T" Parameter="t" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="Doc" Parameter="doc" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="Spu_DocDiagnosticCountResult">
+      <Column Name="count" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ServiceID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="JozeHerfeyi" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TotalK" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Spu_DocParaCount" Method="Spu_DocParaCount">
+    <Parameter Name="F" Parameter="f" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="T" Parameter="t" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="Doc" Parameter="doc" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="Spu_DocParaCountResult">
+      <Column Name="ServiceID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Count" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalK" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="JozeHerfeyi" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Spu_DocSurgeryCount" Method="Spu_DocSurgeryCount">
+    <Parameter Name="F" Parameter="f" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="T" Parameter="t" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="Doc" Parameter="doc" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="Spu_DocSurgeryCountResult">
+      <Column Name="ServiceID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="TotalK" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="JozeHerfeyi" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Spu_DocVisitCount" Method="Spu_DocVisitCount">
+    <Parameter Name="F" Parameter="f" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="T" Parameter="t" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="Doc" Parameter="doc" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="Spu_DocVisitCountResult">
+      <Column Name="Count" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ServiceID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Spu_DocWardVisitCount" Method="Spu_DocWardVisitCount">
+    <Parameter Name="F" Parameter="f" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="T" Parameter="t" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="Doc" Parameter="doc" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="Spu_DocWardVisitCountResult">
+      <Column Name="ServiceID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Count" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="JozHefeyi" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TotalK" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Spu_DocAnasthesiaCount" Method="Spu_DocAnasthesiaCount">
+    <Parameter Name="F" Parameter="f" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="T" Parameter="t" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="Doc" Parameter="doc" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="Spu_DocAnasthesiaCountResult">
+      <Column Name="ServiceID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="TotalK" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="count" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="JozeHerfeyi" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Spu_ReportForDocContract" Method="Spu_ReportForDocContract">
+    <Parameter Name="ServiceID" Parameter="serviceID" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="StaffID" Parameter="staffID" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="FromDate" Parameter="fromDate" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="ToDate" Parameter="toDate" Type="System.String" DbType="NVarChar(10)" />
+    <ElementType Name="Spu_ReportForDocContractResult">
+      <Column Name="Person" Type="System.String" DbType="NVarChar(201)" CanBeNull="true" />
+      <Column Name="PersonalCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ServiceID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="StaffID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

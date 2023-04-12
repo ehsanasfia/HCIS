@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="شاخص افراد سیگاری یا در معرض دود" />
+  <DataSources>
+    <SqlDataSource ComponentName="dashboardSqlDataSource1">
+      <Name>SQL Data Source 1</Name>
+      <Connection Name="172.30.1.145_HCIS_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="172.30.1.145" />
+          <Parameter Name="database" Value="HCIS" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="artp" />
+          <Parameter Name="password" Value="506070" />
+        </Parameters>
+      </Connection>
+      <Query Type="SelectQuery" Name="Vw_FDSSmokeSickPatientCount">
+        <Tables>
+          <Table Name="Vw_FDSSmokeSickPatientCount" Meta="0|0|125|80" />
+        </Tables>
+        <Columns>
+          <Column Table="Vw_FDSSmokeSickPatientCount" Name="C" />
+          <Column Table="Vw_FDSSmokeSickPatientCount" Name="Cjamiat" />
+        </Columns>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="Vw_FDSSmokeSickPatientCount">
+            <Field Name="C" Type="Int32" />
+            <Field Name="Cjamiat" Type="Int32" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+      <CalculatedFields>
+        <CalculatedField Name="Calculated Field 1" Expression="Iif([Cjamiat] = 0, 0, [C] * 1.0 / [Cjamiat])" DataType="Auto" DataMember="Vw_FDSSmokeSickPatientCount" />
+        <CalculatedField Name="Calculated Field 2" Expression="100" DataType="Auto" DataMember="Vw_FDSSmokeSickPatientCount" />
+      </CalculatedFields>
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <Gauge ComponentName="gaugeDashboardItem1" Name="نمایش" DataSource="dashboardSqlDataSource1" DataMember="Vw_FDSSmokeSickPatientCount" ContentLineCount="1" ViewType="CircularThreeFourth" ShowGaugeCaptions="false">
+      <DataItems>
+        <Measure DataMember="Calculated Field 2" UniqueName="DataItem0" />
+        <Measure DataMember="Calculated Field 1" UniqueName="DataItem1" />
+      </DataItems>
+      <GaugeElement Maximum="100">
+        <TargetValue UniqueName="DataItem0" />
+        <ActualValue UniqueName="DataItem1" />
+        <DeltaOptions ValueType="ActualValue" ResultIndicationMode="NoIndication" />
+      </GaugeElement>
+    </Gauge>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="gaugeDashboardItem1" Weight="39.592760180995477" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

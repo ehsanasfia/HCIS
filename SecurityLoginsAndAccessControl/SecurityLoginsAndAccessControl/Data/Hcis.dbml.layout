@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 15" name="Hcis">
+  <DataContextMoniker Name="/HcisDataContext" />
+  <nestedChildShapes>
+    <classShape Id="6007fb8f-cdee-4a72-b436-881d456f0d6d" absoluteBounds="5.375, 2.25, 2, 11.962872721354165">
+      <DataClassMoniker Name="/HcisDataContext/Person1" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6ac49dbb-3521-4604-807e-99a4fdbfb596" absoluteBounds="5.39, 2.71, 1.9700000000000002, 11.402872721354166" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.08423076923077 : 14.2128727213542); (6.08423076923077 : 14.4628727213542); (6.67961538461539 : 14.4628727213542); (6.67961538461539 : 14.2128727213542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HcisDataContext/Person1/Person_Person" />
+      <nodes>
+        <classShapeMoniker Id="6007fb8f-cdee-4a72-b436-881d456f0d6d" />
+        <classShapeMoniker Id="6007fb8f-cdee-4a72-b436-881d456f0d6d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.08423076923077 : 2.25); (6.08423076923077 : 2); (6.67961538461539 : 2); (6.67961538461539 : 2.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HcisDataContext/Person1/Person_Person1" />
+      <nodes>
+        <classShapeMoniker Id="6007fb8f-cdee-4a72-b436-881d456f0d6d" />
+        <classShapeMoniker Id="6007fb8f-cdee-4a72-b436-881d456f0d6d" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

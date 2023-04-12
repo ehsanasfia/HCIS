@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 16.75, 16.25" name="HCISOnCall">
+  <DataContextMoniker Name="/HCISOnCallDataContext" />
+  <nestedChildShapes>
+    <classShape Id="15db39f5-2077-4346-a64b-4489a5fedd64" absoluteBounds="0.75, 1.375, 2, 10.616762695312499">
+      <DataClassMoniker Name="/HCISOnCallDataContext/Person" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2003c81f-b5c2-4988-9963-854917e68186" absoluteBounds="0.765, 1.835, 1.9700000000000002, 10.0567626953125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6762fdb7-ba9d-4aa6-bf4f-d9d2693d66d5" absoluteBounds="7.125, 8.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/HCISOnCallDataContext/Shift" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3efc1404-7070-4f7b-8edf-20ade3d9b7ce" absoluteBounds="7.1400000000000006, 9.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ed5e238e-6a3f-4b30-ba67-d9a598abf85d" absoluteBounds="3.75, 2.25, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/HCISOnCallDataContext/Speciality" />
+      <nestedChildShapes>
+        <elementListCompartment Id="38fa669c-bbf2-4706-97c3-95492c7561d5" absoluteBounds="3.765, 2.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f5198ff6-13b4-44f8-b392-8df8936eacab" absoluteBounds="3.5, 5.25, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/HCISOnCallDataContext/Staff" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f43cd93a-2761-4a93-99d3-6d67a8eb7260" absoluteBounds="3.515, 5.71, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.45923076923077 : 11.9917626953125); (1.45923076923077 : 12.2417626953125); (2.05461538461538 : 12.2417626953125); (2.05461538461538 : 11.9917626953125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISOnCallDataContext/Person/Person_Person" />
+      <nodes>
+        <classShapeMoniker Id="15db39f5-2077-4346-a64b-4489a5fedd64" />
+        <classShapeMoniker Id="15db39f5-2077-4346-a64b-4489a5fedd64" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.45923076923077 : 1.375); (1.45923076923077 : 1.125); (2.05461538461538 : 1.125); (2.05461538461538 : 1.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISOnCallDataContext/Person/Person_Person1" />
+      <nodes>
+        <classShapeMoniker Id="15db39f5-2077-4346-a64b-4489a5fedd64" />
+        <classShapeMoniker Id="15db39f5-2077-4346-a64b-4489a5fedd64" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.61620198567708); (3.5 : 6.61620198567708)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISOnCallDataContext/Person/Person_Staff" />
+      <nodes>
+        <classShapeMoniker Id="15db39f5-2077-4346-a64b-4489a5fedd64" />
+        <classShapeMoniker Id="f5198ff6-13b4-44f8-b392-8df8936eacab" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.625 : 4.2131982421875); (4.625 : 5.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISOnCallDataContext/Speciality/Speciality_Staff" />
+      <nodes>
+        <classShapeMoniker Id="ed5e238e-6a3f-4b30-ba67-d9a598abf85d" />
+        <classShapeMoniker Id="f5198ff6-13b4-44f8-b392-8df8936eacab" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="97327097-a29c-429d-be18-e4a16174ee8c" absoluteBounds="6.375, 0.75, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/HCISOnCallDataContext/vwSecUserApp" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2ac93cc5-1b98-48d9-a7c8-cceff5a34883" absoluteBounds="6.39, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cb0baded-d37f-45cd-8bdf-4ad859e73745" absoluteBounds="9.375, 0.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/HCISOnCallDataContext/vwSTPerson" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b77db420-d715-4342-b7ef-baf837d6619b" absoluteBounds="9.39, 1.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9d55ba2b-690e-46f2-aa84-e2639c94274f" absoluteBounds="9.375, 4.75, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/HCISOnCallDataContext/vwONCall" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e5638678-d4f9-4d64-bb38-848be8f9ea7b" absoluteBounds="9.39, 5.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3233e208-3218-42ad-ad1e-ce9f414d6a1e" absoluteBounds="4, 8.75, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/HCISOnCallDataContext/vwMemGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0b18c950-2aa7-4b77-a0e7-7b6477d3e4c0" absoluteBounds="4.015, 9.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c5f81887-af55-4dfd-b455-401610ccfd5f" absoluteBounds="9.25, 8.375, 2, 1.9631982421875">
+      <DataClassMoniker Name="/HCISOnCallDataContext/Holiday" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aa56f255-04c5-46a2-9c13-a63f81055f3b" absoluteBounds="9.265, 8.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="62225921-a16a-4ab9-8909-d62d1e07cd0c" absoluteBounds="7, 13.125, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/HCISOnCallDataContext/View_SecurityUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fa097d97-24d1-4c3d-8257-3a58b1ea3ae7" absoluteBounds="7.015, 13.585, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.75 : 8.75); (4.75 : 7.98240397135417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISOnCallDataContext/vwMemGroup/vwMemGroup_Staff" />
+      <nodes>
+        <classShapeMoniker Id="3233e208-3218-42ad-ad1e-ce9f414d6a1e" />
+        <classShapeMoniker Id="f5198ff6-13b4-44f8-b392-8df8936eacab" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="acc90ca2-9ed2-4c77-8ea3-79d1e90095f3" absoluteBounds="6.625, 4.625, 2, 3.6939111328124996">
+      <DataClassMoniker Name="/HCISOnCallDataContext/ONcall" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a95a0387-e9fc-493d-8811-b467e39f979f" absoluteBounds="6.64, 5.085, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 4.90625); (6.625 : 4.90625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISOnCallDataContext/Person/Person_ONcall" />
+      <nodes>
+        <classShapeMoniker Id="15db39f5-2077-4346-a64b-4489a5fedd64" />
+        <classShapeMoniker Id="acc90ca2-9ed2-4c77-8ea3-79d1e90095f3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.875 : 8.875); (7.875 : 8.3189111328125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISOnCallDataContext/Shift/Shift_ONcall" />
+      <nodes>
+        <classShapeMoniker Id="6762fdb7-ba9d-4aa6-bf4f-d9d2693d66d5" />
+        <classShapeMoniker Id="acc90ca2-9ed2-4c77-8ea3-79d1e90095f3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 3.39829752604167); (8.53125 : 3.39829752604167); (8.53125 : 4.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISOnCallDataContext/Speciality/Speciality_ONcall" />
+      <nodes>
+        <classShapeMoniker Id="ed5e238e-6a3f-4b30-ba67-d9a598abf85d" />
+        <classShapeMoniker Id="acc90ca2-9ed2-4c77-8ea3-79d1e90095f3" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3713556f-3051-46dc-8235-13df16d71452" absoluteBounds="2.875, 0.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/HCISOnCallDataContext/VwUserIDName" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e3645947-98b7-4ebf-88db-e1c8199c5d72" absoluteBounds="2.89, 0.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7ee3167c-52d7-4769-8436-09234accbed7" absoluteBounds="14.5, 2.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/HCISOnCallDataContext/Vw_OncallRpt" />
+      <nestedChildShapes>
+        <elementListCompartment Id="693a9720-5206-45b1-81b8-8369155a1476" absoluteBounds="14.515, 3.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

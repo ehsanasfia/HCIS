@@ -1,0 +1,752 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{10B4B188-6100-4D8C-B362-CB9D6FDEDB7C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Inventory</RootNamespace>
+    <AssemblyName>Inventory</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>\\172.30.1.30\AsfiyaProjects\NewHIS\InventoryP\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Inventory P2</ProductName>
+    <PublisherName>Inventory P2</PublisherName>
+    <SuiteName>Inventory P2</SuiteName>
+    <ApplicationRevision>19</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>BD0EE60678C79E34B211767940B835788D444AC0</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Inventory_1_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.BonusSkins.v16.1" />
+    <Reference Include="DevExpress.CodeParser.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v16.1" />
+    <Reference Include="DevExpress.DataAccess.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v16.1.UI, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v16.1.Core" />
+    <Reference Include="DevExpress.RichEdit.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v16.1" />
+    <Reference Include="DevExpress.Utils.v16.1.UI, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v16.1" />
+    <Reference Include="DevExpress.Sparkline.v16.1.Core" />
+    <Reference Include="DevExpress.XtraCharts.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v16.1.Extensions, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v16.1.Wizard, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v16.1" />
+    <Reference Include="DevExpress.XtraGauges.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v16.1.Extensions, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="SecurityLoginsAndAccessControl">
+      <HintPath>..\..\SecurityLoginsAndAccessControl\bin\Debug\SecurityLoginsAndAccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Base, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\Stimulsoft Reports Ultimate 2016.3.1\.NET\Stimulsoft.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\Stimulsoft Reports Ultimate 2016.3.1\.NET\Stimulsoft.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Design, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\Stimulsoft Reports Ultimate 2016.3.1\.NET\Stimulsoft.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Editor, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\Stimulsoft Reports Ultimate 2016.3.1\.NET\Stimulsoft.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\Stimulsoft Reports Ultimate 2016.3.1\.NET\Stimulsoft.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Check, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\Stimulsoft Reports Ultimate 2016.3.1\.NET\Stimulsoft.Report.Check.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Design, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\Stimulsoft Reports Ultimate 2016.3.1\.NET\Stimulsoft.Report.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Helper, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\Stimulsoft Reports Ultimate 2016.3.1\.NET\Stimulsoft.Report.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Win, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\Stimulsoft Reports Ultimate 2016.3.1\.NET\Stimulsoft.Report.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Xbap, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\Stimulsoft Reports Ultimate 2016.3.1\.NET\Stimulsoft.Report.Xbap.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\DataClasses.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgBudgetDefinition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgBudgetDefinition.Designer.cs">
+      <DependentUpon>dlgBudgetDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgEditProtection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgEditProtection.Designer.cs">
+      <DependentUpon>dlgEditProtection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgFactor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgFactor.Designer.cs">
+      <DependentUpon>dlgFactor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgFactorBuy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgFactorBuy.Designer.cs">
+      <DependentUpon>dlgFactorBuy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgFactorMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgFactorMain.Designer.cs">
+      <DependentUpon>dlgFactorMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgInProtectionMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgInProtectionMain.Designer.cs">
+      <DependentUpon>dlgInProtectionMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgInputproducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgInputproducts.Designer.cs">
+      <DependentUpon>dlgInputproducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgMeasurementDefinition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgMeasurementDefinition.designer.cs">
+      <DependentUpon>dlgMeasurementDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgProductDefinition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgProductDefinition.designer.cs">
+      <DependentUpon>dlgProductDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgProtection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgProtection.Designer.cs">
+      <DependentUpon>dlgProtection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgProvider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgProvider.Designer.cs">
+      <DependentUpon>dlgProvider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgRequest.Designer.cs">
+      <DependentUpon>dlgRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgTransfer.designer.cs">
+      <DependentUpon>dlgTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgWarehouseDefinition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgWarehouseDefinition.designer.cs">
+      <DependentUpon>dlgWarehouseDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgWarehouseHandling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgWarehouseHandling.Designer.cs">
+      <DependentUpon>dlgWarehouseHandling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\frmV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\frmV.Designer.cs">
+      <DependentUpon>frmV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBossOrgan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBossOrgan.Designer.cs">
+      <DependentUpon>frmBossOrgan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBudget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBudget.Designer.cs">
+      <DependentUpon>frmBudget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBudgetDefinition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBudgetDefinition.Designer.cs">
+      <DependentUpon>frmBudgetDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBudgetPMR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBudgetPMR.Designer.cs">
+      <DependentUpon>frmBudgetPMR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBuy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBuy.Designer.cs">
+      <DependentUpon>frmBuy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBuyUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBuyUnit.Designer.cs">
+      <DependentUpon>frmBuyUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCardx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCardx.Designer.cs">
+      <DependentUpon>frmCardx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFactorBuy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFactorBuy.Designer.cs">
+      <DependentUpon>frmFactorBuy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFinancial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFinancial.Designer.cs">
+      <DependentUpon>frmFinancial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFinancialPMR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFinancialPMR.Designer.cs">
+      <DependentUpon>frmFinancialPMR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmHealthcareBoss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmHealthcareBoss.Designer.cs">
+      <DependentUpon>frmHealthcareBoss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmInProtection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmInProtection.Designer.cs">
+      <DependentUpon>frmInProtection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmInputproducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmInputproducts.Designer.cs">
+      <DependentUpon>frmInputproducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmInventoryBoss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmInventoryBoss.Designer.cs">
+      <DependentUpon>frmInventoryBoss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMeasurementDefinition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMeasurementDefinition.designer.cs">
+      <DependentUpon>frmMeasurementDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmInProtectionMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmInProtectionMain.Designer.cs">
+      <DependentUpon>frmInProtectionMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmorders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmorders.Designer.cs">
+      <DependentUpon>frmorders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOutProtection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOutProtection.Designer.cs">
+      <DependentUpon>frmOutProtection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProcurement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProcurement.Designer.cs">
+      <DependentUpon>frmProcurement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProcurementPRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProcurementPRM.Designer.cs">
+      <DependentUpon>frmProcurementPRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProductDefinition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProductDefinition.designer.cs">
+      <DependentUpon>frmProductDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProductParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProductParent.Designer.cs">
+      <DependentUpon>frmProductParent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProvider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProvider.Designer.cs">
+      <DependentUpon>frmProvider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReq.Designer.cs">
+      <DependentUpon>frmReq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSupportLibrary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSupportLibrary.Designer.cs">
+      <DependentUpon>frmSupportLibrary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSupportPRMcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSupportPRMcs.Designer.cs">
+      <DependentUpon>frmSupportPRMcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTileControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTileControl.Designer.cs">
+      <DependentUpon>frmTileControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTransfer.designer.cs">
+      <DependentUpon>frmTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUserOrgan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUserOrgan.Designer.cs">
+      <DependentUpon>frmUserOrgan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmWarehouseDefinition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmWarehouseDefinition.designer.cs">
+      <DependentUpon>frmWarehouseDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmWarehouseHandling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmWarehouseHandling.Designer.cs">
+      <DependentUpon>frmWarehouseHandling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmWarehouseKeeperBoss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmWarehouseKeeperBoss.Designer.cs">
+      <DependentUpon>frmWarehouseKeeperBoss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmWarehouseKeeperBossLP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmWarehouseKeeperBossLP.Designer.cs">
+      <DependentUpon>frmWarehouseKeeperBossLP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmWarehouseKeeperBossPMR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmWarehouseKeeperBossPMR.Designer.cs">
+      <DependentUpon>frmWarehouseKeeperBossPMR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MedicalEquipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MedicalEquipment.Designer.cs">
+      <DependentUpon>MedicalEquipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UnitManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UnitManager.Designer.cs">
+      <DependentUpon>UnitManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainModule.cs" />
+    <Compile Include="PrintRibbonControllerResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XRDesignRibbonControllerResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>XRDesignRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Dialogs\dlgEditProtection.resx">
+      <DependentUpon>dlgEditProtection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgFactorBuy.resx">
+      <DependentUpon>dlgFactorBuy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgInProtectionMain.resx">
+      <DependentUpon>dlgInProtectionMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgProtection.resx">
+      <DependentUpon>dlgProtection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgWarehouseHandling.resx">
+      <DependentUpon>dlgWarehouseHandling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\frmV.resx">
+      <DependentUpon>frmV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCardx.resx">
+      <DependentUpon>frmCardx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFactorBuy.resx">
+      <DependentUpon>frmFactorBuy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmInProtection.resx">
+      <DependentUpon>frmInProtection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmInProtectionMain.resx">
+      <DependentUpon>frmInProtectionMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOutProtection.resx">
+      <DependentUpon>frmOutProtection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmWarehouseHandling.resx">
+      <DependentUpon>frmWarehouseHandling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintRibbonControllerResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PrintRibbonControllerResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRDesignRibbonControllerResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XRDesignRibbonControllerResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Data\DataClasses.dbml.layout">
+      <DependentUpon>DataClasses.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Dialogs\dlgBudgetDefinition.resx">
+      <DependentUpon>dlgBudgetDefinition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgFactor.resx">
+      <DependentUpon>dlgFactor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgFactorMain.resx">
+      <DependentUpon>dlgFactorMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgInputproducts.resx">
+      <DependentUpon>dlgInputproducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgMeasurementDefinition.resx">
+      <DependentUpon>dlgMeasurementDefinition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgProductDefinition.resx">
+      <DependentUpon>dlgProductDefinition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgProvider.resx">
+      <DependentUpon>dlgProvider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgRequest.resx">
+      <DependentUpon>dlgRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgTransfer.resx">
+      <DependentUpon>dlgTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgWarehouseDefinition.resx">
+      <DependentUpon>dlgWarehouseDefinition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBossOrgan.resx">
+      <DependentUpon>frmBossOrgan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBudget.resx">
+      <DependentUpon>frmBudget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBudgetDefinition.resx">
+      <DependentUpon>frmBudgetDefinition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBudgetPMR.resx">
+      <DependentUpon>frmBudgetPMR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBuy.resx">
+      <DependentUpon>frmBuy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBuyUnit.resx">
+      <DependentUpon>frmBuyUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFinancial.resx">
+      <DependentUpon>frmFinancial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFinancialPMR.resx">
+      <DependentUpon>frmFinancialPMR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmHealthcareBoss.resx">
+      <DependentUpon>frmHealthcareBoss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmInputproducts.resx">
+      <DependentUpon>frmInputproducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmInventoryBoss.resx">
+      <DependentUpon>frmInventoryBoss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMeasurementDefinition.resx">
+      <DependentUpon>frmMeasurementDefinition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmorders.resx">
+      <DependentUpon>frmorders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProcurement.resx">
+      <DependentUpon>frmProcurement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProcurementPRM.resx">
+      <DependentUpon>frmProcurementPRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProductDefinition.resx">
+      <DependentUpon>frmProductDefinition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProductParent.resx">
+      <DependentUpon>frmProductParent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProvider.resx">
+      <DependentUpon>frmProvider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReq.resx">
+      <DependentUpon>frmReq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSupportLibrary.resx">
+      <DependentUpon>frmSupportLibrary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSupportPRMcs.resx">
+      <DependentUpon>frmSupportPRMcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTileControl.resx">
+      <DependentUpon>frmTileControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTransfer.resx">
+      <DependentUpon>frmTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUserOrgan.resx">
+      <DependentUpon>frmUserOrgan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmWarehouseDefinition.resx">
+      <DependentUpon>frmWarehouseDefinition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmWarehouseKeeperBoss.resx">
+      <DependentUpon>frmWarehouseKeeperBoss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmWarehouseKeeperBossLP.resx">
+      <DependentUpon>frmWarehouseKeeperBossLP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmWarehouseKeeperBossPMR.resx">
+      <DependentUpon>frmWarehouseKeeperBossPMR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MedicalEquipment.resx">
+      <DependentUpon>MedicalEquipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UnitManager.resx">
+      <DependentUpon>UnitManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Data\DataClasses.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Inventory_1_TemporaryKey.pfx" />
+    <None Include="Inventory_TemporaryKey.pfx" />
+    <None Include="Properties\DataSources\Inventory.Data.AtblImport.datasource" />
+    <None Include="Properties\DataSources\Inventory.Data.AtblSubImport.datasource" />
+    <None Include="Properties\DataSources\Inventory.Data.Budget.datasource" />
+    <None Include="Properties\DataSources\Inventory.Data.DataClassesDataContext.datasource" />
+    <None Include="Properties\DataSources\Inventory.Data.Factor.datasource" />
+    <None Include="Properties\DataSources\Inventory.Data.FactorProduct.datasource" />
+    <None Include="Properties\DataSources\Inventory.Data.InStack.datasource" />
+    <None Include="Properties\DataSources\Inventory.Data.MeasurementDefinition.datasource" />
+    <None Include="Properties\DataSources\Inventory.Data.Organ.datasource" />
+    <None Include="Properties\DataSources\Inventory.Data.OrganBoss.datasource" />
+    <None Include="Properties\DataSources\Inventory.Data.output_Product.datasource" />
+    <None Include="Properties\DataSources\Inventory.Data.Person.datasource" />
+    <None Include="Properties\DataSources\Inventory.Data.Product.datasource" />
+    <None Include="Properties\DataSources\Inventory.Data.Protection.datasource" />
+    <None Include="Properties\DataSources\Inventory.Data.ProtectionProduct.datasource" />
+    <None Include="Properties\DataSources\Inventory.Data.Provider.datasource" />
+    <None Include="Properties\DataSources\Inventory.Data.RequestD.datasource" />
+    <None Include="Properties\DataSources\Inventory.Data.RequestM.datasource" />
+    <None Include="Properties\DataSources\Inventory.Data.User.datasource" />
+    <None Include="Properties\DataSources\Inventory.Data.View_Import.datasource" />
+    <None Include="Properties\DataSources\Inventory.Data.View_Request.datasource" />
+    <None Include="Properties\DataSources\Inventory.Data.warehouse.datasource" />
+    <None Include="Properties\DataSources\Inventory.Data.WarehouseKeeperBoss.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Incredible Mixed Wallpapers Downloadha %2832%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\39021129.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\39014529.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="OccupationalMedicine" Class="OcMedDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=172.30.1.145;Initial Catalog=OccupationalMedicine;Persist Security Info=True;User ID=artp" SettingsObjectName="HCISManagementDashboard.Properties.Settings" SettingsPropertyName="OccupationalMedicineConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.VwDiabeteTypePercentage" Member="VwDiabeteTypePercentages">
+    <Type Name="VwDiabeteTypePercentage">
+      <Column Name="ContractNumber" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="No" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Total" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TypeOfObservation" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="ObservatedItem" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="pers" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Contract" Member="Contracts">
+    <Type Name="Contract">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ContractNumber" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ContractType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ContractSubject" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Company" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ContractAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="FinancialEstimates" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="FromDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="ToDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Bank" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GuaranteeFromDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="GuaranteeToDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="GuaranteeNumber" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="TenderNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="University" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="HealthCenter" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="RahgiriCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CreationUserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CraeationUserFullName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ModificationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="ModificationUserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModificationUserFullName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VwCheckupBMIPercentage" Member="VwCheckupBMIPercentages">
+    <Type Name="VwCheckupBMIPercentage">
+      <Column Name="ContractNumber" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="BMITYPE" Type="System.String" DbType="VarChar(21)" CanBeNull="true" />
+      <Column Name="No" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Percentage" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VwLDLPercentage" Member="VwLDLPercentages">
+    <Type Name="VwLDLPercentage">
+      <Column Name="ContractNumber" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LDLType" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="No" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Percentage" Type="System.Decimal" DbType="Decimal(21,13)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VwBloodPressurePercentage" Member="VwBloodPressurePercentages">
+    <Type Name="VwBloodPressurePercentage">
+      <Column Name="ContractNumber" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="BloodPressureType" Type="System.String" DbType="VarChar(22)" CanBeNull="true" />
+      <Column Name="BpNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Percentage" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VwSmokePercentage" Member="VwSmokePercentages">
+    <Type Name="VwSmokePercentage">
+      <Column Name="ContractNumber" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="No" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SmokingType" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="Percentage" Type="System.Decimal" DbType="Decimal(21,13)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VwAudiometryPercentage" Member="VwAudiometryPercentages">
+    <Type Name="VwAudiometryPercentage">
+      <Column Name="ContractNumber" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="No" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AudiometryStatus" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Percentage" Type="System.Decimal" DbType="Decimal(21,13)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VwSpirometeryPercentage" Member="VwSpirometeryPercentages">
+    <Type Name="VwSpirometeryPercentage">
+      <Column Name="ContractNumber" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SpirometeryStatus" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="No" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Percentage" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VwExpertiesPercentage" Member="VwExpertiesPercentages">
+    <Type Name="VwExpertiesPercentage">
+      <Column Name="ContractNumber" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ExpertiseType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="No" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Percentage" Type="System.Decimal" DbType="Decimal(21,13)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

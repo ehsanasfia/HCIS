@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="UserConfigDS" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="UserConfigDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="UserConfigDS" msprop:Generator_DataSetName="UserConfigDS" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblUserConfigurations" msprop:Generator_UserTableName="tblUserConfigurations" msprop:Generator_RowDeletedName="tblUserConfigurationsRowDeleted" msprop:Generator_RowChangedName="tblUserConfigurationsRowChanged" msprop:Generator_RowClassName="tblUserConfigurationsRow" msprop:Generator_RowChangingName="tblUserConfigurationsRowChanging" msprop:Generator_RowEvArgName="tblUserConfigurationsRowChangeEvent" msprop:Generator_RowEvHandlerName="tblUserConfigurationsRowChangeEventHandler" msprop:Generator_TableClassName="tblUserConfigurationsDataTable" msprop:Generator_TableVarName="tabletblUserConfigurations" msprop:Generator_RowDeletingName="tblUserConfigurationsRowDeleting" msprop:Generator_TablePropName="tblUserConfigurations">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SkinName" msprop:Generator_UserColumnName="SkinName" msprop:nullValue="Caramel" msprop:Generator_ColumnVarNameInTable="columnSkinName" msprop:Generator_ColumnPropNameInTable="SkinNameColumn" msprop:Generator_ColumnPropNameInRow="SkinName" type="xs:string" default="Office 2007 Blue" minOccurs="0" />
+              <xs:element name="Font" msprop:Generator_UserColumnName="Font" msprop:nullValue="Tahoma" msprop:Generator_ColumnVarNameInTable="columnFont" msprop:Generator_ColumnPropNameInTable="FontColumn" msprop:Generator_ColumnPropNameInRow="Font" type="xs:string" default="Tahoma" minOccurs="0" />
+              <xs:element name="FontSize" msprop:Generator_UserColumnName="FontSize" msprop:nullValue="9" msprop:Generator_ColumnVarNameInTable="columnFontSize" msprop:Generator_ColumnPropNameInTable="FontSizeColumn" msprop:Generator_ColumnPropNameInRow="FontSize" type="xs:decimal" default="10" minOccurs="0" />
+              <xs:element name="FontStyle" msprop:Generator_UserColumnName="FontStyle" msprop:nullValue="0" msprop:Generator_ColumnVarNameInTable="columnFontStyle" msprop:Generator_ColumnPropNameInTable="FontStyleColumn" msprop:Generator_ColumnPropNameInRow="FontStyle" type="xs:unsignedByte" default="0" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

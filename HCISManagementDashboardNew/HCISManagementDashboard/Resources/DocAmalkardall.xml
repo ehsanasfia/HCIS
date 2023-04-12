@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="عملکرد پزشکان" />
+  <DataSources>
+    <SqlDataSource ComponentName="dashboardSqlDataSource1">
+      <Name>SQL Data Source 1</Name>
+      <Connection Name="172.17.8.198_HCIS_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="172.17.8.198" />
+          <Parameter Name="database" Value="HCIS" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="artp" />
+          <Parameter Name="password" Value="506070" />
+        </Parameters>
+      </Connection>
+      <Query Type="StoredProcQuery" Name="Spu_DoctorAmalkardAllDoc">
+        <Parameter Name="@F" Type="DevExpress.DataAccess.Expression">(System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)([Parameters.Parameter1])</Parameter>
+        <Parameter Name="@T" Type="DevExpress.DataAccess.Expression">(System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)([Parameters.Parameter2])</Parameter>
+        <ProcName>Spu_DoctorAmalkardAllDoc</ProcName>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="Spu_DoctorAmalkardAllDoc">
+            <Field Name="Doc" Type="String" />
+            <Field Name="TedadDaroo" Type="Int32" />
+            <Field Name="TedadNosakh" Type="Int32" />
+            <Field Name="TedadAghlam" Type="Int32" />
+            <Field Name="HadeaksarGhalam" Type="Int32" />
+            <Field Name="DarooTazrighi" Type="Int32" />
+            <Field Name="TakDaroo" Type="Int32" />
+            <Field Name="BishAz4Ghalam" Type="Int32" />
+            <Field Name="Visit" Type="Int32" />
+            <Field Name="Moshawere" Type="Int32" />
+            <Field Name="VisitBakhsh" Type="Int32" />
+            <Field Name="Erja" Type="Int32" />
+            <Field Name="Phisio" Type="Int32" />
+            <Field Name="Azmayeshgah" Type="Int32" />
+            <Field Name="CT" Type="Int32" />
+            <Field Name="Radio" Type="Int32" />
+            <Field Name="Sono" Type="Int32" />
+            <Field Name="MRI" Type="Int32" />
+            <Field Name="Sang" Type="Int32" />
+            <Field Name="Mamo" Type="Int32" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+    </SqlDataSource>
+  </DataSources>
+  <Parameters>
+    <Parameter Name="Parameter1" Description="FromDate" />
+    <Parameter Name="Parameter2" Description="ToDate" />
+  </Parameters>
+  <Items>
+    <Grid ComponentName="gridDashboardItem1" Name="دارو" DataSource="dashboardSqlDataSource1" DataMember="Spu_DoctorAmalkardAllDoc">
+      <DataItems>
+        <Measure DataMember="TedadNosakh" UniqueName="DataItem1" />
+        <Measure DataMember="TedadAghlam" UniqueName="DataItem2">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+        <Measure DataMember="HadeaksarGhalam" UniqueName="DataItem3" />
+        <Measure DataMember="DarooTazrighi" UniqueName="DataItem4" />
+        <Measure DataMember="TakDaroo" UniqueName="DataItem5" />
+        <Measure DataMember="BishAz4Ghalam" UniqueName="DataItem6" />
+        <Measure DataMember="TakDaroo" UniqueName="DataItem0" />
+        <Dimension DataMember="Doc" UniqueName="DataItem7" />
+      </DataItems>
+      <GridColumns>
+        <GridDimensionColumn Weight="72.844792615499912">
+          <Dimension UniqueName="DataItem7" />
+        </GridDimensionColumn>
+        <GridMeasureColumn Weight="75.7071732240721">
+          <Measure UniqueName="DataItem0" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="تعداد نسخ" FixedWidth="22.481707912635045">
+          <Measure UniqueName="DataItem1" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="تعداد اقلام" Weight="73.290986844580445">
+          <Measure UniqueName="DataItem2" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="حداکثر قلم" Weight="85.371918742038744">
+          <Measure UniqueName="DataItem3" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="دارو تزریقی" Weight="74.096382304411">
+          <Measure UniqueName="DataItem4" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="تک دارو" Weight="62.015450406952681">
+          <Measure UniqueName="DataItem5" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="بیش از 4 قلم" Weight="64.431636786444344">
+          <Measure UniqueName="DataItem6" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions EnableBandedRows="true" ColumnWidthMode="AutoFitToContents" />
+    </Grid>
+    <Pie ComponentName="pieDashboardItem1" Name="نسخه ها" DataSource="dashboardSqlDataSource1" DataMember="Spu_DoctorAmalkardAllDoc" ShowPieCaptions="false">
+      <InteractivityOptions TargetDimensions="Series" />
+      <DataItems>
+        <Measure DataMember="Phisio" Name="فیزیوتراپی" UniqueName="DataItem0" />
+        <Measure DataMember="Azmayeshgah" Name="آزمایش" UniqueName="DataItem1" />
+        <Measure DataMember="CT" Name="CT" UniqueName="DataItem2" />
+        <Measure DataMember="Radio" Name="رادیوگرافی" UniqueName="DataItem3" />
+        <Measure DataMember="Sono" Name="سونوگرافی" UniqueName="DataItem4" />
+        <Measure DataMember="MRI" Name="MRI" UniqueName="DataItem5" />
+        <Measure DataMember="Sang" Name="سنگ شکن" UniqueName="DataItem6" />
+        <Measure DataMember="Mamo" Name="مامو گرافی" UniqueName="DataItem7" />
+      </DataItems>
+      <Values>
+        <Value UniqueName="DataItem0" />
+        <Value UniqueName="DataItem1" />
+        <Value UniqueName="DataItem2" />
+        <Value UniqueName="DataItem3" />
+        <Value UniqueName="DataItem4" />
+        <Value UniqueName="DataItem5" />
+        <Value UniqueName="DataItem6" />
+        <Value UniqueName="DataItem7" />
+      </Values>
+    </Pie>
+    <Chart ComponentName="chartDashboardItem1" Name="ویزیت" DataSource="dashboardSqlDataSource1" DataMember="Spu_DoctorAmalkardAllDoc">
+      <ColoringOptions MeasuresColoringMode="Hue" />
+      <InteractivityOptions TargetDimensions="Series" />
+      <DataItems>
+        <Dimension DataMember="Doc" ColoringMode="Hue" UniqueName="DataItem0" />
+        <Measure DataMember="Visit" Name="تعداد ویزیت ها" UniqueName="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem0" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" />
+          <Series>
+            <Simple>
+              <Value UniqueName="DataItem1" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <AxisX EnableZooming="true" LimitVisiblePoints="true" />
+    </Chart>
+    <TreeView ComponentName="treeViewDashboardItem1" Name="پزشکان" DataSource="dashboardSqlDataSource1" DataMember="Spu_DoctorAmalkardAllDoc">
+      <DataItems>
+        <Dimension DataMember="Doc" UniqueName="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+      </FilterDimensions>
+    </TreeView>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutGroup Orientation="Vertical" Weight="81.696854146806487">
+        <LayoutItem DashboardItem="gridDashboardItem1" Weight="35.049833887043192" />
+        <LayoutGroup Weight="64.950166112956808">
+          <LayoutItem DashboardItem="chartDashboardItem1" Weight="46.207701283547259" />
+          <LayoutItem DashboardItem="pieDashboardItem1" Weight="53.792298716452741" />
+        </LayoutGroup>
+      </LayoutGroup>
+      <LayoutItem DashboardItem="treeViewDashboardItem1" Weight="18.303145853193517" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

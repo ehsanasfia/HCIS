@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12.25, 8.625" name="Sec">
+  <DataContextMoniker Name="/SecDataContext" />
+  <nestedChildShapes>
+    <classShape Id="c8dab063-f317-44e0-8845-a8c6d1b48903" absoluteBounds="5.375, 2, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/SecDataContext/tblUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4d88a832-e6c4-4d36-a613-ec26d89e689c" absoluteBounds="5.39, 2.46, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="228db2ec-99a1-49f7-9839-b66d1ee77f98" absoluteBounds="9.375, 1.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/SecDataContext/tblApplication" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0cc36fd1-1fda-41c7-a6b1-5e3d24a647c8" absoluteBounds="9.39, 2.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9.375 : 2.56814697265625); (7.375 : 2.56814697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SecDataContext/tblApplication/tblApplication_tblUser" />
+      <nodes>
+        <classShapeMoniker Id="228db2ec-99a1-49f7-9839-b66d1ee77f98" />
+        <classShapeMoniker Id="c8dab063-f317-44e0-8845-a8c6d1b48903" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="e071745d-62df-4472-9f24-fffe28b9e9cb" absoluteBounds="5.375, 7, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/SecDataContext/tblApplicationDepartment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="682b11c0-faf9-4b9c-bf5a-3b497cd28907" absoluteBounds="5.39, 7.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="24526b7f-906c-4977-91d6-c731bbde2746" absoluteBounds="10, 4.125, 2, 1.1939925130208327">
+      <DataClassMoniker Name="/SecDataContext/tblUserAccessibleDepartment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="13b3c9cd-377d-45a6-80e4-cae165fb6d4b" absoluteBounds="10.015, 4.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.375 : 7.69314697265625); (11 : 7.69314697265625); (11 : 5.31899251302083)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SecDataContext/tblApplicationDepartment/tblApplicationDepartment_tblUserAccessibleDepartment" />
+      <nodes>
+        <classShapeMoniker Id="e071745d-62df-4472-9f24-fffe28b9e9cb" />
+        <classShapeMoniker Id="24526b7f-906c-4977-91d6-c731bbde2746" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.375 : 4.72199625651042); (10 : 4.72199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SecDataContext/tblUser/tblUser_tblUserAccessibleDepartment" />
+      <nodes>
+        <classShapeMoniker Id="c8dab063-f317-44e0-8845-a8c6d1b48903" />
+        <classShapeMoniker Id="24526b7f-906c-4977-91d6-c731bbde2746" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

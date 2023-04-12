@@ -1,0 +1,203 @@
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class dialogChooseUserDepartments
+    Inherits System.Windows.Forms.Form
+
+    'Form overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()> _
+    Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel
+        Me.Cancel_Button = New System.Windows.Forms.Button
+        Me.OK_Button = New System.Windows.Forms.Button
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView
+        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DepIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn
+        Me.DepartmentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DS = New SecurityLoginsAndAccessControl.DS
+        Me.Accesible = New System.Windows.Forms.DataGridViewCheckBoxColumn
+        Me.TblApplicationDepartmentsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DepartmentTableAdapter = New SecurityLoginsAndAccessControl.DSTableAdapters.departmentTableAdapter
+        Me.TblApplicationDepartmentsTableAdapter = New SecurityLoginsAndAccessControl.DSTableAdapters.tblApplicationDepartmentsTableAdapter
+        Me.TblUserAccessibleDepartmentsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TblUserAccessibleDepartmentsTableAdapter = New SecurityLoginsAndAccessControl.DSTableAdapters.tblUserAccessibleDepartmentsTableAdapter
+        Me.TableLayoutPanel1.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DepartmentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DS, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TblApplicationDepartmentsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TblUserAccessibleDepartmentsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TableLayoutPanel1.ColumnCount = 2
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.Cancel_Button, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.OK_Button, 1, 0)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(141, 259)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 1
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(170, 31)
+        Me.TableLayoutPanel1.TabIndex = 0
+        '
+        'Cancel_Button
+        '
+        Me.Cancel_Button.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Cancel_Button.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.Cancel_Button.Location = New System.Drawing.Point(89, 3)
+        Me.Cancel_Button.Name = "Cancel_Button"
+        Me.Cancel_Button.Size = New System.Drawing.Size(78, 25)
+        Me.Cancel_Button.TabIndex = 1
+        Me.Cancel_Button.Text = "انصراف"
+        '
+        'OK_Button
+        '
+        Me.OK_Button.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.OK_Button.Location = New System.Drawing.Point(4, 3)
+        Me.OK_Button.Name = "OK_Button"
+        Me.OK_Button.Size = New System.Drawing.Size(78, 25)
+        Me.OK_Button.TabIndex = 0
+        Me.OK_Button.Text = "تایید"
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AllowUserToResizeRows = False
+        Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.DepIDDataGridViewTextBoxColumn, Me.Accesible})
+        Me.DataGridView1.DataSource = Me.TblApplicationDepartmentsBindingSource
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersVisible = False
+        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView1.Size = New System.Drawing.Size(301, 241)
+        Me.DataGridView1.StandardTab = True
+        Me.DataGridView1.TabIndex = 1
+        '
+        'ID
+        '
+        Me.ID.DataPropertyName = "ID"
+        Me.ID.HeaderText = "ID"
+        Me.ID.Name = "ID"
+        Me.ID.ReadOnly = True
+        Me.ID.Visible = False
+        '
+        'DepIDDataGridViewTextBoxColumn
+        '
+        Me.DepIDDataGridViewTextBoxColumn.DataPropertyName = "DepID"
+        Me.DepIDDataGridViewTextBoxColumn.DataSource = Me.DepartmentBindingSource
+        Me.DepIDDataGridViewTextBoxColumn.DisplayMember = "Department"
+        Me.DepIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.[Nothing]
+        Me.DepIDDataGridViewTextBoxColumn.HeaderText = "نرم افزار"
+        Me.DepIDDataGridViewTextBoxColumn.Name = "DepIDDataGridViewTextBoxColumn"
+        Me.DepIDDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DepIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DepIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.DepIDDataGridViewTextBoxColumn.ValueMember = "depID"
+        '
+        'DepartmentBindingSource
+        '
+        Me.DepartmentBindingSource.DataMember = "department"
+        Me.DepartmentBindingSource.DataSource = Me.DS
+        '
+        'DS
+        '
+        Me.DS.DataSetName = "DS"
+        Me.DS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Accesible
+        '
+        Me.Accesible.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.Accesible.HeaderText = "مجاز"
+        Me.Accesible.Name = "Accesible"
+        Me.Accesible.Width = 40
+        '
+        'TblApplicationDepartmentsBindingSource
+        '
+        Me.TblApplicationDepartmentsBindingSource.DataMember = "tblApplicationDepartments"
+        Me.TblApplicationDepartmentsBindingSource.DataSource = Me.DS
+        '
+        'DepartmentTableAdapter
+        '
+        Me.DepartmentTableAdapter.ClearBeforeFill = True
+        '
+        'TblApplicationDepartmentsTableAdapter
+        '
+        Me.TblApplicationDepartmentsTableAdapter.ClearBeforeFill = True
+        '
+        'TblUserAccessibleDepartmentsBindingSource
+        '
+        Me.TblUserAccessibleDepartmentsBindingSource.DataMember = "tblUserAccessibleDepartments"
+        Me.TblUserAccessibleDepartmentsBindingSource.DataSource = Me.DS
+        '
+        'TblUserAccessibleDepartmentsTableAdapter
+        '
+        Me.TblUserAccessibleDepartmentsTableAdapter.ClearBeforeFill = True
+        '
+        'dialogChooseUserDepartments
+        '
+        Me.AcceptButton = Me.OK_Button
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.Cancel_Button
+        Me.ClientSize = New System.Drawing.Size(325, 303)
+        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
+        Me.Name = "dialogChooseUserDepartments"
+        Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.RightToLeftLayout = True
+        Me.ShowInTaskbar = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Me.Text = "انتخاب نرم افزار"
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DepartmentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DS, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TblApplicationDepartmentsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TblUserAccessibleDepartmentsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+
+    End Sub
+    Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents OK_Button As System.Windows.Forms.Button
+    Friend WithEvents Cancel_Button As System.Windows.Forms.Button
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents DS As SecurityLoginsAndAccessControl.DS
+    Friend WithEvents DepartmentBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents DepartmentTableAdapter As SecurityLoginsAndAccessControl.DSTableAdapters.departmentTableAdapter
+    Friend WithEvents TblApplicationDepartmentsBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents TblApplicationDepartmentsTableAdapter As SecurityLoginsAndAccessControl.DSTableAdapters.tblApplicationDepartmentsTableAdapter
+    Friend WithEvents TblUserAccessibleDepartmentsBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents TblUserAccessibleDepartmentsTableAdapter As SecurityLoginsAndAccessControl.DSTableAdapters.tblUserAccessibleDepartmentsTableAdapter
+    Friend WithEvents ID As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DepIDDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewComboBoxColumn
+    Friend WithEvents Accesible As System.Windows.Forms.DataGridViewCheckBoxColumn
+
+End Class

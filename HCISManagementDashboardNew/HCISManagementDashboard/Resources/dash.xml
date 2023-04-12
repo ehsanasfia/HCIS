@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="fa-IR" DesignerAutomaticUpdates="false">
+  <Title Text="پذیرش شده ها" />
+  <DataSources>
+    <SqlDataSource ComponentName="dashboardSqlDataSource1">
+      <Name>SQL Data Source 1</Name>
+      <Connection Name="172.30.1.145_HCIS_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="172.30.1.145" />
+          <Parameter Name="database" Value="HCIS" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="artp" />
+          <Parameter Name="password" Value="506070" />
+        </Parameters>
+      </Connection>
+      <Query Type="SelectQuery" Name="AllDayVisits">
+        <Parameter Name="FromDate" Type="DevExpress.DataAccess.Expression">(System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)([Parameters.FromDate])</Parameter>
+        <Parameter Name="ToDate" Type="DevExpress.DataAccess.Expression">(System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)([Parameters.ToDate])</Parameter>
+        <Tables>
+          <Table Name="AllDayVisitsAllField" Meta="0|0|125|320" />
+        </Tables>
+        <Columns>
+          <Column Table="AllDayVisitsAllField" Name="Date" Alias="تاریخ" />
+          <Column Table="AllDayVisitsAllField" Name="YearNum" Alias="سال" />
+          <Column Table="AllDayVisitsAllField" Name="MonthNum" Alias="ماه" />
+          <Column Table="AllDayVisitsAllField" Name="DayNum" Alias="روز" />
+          <Column Table="AllDayVisitsAllField" Name="Month" Alias="نام ماه" />
+          <Column Table="AllDayVisitsAllField" Name="Count" Alias="پذیرش" />
+          <Column Table="AllDayVisitsAllField" Name="InsuranceName" Alias="بیمه" />
+          <Column Table="AllDayVisitsAllField" Name="DepName" Alias="کلینیک" />
+          <Column Table="AllDayVisitsAllField" Name="DepParent" Alias="محل" />
+          <Column Table="AllDayVisitsAllField" Name="MonthFull" Alias="ماه و شماره" />
+          <Column Table="AllDayVisitsAllField" Name="Status" Alias="وضعیت" />
+          <Column Table="AllDayVisitsAllField" Name="Company" Alias="شرکت" />
+        </Columns>
+        <Filter>[AllDayVisitsAllField.Date] Between(?FromDate, ?ToDate)</Filter>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="AllDayVisits">
+            <Field Name="تاریخ" Type="String" />
+            <Field Name="سال" Type="Int32" />
+            <Field Name="ماه" Type="Int32" />
+            <Field Name="روز" Type="Int32" />
+            <Field Name="نام ماه" Type="String" />
+            <Field Name="پذیرش" Type="Int32" />
+            <Field Name="بیمه" Type="String" />
+            <Field Name="کلینیک" Type="String" />
+            <Field Name="محل" Type="String" />
+            <Field Name="ماه و شماره" Type="String" />
+            <Field Name="وضعیت" Type="String" />
+            <Field Name="شرکت" Type="String" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+      <CalculatedFields>
+        <CalculatedField Name="Calculated Field 1" Expression="[کلینیک] + ' ' + [محل]" DataType="Auto" DataMember="AllDayVisits" />
+      </CalculatedFields>
+    </SqlDataSource>
+  </DataSources>
+  <Parameters>
+    <Parameter Name="FromDate" Value="1397/06/01" />
+    <Parameter Name="ToDate" Value="1397/06/01" />
+  </Parameters>
+  <Items>
+    <Chart ComponentName="chartDashboardItem1" Name="تعداد پذیرش ها به تفکیک ماه" DataSource="dashboardSqlDataSource1" DataMember="AllDayVisits">
+      <DataItems>
+        <Dimension DataMember="سال" UniqueName="DataItem1">
+          <NumericFormat FormatType="General" />
+        </Dimension>
+        <Dimension DataMember="ماه" IsDiscreteScale="true" UniqueName="DataItem4">
+          <NumericFormat FormatType="General" />
+        </Dimension>
+        <Measure DataMember="پذیرش" UniqueName="DataItem2">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension UniqueName="DataItem1" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument UniqueName="DataItem4" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY Title="تعداد پذیرش ها" />
+          <Series>
+            <Simple>
+              <Value UniqueName="DataItem2" />
+              <PointLabelOptions Visible="true" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend IsInsidePosition="true" InsidePosition="BottomLeftVertical" OutsidePosition="BottomLeftHorizontal" />
+      <AxisX TitleVisible="true" Title="ماه" VisiblePointsCount="15" />
+    </Chart>
+    <ListBox ComponentName="listBoxDashboardItem1" Name="بیمه" DataSource="dashboardSqlDataSource1" DataMember="AllDayVisits">
+      <DataItems>
+        <Dimension DataMember="بیمه" UniqueName="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+    <Pie ComponentName="pieDashboardItem1" Name="تعداد پذیرش ها به تفکیک کلینیک" DataSource="dashboardSqlDataSource1" DataMember="AllDayVisits" ShowPieCaptions="false">
+      <ColoringOptions UseGlobalColors="false" />
+      <InteractivityOptions IsDrillDownEnabled="true" />
+      <DataItems>
+        <Measure DataMember="پذیرش" Name="تعداد پذیرش" UniqueName="DataItem0">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+        <Dimension DataMember="Calculated Field 1" TopNEnabled="true" TopNShowOthers="true" TopNCount="8" TopNMeasure="DataItem0" UniqueName="DataItem3" />
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem3" />
+      </Arguments>
+      <Values>
+        <Value UniqueName="DataItem0" />
+      </Values>
+    </Pie>
+    <TreeView ComponentName="treeViewDashboardItem2" Name="کلینیک و درمانگاه ها" DataSource="dashboardSqlDataSource1" DataMember="AllDayVisits" FilterString="[DataItem0] &lt;&gt; 'D86D8A6C-0D87-4CA4-9C15-3356A83699B5'">
+      <DataItems>
+        <Dimension DataMember="محل" UniqueName="DataItem0" />
+        <Dimension DataMember="کلینیک" UniqueName="DataItem1" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+        <Dimension UniqueName="DataItem1" />
+      </FilterDimensions>
+    </TreeView>
+    <ListBox ComponentName="listBoxDashboardItem2" Name="وضعیت پذیرش" DataSource="dashboardSqlDataSource1" DataMember="AllDayVisits">
+      <DataItems>
+        <Dimension DataMember="وضعیت" UniqueName="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+    <Pie ComponentName="pieDashboardItem2" Name="تعداد پذیرش ها به تفکیک شرکت" DataSource="dashboardSqlDataSource1" DataMember="AllDayVisits" ShowPieCaptions="false">
+      <ColoringOptions UseGlobalColors="false" />
+      <InteractivityOptions IsDrillDownEnabled="true" />
+      <DataItems>
+        <Measure DataMember="پذیرش" Name="تعداد پذیرش" UniqueName="DataItem1" />
+        <Dimension DataMember="شرکت" TopNEnabled="true" TopNShowOthers="true" TopNMeasure="DataItem1" UniqueName="DataItem3" />
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem3" />
+      </Arguments>
+      <Values>
+        <Value UniqueName="DataItem1" />
+      </Values>
+    </Pie>
+    <TreeView ComponentName="treeViewDashboardItem1" Name="شرکت ها" DataSource="dashboardSqlDataSource1" DataMember="AllDayVisits">
+      <DataItems>
+        <Dimension DataMember="شرکت" UniqueName="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+      </FilterDimensions>
+    </TreeView>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="chartDashboardItem1" Weight="34.20814479638009" />
+      <LayoutGroup Orientation="Vertical" Weight="49.7737556561086">
+        <LayoutItem DashboardItem="pieDashboardItem1" Weight="48.006644518272424" />
+        <LayoutItem DashboardItem="pieDashboardItem2" Weight="51.993355481727576" />
+      </LayoutGroup>
+      <LayoutGroup Orientation="Vertical" Weight="16.018099547511312">
+        <LayoutItem DashboardItem="listBoxDashboardItem1" Weight="35.049833887043192" />
+        <LayoutItem DashboardItem="treeViewDashboardItem1" Weight="21.926910299003321" />
+        <LayoutItem DashboardItem="treeViewDashboardItem2" Weight="22.093023255813954" />
+        <LayoutItem DashboardItem="listBoxDashboardItem2" Weight="20.930232558139537" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

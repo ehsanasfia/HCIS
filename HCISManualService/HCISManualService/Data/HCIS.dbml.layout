@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 13.875, 23.375" name="HCIS">
+  <DataContextMoniker Name="/HCISDataContext" />
+  <nestedChildShapes>
+    <classShape Id="a8d8a4dc-fa53-431b-811d-d5665f345524" absoluteBounds="4.75, 1.75, 2, 6.0015283203125">
+      <DataClassMoniker Name="/HCISDataContext/Dossier" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4a50a39f-6be8-4749-86ac-f9d5ac8a9f3e" absoluteBounds="4.765, 2.21, 1.9700000000000002, 5.4415283203125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d1d3a7c5-e1b5-4c9b-8d55-a1a3873b3091" absoluteBounds="8.125, 0.5, 2, 4.4631168619791666">
+      <DataClassMoniker Name="/HCISDataContext/Department" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3d3a2f31-ec8d-415f-b83a-8e9da4b4efff" absoluteBounds="8.14, 0.96, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.125 : 3.35655843098958); (6.75 : 3.35655843098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDataContext/Department/Department_Dossier" />
+      <nodes>
+        <classShapeMoniker Id="d1d3a7c5-e1b5-4c9b-8d55-a1a3873b3091" />
+        <classShapeMoniker Id="a8d8a4dc-fa53-431b-811d-d5665f345524" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.83423076923077 : 0.5); (8.83423076923077 : 0.25); (9.42961538461539 : 0.25); (9.42961538461539 : 0.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDataContext/Department/Department_Department" />
+      <nodes>
+        <classShapeMoniker Id="d1d3a7c5-e1b5-4c9b-8d55-a1a3873b3091" />
+        <classShapeMoniker Id="d1d3a7c5-e1b5-4c9b-8d55-a1a3873b3091" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0d41d3a5-d89c-4656-b9b3-331745229bd5" absoluteBounds="1.125, 0.75, 2, 11.962872721354165">
+      <DataClassMoniker Name="/HCISDataContext/Person" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b9fb212b-e088-4aaa-b7be-47b718468a78" absoluteBounds="1.1400000000000001, 1.21, 1.9700000000000002, 11.402872721354166" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.125 : 4.75076416015625); (4.75 : 4.75076416015625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDataContext/Person/Person_Dossier" />
+      <nodes>
+        <classShapeMoniker Id="0d41d3a5-d89c-4656-b9b3-331745229bd5" />
+        <classShapeMoniker Id="a8d8a4dc-fa53-431b-811d-d5665f345524" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.125 : 1.21875); (3.125 : 1.21875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDataContext/Department/Department_Person" />
+      <nodes>
+        <classShapeMoniker Id="d1d3a7c5-e1b5-4c9b-8d55-a1a3873b3091" />
+        <classShapeMoniker Id="0d41d3a5-d89c-4656-b9b3-331745229bd5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.83423076923077 : 12.7128727213542); (1.83423076923077 : 12.9628727213542); (2.42961538461538 : 12.9628727213542); (2.42961538461538 : 12.7128727213542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDataContext/Person/Person_Person" />
+      <nodes>
+        <classShapeMoniker Id="0d41d3a5-d89c-4656-b9b3-331745229bd5" />
+        <classShapeMoniker Id="0d41d3a5-d89c-4656-b9b3-331745229bd5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.83423076923077 : 0.75); (1.83423076923077 : 0.5); (2.42961538461538 : 0.5); (2.42961538461538 : 0.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDataContext/Person/Person_Person1" />
+      <nodes>
+        <classShapeMoniker Id="0d41d3a5-d89c-4656-b9b3-331745229bd5" />
+        <classShapeMoniker Id="0d41d3a5-d89c-4656-b9b3-331745229bd5" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="e2387093-5d32-4ab8-9787-15708cb9fafa" absoluteBounds="8.5, 5.875, 2, 16.770408528645834">
+      <DataClassMoniker Name="/HCISDataContext/GivenServiceM" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c3de1f23-0eb9-4083-afb1-9403af083b37" absoluteBounds="8.515, 6.335, 1.9700000000000002, 16.210408528645832" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9.3125 : 4.96311686197917); (9.3125 : 5.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDataContext/Department/Department_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="d1d3a7c5-e1b5-4c9b-8d55-a1a3873b3091" />
+        <classShapeMoniker Id="e2387093-5d32-4ab8-9787-15708cb9fafa" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.75 : 6.81326416015625); (7.04166666666667 : 6.81326416015625 : JumpStart); (7.20833333333333 : 6.81326416015625 : JumpEnd); (8.16666666666667 : 6.81326416015625 : JumpStart); (8.33333333333333 : 6.81326416015625 : JumpEnd); (8.5 : 6.81326416015625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDataContext/Dossier/Dossier_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="a8d8a4dc-fa53-431b-811d-d5665f345524" />
+        <classShapeMoniker Id="e2387093-5d32-4ab8-9787-15708cb9fafa" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.20923076923077 : 22.6454085286458); (9.20923076923077 : 22.8954085286458); (9.80461538461539 : 22.8954085286458); (9.80461538461539 : 22.6454085286458)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDataContext/GivenServiceM/GivenServiceM_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="e2387093-5d32-4ab8-9787-15708cb9fafa" />
+        <classShapeMoniker Id="e2387093-5d32-4ab8-9787-15708cb9fafa" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.125 : 8.06326416015625); (8.5 : 8.06326416015625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDataContext/Person/Person_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="0d41d3a5-d89c-4656-b9b3-331745229bd5" />
+        <classShapeMoniker Id="e2387093-5d32-4ab8-9787-15708cb9fafa" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="61377aff-f6cf-4526-8631-b561200c101a" absoluteBounds="11.25, 6.375, 2, 6.5784326171875005">
+      <DataClassMoniker Name="/HCISDataContext/GivenServiceD" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d7768532-3faa-41e8-8221-499b04c07ffd" absoluteBounds="11.265, 6.835, 1.9700000000000002, 6.0184326171875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.5 : 9.66421630859375); (11.25 : 9.66421630859375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDataContext/GivenServiceM/GivenServiceM_GivenServiceD" />
+      <nodes>
+        <classShapeMoniker Id="e2387093-5d32-4ab8-9787-15708cb9fafa" />
+        <classShapeMoniker Id="61377aff-f6cf-4526-8631-b561200c101a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="95913aa6-0e74-4f5f-9cef-50d770807e6f" absoluteBounds="4.75, 8.375, 2, 9.8475569661458326">
+      <DataClassMoniker Name="/HCISDataContext/Service" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f84789aa-50c5-4905-adfd-13df87fa0dff" absoluteBounds="4.765, 8.835, 1.9700000000000002, 9.2875569661458321" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.75 : 8.375); (7.125 : 8); (7.125 : 3.12218543098958); (8.125 : 3.12218543098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDataContext/Service/Service_Department" />
+      <nodes>
+        <classShapeMoniker Id="95913aa6-0e74-4f5f-9cef-50d770807e6f" />
+        <classShapeMoniker Id="d1d3a7c5-e1b5-4c9b-8d55-a1a3873b3091" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.75 : 13.3300304830729); (8.25 : 13.3300304830729); (8.25 : 5.625); (12.25 : 5.625); (12.25 : 6.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDataContext/Service/Service_GivenServiceD" />
+      <nodes>
+        <classShapeMoniker Id="95913aa6-0e74-4f5f-9cef-50d770807e6f" />
+        <classShapeMoniker Id="61377aff-f6cf-4526-8631-b561200c101a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.45923076923077 : 18.2225569661458); (5.45923076923077 : 18.4725569661458); (6.05461538461539 : 18.4725569661458); (6.05461538461539 : 18.2225569661458)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDataContext/Service/Service_Service" />
+      <nodes>
+        <classShapeMoniker Id="95913aa6-0e74-4f5f-9cef-50d770807e6f" />
+        <classShapeMoniker Id="95913aa6-0e74-4f5f-9cef-50d770807e6f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="7969cb16-e66a-420c-b7dc-c68c6eec0cb6" absoluteBounds="11.5, 1.75, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/HCISDataContext/Insurance" />
+      <nestedChildShapes>
+        <elementListCompartment Id="af85bb4d-a663-471f-8024-43bb039f282e" absoluteBounds="11.515, 2.21, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.5 : 5.13861328125); (6.75 : 5.13861328125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDataContext/Insurance/Insurance_Dossier" />
+      <nodes>
+        <classShapeMoniker Id="7969cb16-e66a-420c-b7dc-c68c6eec0cb6" />
+        <classShapeMoniker Id="a8d8a4dc-fa53-431b-811d-d5665f345524" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.40625 : 5.25160970052083); (13.40625 : 17.8306705729167); (10.5 : 17.8306705729167)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDataContext/Insurance/Insurance_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="7969cb16-e66a-420c-b7dc-c68c6eec0cb6" />
+        <classShapeMoniker Id="e2387093-5d32-4ab8-9787-15708cb9fafa" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(12.2092307692308 : 1.75); (12.2092307692308 : 1.5); (12.8046153846154 : 1.5); (12.8046153846154 : 1.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDataContext/Insurance/Insurance_Insurance" />
+      <nodes>
+        <classShapeMoniker Id="7969cb16-e66a-420c-b7dc-c68c6eec0cb6" />
+        <classShapeMoniker Id="7969cb16-e66a-420c-b7dc-c68c6eec0cb6" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

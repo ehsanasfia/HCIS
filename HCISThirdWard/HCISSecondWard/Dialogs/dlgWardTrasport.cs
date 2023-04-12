@@ -1,0 +1,78 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Linq;
+using System.Windows.Forms;
+using DevExpress.XtraEditors;
+using HCISSecondWard.Data;
+using HCISSecondWard.Classes;
+
+
+namespace HCISSecondWard.Dialogs
+{
+    public partial class dlgWardTrasport : DevExpress.XtraEditors.XtraForm
+    {
+        HCISDataContext dc = new HCISDataContext();
+        public Guid? DepID { get; set; }
+        public dlgWardTrasport()
+        {
+            InitializeComponent();
+        }
+
+        private void dlgWardTrasport_Load(object sender, EventArgs e)
+        {
+            textEdit1.Text = MainModule.GetPersianDate(DateTime.Now);
+            var lst = dc.Departments.Where(x => x.TypeID == 11 && x.Name != "اورژانس").ToList();
+            departmentBindingSource.DataSource = lst;
+            if (DepID != null && DepID != Guid.Empty)
+                lookUpEdit1.EditValue = lst.FirstOrDefault(x => x.ID == DepID);
+
+            GetData();
+        }
+
+        private void GetData()
+        {
+            givenServiceMBindingSource.DataSource = dc.GivenServiceMs.Where(x => x.ServiceCategoryID == 10  
+                        && x.Confirm != true && x.Date == textEdit1.Text 
+                        && x.Department != null && x.Department.TypeID == 15 && x.Department.Name != "اورژانس").ToList();
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textEdit1.Text))
+            {
+                MessageBox.Show("تاریخ را وارد کنید");
+                return;
+            }
+            GetData();
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            var Ward = lookUpEdit1.EditValue as Department;
+            if (Ward == null)
+            {
+                MessageBox.Show("لطفا بخش مورد نظر رانتخاب کنید ");
+                return;
+            }
+            if (MessageBox.Show("آیا میخواهید بیماران را انتقال دهید؟", "هشدار", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign | MessageBoxOptions.RtlReading) != DialogResult.Yes)
+                return;
+
+            foreach (var item in gridView1.GetSelectedRows())
+            {
+                var gsm = gridView1.GetRow(item) as GivenServiceM;
+                gsm.Department = Ward;
+                gsm.LastModificationDate = MainModule.GetPersianDate(DateTime.Now);
+                gsm.LastModificationTime = DateTime.Now.ToString("HH:mm");
+                gsm.LastModificator = MainModule.UserID;
+            }
+            dc.SubmitChanges();
+            MessageBox.Show("بیماران با موفقیت انتقال یافتند", "توجه", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign | MessageBoxOptions.RtlReading);
+            DialogResult = DialogResult.OK;
+
+        }
+    }
+}

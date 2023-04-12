@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="گزارشات پزشک خانواده" />
+  <DataSources>
+    <SqlDataSource ComponentName="dashboardSqlDataSource1">
+      <Name>SQL Data Source 1</Name>
+      <Connection Name="172.30.1.145_HCIS_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="172.30.1.145" />
+          <Parameter Name="database" Value="HCIS" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="artp" />
+          <Parameter Name="password" Value="506070" />
+        </Parameters>
+      </Connection>
+      <Query Type="SelectQuery" Name="spu_FamilyDoc">
+        <Parameter Name="FromDate" Type="DevExpress.DataAccess.Expression">(System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)([Parameters.FromDate])</Parameter>
+        <Parameter Name="ToDate" Type="DevExpress.DataAccess.Expression">(System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)([Parameters.ToDate])</Parameter>
+        <Tables>
+          <Table Name="Vw_FamilyDoc" Meta="0|0|125|260" />
+        </Tables>
+        <Columns>
+          <Column Table="Vw_FamilyDoc" Name="Name" />
+          <Column Table="Vw_FamilyDoc" Name="P1" />
+          <Column Table="Vw_FamilyDoc" Name="P2" />
+          <Column Table="Vw_FamilyDoc" Name="P3" />
+          <Column Table="Vw_FamilyDoc" Name="P4" />
+          <Column Table="Vw_FamilyDoc" Name="Dep" />
+          <Column Table="Vw_FamilyDoc" Name="C" />
+          <Column Table="Vw_FamilyDoc" Name="InsurName" />
+          <Column Table="Vw_FamilyDoc" Name="Company" />
+          <Column Table="Vw_FamilyDoc" Name="Sex" />
+          <Column Table="Vw_FamilyDoc" Name="CreationDate" />
+        </Columns>
+        <Filter>[Vw_FamilyDoc.CreationDate] &gt;= ?FromDate And [Vw_FamilyDoc.CreationDate] &lt;= ?ToDate</Filter>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="spu_FamilyDoc">
+            <Field Name="Name" Type="String" />
+            <Field Name="P1" Type="String" />
+            <Field Name="P2" Type="String" />
+            <Field Name="P3" Type="String" />
+            <Field Name="P4" Type="String" />
+            <Field Name="Dep" Type="String" />
+            <Field Name="C" Type="Int32" />
+            <Field Name="InsurName" Type="String" />
+            <Field Name="Company" Type="String" />
+            <Field Name="Sex" Type="String" />
+            <Field Name="CreationDate" Type="String" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+    </SqlDataSource>
+  </DataSources>
+  <Parameters>
+    <Parameter Name="FromDate" Value="1397/01/01" />
+    <Parameter Name="ToDate" Value="1397/12/29" />
+  </Parameters>
+  <Items>
+    <Chart ComponentName="chartDashboardItem1" Name="نمودار میله ای" DataSource="dashboardSqlDataSource1" DataMember="spu_FamilyDoc">
+      <DataItems>
+        <Measure DataMember="C" Name="تعداد" UniqueName="DataItem1" />
+        <Dimension DataMember="P1" ColoringMode="Hue" UniqueName="DataItem0" />
+        <Dimension DataMember="Sex" UniqueName="DataItem2" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension UniqueName="DataItem2" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument UniqueName="DataItem0" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple Name="تعداد">
+              <Value UniqueName="DataItem1" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend Visible="false" />
+      <AxisX EnableZooming="true" />
+    </Chart>
+    <TreeView ComponentName="treeViewDashboardItem1" Name="جستجو بر اساس گروه" DataSource="dashboardSqlDataSource1" DataMember="spu_FamilyDoc">
+      <DataItems>
+        <Dimension DataMember="P2" UniqueName="DataItem1" />
+        <Dimension DataMember="P1" UniqueName="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem1" />
+        <Dimension UniqueName="DataItem0" />
+      </FilterDimensions>
+    </TreeView>
+    <ListBox ComponentName="listBoxDashboardItem1" Name="جستجو بر اساس بیمه" DataSource="dashboardSqlDataSource1" DataMember="spu_FamilyDoc">
+      <DataItems>
+        <Dimension DataMember="Sex" UniqueName="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+    <ComboBox ComponentName="comboBoxDashboardItem1" Name="درمانگاه" DataSource="dashboardSqlDataSource1" DataMember="spu_FamilyDoc" FilterString="[DataItem0] = 'درمانگاه کارون'" ShowAllValue="false">
+      <DataItems>
+        <Dimension DataMember="Dep" UniqueName="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+      </FilterDimensions>
+    </ComboBox>
+    <Grid ComponentName="gridDashboardItem1" Name="جدول" DataSource="dashboardSqlDataSource1" DataMember="spu_FamilyDoc">
+      <DataItems>
+        <Measure DataMember="C" Name="تعداد" UniqueName="DataItem1" />
+        <Dimension DataMember="P2" Name="گروه خدمتی" UniqueName="DataItem0" />
+      </DataItems>
+      <FormatRules>
+        <GridItemFormatRule Name="FormatRule 1" DataItem="DataItem1">
+          <FormatConditionBar>
+            <NegativeStyleSettings PredefinedColor="PaleRed" />
+            <StyleSettings PredefinedColor="PaleRed" />
+            <BarOptions />
+          </FormatConditionBar>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="FormatRule 2" DataItem="DataItem1">
+          <FormatConditionGradientRangeBar ValueType="Percent">
+            <RangeSet>
+              <Ranges>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="0" />
+                  <BarStyleSettings PredefinedColor="GradientGreen" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="20" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="40" />
+                  <BarStyleSettings PredefinedColor="GradientTransparent" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="60" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="80" />
+                  <BarStyleSettings PredefinedColor="GradientRed" />
+                </RangeInfo>
+              </Ranges>
+            </RangeSet>
+            <BarOptions />
+          </FormatConditionGradientRangeBar>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="FormatRule 3" DataItem="DataItem1">
+          <FormatConditionBar>
+            <NegativeStyleSettings PredefinedColor="PaleRed" />
+            <StyleSettings PredefinedColor="Yellow" />
+            <BarOptions />
+          </FormatConditionBar>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="FormatRule 4" DataItem="DataItem1">
+          <FormatConditionBar>
+            <NegativeStyleSettings PredefinedColor="PaleRed" />
+            <StyleSettings PredefinedColor="PaleRed" />
+            <BarOptions ShowBarOnly="true" DrawAxis="true" />
+          </FormatConditionBar>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="FormatRule 5" DataItem="DataItem1">
+          <FormatConditionBar>
+            <NegativeStyleSettings PredefinedColor="PaleRed" />
+            <StyleSettings PredefinedColor="PaleRed" />
+            <BarOptions ShowBarOnly="true" DrawAxis="true" />
+          </FormatConditionBar>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="FormatRule 6" DataItem="DataItem1">
+          <FormatConditionBar>
+            <NegativeStyleSettings PredefinedColor="PaleRed" />
+            <StyleSettings PredefinedColor="PaleRed" />
+            <BarOptions />
+          </FormatConditionBar>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="FormatRule 7" DataItem="DataItem1">
+          <FormatConditionColorRangeBar ValueType="Percent">
+            <RangeSet>
+              <Ranges>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="0" />
+                  <BarStyleSettings PredefinedColor="Blue" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="33" />
+                  <BarStyleSettings PredefinedColor="Green" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="67" />
+                  <BarStyleSettings PredefinedColor="Red" />
+                </RangeInfo>
+              </Ranges>
+            </RangeSet>
+            <BarOptions />
+          </FormatConditionColorRangeBar>
+        </GridItemFormatRule>
+      </FormatRules>
+      <GridColumns>
+        <GridDimensionColumn Weight="62.820482689535034">
+          <Dimension UniqueName="DataItem0" />
+        </GridDimensionColumn>
+        <GridMeasureColumn Weight="66.25248055618421">
+          <Measure UniqueName="DataItem1" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions ColumnWidthMode="Manual" />
+    </Grid>
+  </Items>
+  <ColorScheme>
+    <Entry DataSource="dashboardSqlDataSource1" DataMember="spu_FamilyDoc" Color="-5482852">
+      <DimensionKeys>
+        <DimensionKey>
+          <Definition DataMember="P1" />
+          <Value Type="System.String" Value="IHD وجود ریسک فاکتور" />
+        </DimensionKey>
+      </DimensionKeys>
+    </Entry>
+  </ColorScheme>
+  <LayoutTree>
+    <LayoutGroup Orientation="Vertical">
+      <LayoutGroup Weight="53.820598006644516">
+        <LayoutItem DashboardItem="chartDashboardItem1" Weight="79.004524886877832" />
+        <LayoutGroup Orientation="Vertical" Weight="20.995475113122172">
+          <LayoutItem DashboardItem="comboBoxDashboardItem1" Weight="15.740740740740741" />
+          <LayoutItem DashboardItem="treeViewDashboardItem1" Weight="84.259259259259252" />
+        </LayoutGroup>
+      </LayoutGroup>
+      <LayoutGroup Weight="46.179401993355484">
+        <LayoutItem DashboardItem="gridDashboardItem1" Weight="79.004524886877832" />
+        <LayoutItem DashboardItem="listBoxDashboardItem1" Weight="20.995475113122172" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

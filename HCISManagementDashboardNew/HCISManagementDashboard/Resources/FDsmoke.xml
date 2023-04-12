@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="گزارشات پزشک خانواده" />
+  <DataSources>
+    <SqlDataSource ComponentName="dashboardSqlDataSource1">
+      <Name>SQL Data Source 1</Name>
+      <Connection Name="172.30.1.145_HCIS_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="172.30.1.145" />
+          <Parameter Name="database" Value="HCIS" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="artp" />
+          <Parameter Name="password" Value="506070" />
+        </Parameters>
+      </Connection>
+      <Query Type="SelectQuery" Name="Vw_FDSmokeCount">
+        <Parameter Name="FromDate" Type="DevExpress.DataAccess.Expression">(System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)([Parameters.FromDate])</Parameter>
+        <Parameter Name="ToDate" Type="DevExpress.DataAccess.Expression">(System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)([Parameters.ToDate])</Parameter>
+        <Tables>
+          <Table Name="Vw_FDSmokeCount" Meta="0|0|125|240" />
+        </Tables>
+        <Columns>
+          <Column Table="Vw_FDSmokeCount" Name="Name" />
+          <Column Table="Vw_FDSmokeCount" Name="P1" />
+          <Column Table="Vw_FDSmokeCount" Name="P2" />
+          <Column Table="Vw_FDSmokeCount" Name="P3" />
+          <Column Table="Vw_FDSmokeCount" Name="Dep" />
+          <Column Table="Vw_FDSmokeCount" Name="C" />
+          <Column Table="Vw_FDSmokeCount" Name="InsurName" />
+          <Column Table="Vw_FDSmokeCount" Name="Company" />
+          <Column Table="Vw_FDSmokeCount" Name="Sex" />
+          <Column Table="Vw_FDSmokeCount" Name="CreationDate" />
+        </Columns>
+        <Filter>[Vw_FDSmokeCount.CreationDate] &gt;= ?FromDate And [Vw_FDSmokeCount.CreationDate] &lt;= ?ToDate</Filter>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="Vw_FDSmokeCount">
+            <Field Name="Name" Type="String" />
+            <Field Name="P1" Type="String" />
+            <Field Name="P2" Type="String" />
+            <Field Name="P3" Type="String" />
+            <Field Name="Dep" Type="String" />
+            <Field Name="C" Type="Int32" />
+            <Field Name="InsurName" Type="String" />
+            <Field Name="Company" Type="String" />
+            <Field Name="Sex" Type="String" />
+            <Field Name="CreationDate" Type="String" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+    </SqlDataSource>
+  </DataSources>
+  <Parameters>
+    <Parameter Name="FromDate" Value="1397/01/01" />
+    <Parameter Name="ToDate" Value="1397/12/29" />
+  </Parameters>
+  <Items>
+    <TreeView ComponentName="treeViewDashboardItem1" Name="جستجو بر اساس گروه" DataSource="dashboardSqlDataSource1" DataMember="Vw_FDSmokeCount">
+      <DataItems>
+        <Dimension DataMember="Dep" UniqueName="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+      </FilterDimensions>
+    </TreeView>
+    <Pie ComponentName="pieDashboardItem1" Name="به تفکیک بیمه" DataSource="dashboardSqlDataSource1" DataMember="Vw_FDSmokeCount" LabelContentType="ArgumentAndValue">
+      <InteractivityOptions IgnoreMasterFilters="true" />
+      <DataItems>
+        <Measure DataMember="C" Name="تعداد" UniqueName="DataItem0" />
+        <Dimension DataMember="InsurName" UniqueName="DataItem2" />
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem2" />
+      </Arguments>
+      <Values>
+        <Value UniqueName="DataItem0" />
+      </Values>
+    </Pie>
+    <Chart ComponentName="chartDashboardItem1" Name="نمودار میله ای" DataSource="dashboardSqlDataSource1" DataMember="Vw_FDSmokeCount">
+      <DataItems>
+        <Measure DataMember="C" Name="تعداد" UniqueName="DataItem0" />
+        <Dimension DataMember="Dep" UniqueName="DataItem1" />
+        <Dimension DataMember="Company" UniqueName="DataItem3" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension UniqueName="DataItem3" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument UniqueName="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple>
+              <Value UniqueName="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Pie ComponentName="pieDashboardItem2" Name="به تفکیک جنسیت" DataSource="dashboardSqlDataSource1" DataMember="Vw_FDSmokeCount">
+      <InteractivityOptions IgnoreMasterFilters="true" />
+      <DataItems>
+        <Measure DataMember="C" Name="تعداد" UniqueName="DataItem0" />
+        <Dimension DataMember="Sex" UniqueName="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem1" />
+      </Arguments>
+      <Values>
+        <Value UniqueName="DataItem0" />
+      </Values>
+    </Pie>
+  </Items>
+  <ColorScheme>
+    <Entry DataSource="dashboardSqlDataSource1" DataMember="spu_FamilyDoc" Color="-5482852">
+      <DimensionKeys>
+        <DimensionKey>
+          <Definition DataMember="P1" />
+          <Value Type="System.String" Value="IHD وجود ریسک فاکتور" />
+        </DimensionKey>
+      </DimensionKeys>
+    </Entry>
+  </ColorScheme>
+  <LayoutTree>
+    <LayoutGroup Orientation="Vertical">
+      <LayoutGroup Weight="52.6578073089701">
+        <LayoutItem DashboardItem="chartDashboardItem1" Weight="76.018099547511312" />
+        <LayoutItem DashboardItem="treeViewDashboardItem1" Weight="23.981900452488688" />
+      </LayoutGroup>
+      <LayoutGroup Weight="47.3421926910299">
+        <LayoutItem DashboardItem="pieDashboardItem2" Weight="51.040723981900456" />
+        <LayoutItem DashboardItem="pieDashboardItem1" Weight="48.959276018099544" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

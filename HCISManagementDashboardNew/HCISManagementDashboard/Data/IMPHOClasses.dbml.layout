@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="IMPHOClasses">
+  <DataContextMoniker Name="/IMPHOClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="fa687ede-ff4e-4df8-8c0c-827c84214d6d" absoluteBounds="0.75, 1.25, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/IMPHOClassesDataContext/Tbl_Company" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e9d52485-2313-4cb5-a0ea-9ae69beaa017" absoluteBounds="0.765, 1.71, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8fcb5e75-b3a3-4a37-aebf-512342ade2eb" absoluteBounds="4.625, 1, 2, 3.6939111328124992">
+      <DataClassMoniker Name="/IMPHOClassesDataContext/Tbl_SubCompany" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ca065f40-3a75-43d6-a902-6658e79bfc78" absoluteBounds="4.6400000000000006, 1.46, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.90465413411458); (4.625 : 2.90465413411458)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/IMPHOClassesDataContext/Tbl_Company/Tbl_Company_Tbl_SubCompany" />
+      <nodes>
+        <classShapeMoniker Id="fa687ede-ff4e-4df8-8c0c-827c84214d6d" />
+        <classShapeMoniker Id="8fcb5e75-b3a3-4a37-aebf-512342ade2eb" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

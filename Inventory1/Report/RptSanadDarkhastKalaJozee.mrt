@@ -1,0 +1,1385 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="0" />
+    <DataSources isList="true" count="0" />
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="6">
+      <value>,dt,dt,System.String,,False,False</value>
+      <value>,username,username,System.String,,False,False</value>
+      <value>,Insure,Insure,System.String,,False,False</value>
+      <value>,persiannumber,persiannumber,System.String,,False,False</value>
+      <value>,price,price,System.String,,False,False</value>
+      <value>,ServiceType,ServiceType,System.String,,False,False</value>
+    </Variables>
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="2" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="3">
+        <PageHeaderBand2 Ref="3" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.2,9.34,2.17</ClientRectangle>
+          <Components isList="true" count="33">
+            <Text83 Ref="4" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.08,0.25,1.53,0.24</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,10,Bold</Font>
+              <Guid>f6f1edf04e534ebc959f551b603a61d8</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text83</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>LOCAL PURCHASE</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+            </Text83>
+            <Text84 Ref="5" type="Text" isKey="true">
+              <Border>AdvBlack;3;Solid;Black;3;Solid;Black;3;Solid;Black;3;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.9,0.18,5,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,14,Bold</Font>
+              <Guid>0f10fedff3ca41c1aa9b8748d910dfbe</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text84</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>این قسمت توسط متقاضی پر می شود</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+            </Text84>
+            <Text85 Ref="6" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.01,0.16,1.69,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,11,Bold</Font>
+              <Guid>f5b20d107df044449820a2cd0391541b</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text85</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>سند درخواست خرید جزئی کالا</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text85>
+            <Text1 Ref="7" type="Text" isKey="true">
+              <Border>AdvBlack;3;Solid;Black;1;Solid;Black;1;Solid;Black;3;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8.6,0.5,0.72,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,8,Bold</Font>
+              <Guid>101871d937ff40f2b664c462a8094592</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>شماره سند</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+            <Text2 Ref="8" type="Text" isKey="true">
+              <Border>AdvBlack;3;Solid;Black;1;Solid;Black;1;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.8,0.5,0.8,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,8,Bold</Font>
+              <Guid>71b11d5306b84d23b057a7e4392a8bdc</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>جمع مبالغ واقعی
+(ريال)</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text2>
+            <Text3 Ref="9" type="Text" isKey="true">
+              <Border>AdvBlack;3;Solid;Black;1;Solid;Black;3;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.9,0.5,0.9,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,8,Bold</Font>
+              <Guid>8043824da90545da930a805b50f60086</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>جمع مقادیر واقعی
+</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text3>
+            <Text4 Ref="10" type="Text" isKey="true">
+              <Border>AdvBlack;3;Solid;Black;1;Solid;Black;1;Solid;Black;3;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.5,0.5,0.4,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,8,Bold</Font>
+              <Guid>5175d85eeba54dd58d4e0e1dfe0d71e6</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>تعداد
+اقلام</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text4>
+            <Text5 Ref="11" type="Text" isKey="true">
+              <Border>AdvBlack;3;Solid;Black;1;Solid;Black;1;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.5,0.5,1,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,8,Bold</Font>
+              <Guid>90fbf4f3587f400e8631dc8f22206649</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>جمع مبالغ تخمینی
+(ريال)</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text5>
+            <Text6 Ref="12" type="Text" isKey="true">
+              <Border>AdvBlack;3;Solid;Black;1;Solid;Black;1;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.9,0.5,3.6,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,8,Bold</Font>
+              <Guid>36025c8abaee40f3bcf0dd1d5918e073</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>شماره حساب</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text6>
+            <Text7 Ref="13" type="Text" isKey="true">
+              <Border>AdvBlack;3;Solid;Black;1;Solid;Black;1;Solid;Black;3;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.1,0.5,0.8,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,8,Bold</Font>
+              <Guid>9db4a2cfaabc49649bd448de9fab7f36</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>تاریخ تحویل کالا</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text7>
+            <Text8 Ref="14" type="Text" isKey="true">
+              <Border>AdvBlack;3;Solid;Black;1;Solid;Black;1;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.3,0.5,0.8,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,8,Bold</Font>
+              <Guid>9e3706e88da146bd8f450e013987c4b9</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>تاریخ تقاضا</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text8>
+            <Text9 Ref="15" type="Text" isKey="true">
+              <Border>AdvBlack;3;Solid;Black;1;Solid;Black;3;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.5,0.3,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,8,Bold</Font>
+              <Guid>3c5929c37eba43b5bfdd925f2548b2e8</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>نوع سند</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text9>
+            <Text10 Ref="16" type="Text" isKey="true">
+              <Border>AdvBlack;1;Solid;Black;3;Solid;Black;1;Solid;Black;3;Solid;False;3;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8.6,0.82,0.72,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,8,Bold</Font>
+              <Guid>968876ccbf4c4af5bcdc1c89ad1e638e</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text10>
+            <Text11 Ref="17" type="Text" isKey="true">
+              <Border>AdvBlack;1;Solid;Black;3;Solid;Black;1;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.8,0.82,0.8,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,8,Bold</Font>
+              <Guid>f2bdc7fb97ef4722a3b15a7683c0d6b8</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text11</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text11>
+            <Text12 Ref="18" type="Text" isKey="true">
+              <Border>AdvBlack;1;Solid;Black;3;Solid;Black;3;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.9,0.82,0.9,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,8,Bold</Font>
+              <Guid>f20df0fe51a249ccb50a01b1edc27a82</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text12</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text12>
+            <Text13 Ref="19" type="Text" isKey="true">
+              <Border>AdvBlack;1;Solid;Black;1;Solid;Black;1;Solid;Black;3;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.5,0.82,0.4,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,8,Bold</Font>
+              <Guid>0af354f236e24b5bb4b27a65562fa893</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text13</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text13>
+            <Text14 Ref="20" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.5,0.82,1,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,8,Bold</Font>
+              <Guid>3f0d49d4b65343268fbfec656eb74f3d</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text14</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text14>
+            <Text15 Ref="21" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.9,0.82,3.6,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,8,Bold</Font>
+              <Guid>ff6f4aef1b0744d2851982a651584715</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text15</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text15>
+            <Text16 Ref="22" type="Text" isKey="true">
+              <Border>AdvBlack;1;Solid;Black;3;Solid;Black;1;Solid;Black;3;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.1,0.82,0.8,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,8,Bold</Font>
+              <Guid>f761729f6af34e158ba507ecd259b934</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text16</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text16>
+            <Text17 Ref="23" type="Text" isKey="true">
+              <Border>AdvBlack;1;Solid;Black;3;Solid;Black;1;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.3,0.82,0.8,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,8,Bold</Font>
+              <Guid>e0404165b1a64afb80fdd142e6b183b9</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text17</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text17>
+            <Text18 Ref="24" type="Text" isKey="true">
+              <Border>AdvBlack;1;Solid;Black;3;Solid;Black;3;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.82,0.3,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,8,Bold</Font>
+              <Guid>d6ef55f97ebb4d4e9511b89b8e6ec453</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text18</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>LP</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text18>
+            <Text19 Ref="25" type="Text" isKey="true">
+              <Border>AdvBlack;3;Solid;Black;3;Solid;Black;1;None;Black;3;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.3,1.14,5.02,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,10,Bold</Font>
+              <Guid>73c9ec723daa45c0a195f6d14eea9202</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text19</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>شرح کار:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text19>
+            <Text20 Ref="26" type="Text" isKey="true">
+              <Border>AdvBlack;3;Solid;Black;3;Solid;Black;3;Solid;Black;3;None;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.14,4.28,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,10,Bold</Font>
+              <Guid>2c7156e426b54fe8b89cbe4e2057ba2b</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text20</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>محل تحویل کالا:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text20>
+            <Text21 Ref="27" type="Text" isKey="true">
+              <Border>AdvBlack;3;Solid;Black;1;Solid;Black;3;Solid;Black;3;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.7,1.46,2.62,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,10,Bold</Font>
+              <Guid>064ae1d8f0934d3f90d49afd76261e18</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text21</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>کالای خریداری شده</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text21>
+            <Text22 Ref="28" type="Text" isKey="true">
+              <Border>AdvBlack;3;Solid;Black;1;Solid;Black;3;Solid;Black;3;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.46,6.71,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,10,Bold</Font>
+              <Guid>315a17af288e4f1b997b26014ab21e9a</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text22</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>کالای مورد درخواست</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text22>
+            <Text23 Ref="29" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;2;Solid;Black;2;Solid;Black;3;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8.2,1.79,1.12,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>0eb886b5bbf84d1ebcdb737a587eff2d</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text23</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>قیمت واقعی قلم</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text23>
+            <Text24 Ref="30" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;2;Solid;Black;2;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.1,1.79,1.1,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>793f2260a10143c6b24e80d384fc7568</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text24</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>مقدار</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text24>
+            <Text25 Ref="31" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;2;Solid;Black;3;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.7,1.79,0.4,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,8,Bold</Font>
+              <Guid>b82dfa935cdf4d18beff8b8d9bf46a89</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text25</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>واحد صدور</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text25>
+            <Text26 Ref="32" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;2;Solid;Black;2;Solid;Black;3;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.1,1.79,1.6,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>7b595b350a9244499f8dea94a6a46e3e</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text26</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>شماره طبقه بندی کالا</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text26>
+            <Text27 Ref="33" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;2;Solid;Black;2;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.5,1.79,3.6,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>4d6c9aac443344d6be177259b1ba0bb0</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text27</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>شرح کالا</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text27>
+            <Text28 Ref="34" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;2;Solid;Black;2;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.1,1.79,0.4,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>e0f67808d8c640dfaf3c0f45f8207cc1</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text28</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>واحد صدور</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text28>
+            <Text29 Ref="35" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;2;Solid;Black;3;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.79,1.1,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>ff1f6020a4a94e8eba84170e4b47fee0</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text29</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>مقدار</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text29>
+            <Image1 Ref="36" type="Image" isKey="true">
+              <Border>AdvBlack;1;None;Black;3;None;Black;1;None;Black;3;None;False;3;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanShrink>True</CanShrink>
+              <ClientRectangle>8.7,0,0.6,0.49</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Image>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</Image>
+              <Name>Image1</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Stretch>True</Stretch>
+            </Image1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>5e1a60ee86934c45ad1bbba0c5d150a3</Guid>
+          <Name>PageHeaderBand2</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+        </PageHeaderBand2>
+        <PageFooterBand1 Ref="37" type="PageFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <CanGrow>False</CanGrow>
+          <ClientRectangle>0,4.19,9.34,2.2</ClientRectangle>
+          <Components isList="true" count="33">
+            <Text37 Ref="38" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;2;None;Black;2;None;Black;3;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.1,0.01,2.22,0.26</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>c314769bcf514b7798a8511bfd653f3d</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text37</Name>
+              <Page isRef="2" />
+              <Parent isRef="37" />
+              <Text>تهیه کننده:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text37>
+            <Text38 Ref="39" type="Text" isKey="true">
+              <Border>AdvBlack;3;Solid;Black;2;None;Black;2;None;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.82,0.01,2.27,0.26</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>df6eaceccfc142aa8a4d75ef967ed5ab</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text38</Name>
+              <Page isRef="2" />
+              <Parent isRef="37" />
+              <Text>تصویب کننده:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text38>
+            <Text39 Ref="40" type="Text" isKey="true">
+              <Border>AdvBlack;3;Solid;Black;2;None;Black;2;None;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.2,0.01,2.62,0.26</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>09cd90f9b2ad4e4580789f2ffa864c56</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text39</Name>
+              <Page isRef="2" />
+              <Parent isRef="37" />
+              <Text>تائید سفارشات:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text39>
+            <Text40 Ref="41" type="Text" isKey="true">
+              <Border>AdvBlack;3;Solid;Black;2;None;Black;3;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.01,2.22,0.26</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>f83d109c83fa4c71a6a79f3e17e7ef21</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text40</Name>
+              <Page isRef="2" />
+              <Parent isRef="37" />
+              <Text>انبار تحویل دهنده کالا:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text40>
+            <Text41 Ref="42" type="Text" isKey="true">
+              <Border>AdvBlack;3;None;Black;2;None;Black;3;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.26,2.22,0.26</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>8449e9509c1649728cbbbb4f2a80f3e5</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text41</Name>
+              <Page isRef="2" />
+              <Parent isRef="37" />
+              <Text>نام:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text41>
+            <Text42 Ref="43" type="Text" isKey="true">
+              <Border>AdvBlack;3;None;Black;2;Solid;Black;3;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.51,2.22,0.26</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>3bfb7c7b5d3a4a319e50f690f4a626ad</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text42</Name>
+              <Page isRef="2" />
+              <Parent isRef="37" />
+              <Text>                     امضاء</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text42>
+            <Text43 Ref="44" type="Text" isKey="true">
+              <Border>AdvBlack;2;None;Black;2;None;Black;2;Solid;Black;3;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.09,0.28,2.23,0.26</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>0b829cd390324d2da6ab9e1069403ba0</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text43</Name>
+              <Page isRef="2" />
+              <Parent isRef="37" />
+              <Text>نام:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text43>
+            <Text44 Ref="45" type="Text" isKey="true">
+              <Border>AdvBlack;3;None;Black;2;None;Black;2;Solid;Black;2;None;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.22,0.51,1.33,0.26</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>418dc47b145b4dd2a532d34e9c3df567</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text44</Name>
+              <Page isRef="2" />
+              <Parent isRef="37" />
+              <Text>تاریخ:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text44>
+            <Text45 Ref="46" type="Text" isKey="true">
+              <Border>AdvBlack;3;None;Black;2;Solid;Black;2;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.82,0.51,2.27,0.26</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>1f2bb93eca404c8491ec7eb61614a8e7</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text45</Name>
+              <Page isRef="2" />
+              <Parent isRef="37" />
+              <Text>تلفن:                                 امضاء</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text45>
+            <Text46 Ref="47" type="Text" isKey="true">
+              <Border>AdvBlack;3;None;Black;2;Solid;Black;2;Solid;Black;3;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.09,0.51,2.23,0.26</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>f3fd6600898f43db8b756dbecfe0b103</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text46</Name>
+              <Page isRef="2" />
+              <Parent isRef="37" />
+              <Text>تلفن:                                      امضاء</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text46>
+            <Text47 Ref="48" type="Text" isKey="true">
+              <Border>AdvBlack;2;None;Black;2;None;Black;2;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.82,0.27,2.27,0.26</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>89b807f4556344c29451b7fac482f2e5</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text47</Name>
+              <Page isRef="2" />
+              <Parent isRef="37" />
+              <Text>نام:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text47>
+            <Text48 Ref="49" type="Text" isKey="true">
+              <Border>AdvBlack;2;None;Black;2;None;Black;2;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.22,0.25,2.6,0.26</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>0916197cdce04b73b58863441104070a</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text48</Name>
+              <Page isRef="2" />
+              <Parent isRef="37" />
+              <Text>عطف به حواله صدور NIS شده:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text48>
+            <Text49 Ref="50" type="Text" isKey="true">
+              <Border>AdvBlack;3;None;Black;2;None;Black;2;None;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.55,0.51,1.27,0.26</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>fb39e0ab72b14ef29d9e2800ea31c26a</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text49</Name>
+              <Page isRef="2" />
+              <Parent isRef="37" />
+              <Text>شماره:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text49>
+            <Text50 Ref="51" type="Text" isKey="true">
+              <Border>AdvBlack;3;None;Black;2;None;Black;2;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.22,0.77,2.6,0.26</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>dde6592537074283a540a06678419171</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text50</Name>
+              <Page isRef="2" />
+              <Parent isRef="37" />
+              <Text>انبار</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text50>
+            <Text51 Ref="52" type="Text" isKey="true">
+              <Border>AdvBlack;3;None;Black;2;None;Black;2;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.22,1.02,2.6,0.26</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>d0775fb80cd0460bb0b9d1f4ed9e8187</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text51</Name>
+              <Page isRef="2" />
+              <Parent isRef="37" />
+              <Text>آنالیست</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text51>
+            <Text52 Ref="53" type="Text" isKey="true">
+              <Border>AdvBlack;3;None;Black;3;Solid;Black;2;Solid;Black;2;Solid;False;3;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.22,1.28,2.6,0.53</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>5b80d8fd2ef24b53932f04e917a2e571</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text52</Name>
+              <Page isRef="2" />
+              <Parent isRef="37" />
+              <Text>                     امضاء</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text52>
+            <Text53 Ref="54" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;2;None;Black;2;None;Black;3;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.09,0.77,2.23,0.26</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>707d3be796af4e64939b59d0311427fb</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text53</Name>
+              <Page isRef="2" />
+              <Parent isRef="37" />
+              <Text>مأمور خرید:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text53>
+            <Text54 Ref="55" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;2;None;Black;2;None;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.83,0.77,2.27,0.33</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>02eeeb24b50a406e80431caf97baeb63</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text54</Name>
+              <Page isRef="2" />
+              <Parent isRef="37" />
+              <Text>تائید بودجه:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text54>
+            <Text55 Ref="56" type="Text" isKey="true">
+              <Border>AdvBlack;2;None;Black;2;None;Black;2;Solid;Black;3;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.1,1.02,2.22,0.26</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>c9e5a0c99f384673808915b8ce2a43e2</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text55</Name>
+              <Page isRef="2" />
+              <Parent isRef="37" />
+              <Text>نام:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text55>
+            <Text56 Ref="57" type="Text" isKey="true">
+              <Border>AdvBlack;3;None;Black;3;Solid;Black;2;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.82,1.43,2.28,0.38</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>9a6afece7de740b1b1bd1a9c2d512fbb</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text56</Name>
+              <Page isRef="2" />
+              <Parent isRef="37" />
+              <Text>                                         امضاء</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text56>
+            <Text57 Ref="58" type="Text" isKey="true">
+              <Border>AdvBlack;3;None;Black;3;Solid;Black;2;Solid;Black;3;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.1,1.55,2.22,0.26</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>bc9276a9a6064f03a01be5e89be09a06</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text57</Name>
+              <Page isRef="2" />
+              <Parent isRef="37" />
+              <Text>تلفن:                                      امضاء</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text57>
+            <Text58 Ref="59" type="Text" isKey="true">
+              <Border>AdvBlack;2;None;Black;2;None;Black;2;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.82,1.12,2.28,0.33</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>ef9d0b6577f34b3aaae78f91a5a117f7</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text58</Name>
+              <Page isRef="2" />
+              <Parent isRef="37" />
+              <Text>نام:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text58>
+            <Text59 Ref="60" type="Text" isKey="true">
+              <Border>AdvBlack;2;None;Black;2;None;Black;2;Solid;Black;3;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.1,1.28,2.22,0.26</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>ca1a26006d814cd7a0ffb0155ca83e26</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text59</Name>
+              <Page isRef="2" />
+              <Parent isRef="37" />
+              <Text>شماره پرسنلی:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text59>
+            <Text61 Ref="61" type="Text" isKey="true">
+              <Border>AdvBlack;2;None;Black;2;None;Black;3;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.03,2.22,0.26</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>2b412fea7aac4c09a6ae83ed4a5764d2</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text61</Name>
+              <Page isRef="2" />
+              <Parent isRef="37" />
+              <Text>نام:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text61>
+            <Text62 Ref="62" type="Text" isKey="true">
+              <Border>AdvBlack;3;None;Black;3;Solid;Black;3;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.56,2.22,0.25</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>ad2f7af3991e40a3b2948f113e502954</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text62</Name>
+              <Page isRef="2" />
+              <Parent isRef="37" />
+              <Text>تلفن:                                      امضاء</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text62>
+            <Text63 Ref="63" type="Text" isKey="true">
+              <Border>AdvBlack;2;None;Black;2;None;Black;3;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.3,2.22,0.26</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>e0f78dca712540cf93742873c90f9ce2</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text63</Name>
+              <Page isRef="2" />
+              <Parent isRef="37" />
+              <Text>شماره پرسنلی:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text63>
+            <Text60 Ref="64" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;2;None;Black;3;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.77,2.22,0.26</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>bdfec1d7ddf743818b3d6ec866a73382</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text60</Name>
+              <Page isRef="2" />
+              <Parent isRef="37" />
+              <Text>گیرنده کالا:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text60>
+            <Text64 Ref="65" type="Text" isKey="true">
+              <Border>AdvBlack;1;None;Black;3;None;Black;1;None;Black;3;None;False;3;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8.5,1.91,0.72,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,8,Bold</Font>
+              <Guid>1fb2932509c5410e98376f52fe0422bc</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text64</Name>
+              <Page isRef="2" />
+              <Parent isRef="37" />
+              <Text>توزیع نسخ:</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text64>
+            <Text65 Ref="66" type="Text" isKey="true">
+              <Border>AdvBlack;1;None;Black;3;None;Black;1;None;Black;3;None;False;3;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7,1.91,0.72,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,8,Bold</Font>
+              <Guid>81e6c374050d430b8b6e59ba23cd35cd</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text65</Name>
+              <Page isRef="2" />
+              <Parent isRef="37" />
+              <Text>سفید: حسابداری</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text65>
+            <Text66 Ref="67" type="Text" isKey="true">
+              <Border>AdvBlack;1;None;Black;3;None;Black;1;None;Black;3;None;False;3;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.5,1.91,1.02,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,8,Bold</Font>
+              <Guid>a4fd502fadc04cf7a94b48898314447f</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text66</Name>
+              <Page isRef="2" />
+              <Parent isRef="37" />
+              <Text>سبز: پرونده خرید</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text66>
+            <Text67 Ref="68" type="Text" isKey="true">
+              <Border>AdvBlack;1;None;Black;3;None;Black;1;None;Black;3;None;False;3;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.1,1.91,2.02,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,8,Bold</Font>
+              <Guid>fcdb9189cb0a4835bc6892796f0ff0cb</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text67</Name>
+              <Page isRef="2" />
+              <Parent isRef="37" />
+              <Text>صورتی: همراه با کالا جهت عبور از دروازه</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text67>
+            <Text68 Ref="69" type="Text" isKey="true">
+              <Border>AdvBlack;1;None;Black;3;None;Black;1;None;Black;3;None;False;3;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.5,1.91,0.92,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,8,Bold</Font>
+              <Guid>9b6f87537ed441f6b547bf9a6c92300f</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text68</Name>
+              <Page isRef="2" />
+              <Parent isRef="37" />
+              <Text>زرد: اداره متقاضی</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text68>
+            <Text70 Ref="70" type="Text" isKey="true">
+              <Border>AdvBlack;1;None;Black;3;None;Black;1;None;Black;3;None;False;3;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.2,1.91,0.92,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,8,Bold</Font>
+              <Guid>8d1c254badbc4cb89ad8c829cedf4779</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text70</Name>
+              <Page isRef="2" />
+              <Parent isRef="37" />
+              <Text>83-834 (04-86)</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text70>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageFooterBand1</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+        </PageFooterBand1>
+        <DataBand1 Ref="71" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,2.77,9.34,0.3</ClientRectangle>
+          <Components isList="true" count="7">
+            <Text30 Ref="72" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;2;Solid;Black;2;Solid;Black;3;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8.2,0,1.12,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>8d63f26ee9644574b8ed43cf4257e9d4</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text30</Name>
+              <Page isRef="2" />
+              <Parent isRef="71" />
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text30>
+            <Text31 Ref="73" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;2;Solid;Black;2;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.1,0,1.1,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>fe7a3e1c6b834c43b718db74680da183</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text31</Name>
+              <Page isRef="2" />
+              <Parent isRef="71" />
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text31>
+            <Text32 Ref="74" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;2;Solid;Black;3;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.7,0,0.4,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,8,Bold</Font>
+              <Guid>2d281d192a96454b9a3c77d0e141644f</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text32</Name>
+              <Page isRef="2" />
+              <Parent isRef="71" />
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text32>
+            <Text33 Ref="75" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;2;Solid;Black;2;Solid;Black;3;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.1,0,1.6,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>874c61b6fa8c4e62b6b82c73812ea78d</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text33</Name>
+              <Page isRef="2" />
+              <Parent isRef="71" />
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text33>
+            <Text34 Ref="76" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;2;Solid;Black;2;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.5,0,3.6,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>2bdb0b3063da4211bcf6d08f0847d327</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text34</Name>
+              <Page isRef="2" />
+              <Parent isRef="71" />
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text34>
+            <Text35 Ref="77" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;2;Solid;Black;2;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.1,0,0.4,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>1bba388ae2fc4655867a3bc800a57b57</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text35</Name>
+              <Page isRef="2" />
+              <Parent isRef="71" />
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text35>
+            <Text36 Ref="78" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;2;Solid;Black;3;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,1.1,0.32</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9,Bold</Font>
+              <Guid>8158d035e74e40e1a5f70927b9b9bac5</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text36</Name>
+              <Page isRef="2" />
+              <Parent isRef="71" />
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text36>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Filters isList="true" count="0" />
+          <Name>DataBand1</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Sort isList="true" count="0" />
+        </DataBand1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>ed09dfbb07f14b61bbb3bfe479f23311</Guid>
+      <Margins>0.39,0.39,0.39,0.39</Margins>
+      <Name>Page1</Name>
+      <Orientation>Landscape</Orientation>
+      <PageHeight>7.17</PageHeight>
+      <PageWidth>10.12</PageWidth>
+      <PaperSize>B5</PaperSize>
+      <Report isRef="0" />
+      <Watermark Ref="79" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="80" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>9/6/2017 1:27:10 PM</ReportChanged>
+  <ReportCreated>9/2/2017 12:56:59 PM</ReportCreated>
+  <ReportFile>C:\Users\soheilaja\Desktop\RptSanadDarkhastKalaJozee.mrt</ReportFile>
+  <ReportGuid>51067b32b42943aea5de3c8aed2f4e35</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Inches</ReportUnit>
+  <ReportVersion>2013.1.1600</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 14.625, 10.625" name="HCISDataContex">
+  <DataContextMoniker Name="/JamiatClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="33fb3f8e-3c4f-470e-898b-fa93ab81dc47" absoluteBounds="4.375, 1.875, 2, 8.5014469401041666">
+      <DataClassMoniker Name="/JamiatClassesDataContext/PersonTbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="94e2a57a-bab6-45d3-9699-8597416d4e37" absoluteBounds="4.3900000000000006, 2.335, 1.9700000000000002, 7.941446940104167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2d18da10-a29f-46fb-9c09-63a0476d7c4c" absoluteBounds="6.25, 1.625, 2, 2.5401025390625">
+      <DataClassMoniker Name="/JamiatClassesDataContext/MemberPhoto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1bb8c668-ffb5-4bb4-8b7d-d34c0d4112ef" absoluteBounds="6.265, 2.085, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7bf9f50c-a5f2-49b9-9b65-c73d0376c4a5" absoluteBounds="12.375, 3.375, 2, 1.9631982421875">
+      <DataClassMoniker Name="/JamiatClassesDataContext/Tbl_Company" />
+      <nestedChildShapes>
+        <elementListCompartment Id="45edfd7a-822b-485b-879e-a8fb13744054" absoluteBounds="12.39, 3.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8c432145-53ab-41fd-a624-8247ebf4729c" absoluteBounds="0.5, 0.5, 2, 5.6169254557291657">
+      <DataClassMoniker Name="/JamiatClassesDataContext/EmployeeInfoTbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="18458348-793e-4578-a28e-ee5b2e104ab3" absoluteBounds="0.51499999999999968, 0.96, 1.9700000000000002, 5.0569254557291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.375 : 3.99596272786458); (2.5 : 3.99596272786458)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/JamiatClassesDataContext/PersonTbl/PersonTbl_EmployeeInfoTbl" />
+      <nodes>
+        <classShapeMoniker Id="33fb3f8e-3c4f-470e-898b-fa93ab81dc47" />
+        <classShapeMoniker Id="8c432145-53ab-41fd-a624-8247ebf4729c" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

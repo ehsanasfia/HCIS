@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 14.25, 8.5" name="HealthDataClasses">
+  <DataContextMoniker Name="/HealthDataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="4f5bc1b9-ff5d-43a9-9a58-79d5385175ab" isExpanded="false" absoluteBounds="9.375, 0.5, 2, 0.45">
+      <DataClassMoniker Name="/HealthDataClassesDataContext/tblWoman" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ec229c01-d9b5-4063-8412-6e27a3078592" absoluteBounds="9.39, 0.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5ae8df92-61b6-4490-86f5-bdbfeae3a857" isExpanded="false" absoluteBounds="9.375, 1.125, 2, 0.45">
+      <DataClassMoniker Name="/HealthDataClassesDataContext/tblQuestionnaire" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b86a7927-b39d-47db-93ca-1786b69fc962" absoluteBounds="9.39, 1.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4a7334b7-825e-4400-a3f8-2a522b514c2f" isExpanded="false" absoluteBounds="8, 4.625, 2, 0.45">
+      <DataClassMoniker Name="/HealthDataClassesDataContext/tblAllPhoneNumber" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bb703121-9c29-4509-ac7a-21dc1bc8618b" absoluteBounds="8.015, 5.085, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2c3f3ac2-5422-48b7-bf33-e9e69c03702b" isExpanded="false" absoluteBounds="0.75, 1.375, 2, 0.45">
+      <DataClassMoniker Name="/HealthDataClassesDataContext/Department" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bb2af8ad-6a7b-46ff-b8e3-4adb4c6d8f68" absoluteBounds="0.76500000000000012, 1.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.43419230769231 : 1.825); (1.43419230769231 : 2.075); (2.08084615384615 : 2.075); (2.08084615384615 : 1.825)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HealthDataClassesDataContext/Department/Department_Department" />
+      <nodes>
+        <classShapeMoniker Id="2c3f3ac2-5422-48b7-bf33-e9e69c03702b" />
+        <classShapeMoniker Id="2c3f3ac2-5422-48b7-bf33-e9e69c03702b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c0be17ed-a000-4ea9-8b16-8dc304a1a73a" isExpanded="false" absoluteBounds="9.25, 3.5, 2, 0.45">
+      <DataClassMoniker Name="/HealthDataClassesDataContext/tblMngTicketPhone" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a2cd8b51-a695-4453-a90e-b790b23d1cdf" absoluteBounds="9.265, 3.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4b965ab7-b6bc-4134-8e70-f38226536f8c" isExpanded="false" absoluteBounds="7.375, 3.875, 2, 0.45">
+      <DataClassMoniker Name="/HealthDataClassesDataContext/tblMngNotResponse" />
+      <nestedChildShapes>
+        <elementListCompartment Id="14f01ed1-8386-4940-a336-6ca09a8cf98c" absoluteBounds="7.39, 4.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ca7066db-febb-4db4-9f7b-eedebe69f64a" isExpanded="false" absoluteBounds="8, 3.5, 2, 0.45">
+      <DataClassMoniker Name="/HealthDataClassesDataContext/tblMngTelecommunicationPersonnel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c67b5e23-00f3-42ae-8401-bc175379acbc" absoluteBounds="8.015, 3.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0b5cb738-fa1b-45f2-ab60-eafc0bfc4a73" isExpanded="false" absoluteBounds="0.75, 0.5, 2, 0.45">
+      <DataClassMoniker Name="/HealthDataClassesDataContext/Definition" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2d7f7ae1-f165-43a4-8262-f268b15c6a1c" absoluteBounds="0.76500000000000057, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.75 : 0.95); (1.75 : 1.375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HealthDataClassesDataContext/Definition/Definition_Department" />
+      <nodes>
+        <classShapeMoniker Id="0b5cb738-fa1b-45f2-ab60-eafc0bfc4a73" />
+        <classShapeMoniker Id="2c3f3ac2-5422-48b7-bf33-e9e69c03702b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.43419230769231 : 0.5); (1.43419230769231 : 0.25); (2.08084615384615 : 0.25); (2.08084615384615 : 0.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HealthDataClassesDataContext/Definition/Definition_Definition" />
+      <nodes>
+        <classShapeMoniker Id="0b5cb738-fa1b-45f2-ab60-eafc0bfc4a73" />
+        <classShapeMoniker Id="0b5cb738-fa1b-45f2-ab60-eafc0bfc4a73" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="401b2212-b8fc-46aa-b6c1-350238f87578" isExpanded="false" absoluteBounds="12, 1.875, 2, 0.45">
+      <DataClassMoniker Name="/HealthDataClassesDataContext/Shift" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1ad5d2f1-f68b-4445-9ee5-395d8ecba8af" absoluteBounds="12.015, 2.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="831ec10e-da0f-4289-8adf-6795855f96cf" isExpanded="false" absoluteBounds="7.75, 2.875, 2, 0.45">
+      <DataClassMoniker Name="/HealthDataClassesDataContext/tblMngOut_of_CareCall" />
+      <nestedChildShapes>
+        <elementListCompartment Id="37bc10a0-4df1-4372-b6c0-3efd7d527ad9" absoluteBounds="7.765, 3.335, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.875 : 3.5); (8.875 : 3.325)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HealthDataClassesDataContext/tblMngTelecommunicationPersonnel/tblMngTelecommunicationPersonnel_tblMngOut_of_CareCall" />
+      <nodes>
+        <classShapeMoniker Id="ca7066db-febb-4db4-9f7b-eedebe69f64a" />
+        <classShapeMoniker Id="831ec10e-da0f-4289-8adf-6795855f96cf" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ce27ca67-036e-4bd2-a457-4cf05f26965e" isExpanded="false" absoluteBounds="11.625, 3, 2, 0.45">
+      <DataClassMoniker Name="/HealthDataClassesDataContext/tblMngCprGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="93e27353-420b-4588-aee4-1256964241d7" absoluteBounds="11.64, 3.46, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(12.8125 : 2.325); (12.8125 : 3)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HealthDataClassesDataContext/Shift/Shift_tblMngCprGroup" />
+      <nodes>
+        <classShapeMoniker Id="401b2212-b8fc-46aa-b6c1-350238f87578" />
+        <classShapeMoniker Id="ce27ca67-036e-4bd2-a457-4cf05f26965e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="76d04657-2f5b-437e-9dce-b47670aced23" isExpanded="false" absoluteBounds="3, 1, 2, 0.45">
+      <DataClassMoniker Name="/HealthDataClassesDataContext/tblMngDirectionCar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fde26a0e-f3c6-4c54-9e6f-06341262cea7" absoluteBounds="3.0149999999999997, 1.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="722cd008-1c9d-47c4-b858-34a944d25846" isExpanded="false" absoluteBounds="2.875, 1.875, 2, 0.45">
+      <DataClassMoniker Name="/HealthDataClassesDataContext/tblMngtransportPersonel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6bfb4a6e-2721-4ece-b53b-9e51a4ecb421" absoluteBounds="2.8899999999999997, 2.335, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a360d44f-6534-4488-b315-87d9508b5222" isExpanded="false" absoluteBounds="5.5, 1.375, 2, 0.45">
+      <DataClassMoniker Name="/HealthDataClassesDataContext/tblMngDailyRep" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1cb79ebd-cbfc-4c65-b251-007621f07711" absoluteBounds="5.515, 1.835, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5 : 1.225); (5.24 : 1.225); (5.24 : 1.6); (5.5 : 1.6)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HealthDataClassesDataContext/tblMngDirectionCar/tblMngDirectionCar_tblMngDailyRep" />
+      <nodes>
+        <classShapeMoniker Id="76d04657-2f5b-437e-9dce-b47670aced23" />
+        <classShapeMoniker Id="a360d44f-6534-4488-b315-87d9508b5222" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.875 : 1.875); (5.5 : 1.825)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HealthDataClassesDataContext/tblMngtransportPersonel/tblMngtransportPersonel_tblMngDailyRep" />
+      <nodes>
+        <classShapeMoniker Id="722cd008-1c9d-47c4-b858-34a944d25846" />
+        <classShapeMoniker Id="a360d44f-6534-4488-b315-87d9508b5222" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a5c903a4-af0d-4505-a75f-11e7cd7dd5ab" isExpanded="false" absoluteBounds="0.75, 5.75, 2, 0.45">
+      <DataClassMoniker Name="/HealthDataClassesDataContext/tblMngCarInsurance" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aab18a84-e18a-4eae-9f8c-cc7ac4959bb9" absoluteBounds="0.76500000000000057, 6.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c134bb34-dd6e-4e07-a35d-0a8c643e03b2" isExpanded="false" absoluteBounds="0.875, 4.625, 2, 0.45">
+      <DataClassMoniker Name="/HealthDataClassesDataContext/tblMngCivilCar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="65694dd7-eff5-4c55-9fa6-68645de4178c" absoluteBounds="0.89000000000000012, 5.085, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.65625 : 5.075); (1.65625 : 5.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HealthDataClassesDataContext/tblMngCivilCar/tblMngCivilCar_tblMngCarInsurance" />
+      <nodes>
+        <classShapeMoniker Id="c134bb34-dd6e-4e07-a35d-0a8c643e03b2" />
+        <classShapeMoniker Id="a5c903a4-af0d-4505-a75f-11e7cd7dd5ab" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ed6504ef-7559-4e24-a2ad-f9d36599cd29" isExpanded="false" absoluteBounds="3.25, 5.25, 2, 0.45">
+      <DataClassMoniker Name="/HealthDataClassesDataContext/tblMngFuelCar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9c8fe788-cac5-4627-a220-77a6fbbcd657" absoluteBounds="3.265, 5.7100000000000009, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.875 : 5.075); (3.25 : 5.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HealthDataClassesDataContext/tblMngCivilCar/tblMngCivilCar_tblMngFuelCar" />
+      <nodes>
+        <classShapeMoniker Id="c134bb34-dd6e-4e07-a35d-0a8c643e03b2" />
+        <classShapeMoniker Id="ed6504ef-7559-4e24-a2ad-f9d36599cd29" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9853b2f4-9619-448c-a8bf-2bca1bd64ec0" isExpanded="false" absoluteBounds="0.5, 2.75, 2, 0.45">
+      <DataClassMoniker Name="/HealthDataClassesDataContext/tblMngFactorRepair" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ca92e07c-0b54-4893-b694-79900692cca1" absoluteBounds="0.515, 3.21, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.53125 : 4.625); (1.53125 : 3.2)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HealthDataClassesDataContext/tblMngCivilCar/tblMngCivilCar_tblMngFactorRepair" />
+      <nodes>
+        <classShapeMoniker Id="c134bb34-dd6e-4e07-a35d-0a8c643e03b2" />
+        <classShapeMoniker Id="9853b2f4-9619-448c-a8bf-2bca1bd64ec0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.875 : 2.325); (2.5 : 2.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HealthDataClassesDataContext/tblMngtransportPersonel/tblMngtransportPersonel_tblMngFactorRepair" />
+      <nodes>
+        <classShapeMoniker Id="722cd008-1c9d-47c4-b858-34a944d25846" />
+        <classShapeMoniker Id="9853b2f4-9619-448c-a8bf-2bca1bd64ec0" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2e376998-349d-4430-897a-9a2a3d0949c1" isExpanded="false" absoluteBounds="4.375, 3.5, 2, 0.45">
+      <DataClassMoniker Name="/HealthDataClassesDataContext/tblMngCarDriver" />
+      <nestedChildShapes>
+        <elementListCompartment Id="69ce12a1-a795-4d32-951f-ff3659951372" absoluteBounds="4.39, 3.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.875 : 4.8187475); (5.5312525 : 4.8187475); (5.5312525 : 3.95)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HealthDataClassesDataContext/tblMngCivilCar/tblMngCivilCar_tblMngCarDriver" />
+      <nodes>
+        <classShapeMoniker Id="c134bb34-dd6e-4e07-a35d-0a8c643e03b2" />
+        <classShapeMoniker Id="2e376998-349d-4430-897a-9a2a3d0949c1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.625 : 2.325); (4.625 : 3.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HealthDataClassesDataContext/tblMngtransportPersonel/tblMngtransportPersonel_tblMngCarDriver" />
+      <nodes>
+        <classShapeMoniker Id="722cd008-1c9d-47c4-b858-34a944d25846" />
+        <classShapeMoniker Id="2e376998-349d-4430-897a-9a2a3d0949c1" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

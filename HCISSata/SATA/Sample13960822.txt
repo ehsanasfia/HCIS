@@ -1,0 +1,146 @@
+//using ServiceConsumer.proxy;
+using ServiceConsumer.ServiceReference1;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ServiceConsumer
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            #region Sample Data
+            var idHeader = Guid.NewGuid();
+            var h =
+                new AdtHeaderDto
+                {
+                    IdHeaderAdmission = idHeader,
+                    DateOne = 13960411,
+                    DateTwo = 13960101,
+                    FirstName = "Majid",
+                    LastName = "Javei",
+                    IdDeductionTypeRef = Guid.Parse("CF33EC4F-3C17-4EA0-97DC-E729BE6E402C"),
+                    HeConfirmPrice = 0,
+                    HeRequestPrice = 40000,
+                    //DeductionType Dot not Set
+                    //Relation Dot not Set
+                    //Ward Dot not Set                    
+                    IdHeaderState = 1,
+                    NationalCode = "00410220563",
+                    IdUser = Guid.Parse("DB85BE66-D613-4A84-9953-0F62C2BA345D"),
+                    IdUserEdit = Guid.Parse("DB85BE66-D613-4A84-9953-0F62C2BA345D"),
+                    IdHeaderType = 1, // bastari
+                    IdRelation = 0,
+                    IdPersonCase = 1,
+                    IdWardRef = Guid.Parse("FD115864-1B0B-4670-838D-CCCB4ABDE6CB"),
+                    MedicalRecordNumber = "2332-2",
+                    Note = " ”  Ã«ÊÌ",
+                    PersonInsuranceNo = 5359601,
+                    ReceptionNo = 0,
+                    RowSequence = 0,
+                    TotalCount = 1,
+                    TimeOne = DateTime.Now,
+                    TimeTwo = DateTime.Now,
+                    Address = "sam",
+                    IdCauseRefer = 12,
+                    MobileNumber = 09189189189,
+                    PhoneNumber = 08638638638
+                };
+
+            var m =
+               new AdtReceptionDto
+               {
+                   IdInvestigationTypeRef = Guid.Parse("512839EE-7FE7-42F1-94DB-0740DBC70ACE"),
+                   IdBillTypeRef = Guid.Parse("1A1057E1-2484-4AF3-8EFB-3442B99CE245"),
+                   IdUser = Guid.Parse("DB85BE66-D613-4A84-9953-0F62C2BA345D"),
+                   IdUserEdit = Guid.Parse("DB85BE66-D613-4A84-9953-0F62C2BA345D"),
+                   IdDarman = 1,
+                   CenterCode = 6545
+               };
+            var dl = new List<AdtDetailDto>
+            {
+
+                //for (int i = 0; i < 3; i++)
+                //{
+                new AdtDetailDto
+                {
+                    IdServiceDetail = Guid.NewGuid(),
+                    IdHeaderAdmission = idHeader,
+                    IdServiceTotal = Guid.Empty,
+                    IdServiceGroup = 6,
+                    ServiceCode = 12940,
+                    TadilCode = 32,
+                    ServiceName = "ÊÌ“Ì ",
+                    TadilName = "123123",
+                    ServiceTime = 10,
+                    IdSurgeryNo = 1,
+                    IdTadilPercent = 1,
+                    IdTadilArea = 255,
+                    DetailKValue = 1,
+                    DeRequestCount = 1,
+                    DeConfirmCount = 0,
+                    DeRequestPrice = 200000,
+                    DeConfirmPrice = 0,
+                    IdDeductionType = Guid.Parse("CF33EC4F-3C17-4EA0-97DC-E729BE6E402C"),
+                    IdUser = Guid.Parse("DB85BE66-D613-4A84-9953-0F62C2BA345D"),
+                    IdUserEdit = Guid.Parse("DB85BE66-D613-4A84-9953-0F62C2BA345D"),
+                    IdDevice = Guid.Empty,
+                    IdShift = Guid.Parse("03841296-B9DC-4DDC-9EB9-7997DCC62ABA"),
+                    IdLocation = Guid.Empty,
+                    IdProfessionType = Guid.Parse("F1657788-73F7-4B0C-AE43-06A4643282EA"),
+                    DeRequestPerson = 0,
+                    DrNo = "123",
+                    Deleted = false,
+                    DrFirstName = "moj",
+                    DrLastName = "tav",
+                    DrNationalCode = "1234567890",
+                    DrPersonNumber = 123456,
+                    Index = 123,
+                    ICD10Final = "m-110",
+                    IdUnit = 10,
+                    IdDiseaseType = 1
+                }
+            };
+            //}
+
+
+            HospitalServiceSoapClient cl = new HospitalServiceSoapClient();
+
+            try
+            {
+                //var b = cl.GetReceptionNumber("Abadan_Raspina", "R@12345", m).ResponseData;
+
+                var c = cl.GetAll("Abadan_Raspina", "R@12345", 14, h, dl);
+                Console.WriteLine(c.ResponseData);
+                Console.WriteLine(c.IsSuccessful);
+                Console.WriteLine(c.Message);
+
+
+                //Console.WriteLine(g);
+                // var b= cl.GetReceptionNumber("Abadan_Raspina", "R@12345", m).ResponseData;
+                // var res = cl.GetPatientAdmission(h, dl, "Abadan_Raspina", "R@12345");
+
+                //var c = cl.GetAll2("Abadan_Raspina", "R@12345", m, h, dl);
+                //var res = c.ResponseData;
+
+                //Console.WriteLine(res);
+                //Console.WriteLine(c.Message);
+
+                byte[] bytes = Encoding.Default.GetBytes(c.Message);
+                var myString = Encoding.ASCII.GetString(bytes);
+                //var myString = Encoding.BigEndianUnicode.GetString(bytes);
+                Console.WriteLine(myString);
+                Console.ReadLine();
+            }
+            catch (Exception ex)
+            {
+
+
+            }
+
+            #endregion
+
+        }
+    }
+}

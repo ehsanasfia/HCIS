@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="شاخص غربالگری بیماری ها" />
+  <DataSources>
+    <SqlDataSource ComponentName="dashboardSqlDataSource1">
+      <Name>SQL Data Source 1</Name>
+      <Connection Name="172.30.1.145_HCIS_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="172.30.1.145" />
+          <Parameter Name="database" Value="HCIS" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="artp" />
+          <Parameter Name="password" Value="506070" />
+        </Parameters>
+      </Connection>
+      <Query Type="SelectQuery" Name="Vw_FDMcountRecall">
+        <Tables>
+          <Table Name="Vw_FDMcountRecall" Meta="0|0|125|120" />
+        </Tables>
+        <Columns>
+          <AllColumns Table="Vw_FDMcountRecall" />
+        </Columns>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="Vw_FDMcountRecall">
+            <Field Name="Dep" Type="String" />
+            <Field Name="Service" Type="String" />
+            <Field Name="C" Type="Int32" />
+            <Field Name="isAdmitted" Type="Int32" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+      <CalculatedFields>
+        <CalculatedField Name="Calculated Field 1" Expression="Iif([C] = 0, 0, [isAdmitted] / [C])" DataType="Auto" DataMember="Vw_FDMcountRecall" />
+      </CalculatedFields>
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <ListBox ComponentName="listBoxDashboardItem1" Name="کلینیک" DataSource="dashboardSqlDataSource1" DataMember="Vw_FDMcountRecall" FilterString="[DataItem0] = 'درمانگاه کارون'">
+      <DataItems>
+        <Dimension DataMember="Dep" UniqueName="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+    <ListBox ComponentName="listBoxDashboardItem2" Name="بیماری" DataSource="dashboardSqlDataSource1" DataMember="Vw_FDMcountRecall" FilterString="StartsWith([DataItem0], 'نوجوان')">
+      <DataItems>
+        <Dimension DataMember="Service" UniqueName="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+    <Grid ComponentName="gridDashboardItem1" Name="شاخص غربالگری بیماری ها" DataSource="dashboardSqlDataSource1" DataMember="Vw_FDMcountRecall">
+      <DataItems>
+        <Dimension DataMember="Dep" UniqueName="DataItem0" />
+        <Dimension DataMember="Service" UniqueName="DataItem1" />
+        <Measure DataMember="C" UniqueName="DataItem2" />
+        <Measure DataMember="isAdmitted" UniqueName="DataItem3" />
+        <Measure DataMember="Calculated Field 1" UniqueName="DataItem4">
+          <NumericFormat FormatType="Percent" />
+        </Measure>
+      </DataItems>
+      <FormatRules>
+        <GridItemFormatRule Name="FormatRule 1" DataItem="DataItem4">
+          <FormatConditionBar MinimumType="Percent" MaximumType="Percent" Maximum="100">
+            <NegativeStyleSettings PredefinedColor="PaleRed" />
+            <StyleSettings PredefinedColor="Green" />
+            <BarOptions />
+          </FormatConditionBar>
+        </GridItemFormatRule>
+      </FormatRules>
+      <GridColumns>
+        <GridDimensionColumn Name="درمانگاه" Weight="62.806236080178174">
+          <Dimension UniqueName="DataItem0" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="بیماری" Weight="63.697104677060132">
+          <Dimension UniqueName="DataItem1" />
+        </GridDimensionColumn>
+        <GridMeasureColumn Name="تعداد افراد واجد شرایط" Weight="76.837416481069042">
+          <Measure UniqueName="DataItem2" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="تعداد افراد غربالگری شده" Weight="96.659242761692653">
+          <Measure UniqueName="DataItem3" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="شاخص (درصد)">
+          <Measure UniqueName="DataItem4" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions EnableBandedRows="true" ColumnWidthMode="AutoFitToContents" WordWrap="true" />
+    </Grid>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="gridDashboardItem1" Weight="91.000671591672258" />
+      <LayoutGroup Orientation="Vertical" Weight="8.9993284083277363">
+        <LayoutItem DashboardItem="listBoxDashboardItem2" Weight="19.682151589242054" />
+        <LayoutItem DashboardItem="listBoxDashboardItem1" Weight="80.317848410757946" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

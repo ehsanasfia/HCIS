@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="نسبت ویزیت شده ها به پذیرش شده" />
+  <DataSources>
+    <SqlDataSource ComponentName="dashboardSqlDataSource1">
+      <Name>SQL Data Source 1</Name>
+      <Connection Name="172.30.1.145_HCIS_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="172.30.1.145" />
+          <Parameter Name="database" Value="HCIS" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="artp" />
+          <Parameter Name="password" Value="506070" />
+        </Parameters>
+      </Connection>
+      <Query Type="SelectQuery" Name="Vw_AdmitDashboardFull">
+        <Parameter Name="FromDate" Type="DevExpress.DataAccess.Expression">(System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)([Parameters.FromDate])</Parameter>
+        <Parameter Name="ToDate" Type="DevExpress.DataAccess.Expression">(System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)([Parameters.ToDate])</Parameter>
+        <Tables>
+          <Table Name="Vw_AdmitDashboardFull" Meta="0|0|125|260" />
+        </Tables>
+        <Columns>
+          <Column Table="Vw_AdmitDashboardFull" Name="Date" />
+          <Column Table="Vw_AdmitDashboardFull" Name="AllCount" />
+          <Column Table="Vw_AdmitDashboardFull" Name="InsuranceName" />
+          <Column Table="Vw_AdmitDashboardFull" Name="DepName" />
+          <Column Table="Vw_AdmitDashboardFull" Name="DepParent" />
+          <Column Table="Vw_AdmitDashboardFull" Name="ConfirmC" />
+          <Column Table="Vw_AdmitDashboardFull" Name="Company" />
+          <Column Table="Vw_AdmitDashboardFull" Name="AdmittedC" />
+          <Column Table="Vw_AdmitDashboardFull" Name="Percentage" />
+          <Column Table="Vw_AdmitDashboardFull" Name="Doc" />
+          <Column Table="Vw_AdmitDashboardFull" Name="Speciality" />
+        </Columns>
+        <Filter>[Vw_AdmitDashboardFull.Date] Between(?FromDate, ?ToDate)</Filter>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="Vw_AdmitDashboardFull">
+            <Field Name="Date" Type="String" />
+            <Field Name="AllCount" Type="Int32" />
+            <Field Name="InsuranceName" Type="String" />
+            <Field Name="DepName" Type="String" />
+            <Field Name="DepParent" Type="String" />
+            <Field Name="ConfirmC" Type="Double" />
+            <Field Name="Company" Type="String" />
+            <Field Name="AdmittedC" Type="Double" />
+            <Field Name="Percentage" Type="Double" />
+            <Field Name="Doc" Type="String" />
+            <Field Name="Speciality" Type="String" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+      <CalculatedFields>
+        <CalculatedField Name="Calculated Field 1" Expression="[DepParent] + ' ' + [DepName]" DataType="Auto" DataMember="Vw_AdmitDashboardFull" />
+        <CalculatedField Name="Calculated Field 2" Expression="Sum([ConfirmC]) / Sum([AllCount]) * 100" DataType="Auto" DataMember="Vw_AdmitDashboardFull" />
+      </CalculatedFields>
+    </SqlDataSource>
+  </DataSources>
+  <Parameters>
+    <Parameter Name="FromDate" Value="1400/02/01" />
+    <Parameter Name="ToDate" Value="1400/02/02" />
+  </Parameters>
+  <Items>
+    <ListBox ComponentName="listBoxDashboardItem1" Name="نوع بیمه" DataSource="dashboardSqlDataSource1" DataMember="Vw_AdmitDashboardFull">
+      <DataItems>
+        <Dimension DataMember="InsuranceName" UniqueName="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+    <Chart ComponentName="chartDashboardItem1" Name="Chart 1" ShowCaption="false" DataSource="dashboardSqlDataSource1" DataMember="Vw_AdmitDashboardFull">
+      <ColoringOptions MeasuresColoringMode="Hue" />
+      <DataItems>
+        <Measure DataMember="AllCount" Name="پذیرش شذه" UniqueName="DataItem3">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+        <Measure DataMember="ConfirmC" Name="تعداد ویزیت شده" UniqueName="DataItem2">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+        <Measure DataMember="AdmittedC" Name="مراجعه به کلینیک" UniqueName="DataItem0">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+        <Dimension DataMember="DepParent" UniqueName="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" />
+          <Series>
+            <Simple>
+              <Value UniqueName="DataItem2" />
+              <PointLabelOptions Visible="true" OverlappingMode="Reposition" Position="Inside" />
+            </Simple>
+            <Simple Name="پذیرش شده">
+              <Value UniqueName="DataItem3" />
+              <PointLabelOptions Visible="true" OverlappingMode="Reposition" Position="Inside" />
+            </Simple>
+            <Simple>
+              <Value UniqueName="DataItem0" />
+              <PointLabelOptions Visible="true" Position="Inside" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend IsInsidePosition="true" InsidePosition="BottomLeftVertical" OutsidePosition="TopLeftVertical" />
+      <AxisX EnableZooming="true" />
+    </Chart>
+    <TreeView ComponentName="treeViewDashboardItem1" Name="کلینیک ها" DataSource="dashboardSqlDataSource1" DataMember="Vw_AdmitDashboardFull">
+      <DataItems>
+        <Dimension DataMember="DepParent" UniqueName="DataItem0" />
+        <Dimension DataMember="DepName" UniqueName="DataItem1" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+        <Dimension UniqueName="DataItem1" />
+      </FilterDimensions>
+    </TreeView>
+    <Grid ComponentName="gridDashboardItem1" Name="Grid 1" ShowCaption="false" DataSource="dashboardSqlDataSource1" DataMember="Vw_AdmitDashboardFull">
+      <DataItems>
+        <Dimension DataMember="Calculated Field 1" UniqueName="DataItem0" />
+        <Measure DataMember="AllCount" UniqueName="DataItem1">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+        <Measure DataMember="Calculated Field 2" UniqueName="DataItem3" />
+        <Dimension DataMember="Doc" UniqueName="DataItem4" />
+        <Measure DataMember="ConfirmC" Name="تعداد ویزیت شده ها" UniqueName="DataItem2">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+      </DataItems>
+      <FormatRules>
+        <GridItemFormatRule Name="FormatRule 1" DataItem="DataItem3">
+          <FormatConditionColorRangeBar ValueType="Percent">
+            <RangeSet>
+              <Ranges>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="0" />
+                  <BarStyleSettings PredefinedColor="Red" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="33" />
+                  <BarStyleSettings PredefinedColor="Blue" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="67" />
+                  <BarStyleSettings PredefinedColor="Green" />
+                </RangeInfo>
+              </Ranges>
+            </RangeSet>
+            <BarOptions />
+          </FormatConditionColorRangeBar>
+        </GridItemFormatRule>
+      </FormatRules>
+      <GridColumns>
+        <GridDimensionColumn Name="کلینیک" Weight="87.115384615384613">
+          <Dimension UniqueName="DataItem0" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="پزشک" Weight="81.34615384615384">
+          <Dimension UniqueName="DataItem4" />
+        </GridDimensionColumn>
+        <GridMeasureColumn Weight="62.307692307692307">
+          <Measure UniqueName="DataItem2" />
+          <Totals>
+            <Total Type="Sum" />
+          </Totals>
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="تعداد پذیرش شده" Weight="65.769230769230774">
+          <Measure UniqueName="DataItem1" />
+          <Totals>
+            <Total Type="Sum" />
+          </Totals>
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="نسبت پذیرش به ویزیت" Weight="78.461538461538467">
+          <Measure UniqueName="DataItem3" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions EnableBandedRows="true" ColumnWidthMode="Manual" />
+    </Grid>
+    <TreeView ComponentName="treeViewDashboardItem2" Name="پزشکان" DataSource="dashboardSqlDataSource1" DataMember="Vw_AdmitDashboardFull">
+      <DataItems>
+        <Dimension DataMember="Speciality" UniqueName="DataItem0" />
+        <Dimension DataMember="Doc" UniqueName="DataItem1" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+        <Dimension UniqueName="DataItem1" />
+      </FilterDimensions>
+    </TreeView>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutGroup Orientation="Vertical" Weight="83.001808318264011">
+        <LayoutItem DashboardItem="gridDashboardItem1" Weight="38.03986710963455" />
+        <LayoutItem DashboardItem="chartDashboardItem1" Weight="61.96013289036545" />
+      </LayoutGroup>
+      <LayoutGroup Orientation="Vertical" Weight="16.998191681735985">
+        <LayoutItem DashboardItem="treeViewDashboardItem1" Weight="38.03986710963455" />
+        <LayoutItem DashboardItem="treeViewDashboardItem2" Weight="43.02325581395349" />
+        <LayoutItem DashboardItem="listBoxDashboardItem1" Weight="18.93687707641196" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

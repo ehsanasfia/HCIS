@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="شاخص پزشک و پرستار خانواده به جمعیت" />
+  <DataSources>
+    <SqlDataSource ComponentName="dashboardSqlDataSource1">
+      <Name>SQL Data Source 1</Name>
+      <Connection Name="172.30.1.145_HCIS_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="172.30.1.145" />
+          <Parameter Name="database" Value="HCIS" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="artp" />
+          <Parameter Name="password" Value="506070" />
+        </Parameters>
+      </Connection>
+      <Query Type="SelectQuery" Name="Vw_FDMDocAndNurseIndicator">
+        <Tables>
+          <Table Name="Vw_FDMDocAndNurseIndicator" Meta="0|0|125|160" />
+        </Tables>
+        <Columns>
+          <Column Table="Vw_FDMDocAndNurseIndicator" Name="Year" />
+          <Column Table="Vw_FDMDocAndNurseIndicator" Name="Month" />
+          <Column Table="Vw_FDMDocAndNurseIndicator" Name="Nurse" />
+          <Column Table="Vw_FDMDocAndNurseIndicator" Name="Doc" />
+          <Column Table="Vw_FDMDocAndNurseIndicator" Name="population" />
+          <Column Table="Vw_FDMDocAndNurseIndicator" Name="Clinic" />
+        </Columns>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="Vw_FDMDocAndNurseIndicator">
+            <Field Name="Year" Type="Int32" />
+            <Field Name="Month" Type="String" />
+            <Field Name="Nurse" Type="Double" />
+            <Field Name="Doc" Type="Double" />
+            <Field Name="population" Type="Double" />
+            <Field Name="Clinic" Type="String" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+      <CalculatedFields>
+        <CalculatedField Name="Calculated Field 1" Expression="Iif([population] = 0, 0, [Doc] / [population] * 100)" DataType="Auto" DataMember="Vw_FDMDocAndNurseIndicator" />
+        <CalculatedField Name="Calculated Field 2" Expression="Iif([population] = 0, 0, [Nurse] / [population] * 100)" DataType="Auto" DataMember="Vw_FDMDocAndNurseIndicator" />
+      </CalculatedFields>
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <TreeView ComponentName="treeViewDashboardItem1" Name="تاریخ" DataSource="dashboardSqlDataSource1" DataMember="Vw_FDMDocAndNurseIndicator">
+      <DataItems>
+        <Dimension DataMember="Year" SortOrder="Descending" UniqueName="DataItem0">
+          <NumericFormat FormatType="General" />
+        </Dimension>
+        <Dimension DataMember="Month" SortOrder="Descending" UniqueName="DataItem1" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+        <Dimension UniqueName="DataItem1" />
+      </FilterDimensions>
+    </TreeView>
+    <ListBox ComponentName="listBoxDashboardItem1" Name="درمانگاه" DataSource="dashboardSqlDataSource1" DataMember="Vw_FDMDocAndNurseIndicator">
+      <DataItems>
+        <Dimension DataMember="Clinic" UniqueName="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+    <Grid ComponentName="gridDashboardItem1" Name="شاخص پزشک خانواده به جمعیت" DataSource="dashboardSqlDataSource1" DataMember="Vw_FDMDocAndNurseIndicator">
+      <DataItems>
+        <Dimension DataMember="Month" SortOrder="Descending" UniqueName="DataItem0" />
+        <Measure DataMember="Doc" UniqueName="DataItem1" />
+        <Measure DataMember="population" UniqueName="DataItem2">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+        <Dimension DataMember="Clinic" UniqueName="DataItem3" />
+        <Measure DataMember="Calculated Field 1" UniqueName="DataItem4">
+          <NumericFormat FormatType="Percent" />
+        </Measure>
+      </DataItems>
+      <GridColumns>
+        <GridDimensionColumn Name="ماه" Weight="48.648648648648646">
+          <Dimension UniqueName="DataItem0" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="درمانگاه">
+          <Dimension UniqueName="DataItem3" />
+        </GridDimensionColumn>
+        <GridMeasureColumn Name="تعداد پزشک" Weight="71.621621621621628">
+          <Measure UniqueName="DataItem1" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="جمعیت تحت پوشش" Weight="104.72972972972973">
+          <Measure UniqueName="DataItem2" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="شاخص (درصد)">
+          <Measure UniqueName="DataItem4" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions EnableBandedRows="true" ColumnWidthMode="AutoFitToContents" WordWrap="true" />
+    </Grid>
+    <Grid ComponentName="gridDashboardItem2" Name="شاخص پرستار خانواده به جمعیت" DataSource="dashboardSqlDataSource1" DataMember="Vw_FDMDocAndNurseIndicator">
+      <DataItems>
+        <Dimension DataMember="Month" SortOrder="Descending" UniqueName="DataItem0" />
+        <Dimension DataMember="Clinic" UniqueName="DataItem1" />
+        <Measure DataMember="Nurse" UniqueName="DataItem2" />
+        <Measure DataMember="population" UniqueName="DataItem3">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+        <Measure DataMember="Calculated Field 2" UniqueName="DataItem4">
+          <NumericFormat FormatType="Percent" />
+        </Measure>
+      </DataItems>
+      <GridColumns>
+        <GridDimensionColumn Name="ماه">
+          <Dimension UniqueName="DataItem0" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="درمانگاه">
+          <Dimension UniqueName="DataItem1" />
+        </GridDimensionColumn>
+        <GridMeasureColumn Name="تعداد پرستار خانواده">
+          <Measure UniqueName="DataItem2" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="جمعیت">
+          <Measure UniqueName="DataItem3" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="شاخص (به درصد)">
+          <Measure UniqueName="DataItem4" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions EnableBandedRows="true" ColumnWidthMode="AutoFitToContents" WordWrap="true" />
+    </Grid>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutGroup Orientation="Vertical" Weight="86.968325791855207">
+        <LayoutItem DashboardItem="gridDashboardItem1" Weight="45.016611295681066" />
+        <LayoutItem DashboardItem="gridDashboardItem2" Weight="54.983388704318934" />
+      </LayoutGroup>
+      <LayoutGroup Orientation="Vertical" Weight="13.031674208144796">
+        <LayoutItem DashboardItem="treeViewDashboardItem1" Weight="21.926910299003321" />
+        <LayoutItem DashboardItem="listBoxDashboardItem1" Weight="78.073089700996675" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

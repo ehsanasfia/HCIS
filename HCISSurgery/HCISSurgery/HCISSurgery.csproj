@@ -1,0 +1,568 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E71EE8AA-49CE-4DCD-B494-797A90F6A2E6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HCISSurgery</RootNamespace>
+    <AssemblyName>HCISSurgery</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.BonusSkins.v16.1" />
+    <Reference Include="DevExpress.Data.v16.1" />
+    <Reference Include="DevExpress.Office.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v16.1.Drawing, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v16.1" />
+    <Reference Include="DevExpress.Sparkline.v16.1.Core" />
+    <Reference Include="DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v16.1" />
+    <Reference Include="DevExpress.XtraGrid.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Stimulsoft.Base, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a" />
+    <Reference Include="Stimulsoft.Report, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Category.cs" />
+    <Compile Include="Classes\MainModule.cs" />
+    <Compile Include="Data\HCISSurgeryDataClasses.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HCISSurgeryDataClasses.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PartialClass.cs" />
+    <Compile Include="Dialogs\dlgAnesthesiaDefinition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgAnesthesiaDefinition.designer.cs">
+      <DependentUpon>dlgAnesthesiaDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgAnesthesiaOthers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgAnesthesiaOthers.designer.cs">
+      <DependentUpon>dlgAnesthesiaOthers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgDischarge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgDischarge.designer.cs">
+      <DependentUpon>dlgDischarge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgDoctorOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgDoctorOrder.designer.cs">
+      <DependentUpon>dlgDoctorOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgDrugOnDischarge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgDrugOnDischarge.designer.cs">
+      <DependentUpon>dlgDrugOnDischarge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgDrugPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgDrugPlan.designer.cs">
+      <DependentUpon>dlgDrugPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgEditAnesthesiaNewVersion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgEditAnesthesiaNewVersion.Designer.cs">
+      <DependentUpon>dlgEditAnesthesiaNewVersion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgEditDrugAndSupplies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgEditDrugAndSupplies.Designer.cs">
+      <DependentUpon>dlgEditDrugAndSupplies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgEditAnesthesia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgEditAnesthesia.Designer.cs">
+      <DependentUpon>dlgEditAnesthesia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgEditSurgeryNewVersion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgEditSurgeryNewVersion.Designer.cs">
+      <DependentUpon>dlgEditSurgeryNewVersion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgEditSurgery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgEditSurgery.Designer.cs">
+      <DependentUpon>dlgEditSurgery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgFinancialDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgFinancialDepartment.Designer.cs">
+      <DependentUpon>dlgFinancialDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgMedicineAndSupplies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgMedicineAndSupplies.designer.cs">
+      <DependentUpon>dlgMedicineAndSupplies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgBed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgBed.Designer.cs">
+      <DependentUpon>dlgBed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgDrugsPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgDrugsPanel.designer.cs">
+      <DependentUpon>dlgDrugsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgDrugsPanelDefinition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgDrugsPanelDefinition.designer.cs">
+      <DependentUpon>dlgDrugsPanelDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgGoToWard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgGoToWard.designer.cs">
+      <DependentUpon>dlgGoToWard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgModularAnesthesiaDefinition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgModularAnesthesiaDefinition.designer.cs">
+      <DependentUpon>dlgModularAnesthesiaDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgModularSurgeryDefinition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgModularSurgeryDefinition.designer.cs">
+      <DependentUpon>dlgModularSurgeryDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgPanel.designer.cs">
+      <DependentUpon>dlgPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgPanelDefinition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgPanelDefinition.designer.cs">
+      <DependentUpon>dlgPanelDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgParaService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgParaService.Designer.cs">
+      <DependentUpon>dlgParaService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgPathology.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgPathology.Designer.cs">
+      <DependentUpon>dlgPathology.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgStart.designer.cs">
+      <DependentUpon>dlgStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgSuppliesPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgSuppliesPanel.designer.cs">
+      <DependentUpon>dlgSuppliesPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgSuppliesPanelDefinition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgSuppliesPanelDefinition.designer.cs">
+      <DependentUpon>dlgSuppliesPanelDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgSurgeryNewVersion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgSurgeryNewVersion.designer.cs">
+      <DependentUpon>dlgSurgeryNewVersion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgSurgeryNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgSurgeryNew.designer.cs">
+      <DependentUpon>dlgSurgeryNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgSurgery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgSurgery.designer.cs">
+      <DependentUpon>dlgSurgery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgSurgeryDefinition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgSurgeryDefinition.designer.cs">
+      <DependentUpon>dlgSurgeryDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgSurgeryOthers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgSurgeryOthers.designer.cs">
+      <DependentUpon>dlgSurgeryOthers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgAfterSurgeryRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgAfterSurgeryRpt.designer.cs">
+      <DependentUpon>dlgAfterSurgeryRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgAnesthesiaRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgAnesthesiaRpt.designer.cs">
+      <DependentUpon>dlgAnesthesiaRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAdmissionList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAdmissionList.designer.cs">
+      <DependentUpon>frmAdmissionList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDrugsPanelDefinition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDrugsPanelDefinition.designer.cs">
+      <DependentUpon>frmDrugsPanelDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSuppliesPanelDefinition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSuppliesPanelDefinition.designer.cs">
+      <DependentUpon>frmSuppliesPanelDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgSurgeryRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgSurgeryRpt.designer.cs">
+      <DependentUpon>dlgSurgeryRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmWaitingList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmWaitingList.designer.cs">
+      <DependentUpon>frmWaitingList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAnesthesiaDefinition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAnesthesiaDefinition.designer.cs">
+      <DependentUpon>frmAnesthesiaDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmModularAnesthesiaDefinition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmModularAnesthesiaDefinition.designer.cs">
+      <DependentUpon>frmModularAnesthesiaDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmModularSurgeryDefinition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmModularSurgeryDefinition.designer.cs">
+      <DependentUpon>frmModularSurgeryDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPanelDefinition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPanelDefinition.designer.cs">
+      <DependentUpon>frmPanelDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSurgery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSurgery.designer.cs">
+      <DependentUpon>frmSurgery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSurgeryDefinition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSurgeryDefinition.designer.cs">
+      <DependentUpon>frmSurgeryDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="app.config" />
+    <None Include="Data\HCISSurgeryDataClasses.dbml.layout">
+      <DependentUpon>HCISSurgeryDataClasses.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Dialogs\dlgAnesthesiaDefinition.resx">
+      <DependentUpon>dlgAnesthesiaDefinition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgAnesthesiaOthers.resx">
+      <DependentUpon>dlgAnesthesiaOthers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgDischarge.resx">
+      <DependentUpon>dlgDischarge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgDoctorOrder.resx">
+      <DependentUpon>dlgDoctorOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgDrugOnDischarge.resx">
+      <DependentUpon>dlgDrugOnDischarge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgDrugPlan.resx">
+      <DependentUpon>dlgDrugPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgEditAnesthesiaNewVersion.resx">
+      <DependentUpon>dlgEditAnesthesiaNewVersion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgEditDrugAndSupplies.resx">
+      <DependentUpon>dlgEditDrugAndSupplies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgEditAnesthesia.resx">
+      <DependentUpon>dlgEditAnesthesia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgEditSurgeryNewVersion.resx">
+      <DependentUpon>dlgEditSurgeryNewVersion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgEditSurgery.resx">
+      <DependentUpon>dlgEditSurgery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgFinancialDepartment.resx">
+      <DependentUpon>dlgFinancialDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgMedicineAndSupplies.resx">
+      <DependentUpon>dlgMedicineAndSupplies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgBed.resx">
+      <DependentUpon>dlgBed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgDrugsPanel.resx">
+      <DependentUpon>dlgDrugsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgDrugsPanelDefinition.resx">
+      <DependentUpon>dlgDrugsPanelDefinition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgGoToWard.resx">
+      <DependentUpon>dlgGoToWard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgModularAnesthesiaDefinition.resx">
+      <DependentUpon>dlgModularAnesthesiaDefinition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgModularSurgeryDefinition.resx">
+      <DependentUpon>dlgModularSurgeryDefinition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgPanel.resx">
+      <DependentUpon>dlgPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgPanelDefinition.resx">
+      <DependentUpon>dlgPanelDefinition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgParaService.resx">
+      <DependentUpon>dlgParaService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgPathology.resx">
+      <DependentUpon>dlgPathology.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgStart.resx">
+      <DependentUpon>dlgStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgSuppliesPanel.resx">
+      <DependentUpon>dlgSuppliesPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgSuppliesPanelDefinition.resx">
+      <DependentUpon>dlgSuppliesPanelDefinition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgSurgeryNewVersion.resx">
+      <DependentUpon>dlgSurgeryNewVersion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgSurgeryNew.resx">
+      <DependentUpon>dlgSurgeryNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgSurgery.resx">
+      <DependentUpon>dlgSurgery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgSurgeryDefinition.resx">
+      <DependentUpon>dlgSurgeryDefinition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgSurgeryOthers.resx">
+      <DependentUpon>dlgSurgeryOthers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgAfterSurgeryRpt.resx">
+      <DependentUpon>dlgAfterSurgeryRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgAnesthesiaRpt.resx">
+      <DependentUpon>dlgAnesthesiaRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAdmissionList.resx">
+      <DependentUpon>frmAdmissionList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDrugsPanelDefinition.resx">
+      <DependentUpon>frmDrugsPanelDefinition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSuppliesPanelDefinition.resx">
+      <DependentUpon>frmSuppliesPanelDefinition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgSurgeryRpt.resx">
+      <DependentUpon>dlgSurgeryRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmWaitingList.resx">
+      <DependentUpon>frmWaitingList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAnesthesiaDefinition.resx">
+      <DependentUpon>frmAnesthesiaDefinition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmModularAnesthesiaDefinition.resx">
+      <DependentUpon>frmModularAnesthesiaDefinition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmModularSurgeryDefinition.resx">
+      <DependentUpon>frmModularSurgeryDefinition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPanelDefinition.resx">
+      <DependentUpon>frmPanelDefinition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSurgery.resx">
+      <DependentUpon>frmSurgery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSurgeryDefinition.resx">
+      <DependentUpon>frmSurgeryDefinition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Data\HCISSurgeryDataClasses.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>HCISSurgeryDataClasses.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\DataSources\HCISSurgery.Data.AfterSurgeryReport.datasource" />
+    <None Include="Properties\DataSources\HCISSurgery.Data.AnesthesiaReport.datasource" />
+    <None Include="Properties\DataSources\HCISSurgery.Data.Bed.datasource" />
+    <None Include="Properties\DataSources\HCISSurgery.Data.DiagnosticServiceDetail.datasource" />
+    <None Include="Properties\DataSources\HCISSurgery.Data.GivenServiceD.datasource" />
+    <None Include="Properties\DataSources\HCISSurgery.Data.ModularService.datasource" />
+    <None Include="Properties\DataSources\HCISSurgery.Data.PatternM.datasource" />
+    <None Include="Properties\DataSources\HCISSurgery.Data.Person.datasource" />
+    <None Include="Properties\DataSources\HCISSurgery.Data.Service.datasource" />
+    <None Include="Properties\DataSources\HCISSurgery.Data.Staff.datasource" />
+    <None Include="Properties\DataSources\HCISSurgery.Data.Surgery.datasource" />
+    <None Include="Properties\DataSources\HCISSurgery.Data.TadilArea.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SecurityLoginsAndAccessControl\SecurityLoginsAndAccessControl\SecurityLoginsAndAccessControl.vbproj">
+      <Project>{b07c6401-2d8d-4c7c-b785-2de29800a45f}</Project>
+      <Name>SecurityLoginsAndAccessControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Stimulsoft.Base.dll" />
+    <Content Include="Resources\Stimulsoft.Controls.dll" />
+    <Content Include="Resources\Stimulsoft.Controls.Win.dll" />
+    <Content Include="Resources\Stimulsoft.Design.dll" />
+    <Content Include="Resources\Stimulsoft.Editor.dll" />
+    <Content Include="Resources\Stimulsoft.Report.Check.dll" />
+    <Content Include="Resources\Stimulsoft.Report.Design.dll" />
+    <Content Include="Resources\Stimulsoft.Report.dll" />
+    <Content Include="Resources\Stimulsoft.Report.Helper.dll" />
+    <Content Include="Resources\Stimulsoft.Report.Win.dll" />
+    <Content Include="Resources\Stimulsoft.Report.Xbap.Design.dll" />
+    <Content Include="Resources\Stimulsoft.Report.Xbap.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

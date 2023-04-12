@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="squrity">
+  <DataContextMoniker Name="/squrityDataContext" />
+  <nestedChildShapes>
+    <classShape Id="fedfdf92-8831-4953-8168-0f46da263575" absoluteBounds="3.5, 6, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/squrityDataContext/tblApplicationDepartment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2baac74b-2c9f-485e-aea3-76620e3917f1" absoluteBounds="3.515, 6.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a0ecd1bd-83ff-4200-9afe-5c3ef665c7ee" absoluteBounds="0.75, 2, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/squrityDataContext/tblApplication" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7931e900-7493-495a-a268-da8a302461c1" absoluteBounds="0.765, 2.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8dbc737c-8bae-40ac-ab86-05693cd16803" absoluteBounds="6.25, 2.125, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/squrityDataContext/tblUserAccessibleDepartment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b9cc2735-948b-4970-bb23-a2df230ff85f" absoluteBounds="6.265, 2.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fac4547a-a2b4-4ff4-8e24-f6b59f4c0dae" absoluteBounds="3.5, 1, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/squrityDataContext/tblUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6cb9bd1c-6bed-4900-bb29-de4d71d3b348" absoluteBounds="3.515, 1.46, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 6.69314697265625); (7.25 : 6.69314697265625); (7.25 : 3.31899251302083)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/squrityDataContext/tblApplicationDepartment/tblApplicationDepartment_tblUserAccessibleDepartment" />
+      <nodes>
+        <classShapeMoniker Id="fedfdf92-8831-4953-8168-0f46da263575" />
+        <classShapeMoniker Id="8dbc737c-8bae-40ac-ab86-05693cd16803" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 2.72199625651042); (6.25 : 2.72199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/squrityDataContext/tblUser/tblUser_tblUserAccessibleDepartment" />
+      <nodes>
+        <classShapeMoniker Id="fac4547a-a2b4-4ff4-8e24-f6b59f4c0dae" />
+        <classShapeMoniker Id="8dbc737c-8bae-40ac-ab86-05693cd16803" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.69314697265625); (3.5 : 2.69314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/squrityDataContext/tblApplication/tblApplication_tblUser" />
+      <nodes>
+        <classShapeMoniker Id="a0ecd1bd-83ff-4200-9afe-5c3ef665c7ee" />
+        <classShapeMoniker Id="fac4547a-a2b4-4ff4-8e24-f6b59f4c0dae" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

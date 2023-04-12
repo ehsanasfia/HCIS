@@ -1,0 +1,829 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A9839A99-4752-4103-9B15-26B8687303C7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HCISCash</RootNamespace>
+    <AssemblyName>HCISCash</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>\\172.30.1.30\AsfiyaProjects\Files\cash\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\172.30.1.30\AsfiyaProjects\NewHIS\CashG\</InstallUrl>
+    <ProductName>Cash</ProductName>
+    <PublisherName>CashG</PublisherName>
+    <SuiteName>HCIS</SuiteName>
+    <ApplicationRevision>131</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>CBE002FB4DC9FB9B65591B0A5F973B5EBD7695BE</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>HCISCash_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>cash.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.BonusSkins.v16.1" />
+    <Reference Include="DevExpress.Charts.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v16.1.Win, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v16.1" />
+    <Reference Include="DevExpress.DataAccess.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v16.1.UI, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Map.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v16.1" />
+    <Reference Include="DevExpress.Sparkline.v16.1.Core" />
+    <Reference Include="DevExpress.Utils.v16.1.UI, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v16.1.UI, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v16.1.Wizard, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v16.1" />
+    <Reference Include="DevExpress.XtraGauges.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v16.1.Presets, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v16.1.Win, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraMap.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v16.1.Extensions, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="PersianDate">
+      <HintPath>Resources\PersianDate.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Base, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls.Win">
+      <HintPath>..\..\..\..\..\..\Program Files\Stimulsoft Reports Ultimate 2016.3.1\.NET\Stimulsoft.Controls.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Design, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Editor, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Check, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Report.Check.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Design, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Report.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Helper">
+      <HintPath>..\..\..\..\..\..\Program Files\Stimulsoft Reports Ultimate 2016.3.1\.NET\Stimulsoft.Report.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Win, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Report.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Category.cs" />
+    <Compile Include="Classes\PNumberTString.cs" />
+    <Compile Include="Data\HCISCashDataContext.cs">
+      <DependentUpon>HCISCashDataContext.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Data\HCISCashDataContext1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HCISCashDataContext.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Data\IMPHO.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IMPHO.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PartialClasses.cs" />
+    <Compile Include="Data\SecurityDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SecurityDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgAddFreeGSD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgAddFreeGSD.Designer.cs">
+      <DependentUpon>dlgAddFreeGSD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgAddNewGSD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgAddNewGSD.Designer.cs">
+      <DependentUpon>dlgAddNewGSD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgBackPaymentn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgBackPaymentn.designer.cs">
+      <DependentUpon>dlgBackPaymentn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgBackPaymentNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgBackPaymentNew.designer.cs">
+      <DependentUpon>dlgBackPaymentNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgBilling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgBilling.designer.cs">
+      <DependentUpon>dlgBilling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgAdvancedSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgAdvancedSearch.designer.cs">
+      <DependentUpon>dlgAdvancedSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgAdvancePayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgAdvancePayment.Designer.cs">
+      <DependentUpon>dlgAdvancePayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgChangeInsurence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgChangeInsurence.Designer.cs">
+      <DependentUpon>dlgChangeInsurence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgCompanyType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgCompanyType.Designer.cs">
+      <DependentUpon>dlgCompanyType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgCreditOrCashBastari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgCreditOrCashBastari.designer.cs">
+      <DependentUpon>dlgCreditOrCashBastari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgCreditOrCashPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgCreditOrCashPay.Designer.cs">
+      <DependentUpon>dlgCreditOrCashPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgEditPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgEditPerson.Designer.cs">
+      <DependentUpon>dlgEditPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgFindDosseir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgFindDosseir.Designer.cs">
+      <DependentUpon>dlgFindDosseir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgGetDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgGetDate.Designer.cs">
+      <DependentUpon>dlgGetDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgOutDoorBilling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgOutDoorBilling.Designer.cs">
+      <DependentUpon>dlgOutDoorBilling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgDossierPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgDossierPay.designer.cs">
+      <DependentUpon>dlgDossierPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgPaidCatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgPaidCatch.designer.cs">
+      <DependentUpon>dlgPaidCatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgPaidShift.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgPaidShift.Designer.cs">
+      <DependentUpon>dlgPaidShift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgBackPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgBackPayment.designer.cs">
+      <DependentUpon>dlgBackPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgPaymentBastari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgPaymentBastari.designer.cs">
+      <DependentUpon>dlgPaymentBastari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgPayment.Designer.cs">
+      <DependentUpon>dlgPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgBillingHotle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgBillingHotle.designer.cs">
+      <DependentUpon>dlgBillingHotle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgPersonDossiers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgPersonDossiers.Designer.cs">
+      <DependentUpon>dlgPersonDossiers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgSearchBastari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgSearchBastari.designer.cs">
+      <DependentUpon>dlgSearchBastari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgSearchBastariPersoneli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgSearchBastariPersoneli.designer.cs">
+      <DependentUpon>dlgSearchBastariPersoneli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgSearchBastari1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgSearchBastari1.Designer.cs">
+      <DependentUpon>dlgSearchBastari1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgSelectKindBilling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgSelectKindBilling.Designer.cs">
+      <DependentUpon>dlgSelectKindBilling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgSpecialCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgSpecialCode.Designer.cs">
+      <DependentUpon>dlgSpecialCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgStart.designer.cs">
+      <DependentUpon>dlgStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgTransferServiceDossier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgTransferServiceDossier.Designer.cs">
+      <DependentUpon>dlgTransferServiceDossier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\XtraForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\XtraForm1.Designer.cs">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSarepayeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSarepayeEdit.designer.cs">
+      <DependentUpon>FrmSarepayeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPardakhtBastari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPardakhtBastari.designer.cs">
+      <DependentUpon>frmPardakhtBastari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBackPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBackPay.designer.cs">
+      <DependentUpon>frmBackPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBastariBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBastariBill.Designer.cs">
+      <DependentUpon>frmBastariBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCash.designer.cs">
+      <DependentUpon>FrmCash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCashBastari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCashBastari.designer.cs">
+      <DependentUpon>FrmCashBastari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCashBastari2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCashBastari2.Designer.cs">
+      <DependentUpon>frmCashBastari2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPayAdvancePayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPayAdvancePayment.designer.cs">
+      <DependentUpon>frmPayAdvancePayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmInCome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmInCome.Designer.cs">
+      <DependentUpon>frmInCome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RptFalateGhareSarepayee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RptFalateGhareSarepayee.designer.cs">
+      <DependentUpon>RptFalateGhareSarepayee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RptAllinsuranceSarepayee1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RptAllinsuranceSarepayee1.designer.cs">
+      <DependentUpon>RptAllinsuranceSarepayee1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RptAllinsurance1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RptAllinsurance1.designer.cs">
+      <DependentUpon>RptAllinsurance1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RptBazneshasteBastari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RptBazneshasteBastari.designer.cs">
+      <DependentUpon>RptBazneshasteBastari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RptFalateghareBilling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RptFalateghareBilling.designer.cs">
+      <DependentUpon>RptFalateghareBilling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RptBazneshastebastariBilling1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RptBazneshastebastariBilling1.designer.cs">
+      <DependentUpon>RptBazneshastebastariBilling1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RptBazneshasteBastariBillingsayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RptBazneshasteBastariBillingsayer.designer.cs">
+      <DependentUpon>RptBazneshasteBastariBillingsayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RptDispatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RptDispatch.designer.cs">
+      <DependentUpon>RptDispatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RptKhadamatTashkhisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RptKhadamatTashkhisi.Designer.cs">
+      <DependentUpon>RptKhadamatTashkhisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RptDrugEzami.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RptDrugEzami.designer.cs">
+      <DependentUpon>RptDrugEzami.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RptSurgery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RptSurgery.designer.cs">
+      <DependentUpon>RptSurgery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RptSystemError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RptSystemError.Designer.cs">
+      <DependentUpon>RptSystemError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WaitForm1.designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WaitForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WaitForm2.Designer.cs">
+      <DependentUpon>WaitForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainModule.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="app.config" />
+    <None Include="Data\HCISCashDataContext.dbml.layout">
+      <DependentUpon>HCISCashDataContext.dbml</DependentUpon>
+    </None>
+    <None Include="Data\IMPHO.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>IMPHO.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\SecurityDB.dbml.layout">
+      <DependentUpon>SecurityDB.dbml</DependentUpon>
+    </None>
+    <None Include="Data\IMPHO.dbml.layout">
+      <DependentUpon>IMPHO.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Dialogs\dlgAddFreeGSD.resx">
+      <DependentUpon>dlgAddFreeGSD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgAddNewGSD.resx">
+      <DependentUpon>dlgAddNewGSD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgBackPaymentn.resx">
+      <DependentUpon>dlgBackPaymentn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgBackPaymentNew.resx">
+      <DependentUpon>dlgBackPaymentNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgBilling.resx">
+      <DependentUpon>dlgBilling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgAdvancedSearch.resx">
+      <DependentUpon>dlgAdvancedSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgAdvancePayment.resx">
+      <DependentUpon>dlgAdvancePayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgChangeInsurence.resx">
+      <DependentUpon>dlgChangeInsurence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgCompanyType.resx">
+      <DependentUpon>dlgCompanyType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgCreditOrCashBastari.resx">
+      <DependentUpon>dlgCreditOrCashBastari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgCreditOrCashPay.resx">
+      <DependentUpon>dlgCreditOrCashPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgEditPerson.resx">
+      <DependentUpon>dlgEditPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgFindDosseir.resx">
+      <DependentUpon>dlgFindDosseir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgGetDate.resx">
+      <DependentUpon>dlgGetDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgOutDoorBilling.resx">
+      <DependentUpon>dlgOutDoorBilling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgDossierPay.resx">
+      <DependentUpon>dlgDossierPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgPaidCatch.resx">
+      <DependentUpon>dlgPaidCatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgPaidShift.resx">
+      <DependentUpon>dlgPaidShift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgBackPayment.resx">
+      <DependentUpon>dlgBackPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgPaymentBastari.resx">
+      <DependentUpon>dlgPaymentBastari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgPayment.resx">
+      <DependentUpon>dlgPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgBillingHotle.resx">
+      <DependentUpon>dlgBillingHotle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgPersonDossiers.resx">
+      <DependentUpon>dlgPersonDossiers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgSearchBastari.resx">
+      <DependentUpon>dlgSearchBastari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgSearchBastariPersoneli.resx">
+      <DependentUpon>dlgSearchBastariPersoneli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgSearchBastari1.resx">
+      <DependentUpon>dlgSearchBastari1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgSelectKindBilling.resx">
+      <DependentUpon>dlgSelectKindBilling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgSpecialCode.resx">
+      <DependentUpon>dlgSpecialCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgStart.resx">
+      <DependentUpon>dlgStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgTransferServiceDossier.resx">
+      <DependentUpon>dlgTransferServiceDossier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSarepayeEdit.resx">
+      <DependentUpon>FrmSarepayeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPardakhtBastari.resx">
+      <DependentUpon>frmPardakhtBastari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBackPay.resx">
+      <DependentUpon>frmBackPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBastariBill.resx">
+      <DependentUpon>frmBastariBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCash.resx">
+      <DependentUpon>FrmCash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCashBastari.resx">
+      <DependentUpon>FrmCashBastari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCashBastari2.resx">
+      <DependentUpon>frmCashBastari2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPayAdvancePayment.resx">
+      <DependentUpon>frmPayAdvancePayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmInCome.resx">
+      <DependentUpon>frmInCome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RptFalateGhareSarepayee.resx">
+      <DependentUpon>RptFalateGhareSarepayee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RptAllinsuranceSarepayee1.resx">
+      <DependentUpon>RptAllinsuranceSarepayee1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RptAllinsurance1.resx">
+      <DependentUpon>RptAllinsurance1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RptBazneshasteBastari.resx">
+      <DependentUpon>RptBazneshasteBastari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RptFalateghareBilling.resx">
+      <DependentUpon>RptFalateghareBilling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RptBazneshastebastariBilling1.resx">
+      <DependentUpon>RptBazneshastebastariBilling1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RptBazneshasteBastariBillingsayer.resx">
+      <DependentUpon>RptBazneshasteBastariBillingsayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RptDispatch.resx">
+      <DependentUpon>RptDispatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RptKhadamatTashkhisi.resx">
+      <DependentUpon>RptKhadamatTashkhisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RptDrugEzami.resx">
+      <DependentUpon>RptDrugEzami.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RptSurgery.resx">
+      <DependentUpon>RptSurgery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RptSystemError.resx">
+      <DependentUpon>RptSystemError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WaitForm2.resx">
+      <DependentUpon>WaitForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Data\HCISCashDataContext.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>HCISCashDataContext1.designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\SecurityDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>SecurityDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HCISCash_TemporaryKey.pfx" />
+    <None Include="Properties\DataSources\ArtParsCash.Data.GivenServiceM.datasource" />
+    <None Include="Properties\DataSources\HCISCash.Data.Department.datasource" />
+    <None Include="Properties\DataSources\HCISCash.Data.Dossier.datasource" />
+    <None Include="Properties\DataSources\HCISCash.Data.GivenServiceD.datasource" />
+    <None Include="Properties\DataSources\HCISCash.Data.Insurance.datasource" />
+    <None Include="Properties\DataSources\HCISCash.Data.Payment1.datasource" />
+    <None Include="Properties\DataSources\HCISCash.Data.Person.datasource" />
+    <None Include="Properties\DataSources\HCISCash.Data.Service.datasource" />
+    <None Include="Properties\DataSources\HCISCash.Data.ServiceCategory.datasource" />
+    <None Include="Properties\DataSources\HCISCash.Data.Staff.datasource" />
+    <None Include="Properties\DataSources\HCISCash.Data.tblUser.datasource" />
+    <None Include="Properties\DataSources\HCISCash.Data.Tbl_Company.datasource" />
+    <None Include="Properties\DataSources\HCISCash.Data.View_FalateghareSarepaei.datasource" />
+    <None Include="Properties\DataSources\HCISCash.Data.View_FalateghareSarepaei1.datasource" />
+    <None Include="Properties\DataSources\HCISCash.Data.Vw_CashPay.datasource" />
+    <None Include="Properties\DataSources\HCISCash.Data.Vw_DosFinance.datasource" />
+    <None Include="Properties\DataSources\HCISCash.Data.Vw_DosseirPayment.datasource" />
+    <None Include="Properties\DataSources\HCISCash.Data.Vw_DossierBastari.datasource" />
+    <None Include="Properties\DataSources\HCISCash.Data.Vw_OutDoorPatinetByInsurance.datasource" />
+    <None Include="Properties\DataSources\HCISCash.Data.Vw_SystemErrorRpt.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Stimulsoft.Controls.Win">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Stimulsoft.Report.Check">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Stimulsoft.Report.Helper">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cash.ico" />
+    <None Include="Resources\64-64-46c1b0544f5f652e0ed086bb548ea00a-dollar.png" />
+    <None Include="Resources\64-64-ee0b6cbeddd301148852cbf5785146ed.png" />
+    <None Include="Resources\64-64-dee93e25677414c04e7d38c60dffce1d-Cash.png" />
+    <None Include="Resources\64-64-6530461b398909b5374e802f6fea330d.png" />
+    <None Include="Resources\64-64-1e4daaeac63894960d4cd92a736d3ee7.png" />
+    <None Include="Resources\Patient.ico" />
+    <Content Include="Resources\Stimulsoft.Base.dll" />
+    <Content Include="Resources\Stimulsoft.Controls.dll" />
+    <Content Include="Resources\Stimulsoft.Design.dll" />
+    <Content Include="Resources\Stimulsoft.Editor.dll" />
+    <Content Include="Resources\Stimulsoft.Report.Check.dll" />
+    <Content Include="Resources\Stimulsoft.Report.Design.dll" />
+    <Content Include="Resources\Stimulsoft.Report.dll" />
+    <Content Include="Resources\Stimulsoft.Report.Win.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SecurityLoginsAndAccessControl\SecurityLoginsAndAccessControl\SecurityLoginsAndAccessControl.vbproj">
+      <Project>{b07c6401-2d8d-4c7c-b785-2de29800a45f}</Project>
+      <Name>SecurityLoginsAndAccessControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

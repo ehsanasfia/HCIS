@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="آمار افراد دارای اضافه وزن" />
+  <DataSources>
+    <SqlDataSource ComponentName="dashboardSqlDataSource1">
+      <Name>SQL Data Source 1</Name>
+      <Connection Name="172.30.1.145_HCIS_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="172.30.1.145" />
+          <Parameter Name="database" Value="HCIS" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="artp" />
+          <Parameter Name="password" Value="506070" />
+        </Parameters>
+      </Connection>
+      <Query Type="SelectQuery" Name="Vw_FDMBmiFat">
+        <Tables>
+          <Table Name="Vw_FDMBmiFat" Meta="0|0|125|120" />
+        </Tables>
+        <Columns>
+          <Column Table="Vw_FDMBmiFat" Name="Name" />
+          <Column Table="Vw_FDMBmiFat" Name="CountFat" />
+          <Column Table="Vw_FDMBmiFat" Name="Total" />
+          <Column Table="Vw_FDMBmiFat" Name="Fraction" />
+        </Columns>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="Vw_FDMBmiFat">
+            <Field Name="Name" Type="String" />
+            <Field Name="CountFat" Type="Int32" />
+            <Field Name="Total" Type="Int32" />
+            <Field Name="Fraction" Type="Decimal" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <Grid ComponentName="gridDashboardItem1" Name="آمار افراد دارای اضافه وزن" DataSource="dashboardSqlDataSource1" DataMember="Vw_FDMBmiFat">
+      <DataItems>
+        <Dimension DataMember="Name" Name="درمانگاه" UniqueName="DataItem0" />
+        <Measure DataMember="CountFat" Name="تعداد افراد دارای اضافه وزن" UniqueName="DataItem1" />
+        <Measure DataMember="Total" Name="جمعیت تحت پوشش" UniqueName="DataItem2">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+        <Measure DataMember="Fraction" Name="درصد" UniqueName="DataItem3">
+          <NumericFormat FormatType="Percent" Unit="Ones" />
+        </Measure>
+      </DataItems>
+      <GridColumns>
+        <GridDimensionColumn>
+          <Dimension UniqueName="DataItem0" />
+        </GridDimensionColumn>
+        <GridMeasureColumn>
+          <Measure UniqueName="DataItem1" />
+          <Totals>
+            <Total Type="Sum" />
+          </Totals>
+        </GridMeasureColumn>
+        <GridMeasureColumn>
+          <Measure UniqueName="DataItem2" />
+          <Totals>
+            <Total Type="Sum" />
+          </Totals>
+        </GridMeasureColumn>
+        <GridMeasureColumn>
+          <Measure UniqueName="DataItem3" />
+          <Totals>
+            <Total Type="Sum" />
+          </Totals>
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions />
+    </Grid>
+    <ListBox ComponentName="listBoxDashboardItem1" Name="درمانگاه ها" DataSource="dashboardSqlDataSource1" DataMember="Vw_FDMBmiFat">
+      <DataItems>
+        <Dimension DataMember="Name" Name="درمانگاه" UniqueName="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="gridDashboardItem1" Weight="86.915254237288138" />
+      <LayoutItem DashboardItem="listBoxDashboardItem1" Weight="13.084745762711865" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

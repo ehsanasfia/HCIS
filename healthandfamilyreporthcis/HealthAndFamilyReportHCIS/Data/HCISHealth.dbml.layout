@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 14.125, 13.75" name="HCISHealth">
+  <DataContextMoniker Name="/HCISHealthDataContext" />
+  <nestedChildShapes>
+    <classShape Id="2306a540-24c9-4c92-8cc9-9f4bd0fdbabe" absoluteBounds="0.75, 4.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/HCISHealthDataContext/Vw_HealthPregnantWoman" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5a9eb2e3-342b-4efd-a45c-785d895f2f4d" absoluteBounds="0.765, 5.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="615c2dda-eca3-4085-b96a-095343543533" absoluteBounds="3.75, 4.75, 2, 6.0015283203124987">
+      <DataClassMoniker Name="/HCISHealthDataContext/Vw_HealthQAResult" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0e09dbaa-4b43-410d-9e89-338cfa8dece4" absoluteBounds="3.765, 5.21, 1.9700000000000002, 5.4415283203125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c31eecd8-de17-4184-8529-4247164a9d31" absoluteBounds="6.75, 3.75, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/HCISHealthDataContext/Vw_HealthQuestionCount" />
+      <nestedChildShapes>
+        <elementListCompartment Id="52e1210b-b860-4faa-86b5-c0f3eb1c15bc" absoluteBounds="6.765, 4.21, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="69083403-be70-4f48-afa1-f8cc4527ba74" absoluteBounds="11.125, 5.5, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/HCISHealthDataContext/Vw_HealthWomanChildbirthDate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4e941d5c-8c4a-4b39-bf2a-2319b3f37138" absoluteBounds="11.14, 5.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b6c25ba2-f2d2-40a8-8e38-ece66765bde8" absoluteBounds="11.125, 2, 2, 3.1170068359375">
+      <DataClassMoniker Name="/HCISHealthDataContext/IndexTeh" />
+      <nestedChildShapes>
+        <elementListCompartment Id="16617c58-a3b2-4d65-9020-33c09bbc0e27" absoluteBounds="11.14, 2.46, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0e6ec3a6-b0c3-4fcf-a0ed-ceaa1f0cc115" absoluteBounds="11.875, 9, 2, 3.1170068359375023">
+      <DataClassMoniker Name="/HCISHealthDataContext/QAPlus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="571b6f49-0e50-4a9d-88b5-e9e840dfff4e" absoluteBounds="11.89, 9.46, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ff98c77a-f541-4d74-89bb-a9c213315eb5" absoluteBounds="9.125, 9.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/HCISHealthDataContext/Questionnaire" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f246ed6b-dc53-4137-8513-a64de6aca6d6" absoluteBounds="9.14, 9.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8131ccf5-61b0-4797-955d-33459313588d" absoluteBounds="6.375, 9.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/HCISHealthDataContext/QuestionnaireGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="98e2cd02-f575-4793-84b0-c29c05365a90" absoluteBounds="6.39, 10.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.125 : 10.5777498372396); (11.875 : 10.5777498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISHealthDataContext/Questionnaire/Questionnaire_QAPlus" />
+      <nodes>
+        <classShapeMoniker Id="ff98c77a-f541-4d74-89bb-a9c213315eb5" />
+        <classShapeMoniker Id="0e6ec3a6-b0c3-4fcf-a0ed-ceaa1f0cc115" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.375 : 10.5392976888021); (9.125 : 10.5392976888021)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISHealthDataContext/QuestionnaireGroup/QuestionnaireGroup_Questionnaire" />
+      <nodes>
+        <classShapeMoniker Id="8131ccf5-61b0-4797-955d-33459313588d" />
+        <classShapeMoniker Id="ff98c77a-f541-4d74-89bb-a9c213315eb5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.07742346379207 : 11.3285953776042); (7.07742346379207 : 11.5785953776042); (7.68674684745593 : 11.5785953776042); (7.68674684745593 : 11.3285953776042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISHealthDataContext/QuestionnaireGroup/QuestionnaireGroup_QuestionnaireGroup" />
+      <nodes>
+        <classShapeMoniker Id="8131ccf5-61b0-4797-955d-33459313588d" />
+        <classShapeMoniker Id="8131ccf5-61b0-4797-955d-33459313588d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="fa00982d-d31c-45a1-a273-3e1d35a68fea" absoluteBounds="4.125, 11.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/HCISHealthDataContext/tmpSexPyramid" />
+      <nestedChildShapes>
+        <elementListCompartment Id="23526855-c955-4a81-bd43-198fc4a63798" absoluteBounds="4.14, 12.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="044c34b9-234a-45c3-a5ce-2d743889f8fc" absoluteBounds="3.625, 0.875, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/HCISHealthDataContext/HealthDailyResult" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4d201302-8862-44f7-a452-3a5e9494601d" absoluteBounds="3.64, 1.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="آمار تعداد پزشک خانواده برای درمانگاه" />
+  <DataSources>
+    <SqlDataSource ComponentName="dashboardSqlDataSource1">
+      <Name>SQL Data Source 1</Name>
+      <Connection Name="172.30.1.145_HCIS_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="172.30.1.145" />
+          <Parameter Name="database" Value="HCIS" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="artp" />
+          <Parameter Name="password" Value="506070" />
+        </Parameters>
+      </Connection>
+      <Query Type="SelectQuery" Name="Vw_FDDoctorStandardCount">
+        <Tables>
+          <Table Name="Vw_FDDoctorStandardCount" Meta="0|0|125|360" />
+        </Tables>
+        <Columns>
+          <Column Table="Vw_FDDoctorStandardCount" Name="سال" />
+          <Column Table="Vw_FDDoctorStandardCount" Name="منطقه" />
+          <Column Table="Vw_FDDoctorStandardCount" Name="ماه" />
+          <Column Table="Vw_FDDoctorStandardCount" Name="Month" />
+          <Column Table="Vw_FDDoctorStandardCount" Name="درمانگاه" />
+          <Column Table="Vw_FDDoctorStandardCount" Name="تعداد پزشک عمومی مرکز" />
+          <Column Table="Vw_FDDoctorStandardCount" Name="تعداد پرستار مرکز" />
+          <Column Table="Vw_FDDoctorStandardCount" Name="تعداد کل پزشک خانواده مرکز" />
+          <Column Table="Vw_FDDoctorStandardCount" Name="تعدادجمعیت  " />
+          <Column Table="Vw_FDDoctorStandardCount" Name="یک پزشک برای جمعیت" />
+          <Column Table="Vw_FDDoctorStandardCount" Name="یک پرستار برای جمعیت" />
+          <Column Table="Vw_FDDoctorStandardCount" Name="یک پزشک خانواده برای جمعیت" />
+          <Column Table="Vw_FDDoctorStandardCount" Name="تعداد پزشک عمومی مطلوب" />
+          <Column Table="Vw_FDDoctorStandardCount" Name="تعداد پرستار مطلوب" />
+          <Column Table="Vw_FDDoctorStandardCount" Name="تعداد پزشک خانواده مطلوب" />
+          <Column Table="Vw_FDDoctorStandardCount" Name="MonthNum" />
+        </Columns>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="Vw_FDDoctorStandardCount">
+            <Field Name="سال" Type="Int32" />
+            <Field Name="منطقه" Type="String" />
+            <Field Name="ماه" Type="String" />
+            <Field Name="Month" Type="String" />
+            <Field Name="درمانگاه" Type="String" />
+            <Field Name="تعداد پزشک عمومی مرکز" Type="Double" />
+            <Field Name="تعداد پرستار مرکز" Type="Double" />
+            <Field Name="تعداد کل پزشک خانواده مرکز" Type="Double" />
+            <Field Name="تعدادجمعیت  " Type="Double" />
+            <Field Name="یک پزشک برای جمعیت" Type="Int32" />
+            <Field Name="یک پرستار برای جمعیت" Type="Int32" />
+            <Field Name="یک پزشک خانواده برای جمعیت" Type="Int32" />
+            <Field Name="تعداد پزشک عمومی مطلوب" Type="Double" />
+            <Field Name="تعداد پرستار مطلوب" Type="Double" />
+            <Field Name="تعداد پزشک خانواده مطلوب" Type="Double" />
+            <Field Name="MonthNum" Type="Int32" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+    </SqlDataSource>
+  </DataSources>
+  <Parameters>
+    <Parameter Name="City" Value="اهواز">
+      <DynamicListLookUpSettings DataSourceName="dashboardSqlDataSource1" DataMember="Vw_FDDoctorStandardCount" ValueMember="منطقه" DisplayMember="منطقه" />
+    </Parameter>
+    <Parameter Name="Department" Value="درمانگاه کارون">
+      <DynamicListLookUpSettings DataSourceName="dashboardSqlDataSource1" DataMember="Vw_FDDoctorStandardCount" ValueMember="درمانگاه" DisplayMember="درمانگاه" />
+    </Parameter>
+  </Parameters>
+  <Items>
+    <Grid ComponentName="gridDashboardItem1" Name="جدول کلی" DataSource="dashboardSqlDataSource1" DataMember="Vw_FDDoctorStandardCount">
+      <DataItems>
+        <Dimension DataMember="ماه" UniqueName="DataItem0" />
+        <Dimension DataMember="درمانگاه" UniqueName="DataItem2" />
+        <Dimension DataMember="MonthNum" Name="شماره ماه" UniqueName="DataItem3" />
+        <Measure DataMember="تعداد پزشک عمومی مطلوب" UniqueName="DataItem5" />
+        <Dimension DataMember="تعدادجمعیت  " UniqueName="DataItem6">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Dimension>
+        <Measure DataMember="تعداد پزشک عمومی مرکز" UniqueName="DataItem4" />
+        <Measure DataMember="تعداد پرستار مرکز" UniqueName="DataItem7" />
+        <Measure DataMember="تعداد پرستار مطلوب" UniqueName="DataItem8" />
+        <Dimension DataMember="سال" SortOrder="Descending" UniqueName="DataItem1">
+          <NumericFormat FormatType="General" Unit="Ones" />
+        </Dimension>
+        <Measure DataMember="تعداد کل پزشک خانواده مرکز" UniqueName="DataItem9" />
+        <Measure DataMember="تعداد پزشک خانواده مطلوب" UniqueName="DataItem10" />
+      </DataItems>
+      <FormatRules>
+        <GridItemFormatRule Name="FormatRule 1" DataItem="DataItem4">
+          <FormatConditionExpression Expression="[DataItem4] &gt; [DataItem5]">
+            <AppearanceSettings AppearanceType="Green" />
+          </FormatConditionExpression>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="FormatRule 2" DataItem="DataItem4">
+          <FormatConditionExpression Expression="[DataItem4] &lt; [DataItem5]">
+            <AppearanceSettings AppearanceType="Red" />
+          </FormatConditionExpression>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="FormatRule 3" DataItem="DataItem7">
+          <FormatConditionExpression Expression="[DataItem7] &gt; [DataItem8]">
+            <AppearanceSettings AppearanceType="Green" />
+          </FormatConditionExpression>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="FormatRule 4" DataItem="DataItem9">
+          <FormatConditionExpression Expression="[DataItem9] &gt; [DataItem10]">
+            <AppearanceSettings AppearanceType="Green" />
+          </FormatConditionExpression>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="FormatRule 5" DataItem="DataItem9">
+          <FormatConditionExpression Expression="[DataItem9] &lt; [DataItem10]">
+            <AppearanceSettings AppearanceType="Red" />
+          </FormatConditionExpression>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="FormatRule 6" DataItem="DataItem4">
+          <FormatConditionExpression Expression="[DataItem4] = [DataItem5]">
+            <AppearanceSettings AppearanceType="PaleYellow" />
+          </FormatConditionExpression>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="FormatRule 7" DataItem="DataItem7">
+          <FormatConditionExpression Expression="[DataItem7] &lt; [DataItem8]">
+            <AppearanceSettings AppearanceType="Red" />
+          </FormatConditionExpression>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="FormatRule 8" DataItem="DataItem7">
+          <FormatConditionExpression Expression="[DataItem7] = [DataItem8]">
+            <AppearanceSettings AppearanceType="PaleYellow" />
+          </FormatConditionExpression>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="FormatRule 9" DataItem="DataItem9">
+          <FormatConditionExpression Expression="[DataItem9] = [DataItem10]">
+            <AppearanceSettings AppearanceType="PaleYellow" />
+          </FormatConditionExpression>
+        </GridItemFormatRule>
+      </FormatRules>
+      <GridColumns>
+        <GridDimensionColumn Weight="64.041767242727">
+          <Dimension UniqueName="DataItem1" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Weight="96.807322576215242">
+          <Dimension UniqueName="DataItem3" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Weight="93.8286357277163">
+          <Dimension UniqueName="DataItem0" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Weight="177.23186748568634">
+          <Dimension UniqueName="DataItem2" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Weight="139.99828187944974">
+          <Dimension UniqueName="DataItem6" />
+        </GridDimensionColumn>
+        <GridMeasureColumn Weight="195.10398857667994">
+          <Measure UniqueName="DataItem4" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Weight="168.29580694018958">
+          <Measure UniqueName="DataItem5" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Weight="174.25318063718743" FixedWidth="73.1071835084947">
+          <Measure UniqueName="DataItem7" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Weight="187.65727145543261">
+          <Measure UniqueName="DataItem8" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Weight="233.82691760716605">
+          <Measure UniqueName="DataItem9" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Weight="232.33757418291654">
+          <Measure UniqueName="DataItem10" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions ColumnWidthMode="Manual" />
+    </Grid>
+    <Chart ComponentName="chartDashboardItem1" Name="پزشک عمومی" DataSource="dashboardSqlDataSource1" DataMember="Vw_FDDoctorStandardCount">
+      <DataItems>
+        <Measure DataMember="تعداد پزشک عمومی مرکز" UniqueName="DataItem0" />
+        <Measure DataMember="تعداد پزشک عمومی مطلوب" UniqueName="DataItem1" />
+      </DataItems>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" />
+          <Series>
+            <Simple>
+              <Value UniqueName="DataItem0" />
+              <PointLabelOptions Visible="true" Position="Inside" />
+            </Simple>
+            <Simple>
+              <Value UniqueName="DataItem1" />
+              <PointLabelOptions Visible="true" Position="Inside" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend OutsidePosition="BottomCenterHorizontal" />
+      <AxisX Visible="false" />
+    </Chart>
+    <TreeView ComponentName="treeViewDashboardItem2" Name="درمانگاه ها" DataSource="dashboardSqlDataSource1" DataMember="Vw_FDDoctorStandardCount" FilterString="[DataItem0] = ?Department">
+      <DataItems>
+        <Dimension DataMember="درمانگاه" UniqueName="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+      </FilterDimensions>
+    </TreeView>
+    <TreeView ComponentName="treeViewDashboardItem1" Name="تاریخ" DataSource="dashboardSqlDataSource1" DataMember="Vw_FDDoctorStandardCount">
+      <DataItems>
+        <Dimension DataMember="سال" UniqueName="DataItem0">
+          <NumericFormat FormatType="General" />
+        </Dimension>
+        <Dimension DataMember="ماه" UniqueName="DataItem1" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+        <Dimension UniqueName="DataItem1" />
+      </FilterDimensions>
+    </TreeView>
+    <Chart ComponentName="chartDashboardItem2" Name="پرستار" DataSource="dashboardSqlDataSource1" DataMember="Vw_FDDoctorStandardCount">
+      <DataItems>
+        <Measure DataMember="تعداد پرستار مرکز" UniqueName="DataItem0" />
+        <Measure DataMember="تعداد پرستار مطلوب" UniqueName="DataItem2" />
+      </DataItems>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" />
+          <Series>
+            <Simple>
+              <Value UniqueName="DataItem0" />
+              <PointLabelOptions Visible="true" Position="Inside" />
+            </Simple>
+            <Simple>
+              <Value UniqueName="DataItem2" />
+              <PointLabelOptions Visible="true" Position="Inside" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend InsidePosition="BottomCenterVertical" OutsidePosition="BottomCenterHorizontal" />
+      <AxisX Visible="false" />
+    </Chart>
+    <Chart ComponentName="chartDashboardItem3" Name="پزشک خانواده" DataSource="dashboardSqlDataSource1" DataMember="Vw_FDDoctorStandardCount">
+      <DataItems>
+        <Measure DataMember="تعداد کل پزشک خانواده مرکز" UniqueName="DataItem0" />
+        <Measure DataMember="تعداد پزشک خانواده مطلوب" UniqueName="DataItem2" />
+      </DataItems>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" />
+          <Series>
+            <Simple>
+              <Value UniqueName="DataItem0" />
+              <PointLabelOptions Visible="true" Position="Inside" />
+            </Simple>
+            <Simple>
+              <Value UniqueName="DataItem2" />
+              <PointLabelOptions Visible="true" Position="Inside" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend OutsidePosition="BottomCenterHorizontal" />
+      <AxisX Visible="false" />
+    </Chart>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup Orientation="Vertical">
+      <LayoutGroup Weight="51.97530864197531">
+        <LayoutItem DashboardItem="gridDashboardItem1" Weight="84.969532836831419" />
+        <LayoutItem DashboardItem="treeViewDashboardItem2" Weight="15.030467163168584" />
+      </LayoutGroup>
+      <LayoutGroup Weight="48.02469135802469">
+        <LayoutItem DashboardItem="chartDashboardItem1" Weight="27.962085308056871" />
+        <LayoutItem DashboardItem="chartDashboardItem2" Weight="28.977657413676372" />
+        <LayoutItem DashboardItem="chartDashboardItem3" Weight="28.029790115098173" />
+        <LayoutItem DashboardItem="treeViewDashboardItem1" Weight="15.030467163168584" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

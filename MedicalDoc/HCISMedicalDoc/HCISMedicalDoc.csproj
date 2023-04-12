@@ -1,0 +1,704 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FC0895BE-7B9B-4B1D-9645-81677F7D914C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HCISMedicalDoc</RootNamespace>
+    <AssemblyName>HCISMedicalDoc</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>\\172.30.1.30\AsfiyaProjects\HCISMedicalDoc\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\172.30.1.30\AsfiyaProjects\HCISMedicalDoc\</InstallUrl>
+    <PublisherName>HCISMedicalDoc</PublisherName>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>10.0.0.3</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>3A70629399D907A33F6202B4FB8FB020732FA115</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>HSE_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.BonusSkins.v16.1" />
+    <Reference Include="DevExpress.Charts.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v16.1.Win, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v16.1" />
+    <Reference Include="DevExpress.DataAccess.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v16.1.UI, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Map.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v16.1.Core" />
+    <Reference Include="DevExpress.RichEdit.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v16.1" />
+    <Reference Include="DevExpress.Utils.v16.1.UI, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v16.1" />
+    <Reference Include="DevExpress.Sparkline.v16.1.Core" />
+    <Reference Include="DevExpress.XtraCharts.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v16.1.Extensions, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v16.1.UI, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v16.1.Wizard, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v16.1" />
+    <Reference Include="DevExpress.XtraGauges.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v16.1.Presets, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v16.1.Win, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraMap.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v16.1.Extensions, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v16.1.Extensions, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="PersianDate">
+      <HintPath>Resources\PersianDate.dll</HintPath>
+    </Reference>
+    <Reference Include="PersianToolS">
+      <HintPath>Resources\PersianToolS.dll</HintPath>
+    </Reference>
+    <Reference Include="PersianToolsPack">
+      <HintPath>Resources\PersianToolsPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Base, Version=2013.1.1600.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls, Version=2013.1.1600.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls.Win, Version=2013.1.1600.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Controls.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Design, Version=2013.1.1600.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Editor, Version=2013.1.1600.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report, Version=2013.1.1600.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Check, Version=2013.1.1600.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Report.Check.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Design, Version=2013.1.1600.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Report.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Helper, Version=2013.1.1600.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Report.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Win, Version=2013.1.1600.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Report.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Xbap, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Report.Xbap.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Xbap.Design, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Report.Xbap.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\MainModule.cs" />
+    <Compile Include="Data\HCISDataContex.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HCISDataContex.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Data\OccupationalMedicineOilDataContex.cs">
+      <DependentUpon>OccupationalMedicineOilDataContex.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Data\OccupationalMedicineOilDataContex.designer.cs">
+      <DependentUpon>OccupationalMedicineOilDataContex.dbml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Data\Security.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Security.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgChangeTariff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgChangeTariff.designer.cs">
+      <DependentUpon>dlgChangeTariff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgInsurance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgInsurance.designer.cs">
+      <DependentUpon>dlgInsurance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgStart.designer.cs">
+      <DependentUpon>dlgStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\frmAgreedClauses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\frmAgreedClauses.Designer.cs">
+      <DependentUpon>frmAgreedClauses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\frmMP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\frmMP.Designer.cs">
+      <DependentUpon>frmMP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\frmTahvilgirande.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\frmTahvilgirande.designer.cs">
+      <DependentUpon>frmTahvilgirande.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\TechnicalContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\TechnicalContract.Designer.cs">
+      <DependentUpon>TechnicalContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dlgPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgPerson.Designer.cs">
+      <DependentUpon>dlgPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmA.Designer.cs">
+      <DependentUpon>frmA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddNewPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddNewPerson.Designer.cs">
+      <DependentUpon>frmAddNewPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAdmitA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAdmitA.Designer.cs">
+      <DependentUpon>frmAdmitA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmALL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmALL.Designer.cs">
+      <DependentUpon>frmALL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmContract.Designer.cs">
+      <DependentUpon>frmContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCreationUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCreationUser.Designer.cs">
+      <DependentUpon>frmCreationUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmekhtelafgheymat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmekhtelafgheymat.Designer.cs">
+      <DependentUpon>frmekhtelafgheymat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFamilyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFamilyList.Designer.cs">
+      <DependentUpon>frmFamilyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFinanceDashboardBig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFinanceDashboardBig.designer.cs">
+      <DependentUpon>frmFinanceDashboardBig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmhazinePersonel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmhazinePersonel.Designer.cs">
+      <DependentUpon>frmhazinePersonel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmHistory.Designer.cs">
+      <DependentUpon>frmHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmInsuranse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmInsuranse.Designer.cs">
+      <DependentUpon>frmInsuranse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMD.Designer.cs">
+      <DependentUpon>frmMD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmmoarefinametarif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmmoarefinametarif.designer.cs">
+      <DependentUpon>frmmoarefinametarif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMontly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMontly.Designer.cs">
+      <DependentUpon>frmMontly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMontly3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMontly3.Designer.cs">
+      <DependentUpon>frmMontly3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMontlysazemanfarie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMontlysazemanfarie.Designer.cs">
+      <DependentUpon>frmMontlysazemanfarie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMontlySherkatasli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMontlySherkatasli.Designer.cs">
+      <DependentUpon>frmMontlySherkatasli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOffice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOffice.Designer.cs">
+      <DependentUpon>frmOffice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReport1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReport1.Designer.cs">
+      <DependentUpon>frmReport1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReport3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReport3.Designer.cs">
+      <DependentUpon>frmReport3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmREsidegi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmREsidegi.Designer.cs">
+      <DependentUpon>frmREsidegi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SplashScreen1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SplashScreen1.Designer.cs">
+      <DependentUpon>SplashScreen1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SplashScreen2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SplashScreen2.Designer.cs">
+      <DependentUpon>SplashScreen2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SplashScreen3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SplashScreen3.Designer.cs">
+      <DependentUpon>SplashScreen3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SplashScreen4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SplashScreen4.Designer.cs">
+      <DependentUpon>SplashScreen4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WaitForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WaitForm2.Designer.cs">
+      <DependentUpon>WaitForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="app.config" />
+    <None Include="Data\HCISDataContex.dbml.layout">
+      <DependentUpon>HCISDataContex.dbml</DependentUpon>
+    </None>
+    <None Include="Data\OccupationalMedicineOilDataContex.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>OccupationalMedicineOilDataContex.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\Security.dbml.layout">
+      <DependentUpon>Security.dbml</DependentUpon>
+    </None>
+    <None Include="Data\OccupationalMedicineOilDataContex.dbml.layout">
+      <DependentUpon>OccupationalMedicineOilDataContex.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Dialogs\dlgChangeTariff.resx">
+      <DependentUpon>dlgChangeTariff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgInsurance.resx">
+      <DependentUpon>dlgInsurance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgStart.resx">
+      <DependentUpon>dlgStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\frmAgreedClauses.resx">
+      <DependentUpon>frmAgreedClauses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\frmMP.resx">
+      <DependentUpon>frmMP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\frmTahvilgirande.resx">
+      <DependentUpon>frmTahvilgirande.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\TechnicalContract.resx">
+      <DependentUpon>TechnicalContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgPerson.resx">
+      <DependentUpon>dlgPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmA.resx">
+      <DependentUpon>frmA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddNewPerson.resx">
+      <DependentUpon>frmAddNewPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAdmitA.resx">
+      <DependentUpon>frmAdmitA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmALL.resx">
+      <DependentUpon>frmALL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmContract.resx">
+      <DependentUpon>frmContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCreationUser.resx">
+      <DependentUpon>frmCreationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmekhtelafgheymat.resx">
+      <DependentUpon>frmekhtelafgheymat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFamilyList.resx">
+      <DependentUpon>frmFamilyList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFinanceDashboardBig.resx">
+      <DependentUpon>frmFinanceDashboardBig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmhazinePersonel.resx">
+      <DependentUpon>frmhazinePersonel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmHistory.resx">
+      <DependentUpon>frmHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmInsuranse.resx">
+      <DependentUpon>frmInsuranse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMD.resx">
+      <DependentUpon>frmMD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmmoarefinametarif.resx">
+      <DependentUpon>frmmoarefinametarif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMontly.resx">
+      <DependentUpon>frmMontly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMontly3.resx">
+      <DependentUpon>frmMontly3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMontlysazemanfarie.resx">
+      <DependentUpon>frmMontlysazemanfarie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMontlySherkatasli.resx">
+      <DependentUpon>frmMontlySherkatasli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOffice.resx">
+      <DependentUpon>frmOffice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReport1.resx">
+      <DependentUpon>frmReport1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReport3.resx">
+      <DependentUpon>frmReport3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmREsidegi.resx">
+      <DependentUpon>frmREsidegi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SplashScreen2.resx">
+      <DependentUpon>SplashScreen2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SplashScreen3.resx">
+      <DependentUpon>SplashScreen3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SplashScreen4.resx">
+      <DependentUpon>SplashScreen4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WaitForm2.resx">
+      <DependentUpon>WaitForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Data\HCISDataContex.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>HCISDataContex.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\Security.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Security.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HSE_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.AdmitResult.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.ClauseContract.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.DefinitionContract.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.Department.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.Floship.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.Handle.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.Insurance.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.Line.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.PersonTbl.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.ProfileAgreement.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.ProfileMatabha.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.Service.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.ServiceCategory.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.Speciality.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.spuAdmitResult.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.SpuCompanyHandelResult.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.SpuHistoryResult.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.SpuPazireshResult.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.Spu_MontlyCompanyResult.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.Spu_MontlyCompanysherkatasliResult.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.Spu_MontlySazemanAsliResult.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.Spu_MontlySazemanFarieResult.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.Spu_ServiceCreationUserResult.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.Tbl_Company.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.Tbl_ManageMent.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.Tbl_Relation.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.Tbl_SubCompany.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.Tbl_Unit.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.Tbl_ValidCenter.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.Tbl_ValidCenterZone.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.TechnicalContract.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.TypeStaff.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.ViewInsuranceRVUService.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.vwcompani.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.vWDateHandel.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.vwHandel.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.vwSazemanAsli.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.vwSazemanFarie.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.VWService.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Data.vwSherkatAsli.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Forms.frmInsuranse+CD.datasource" />
+    <None Include="Properties\DataSources\HCISMedicalDoc.Forms.frmInsuranse.datasource" />
+    <None Include="Properties\DataSources\HSE.Data.Company.datasource" />
+    <None Include="Properties\DataSources\HSE.Data.Definition.datasource" />
+    <None Include="Properties\DataSources\HSE.Data.Introduction.datasource" />
+    <None Include="Properties\DataSources\HSE.Data.MedicalCenter.datasource" />
+    <None Include="Properties\DataSources\HSE.Data.PcaseView.datasource" />
+    <None Include="Properties\DataSources\HSE.Data.QA.datasource" />
+    <None Include="Properties\DataSources\HSE.Data.Question.datasource" />
+    <None Include="Properties\DataSources\HSE.Data.ReferenceFile.datasource" />
+    <None Include="Properties\DataSources\HSE.Data.Spu_FullLabHistoryResult.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\119044.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chemistry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\audio.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lungs.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\psychology.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Application.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radiology.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stethoscope.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SecurityLoginsAndAccessControl\SecurityLoginsAndAccessControl\SecurityLoginsAndAccessControl.vbproj">
+      <Project>{b07c6401-2d8d-4c7c-b785-2de29800a45f}</Project>
+      <Name>SecurityLoginsAndAccessControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\MedicalDocDashboard.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

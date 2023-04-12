@@ -1,0 +1,557 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="inventory" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=172.30.1.145;Initial Catalog=inventory;User ID=artp" SettingsObjectName="Inventory.Properties.Settings" SettingsPropertyName="InventoryConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.output_Product" Member="output_Products">
+    <Type Name="output_Product">
+      <Column Name="AmountDelivery" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IDPerson" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDProduct" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FaName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WarehouseKeeperBoss" Member="WarehouseKeeperBosses">
+    <Type Name="WarehouseKeeperBoss">
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RequestDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="RequestTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="WarehouseKeeper" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IDRequestM" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_Import" Member="View_Imports">
+    <Type Name="View_Import">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Ordernum" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="barname" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="RequestDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Tahvildahande" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrganBoss" Member="OrganBosses">
+    <Type Name="OrganBoss">
+      <Column Name="RequestDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="OrganBoss" Member="OrganBoss1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IDRequestM" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDPerson" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MeasurementDefinition" Member="MeasurementDefinitions">
+    <Type Name="MeasurementDefinition">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MeasurementDefinition" Member="MeasurementDefinition1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MeasurementName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Provider" Member="Providers">
+    <Type Name="Provider">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Manager" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="Available" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Provider_Factor" Member="Factors" ThisKey="ID" OtherKey="IDProvider" Type="Factor" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_Request" Member="View_Requests">
+    <Type Name="View_Request">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RequestDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="RequestTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="OrganBoss" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="UMtime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="UMDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="RUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IDPerson" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OrganName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IDWarehouse" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProtectionProduct" Member="ProtectionProducts">
+    <Type Name="ProtectionProduct">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Product_ProtectionProduct" Member="Product" ThisKey="IDProduct" OtherKey="ID" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Protection" Member="Protections">
+    <Type Name="Protection">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDFactor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDTahvilgirande" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DesProduct" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DateInProtection" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="TimeInProtection" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="InProtection" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IPUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Driver" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Worker" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Car" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CarNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Des" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="InPutProduct" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="OrganName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PersonName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Destination" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Tahvilgirande" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="HouseKeeping" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="Product_Protection" Member="Product" ThisKey="IDProduct" OtherKey="ID" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Transfer" Member="Transfers">
+    <Type Name="Transfer">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDOriginWarehouse" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDDestinationWarehouse" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DocumentNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DocumentDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="warehouse_Transfer" Member="warehouse" ThisKey="IDOriginWarehouse" OtherKey="ID" Type="warehouse" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Budget" Member="Budgets">
+    <Type Name="Budget">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDOrgan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Year" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BudgetRequest" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="LocationUnit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Organ_Budget" Member="Organ" ThisKey="IDOrgan" OtherKey="ID" Type="Organ" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[User]" Member="Users">
+    <Type Name="User">
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Disabled" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ApplicationID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDOrgan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.warehouse" Member="warehouses">
+    <Type Name="warehouse">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RegisterNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WarehouseName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ResponsibleUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ResponsibleName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="warehouse_Transfer" Member="Transfers" ThisKey="ID" OtherKey="IDOriginWarehouse" Type="Transfer" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Organ" Member="Organs">
+    <Type Name="Organ">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Parent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Manager" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreatorUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="LastModificator" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="Warehouse" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="WarehouseMedical" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Organ_Budget" Member="Budgets" ThisKey="ID" OtherKey="IDOrgan" Type="Budget" />
+      <Association Name="Organ_Organ" Member="Organs" ThisKey="ID" OtherKey="Parent" Type="Organ" />
+      <Association Name="Organ_Person" Member="Persons" ThisKey="ID" OtherKey="IDOrgan" Type="Person" />
+      <Association Name="Organ_Factor" Member="Factors" ThisKey="ID" OtherKey="IDWarehouse" Type="Factor" />
+      <Association Name="Organ_Product" Member="Products" ThisKey="ID" OtherKey="IDWarehouse" Type="Product" />
+      <Association Name="Organ_RequestM" Member="RequestMs" ThisKey="ID" OtherKey="IDWarehouse" Type="RequestM" />
+      <Association Name="Organ_Organ" Member="Organ1" ThisKey="Parent" OtherKey="ID" Type="Organ" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Person" Member="Persons">
+    <Type Name="Person">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserParent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDOrgan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FatherName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NationalCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BirthDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Sex" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MaritalStatus" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UserType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Boss" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatorUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="LastModificator" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastModificationDate1" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="LastModificationTime1" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="LocationUnit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Person_Person" Member="Persons" ThisKey="UserID" OtherKey="UserParent" Type="Person" />
+      <Association Name="Person_RequestM" Member="RequestMs" ThisKey="UserID" OtherKey="IDPerson" Type="RequestM" />
+      <Association Name="Organ_Person" Member="Organ" ThisKey="IDOrgan" OtherKey="ID" Type="Organ" IsForeignKey="true" />
+      <Association Name="Person_Person" Member="Person1" ThisKey="UserParent" OtherKey="UserID" Type="Person" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.InStack" Member="InStacks">
+    <Type Name="InStack">
+      <Column Name="Expr3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FaName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Expr1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Expr2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Mojodi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Price" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Parent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDWarehouse" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Factor" Member="Factors">
+    <Type Name="Factor">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDWarehouse" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDProvider" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDRequestM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FactorDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="FactorTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="factorUserid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ResponsibleBuy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ResponsibleSale" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Product" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Ordernum" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="barname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DeliveryDateF" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="WarehouseKeeper" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="WarehouseHandling" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DateInProtection" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="TimeInProtection" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="InProtection" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IPUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WarehouseKeeperDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="WarehouseKeeperTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="WarehouseKeeperUsername" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Factor_FactorProduct" Member="FactorProducts" ThisKey="ID" OtherKey="IDFactor" Type="FactorProduct" />
+      <Association Name="Organ_Factor" Member="Organ" ThisKey="IDWarehouse" OtherKey="ID" Type="Organ" IsForeignKey="true" />
+      <Association Name="Provider_Factor" Member="Provider" ThisKey="IDProvider" OtherKey="ID" Type="Provider" IsForeignKey="true" />
+      <Association Name="RequestM_Factor" Member="RequestM" ThisKey="IDRequestM" OtherKey="ID" Type="RequestM" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ViewBudge" Member="ViewBudges">
+    <Type Name="ViewBudge">
+      <Column Name="IDProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FaName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AmountBuy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Price" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LocationUnit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Product" Member="Products">
+    <Type Name="Product">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Parent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FaName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RegisterNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IDMeasurement" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDWarehouse" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Price" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LessAmount" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InitialBalance" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RegisterDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Shelf" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TechnicalNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Unit" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EnName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DateAdd" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="TimeAdd" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="Weight" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Dimensions" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Color" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ProductBit" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ExpirationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="MESC" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="GroupP" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatorUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="LastModificator" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Product_ProtectionProduct" Member="ProtectionProducts" ThisKey="ID" OtherKey="IDProduct" Type="ProtectionProduct" />
+      <Association Name="Product_Protection" Member="Protections" ThisKey="ID" OtherKey="IDProduct" Type="Protection" />
+      <Association Name="Product_Product" Member="Products" ThisKey="ID" OtherKey="Parent" Type="Product" />
+      <Association Name="Product_RequestD" Member="RequestDs" ThisKey="ID" OtherKey="IDProduct" Type="RequestD" />
+      <Association Name="Product_FactorProduct" Member="FactorProducts" ThisKey="ID" OtherKey="IDProduct" Type="FactorProduct" />
+      <Association Name="Organ_Product" Member="Organ" ThisKey="IDWarehouse" OtherKey="ID" Type="Organ" IsForeignKey="true" />
+      <Association Name="Product_Product" Member="Product1" ThisKey="Parent" OtherKey="ID" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RequestD" Member="RequestDs">
+    <Type Name="RequestD">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDRequestM" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDProduct" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="AmountBuy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AmountDelivery" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AmountRequest" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OrganBoss" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="WarehouseKeeper" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="WarehouseKeeperBoss" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Delivery" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Num" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Budget" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FinancialBoss" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SupportLibary" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="frmHealthcareBoss" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PMRLP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DatePMRLP" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="TimePMRLP" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="AmountPMRLP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WKBossLP" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="WKBossPMR" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="BudgetLP" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="BudgetPRM" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FinancialLP" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FinancialPRM" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SupportLibraryLP" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SupportLibraryPRM" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="HealthcareBossPRM" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ProcurementLP" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ProcurementPRM" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="OrdersPRM" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="BuyUnitPRM" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="MedicalEquipmentPRM" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UMDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="UMtime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="IBDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="IBTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="WKBDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="WKBTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="WKBLPDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="WKBLPTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="WKBPMRDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="WKBPMRTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="BGLPDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="BGLPTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="BGPMRDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="BGPMRTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="FLPDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="FLPTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="FPMRDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="FPMRTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="SLLPDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="SLLPTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="SLPMRDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="SLPMRTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="HBPMRDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="HBPMRTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="PLPDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="PLPTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="PPMRDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="PPMRTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="OPMRDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="OPMRTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="BUPMRDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="BUPMRTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="MEPMRDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="MEPMRTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="UMUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IBUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WKBUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BuyPMRLP" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DateOutProtection" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="TimeOutProtection" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="outProtection" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="OPUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="BTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="WKBLPUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WKBPMRUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BGPMRUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FLPUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FPMRUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SLLPUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SLPMRUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HBPMRUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PPMRUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OPMRUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BUPMRUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MEPMRUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Buser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FactorBuy" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatorUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="LastModificator" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastModificationDate1" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="LastModificationTime1" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="LocationUnit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PricePMRLP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PMRWarHousekeeper" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LPWarHousekeeper" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PMRLPWarHousekeeper" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RequestID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Product_RequestD" Member="Product" ThisKey="IDProduct" OtherKey="ID" Type="Product" IsForeignKey="true" />
+      <Association Name="RequestM_RequestD" Member="RequestM" ThisKey="IDRequestM" OtherKey="ID" Type="RequestM" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RequestM" Member="RequestMs">
+    <Type Name="RequestM">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDWarehouse" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDPerson" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDOrgan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Type" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RequestDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="RequestTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="OrganBoss" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="WarehouseKeeper" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="WarehouseKeeperBoss" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DeliveryDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DeliveryTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="Tahvildahande" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Ordernum" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="barname" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="PMR" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LP" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="WKBossLP" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="WKBossPRM" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="BudgetLP" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="BudgetPRM" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FinancialLP" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FinancialPRM" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SupportLibraryLP" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SupportLibraryPRM" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="HealthcareBossPRM" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ProcurementLP" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ProcurementPRM" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="OrdersPRM" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="BuyUnitPRM" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="MedicalEquipmentPRM" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UMDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="UMtime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="IBDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="IBTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="WKBDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="WKBTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="WKBLPDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="WKBLPTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="WKBPMRDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="WKBPMRTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="BGLPDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="BGLPTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="BGPMRDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="BGPMRTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="FLPDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="FLPTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="FPMRDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="FPMRTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="SLLPDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="SLLPTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="SLPMRDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="SLPMRTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="HBPMRDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="HBPMRTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="PLPDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="PLPTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="PPMRDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="PPMRTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="OPMRDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="OPMRTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="BUPMRDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="BUPMRTime" Type="System.String" DbType="NChar(8)" CanBeNull="true" />
+      <Column Name="MEPMRDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="MEPMRTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="RUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UMUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IBUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WKBUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FactorCode" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="BuyPMRLP" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="OrganName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DateOutProtection" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="TimeOutProtection" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="outProtection" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="OPUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="BTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="WKBLPUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WKBPMRUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BGPMRUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FLPUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FPMRUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SLLPUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SLPMRUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HBPMRUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PPMRUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OPMRUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BUPMRUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MEPMRUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Buser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FactorBuy" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatorUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="LastModificator" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastModificationDate1" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="LastModificationTime1" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="LocationUnit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WarHouseORUserPMRLP" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PMRWarHousekeeper" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LPWarHousekeeper" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RequestID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="RequestM_Factor" Member="Factors" ThisKey="ID" OtherKey="IDRequestM" Type="Factor" />
+      <Association Name="RequestM_RequestD" Member="RequestDs" ThisKey="ID" OtherKey="IDRequestM" Type="RequestD" />
+      <Association Name="Organ_RequestM" Member="Organ" ThisKey="IDWarehouse" OtherKey="ID" Type="Organ" IsForeignKey="true" />
+      <Association Name="Person_RequestM" Member="Person" ThisKey="IDPerson" OtherKey="UserID" Type="Person" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FactorProduct" Member="FactorProducts">
+    <Type Name="FactorProduct">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDFactor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AmountBuyAgo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AmountBuy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WarehouseKeeper" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="WarehouseKeeperDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="WarehouseKeeperTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="Shelf" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ProductName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DateInProtection" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="TimeInProtection" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="InProtection" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IPUser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IDPR" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="Factor_FactorProduct" Member="Factor" ThisKey="IDFactor" OtherKey="ID" Type="Factor" IsForeignKey="true" />
+      <Association Name="Product_FactorProduct" Member="Product" ThisKey="IDProduct" OtherKey="ID" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

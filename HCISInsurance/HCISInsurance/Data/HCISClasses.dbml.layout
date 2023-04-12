@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 14.375, 12.875" name="HCISClasses">
+  <DataContextMoniker Name="/HCISClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="9b8be512-e15c-4fe0-9f1d-c1ead0f5ea53" absoluteBounds="9.5, 5.5, 2, 2.3478011067708326">
+      <DataClassMoniker Name="/HCISClassesDataContext/Staff" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ae6328c1-d516-4fba-a840-fd2fd409cb1b" absoluteBounds="9.515, 5.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="56e0b9d1-15d7-4921-ae88-af6dca0c3018" absoluteBounds="6.75, 5.5, 2, 1.1939925130208327">
+      <DataClassMoniker Name="/HCISClassesDataContext/Speciality" />
+      <nestedChildShapes>
+        <elementListCompartment Id="827e393a-ff98-488a-a098-ceb03179c102" absoluteBounds="6.765, 5.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a9cfdb73-9c53-4558-84ab-d331d8e57f2e" absoluteBounds="0.75, 1.625, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/HCISClassesDataContext/ServiceCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="40da61cc-14df-4c4a-acd2-0f31b3357911" absoluteBounds="0.765, 2.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="604c0bef-5870-4405-ae4f-c3ca2d95f411" absoluteBounds="6.75, 7.75, 2, 4.6554182942708318">
+      <DataClassMoniker Name="/HCISClassesDataContext/Person" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d0a9a5b6-ea09-4e5f-b9b0-22cdca8df688" absoluteBounds="6.765, 8.21, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.75 : 6.09699625651042); (9.5 : 6.09699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISClassesDataContext/Speciality/Speciality_Staff" />
+      <nodes>
+        <classShapeMoniker Id="56e0b9d1-15d7-4921-ae88-af6dca0c3018" />
+        <classShapeMoniker Id="9b8be512-e15c-4fe0-9f1d-c1ead0f5ea53" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.75 : 10.1266102005208); (10.5 : 10.1266102005208); (10.5 : 7.84780110677083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISClassesDataContext/Person/Person_Staff" />
+      <nodes>
+        <classShapeMoniker Id="604c0bef-5870-4405-ae4f-c3ca2d95f411" />
+        <classShapeMoniker Id="9b8be512-e15c-4fe0-9f1d-c1ead0f5ea53" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4ace6fc2-bf52-4179-96b3-e390ad8ba601" absoluteBounds="12.125, 1.75, 2, 4.6554182942708326">
+      <DataClassMoniker Name="/HCISClassesDataContext/ViewTariffComplete" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8193179d-baf1-4629-a61b-d1034c84cb56" absoluteBounds="12.14, 2.21, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4f783098-7c66-4bc4-9b43-e0bec5711770" absoluteBounds="6.25, 0.875, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/HCISClassesDataContext/Tariff" />
+      <nestedChildShapes>
+        <elementListCompartment Id="698d865d-41ca-4bb1-9380-2bb9baced5cd" absoluteBounds="6.265, 1.335, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="19b938d2-d909-4237-830c-284f6df9ac4b" absoluteBounds="3.5, 1.125, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/HCISClassesDataContext/Service" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d592431e-1a6e-4794-bb4a-fcfe41b267f1" absoluteBounds="3.515, 1.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f8fffdd7-b100-4598-ba3f-f617aeef7a30" absoluteBounds="3.5, 5.625, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/HCISClassesDataContext/Insurance" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f0869ed0-1f6e-491f-b2a7-7505c2388aec" absoluteBounds="3.515, 6.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 2.20274983723958); (6.25 : 2.20274983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISClassesDataContext/Service/Service_Tariff" />
+      <nodes>
+        <classShapeMoniker Id="19b938d2-d909-4237-830c-284f6df9ac4b" />
+        <classShapeMoniker Id="4f783098-7c66-4bc4-9b43-e0bec5711770" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.20923076923077 : 3.28049967447917); (4.20923076923077 : 3.53049967447917); (4.80461538461539 : 3.53049967447917); (4.80461538461539 : 3.28049967447917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISClassesDataContext/Service/Service_Service" />
+      <nodes>
+        <classShapeMoniker Id="19b938d2-d909-4237-830c-284f6df9ac4b" />
+        <classShapeMoniker Id="19b938d2-d909-4237-830c-284f6df9ac4b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.22199625651042); (3.5 : 2.22199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HCISClassesDataContext/ServiceCategory/ServiceCategory_Service" />
+      <nodes>
+        <classShapeMoniker Id="a9cfdb73-9c53-4558-84ab-d331d8e57f2e" />
+        <classShapeMoniker Id="19b938d2-d909-4237-830c-284f6df9ac4b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 6.78774251302083); (6.46875 : 6.78774251302083); (6.46875 : 3.60740397135417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISClassesDataContext/Insurance/Insurance_Tariff" />
+      <nodes>
+        <classShapeMoniker Id="f8fffdd7-b100-4598-ba3f-f617aeef7a30" />
+        <classShapeMoniker Id="4f783098-7c66-4bc4-9b43-e0bec5711770" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="e4f731ba-317c-4548-af53-0fe2a68fd66f" absoluteBounds="2.625, 7.375, 2, 5.2323225911458326">
+      <DataClassMoniker Name="/HCISClassesDataContext/RVU" />
+      <nestedChildShapes>
+        <elementListCompartment Id="57752bf1-162e-4190-a5d2-1a5f31c8ffe0" absoluteBounds="2.6399999999999997, 7.8350000000000009, 1.9700000000000002, 4.672322591145833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

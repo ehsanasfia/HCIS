@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="2">
+      <MS_x0020_SQL Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>MS SQL</Alias>
+        <ConnectionStringEncrypted>9NjZC08IMchiE+3EdwCgbtFq+0jGSsLdy0clmOAZ5E+NxJ8CyVFLaW9BvVhiEW175DTPoWJWccjhe4SAY4jgYpBUfa/IXUKBzBuEjeoJpHvRyPmjVRh77WpPrOxjTOASniDZ60YIo4lpX9VsdyykZ9FWywLNXWHNaFv9bE0YZQ==</ConnectionStringEncrypted>
+        <Name>MS SQL</Name>
+      </MS_x0020_SQL>
+      <MS_x0020_SQL2 Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>MS SQL2</Alias>
+        <ConnectionStringEncrypted>9NhlC08IMQViE+3EdwCgbtFY+0jGS8Ldy0clmGQZ5E+NErsCyUtLaW9cpVhiEW0q0TTfoWJWcchnTYSAY1zgYvlUfa/IXUL5zBuEjeoJpHvRPvejVRh77WFPrOzqTGESniD360YIo4lpX5xsd0mkD9FgywLNXWHNaFz98E0Y4A==</ConnectionStringEncrypted>
+        <Name>MS SQL2</Name>
+      </MS_x0020_SQL2>
+    </Databases>
+    <DataSources isList="true" count="7">
+      <DataSource1 Ref="4" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>DataSource1</Alias>
+        <Columns isList="true" count="0" />
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>DataSource1</Name>
+        <NameInSource>MS SQL2</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>SELECT DoctorSalaryParams.GrossPayment, DoctorSalaryParams.EmpContrib,
+  DoctorSalaryParams.NetPayment, QualitativePoints.Total,
+  DoctorFunction.ServiceID, DoctorFunction.Amount, DoctorFunction.UnitPrice,
+  DoctorFunction.Multiplier, DoctorFunction.TotalPrice, DoctorSalaryParams.Date,
+  DoctorSalaryParams.StaffID
+FROM DoctorFunction INNER JOIN
+  DoctorSalaryParams ON DoctorSalaryParams.StaffID = DoctorFunction.StaffID AND
+    DoctorSalaryParams.Date = DoctorFunction.Date INNER JOIN
+  QualitativePoints ON DoctorSalaryParams.StaffID = QualitativePoints.StaffID
+    AND DoctorSalaryParams.Date = QualitativePoints.Date</SqlCommand>
+      </DataSource1>
+      <DoctorFunction Ref="5" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>DoctorFunction</Alias>
+        <Columns isList="true" count="12">
+          <value>ID,System.Int64</value>
+          <value>StaffID,System.Int64</value>
+          <value>ServiceID,System.Int32</value>
+          <value>Date,System.String</value>
+          <value>Amount,System.Single</value>
+          <value>StandardAmount,System.Single</value>
+          <value>ConfirmedAmount,System.Single</value>
+          <value>ClinicalOfficerConfirm,System.Boolean</value>
+          <value>TimeOfExist,System.Int32</value>
+          <value>TotalPrice,System.Decimal</value>
+          <value>UnitPrice,System.Decimal</value>
+          <value>Multiplier,System.Int32</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>DoctorFunction</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from DoctorFunction</SqlCommand>
+      </DoctorFunction>
+      <DoctorSalaryParams Ref="6" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>DoctorSalaryParams</Alias>
+        <Columns isList="true" count="5">
+          <value>StaffID,System.Int64</value>
+          <value>Date,System.String</value>
+          <value>GrossPayment,System.Decimal</value>
+          <value>EmpContrib,System.Decimal</value>
+          <value>NetPayment,System.Decimal</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>DoctorSalaryParams</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from DoctorSalaryParams</SqlCommand>
+      </DoctorSalaryParams>
+      <Person Ref="7" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>Person</Alias>
+        <Columns isList="true" count="51">
+          <value>AllowInstallment,System.Boolean</value>
+          <value>NotUse,System.Boolean</value>
+          <value>Visibel,System.Boolean</value>
+          <value>Death,System.Boolean</value>
+          <value>Forieng,System.Boolean</value>
+          <value>ID,System.Int64</value>
+          <value>MedicalID,System.String</value>
+          <value>FamilyNumber,System.String</value>
+          <value>FamilyDoctor,System.Int64</value>
+          <value>FamilyNurse,System.Int64</value>
+          <value>NationalCode,System.String</value>
+          <value>PersonalCode,System.String</value>
+          <value>FirstName,System.String</value>
+          <value>LastName,System.String</value>
+          <value>Sex,System.Boolean</value>
+          <value>IdentityNumber,System.String</value>
+          <value>IdentityPlace,System.String</value>
+          <value>FatherName,System.String</value>
+          <value>BirthDate,System.String</value>
+          <value>BirthPlace,System.String</value>
+          <value>Phone,System.String</value>
+          <value>CellularPhone,System.String</value>
+          <value>WorkPhone,System.String</value>
+          <value>Photo,System.String</value>
+          <value>Address,System.String</value>
+          <value>WorkAddress,System.String</value>
+          <value>InsuranceName,System.String</value>
+          <value>InsuranceNo,System.String</value>
+          <value>Education,System.String</value>
+          <value>Comment,System.String</value>
+          <value>MaritalStatus,System.String</value>
+          <value>Religion,System.String</value>
+          <value>CurrentJob,System.String</value>
+          <value>BloodType,System.String</value>
+          <value>Weight,System.Single</value>
+          <value>Height,System.Single</value>
+          <value>Barcode,System.Int32</value>
+          <value>CreatorUser,System.Int32</value>
+          <value>CreationDate,System.String</value>
+          <value>CreationTime,System.String</value>
+          <value>LastModificator,System.Int32</value>
+          <value>LastModificationDate,System.String</value>
+          <value>LastModificationTime,System.String</value>
+          <value>BookletExpireDate,System.String</value>
+          <value>Nationality,System.String</value>
+          <value>PassportNumber,System.String</value>
+          <value>TS,System.DateTime</value>
+          <value>InsertTime,System.DateTime</value>
+          <value>DeathTime,System.String</value>
+          <value>DeathDate,System.String</value>
+          <value>DialectLanguage,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>Person</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from Person</SqlCommand>
+      </Person>
+      <QualitativePoints Ref="8" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>QualitativePoints</Alias>
+        <Columns isList="true" count="12">
+          <value>ID,System.Int64</value>
+          <value>StaffID,System.Int64</value>
+          <value>Date,System.String</value>
+          <value>Education,System.Int32</value>
+          <value>WorkExperience,System.Int32</value>
+          <value>PhysicalPresence,System.Int32</value>
+          <value>ResponsibleTheory,System.Int32</value>
+          <value>WorkQuality,System.Int32</value>
+          <value>Patientdissatisfaction,System.Int32</value>
+          <value>Nosave,System.Int32</value>
+          <value>Total,System.Int32</value>
+          <value>TotalPoint,System.Single</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>QualitativePoints</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from QualitativePoints</SqlCommand>
+      </QualitativePoints>
+      <Speciality Ref="9" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>Speciality</Alias>
+        <Columns isList="true" count="6">
+          <value>ID,System.Int32</value>
+          <value>OldID,System.Int32</value>
+          <value>Speciality,System.String</value>
+          <value>HeadUserID,System.Int32</value>
+          <value>SepasID,System.Int32</value>
+          <value>SATAIdProfessionType,System.Int64</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>Speciality</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from Speciality</SqlCommand>
+      </Speciality>
+      <Staff Ref="10" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>Staff</Alias>
+        <Columns isList="true" count="10">
+          <value>ID,System.Int64</value>
+          <value>Code,System.Int32</value>
+          <value>MedicalSystemCode,System.String</value>
+          <value>Position,System.String</value>
+          <value>RoomNumber,System.String</value>
+          <value>UserID,System.Int32</value>
+          <value>UserType,System.String</value>
+          <value>SpecialityID,System.Int32</value>
+          <value>SpecialityDegree,System.String</value>
+          <value>OrganizationLevel,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>Staff</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from Staff</SqlCommand>
+      </Staff>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Resources isList="true" count="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="11" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="1">
+        <GroupHeaderBand1 Ref="12" type="GroupHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.2,7.72,0.3</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <Name>GroupHeaderBand1</Name>
+          <Page isRef="11" />
+          <Parent isRef="11" />
+        </GroupHeaderBand1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>f6139d9a82e240ca8c93947b44ae2b07</Guid>
+      <Margins>0.39,0.39,0.39,0.39</Margins>
+      <Name>Page1</Name>
+      <PageHeight>11</PageHeight>
+      <PageWidth>8.5</PageWidth>
+      <PaperSize>Letter</PaperSize>
+      <Report isRef="0" />
+      <Watermark Ref="13" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PreviewSettings>268435455</PreviewSettings>
+  <PrinterSettings Ref="14" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>6/21/2018 2:15:06 PM</ReportChanged>
+  <ReportCreated>6/21/2018 10:27:43 AM</ReportCreated>
+  <ReportFile>D:\_Projects\HCISContracts\HCISContracts\Reports\DoctorStatement.mrt</ReportFile>
+  <ReportGuid>a0198563f71044cb823fabcd521e5005</ReportGuid>
+  <ReportImage isNull="true" />
+  <ReportName>Report</ReportName>
+  <ReportUnit>Inches</ReportUnit>
+  <ReportVersion>2016.3.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

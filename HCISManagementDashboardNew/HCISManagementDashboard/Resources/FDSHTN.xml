@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="شاخص بیماری ها" />
+  <DataSources>
+    <SqlDataSource ComponentName="dashboardSqlDataSource1">
+      <Name>SQL Data Source 1</Name>
+      <Connection Name="172.30.1.145_HCIS_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="172.30.1.145" />
+          <Parameter Name="database" Value="HCIS" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="artp" />
+          <Parameter Name="password" Value="506070" />
+        </Parameters>
+      </Connection>
+      <Query Type="SelectQuery" Name="Vw_FDMsicknessPatientCount">
+        <Tables>
+          <Table Name="Vw_FDMsicknessPatientCount" Meta="0|0|125|120" />
+        </Tables>
+        <Columns>
+          <AllColumns Table="Vw_FDMsicknessPatientCount" />
+        </Columns>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="Vw_FDMsicknessPatientCount">
+            <Field Name="P2" Type="String" />
+            <Field Name="Dep" Type="String" />
+            <Field Name="C" Type="Int32" />
+            <Field Name="CJamiat" Type="Int32" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+      <CalculatedFields>
+        <CalculatedField Name="Calculated Field 1" Expression="Iif([CJamiat] = 0, 0, [C] * 1.0 / [CJamiat])" DataType="Auto" DataMember="Vw_FDMsicknessPatientCount" />
+      </CalculatedFields>
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <Grid ComponentName="gridDashboardItem1" Name="شاخص بیماری ها" DataSource="dashboardSqlDataSource1" DataMember="Vw_FDMsicknessPatientCount">
+      <DataItems>
+        <Dimension DataMember="Dep" UniqueName="DataItem0" />
+        <Dimension DataMember="P2" UniqueName="DataItem1" />
+        <Measure DataMember="C" UniqueName="DataItem2" />
+        <Measure DataMember="CJamiat" UniqueName="DataItem3">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+        <Measure DataMember="Calculated Field 1" UniqueName="DataItem4">
+          <NumericFormat FormatType="Percent" />
+        </Measure>
+      </DataItems>
+      <FormatRules>
+        <GridItemFormatRule Name="FormatRule 1" DataItem="DataItem4">
+          <FormatConditionBar MinimumType="Percent" MaximumType="Percent" Maximum="100">
+            <NegativeStyleSettings PredefinedColor="PaleRed" />
+            <StyleSettings PredefinedColor="PaleRed" />
+            <BarOptions />
+          </FormatConditionBar>
+        </GridItemFormatRule>
+      </FormatRules>
+      <GridColumns>
+        <GridDimensionColumn Name="درمانگاه">
+          <Dimension UniqueName="DataItem0" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="بیماری">
+          <Dimension UniqueName="DataItem1" />
+        </GridDimensionColumn>
+        <GridMeasureColumn Name="تعداد بیماران">
+          <Measure UniqueName="DataItem2" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="جمعیت تحت پوشش">
+          <Measure UniqueName="DataItem3" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="شاخص (درصد)">
+          <Measure UniqueName="DataItem4" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions EnableBandedRows="true" ColumnWidthMode="AutoFitToContents" WordWrap="true" />
+    </Grid>
+    <ListBox ComponentName="listBoxDashboardItem1" Name="درمانگاه" DataSource="dashboardSqlDataSource1" DataMember="Vw_FDMsicknessPatientCount">
+      <DataItems>
+        <Dimension DataMember="Dep" UniqueName="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+    <ListBox ComponentName="listBoxDashboardItem2" Name="بیماری" DataSource="dashboardSqlDataSource1" DataMember="Vw_FDMsicknessPatientCount" FilterString="StartsWith([DataItem0], 'هیپرتانسیون')">
+      <DataItems>
+        <Dimension DataMember="P2" UniqueName="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="gridDashboardItem1" Weight="85.704874835309624" />
+      <LayoutGroup Orientation="Vertical" Weight="14.295125164690383">
+        <LayoutItem DashboardItem="listBoxDashboardItem2" Weight="16.014669926650367" />
+        <LayoutItem DashboardItem="listBoxDashboardItem1" Weight="83.98533007334963" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

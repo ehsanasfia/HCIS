@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 25, 19.5" name="Sepas">
+  <DataContextMoniker Name="/SepasDataContext" />
+  <nestedChildShapes>
+    <classShape Id="eb67d254-4b93-4b8e-a903-8ea21552078e" absoluteBounds="8.375, 1.5, 2, 11.578269856770833">
+      <DataClassMoniker Name="/SepasDataContext/Person" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8146f10e-c9a2-4c6f-b02c-bc4e0fad33b3" absoluteBounds="8.39, 1.96, 1.9700000000000002, 11.018269856770832" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9.08423076923077 : 13.0782698567708); (9.08423076923077 : 13.3282698567708); (9.67961538461539 : 13.3282698567708); (9.67961538461539 : 13.0782698567708)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SepasDataContext/Person/Person_Person" />
+      <nodes>
+        <classShapeMoniker Id="eb67d254-4b93-4b8e-a903-8ea21552078e" />
+        <classShapeMoniker Id="eb67d254-4b93-4b8e-a903-8ea21552078e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.08423076923077 : 1.5); (9.08423076923077 : 1.25); (9.67961538461539 : 1.25); (9.67961538461539 : 1.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SepasDataContext/Person/Person_Person1" />
+      <nodes>
+        <classShapeMoniker Id="eb67d254-4b93-4b8e-a903-8ea21552078e" />
+        <classShapeMoniker Id="eb67d254-4b93-4b8e-a903-8ea21552078e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="55265eb7-7406-48d4-9970-0042ecb7a22f" absoluteBounds="14.875, 2, 2, 16.770408528645834">
+      <DataClassMoniker Name="/SepasDataContext/GivenServiceM" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c995362f-d70d-4ced-b793-a3b121c8d7cb" absoluteBounds="14.89, 2.46, 1.9700000000000002, 16.210408528645832" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(15.5842307692308 : 18.7704085286458); (15.5842307692308 : 19.0204085286458); (16.1796153846154 : 19.0204085286458); (16.1796153846154 : 18.7704085286458)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SepasDataContext/GivenServiceM/GivenServiceM_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="55265eb7-7406-48d4-9970-0042ecb7a22f" />
+        <classShapeMoniker Id="55265eb7-7406-48d4-9970-0042ecb7a22f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.375 : 10.4461490885417); (14.875 : 10.4461490885417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SepasDataContext/Person/Person_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="eb67d254-4b93-4b8e-a903-8ea21552078e" />
+        <classShapeMoniker Id="55265eb7-7406-48d4-9970-0042ecb7a22f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="fec3d135-0ed9-4ea2-ae33-6a9096749242" absoluteBounds="18.25, 1.875, 2, 6.5784326171875005">
+      <DataClassMoniker Name="/SepasDataContext/GivenServiceD" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f0e98260-e7f3-49c7-b094-3e1f74120b75" absoluteBounds="18.265, 2.335, 1.9700000000000002, 6.0184326171875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(16.875 : 5.22671630859375); (18.25 : 5.22671630859375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SepasDataContext/GivenServiceM/GivenServiceM_GivenServiceD" />
+      <nodes>
+        <classShapeMoniker Id="55265eb7-7406-48d4-9970-0042ecb7a22f" />
+        <classShapeMoniker Id="fec3d135-0ed9-4ea2-ae33-6a9096749242" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ad676d1e-a103-4b21-8a16-3d9a7230753f" absoluteBounds="11.375, 1.75, 2, 6.0015283203125">
+      <DataClassMoniker Name="/SepasDataContext/Dossier" />
+      <nestedChildShapes>
+        <elementListCompartment Id="471ca6db-3807-431e-9dbb-65b11d6845df" absoluteBounds="11.39, 2.21, 1.9700000000000002, 5.4415283203125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(13.375 : 4.87576416015625); (14.875 : 4.87576416015625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SepasDataContext/Dossier/Dossier_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="ad676d1e-a103-4b21-8a16-3d9a7230753f" />
+        <classShapeMoniker Id="55265eb7-7406-48d4-9970-0042ecb7a22f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.375 : 4.75076416015625); (11.375 : 4.75076416015625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SepasDataContext/Person/Person_Dossier" />
+      <nodes>
+        <classShapeMoniker Id="eb67d254-4b93-4b8e-a903-8ea21552078e" />
+        <classShapeMoniker Id="ad676d1e-a103-4b21-8a16-3d9a7230753f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="7cf9aded-be64-4dc0-874f-2d69e9d893d3" absoluteBounds="22.75, 1.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SepasDataContext/Definition" />
+      <nestedChildShapes>
+        <elementListCompartment Id="62a76708-b80c-4a21-b783-38af6f6ea307" absoluteBounds="22.765, 2.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(23.75 : 3.32859537760417); (23.75 : 13.6431705729167); (16.875 : 13.6431705729167)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SepasDataContext/Definition/Definition_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="7cf9aded-be64-4dc0-874f-2d69e9d893d3" />
+        <classShapeMoniker Id="55265eb7-7406-48d4-9970-0042ecb7a22f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(23.2187475 : 3.32859537760417); (23.2187475 : 11.0482990950521); (16.875 : 11.0482990950521)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SepasDataContext/Definition/Definition_GivenServiceM1" />
+      <nodes>
+        <classShapeMoniker Id="7cf9aded-be64-4dc0-874f-2d69e9d893d3" />
+        <classShapeMoniker Id="55265eb7-7406-48d4-9970-0042ecb7a22f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(23.4524234637921 : 1.75); (23.4524234637921 : 1.5); (24.0617468474559 : 1.5); (24.0617468474559 : 1.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SepasDataContext/Definition/Definition_Definition" />
+      <nodes>
+        <classShapeMoniker Id="7cf9aded-be64-4dc0-874f-2d69e9d893d3" />
+        <classShapeMoniker Id="7cf9aded-be64-4dc0-874f-2d69e9d893d3" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ea1b9755-a528-4fa2-a017-61b48acf7512" absoluteBounds="5.125, 1.5, 2, 16.578107096354167">
+      <DataClassMoniker Name="/SepasDataContext/Vw_Sepa" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3419ddf0-1d5f-4b5f-a4d4-fd78ae1cd671" absoluteBounds="5.14, 1.96, 1.9700000000000002, 16.018107096354164" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

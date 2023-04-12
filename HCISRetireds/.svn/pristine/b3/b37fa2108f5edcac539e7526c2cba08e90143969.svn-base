@@ -1,0 +1,220 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Bazneshastegan
+</name>
+</assembly>
+<members>
+<member name="P:Bazneshastegan.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Bazneshastegan.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:Bazneshastegan.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="T:Bazneshastegan.ReaderDataset.Tbl_Baz_FileLoadDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Bazneshastegan.ReaderDataset.ResXmlDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Bazneshastegan.ReaderDataset.NonXmlDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Bazneshastegan.ReaderDataset.ResXml_errorDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Bazneshastegan.ReaderDataset.OutXml_errorDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Bazneshastegan.ReaderDataset.NonXml_errorDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Bazneshastegan.ReaderDataset.OutXmlDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Bazneshastegan.ReaderDataset.Tbl_Baz_FileLoadRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Bazneshastegan.ReaderDataset.ResXmlRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Bazneshastegan.ReaderDataset.NonXmlRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Bazneshastegan.ReaderDataset.ResXml_errorRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Bazneshastegan.ReaderDataset.OutXml_errorRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Bazneshastegan.ReaderDataset.NonXml_errorRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Bazneshastegan.ReaderDataset.OutXmlRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Bazneshastegan.ReaderDataset.Tbl_Baz_FileLoadRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Bazneshastegan.ReaderDataset.ResXmlRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Bazneshastegan.ReaderDataset.NonXmlRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Bazneshastegan.ReaderDataset.ResXml_errorRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Bazneshastegan.ReaderDataset.OutXml_errorRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Bazneshastegan.ReaderDataset.NonXml_errorRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Bazneshastegan.ReaderDataset.OutXmlRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Bazneshastegan.ReaderDataset">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Bazneshastegan.ReaderDatasetTableAdapters.Tbl_Baz_FileLoadTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Bazneshastegan.ReaderDatasetTableAdapters.QueriesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Bazneshastegan.ReaderDatasetTableAdapters.TableAdapterManager.UpdateUpdatedRows(Bazneshastegan.ReaderDataset,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:Bazneshastegan.ReaderDatasetTableAdapters.TableAdapterManager.UpdateInsertedRows(Bazneshastegan.ReaderDataset,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:Bazneshastegan.ReaderDatasetTableAdapters.TableAdapterManager.UpdateDeletedRows(Bazneshastegan.ReaderDataset,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:Bazneshastegan.ReaderDatasetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:Bazneshastegan.ReaderDatasetTableAdapters.TableAdapterManager.UpdateAll(Bazneshastegan.ReaderDataset)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:Bazneshastegan.ReaderDatasetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:Bazneshastegan.ReaderDatasetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:Bazneshastegan.ReaderDatasetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:Bazneshastegan.DS.bazneshasteDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Bazneshastegan.DS.showsarpaeeDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Bazneshastegan.DS.bazneshasteRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Bazneshastegan.DS.showsarpaeeRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Bazneshastegan.DS.bazneshasteRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Bazneshastegan.DS.showsarpaeeRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Bazneshastegan.DS">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Bazneshastegan.DSTableAdapters.bazneshasteTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Bazneshastegan.DSTableAdapters.showsarpaeeTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Bazneshastegan.DSTableAdapters.TableAdapterManager.UpdateUpdatedRows(Bazneshastegan.DS,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:Bazneshastegan.DSTableAdapters.TableAdapterManager.UpdateInsertedRows(Bazneshastegan.DS,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:Bazneshastegan.DSTableAdapters.TableAdapterManager.UpdateDeletedRows(Bazneshastegan.DS,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:Bazneshastegan.DSTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:Bazneshastegan.DSTableAdapters.TableAdapterManager.UpdateAll(Bazneshastegan.DS)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:Bazneshastegan.DSTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:Bazneshastegan.DSTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:Bazneshastegan.DSTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+</members>
+</doc>

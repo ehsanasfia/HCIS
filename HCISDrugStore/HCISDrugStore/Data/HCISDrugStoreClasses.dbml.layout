@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 18.125, 22.5" name="HCISDrugStoreClasses">
+  <DataContextMoniker Name="/HCISDrugStoreClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d4915b54-758d-467b-9854-e2c9bc499eee" absoluteBounds="13.125, 2.25, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/HCISDrugStoreClassesDataContext/Tariff" />
+      <nestedChildShapes>
+        <elementListCompartment Id="66cf4dd6-95b6-4e77-9245-7cd2dfb2260d" absoluteBounds="13.14, 2.71, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="623b7726-f77d-49a4-ba57-4844551a3640" absoluteBounds="3.5, 7.875, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/HCISDrugStoreClassesDataContext/Staff" />
+      <nestedChildShapes>
+        <elementListCompartment Id="462363af-2e4a-4238-a8d2-83017e2d08ff" absoluteBounds="3.515, 8.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="896cf7d8-d945-451f-95fb-c9e088221865" absoluteBounds="0.75, 4.5, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/HCISDrugStoreClassesDataContext/Speciality" />
+      <nestedChildShapes>
+        <elementListCompartment Id="03548fac-6d1b-4a4e-8f14-e6e5571ce4e7" absoluteBounds="0.765, 4.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e173e2fa-9113-48a9-b5b6-90898b098b8b" absoluteBounds="6.5, 12.5, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/HCISDrugStoreClassesDataContext/ServiceCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fc1f5ba7-58c6-45ff-94a4-005fd186e777" absoluteBounds="6.515, 12.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="306e0716-004b-460f-b420-6cfd6be44c3b" absoluteBounds="10.625, 3.625, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/HCISDrugStoreClassesDataContext/Insurance" />
+      <nestedChildShapes>
+        <elementListCompartment Id="96fc5131-f058-4c5b-9b85-2aab57b4579d" absoluteBounds="10.64, 4.085, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(0.75 : 5.09699625651042); (0.558 : 5.09699625651042); (0.558 : 7.55270540364583); (3.308 : 7.55270540364583); (3.308 : 9.04890055338542); (3.5 : 9.04890055338542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Speciality/Speciality_Staff" />
+      <nodes>
+        <classShapeMoniker Id="896cf7d8-d945-451f-95fb-c9e088221865" />
+        <classShapeMoniker Id="623b7726-f77d-49a4-ba57-4844551a3640" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(12.625 : 4.20755126953125); (13.125 : 4.20755126953125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Insurance/Insurance_Tariff" />
+      <nodes>
+        <classShapeMoniker Id="306e0716-004b-460f-b420-6cfd6be44c3b" />
+        <classShapeMoniker Id="d4915b54-758d-467b-9854-e2c9bc499eee" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a61c4162-752f-41d1-9e55-2dc72a84acd7" absoluteBounds="6.625, 6.125, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/HCISDrugStoreClassesDataContext/Agenda" />
+      <nestedChildShapes>
+        <elementListCompartment Id="356a8a47-44f1-40f5-950e-b1e1a9547520" absoluteBounds="6.64, 6.585, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 9.29688391731771); (5.66666666666667 : 9.29688391731771 : JumpStart); (5.83333333333333 : 9.29688391731771 : JumpEnd); (5.84 : 9.29688391731771); (5.84 : 11.3154182942708); (6.62589743589744 : 11.3154182942708 : JumpStart); (6.7925641025641 : 11.3154182942708 : JumpEnd); (7.22128205128206 : 11.3154182942708 : JumpStart); (7.38794871794872 : 11.3154182942708 : JumpEnd); (8.865 : 11.3154182942708); (8.865 : 7.77965413411458); (8.625 : 7.77965413411458)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Staff/Staff_Agenda" />
+      <nodes>
+        <classShapeMoniker Id="623b7726-f77d-49a4-ba57-4844551a3640" />
+        <classShapeMoniker Id="a61c4162-752f-41d1-9e55-2dc72a84acd7" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6ae70392-7d65-4442-b37e-6cbb07f4c8d3" absoluteBounds="6, 6.5, 2, 4.6554182942708326">
+      <DataClassMoniker Name="/HCISDrugStoreClassesDataContext/Payment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="efdb2234-a535-446e-8e6a-b585f9e45b0a" absoluteBounds="6.015, 6.96, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.70923076923077 : 11.1554182942708); (6.70923076923077 : 11.6554182942708); (7.30461538461539 : 11.6554182942708); (7.30461538461539 : 11.1554182942708)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Payment/Payment_Payment" />
+      <nodes>
+        <classShapeMoniker Id="6ae70392-7d65-4442-b37e-6cbb07f4c8d3" />
+        <classShapeMoniker Id="6ae70392-7d65-4442-b37e-6cbb07f4c8d3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 9.69835083007813); (5.66666666666667 : 9.69835083007813 : JumpStart); (5.92333333333333 : 9.69835083007813 : JumpEnd); (6 : 9.69835083007813)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Staff/Staff_Payment" />
+      <nodes>
+        <classShapeMoniker Id="623b7726-f77d-49a4-ba57-4844551a3640" />
+        <classShapeMoniker Id="6ae70392-7d65-4442-b37e-6cbb07f4c8d3" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a32bdff4-7f3b-4f2f-b145-2579c6f7fbf5" absoluteBounds="5, 1, 2, 1.3862939453125">
+      <DataClassMoniker Name="/HCISDrugStoreClassesDataContext/SpecialityDrug" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1516c127-c15a-4d35-8312-0220881cd046" absoluteBounds="5.015, 1.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.35423126923077 : 4.5); (1.35423126923077 : 3.87180826822917); (3.0625 : 3.87180826822917); (3.0625 : 0.90625); (6 : 0.90625); (6 : 1)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Speciality/Speciality_SpecialityDrug" />
+      <nodes>
+        <classShapeMoniker Id="896cf7d8-d945-451f-95fb-c9e088221865" />
+        <classShapeMoniker Id="a32bdff4-7f3b-4f2f-b145-2579c6f7fbf5" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="eebb03d1-e474-42e4-bd1f-95046fbbc319" absoluteBounds="1.125, 7.75, 2, 9.6552555338541648">
+      <DataClassMoniker Name="/HCISDrugStoreClassesDataContext/Person" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e675e7b4-0a26-46bd-a914-7d5b88e80670" absoluteBounds="1.1400000000000001, 8.21, 1.9700000000000002, 9.0952555338541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.125 : 8.39945027669271); (3.5 : 8.39945027669271)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Person/Person_Staff" />
+      <nodes>
+        <classShapeMoniker Id="eebb03d1-e474-42e4-bd1f-95046fbbc319" />
+        <classShapeMoniker Id="623b7726-f77d-49a4-ba57-4844551a3640" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.125 : 10.7203597005208); (5.15103916666667 : 10.7203597005208 : JumpStart); (5.53646083333333 : 10.7203597005208 : JumpEnd); (5.66666666666667 : 10.7203597005208 : JumpStart); (5.92333333333333 : 10.7203597005208 : JumpEnd); (6 : 10.7203597005208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Person/Person_Payment" />
+      <nodes>
+        <classShapeMoniker Id="eebb03d1-e474-42e4-bd1f-95046fbbc319" />
+        <classShapeMoniker Id="6ae70392-7d65-4442-b37e-6cbb07f4c8d3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.83423076923077 : 17.4052555338542); (1.83423076923077 : 17.6552555338542); (2.42961538461538 : 17.6552555338542); (2.42961538461538 : 17.4052555338542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Person/Person_Person" />
+      <nodes>
+        <classShapeMoniker Id="eebb03d1-e474-42e4-bd1f-95046fbbc319" />
+        <classShapeMoniker Id="eebb03d1-e474-42e4-bd1f-95046fbbc319" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.83423076923077 : 7.75); (1.83423076923077 : 7.625); (2.42961538461538 : 7.625); (2.42961538461538 : 7.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Person/Person_Person1" />
+      <nodes>
+        <classShapeMoniker Id="eebb03d1-e474-42e4-bd1f-95046fbbc319" />
+        <classShapeMoniker Id="eebb03d1-e474-42e4-bd1f-95046fbbc319" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="79e7472e-1475-40ae-8e30-b9af1e9442c3" absoluteBounds="3.125, 18.375, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/HCISDrugStoreClassesDataContext/ViewTariffMaxDateFull" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0212c25f-c254-47f8-936f-804d1ad4d9a6" absoluteBounds="3.14, 18.835, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="82fe3892-4dbb-4457-a028-b9194e051f81" absoluteBounds="15.75, 3.375, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/HCISDrugStoreClassesDataContext/DrugFrequencyUsage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="70bdceb6-8653-4c7d-8db6-9d12f0f114e4" absoluteBounds="15.765, 3.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a737bf2b-be89-4263-a973-9420d5d48a08" absoluteBounds="1, 0.5, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/HCISDrugStoreClassesDataContext/Department" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9162ed96-470e-47a4-8989-d553280ab659" absoluteBounds="1.0149999999999997, 0.96, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2 : 0.5); (2 : 0.2775); (2.44791866666667 : 0.277499999999999 : JumpStart); (2.61458533333333 : 0.2775 : JumpEnd); (7.19791666666667 : 0.277499999999999 : JumpStart); (7.36458333333333 : 0.2775 : JumpEnd); (8.215 : 0.2775); (8.215 : 5.885); (8.54466666666667 : 5.885 : JumpStart); (8.71133333333333 : 5.885 : JumpEnd); (8.99 : 5.885); (8.99 : 7.77965413411458); (8.625 : 7.77965413411458)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Department/Department_Agenda" />
+      <nodes>
+        <classShapeMoniker Id="a737bf2b-be89-4263-a973-9420d5d48a08" />
+        <classShapeMoniker Id="a61c4162-752f-41d1-9e55-2dc72a84acd7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.95846153846154 : 3.80930826822917); (1.95846153846154 : 4.05930826822917); (2.30461538461538 : 4.05930826822917); (2.30461538461538 : 3.80930826822917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Department/Department_Department" />
+      <nodes>
+        <classShapeMoniker Id="a737bf2b-be89-4263-a973-9420d5d48a08" />
+        <classShapeMoniker Id="a737bf2b-be89-4263-a973-9420d5d48a08" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d6bc54ff-8d7f-40be-a26f-6efd405f8950" absoluteBounds="1.25, 4.5, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/HCISDrugStoreClassesDataContext/PharmacyDrug" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2445ac82-0180-42e8-a383-d8ef5d24fc30" absoluteBounds="1.2649999999999997, 4.96, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.71480769230769 : 3.80930826822917); (2.71480769230769 : 4.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Department/Department_PharmacyDrug" />
+      <nodes>
+        <classShapeMoniker Id="a737bf2b-be89-4263-a973-9420d5d48a08" />
+        <classShapeMoniker Id="d6bc54ff-8d7f-40be-a26f-6efd405f8950" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="43b32a03-fc10-4d11-93bc-54c5373e602d" absoluteBounds="8.375, 0.5, 2, 4.2708154296875">
+      <DataClassMoniker Name="/HCISDrugStoreClassesDataContext/Pharmacy" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fc23d244-ef48-49df-a3ea-5e075a399efc" absoluteBounds="8.39, 0.96, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3 : 0.640625); (7.19791666666667 : 0.640624999999999 : JumpStart); (7.36458333333333 : 0.640625 : JumpEnd); (8.13166666666667 : 0.640624999999999 : JumpStart); (8.29833333333333 : 0.640625 : JumpEnd); (8.375 : 0.640625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Department/Department_Pharmacy" />
+      <nodes>
+        <classShapeMoniker Id="a737bf2b-be89-4263-a973-9420d5d48a08" />
+        <classShapeMoniker Id="43b32a03-fc10-4d11-93bc-54c5373e602d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 7.875); (4.5 : 6.33811686197917); (5.375 : 6.33811686197917); (5.375 : 2.72439797265625); (7.55729166666667 : 2.72439797265625 : JumpStart); (7.72395833333333 : 2.72439797265625 : JumpEnd); (8.13166666666667 : 2.72439797265625 : JumpStart); (8.29833333333333 : 2.72439797265625 : JumpEnd); (8.375 : 2.72439797265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Staff/Staff_Pharmacy" />
+      <nodes>
+        <classShapeMoniker Id="623b7726-f77d-49a4-ba57-4844551a3640" />
+        <classShapeMoniker Id="43b32a03-fc10-4d11-93bc-54c5373e602d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="82b9c1dd-60fc-4555-8d12-4b17a9750c39" absoluteBounds="15.5, 7.125, 2, 6.0015283203125">
+      <DataClassMoniker Name="/HCISDrugStoreClassesDataContext/Service" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cfde5770-fc82-489e-8d7a-d0ee3d4c8b17" absoluteBounds="15.515, 7.585, 1.9700000000000002, 5.4415283203125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(15.5937505 : 7.125); (15.5937505 : 2.78125); (15.5483333333333 : 2.78125 : JumpStart); (15.3816666666667 : 2.78125 : JumpEnd); (15.3333333333333 : 2.78125 : JumpStart); (15.1666666666667 : 2.78125 : JumpEnd); (15.125 : 2.78125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Service/Service_Tariff" />
+      <nodes>
+        <classShapeMoniker Id="82b9c1dd-60fc-4555-8d12-4b17a9750c39" />
+        <classShapeMoniker Id="d4915b54-758d-467b-9854-e2c9bc499eee" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.5 : 7.125); (15.676559822111 : 7.03221800812519 : JumpStart); (15.510941177889 : 7.01355675243819 : JumpEnd); (9.07280932211104 : 6.28813344474491 : JumpStart); (8.90719067788896 : 6.26947218905791 : JumpEnd); (8.625 : 6.23767605633803)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Service/Service_Agenda" />
+      <nodes>
+        <classShapeMoniker Id="82b9c1dd-60fc-4555-8d12-4b17a9750c39" />
+        <classShapeMoniker Id="a61c4162-752f-41d1-9e55-2dc72a84acd7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.57812725 : 7.125); (16.57812725 : 5.45839680989583); (16.1692722083333 : 5.45839680989583 : JumpStart); (16.0026055416667 : 5.45839680989583 : JumpEnd); (15.6770838333333 : 5.45839680989583 : JumpStart); (15.5104171666667 : 5.45839680989583 : JumpEnd); (15.25 : 5.45839680989583); (15.25 : 0.125); (7.28125 : 0.125); (7.28125 : 1.69314697265625); (7 : 1.69314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Service/Service_SpecialityDrug" />
+      <nodes>
+        <classShapeMoniker Id="82b9c1dd-60fc-4555-8d12-4b17a9750c39" />
+        <classShapeMoniker Id="a32bdff4-7f3b-4f2f-b145-2579c6f7fbf5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.085938875 : 7.125); (16.085938875 : 5.30589680989583); (15.6770838333333 : 5.30589680989583 : JumpStart); (15.5104171666667 : 5.30589680989583 : JumpEnd); (15.465 : 5.30589680989583); (15.465 : -0.115); (2.531252 : -0.115); (2.531252 : 0.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Service/Service_Department" />
+      <nodes>
+        <classShapeMoniker Id="82b9c1dd-60fc-4555-8d12-4b17a9750c39" />
+        <classShapeMoniker Id="a737bf2b-be89-4263-a973-9420d5d48a08" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.765626 : 7.125); (16.765626 : 5.372); (15.6770838333333 : 5.372 : JumpStart); (15.5104171666667 : 5.372 : JumpEnd); (15.3333333333333 : 5.372 : JumpStart); (15.1666666666667 : 5.372 : JumpEnd); (10.3333333333333 : 5.372 : JumpStart); (10.1666666666667 : 5.372 : JumpEnd); (8.628 : 5.372); (8.628 : 5.997); (5.622 : 5.997); (5.622 : 7.49170540364583); (4.58333333333333 : 7.49170540364583 : JumpStart); (4.41666666666667 : 7.49170540364583 : JumpEnd); (2.25 : 7.49170540364583); (2.25 : 7.42470540364583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Service/Service_PharmacyDrug" />
+      <nodes>
+        <classShapeMoniker Id="82b9c1dd-60fc-4555-8d12-4b17a9750c39" />
+        <classShapeMoniker Id="d6bc54ff-8d7f-40be-a26f-6efd405f8950" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.6246153846154 : 13.1265283203125); (16.6246153846154 : 13.3765283203125); (16.9430769230769 : 13.3765283203125); (16.9430769230769 : 13.1265283203125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Service/Service_Service" />
+      <nodes>
+        <classShapeMoniker Id="82b9c1dd-60fc-4555-8d12-4b17a9750c39" />
+        <classShapeMoniker Id="82b9c1dd-60fc-4555-8d12-4b17a9750c39" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 13.0969962565104); (9 : 13.0969962565104); (9 : 19.5685856119792); (13.2916666666667 : 19.5685856119792 : JumpStart); (13.4583333333333 : 19.5685856119792 : JumpEnd); (16.5 : 19.5685856119792); (16.5 : 13.1265283203125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/ServiceCategory/ServiceCategory_Service" />
+      <nodes>
+        <classShapeMoniker Id="e173e2fa-9113-48a9-b5b6-90898b098b8b" />
+        <classShapeMoniker Id="82b9c1dd-60fc-4555-8d12-4b17a9750c39" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.03451948076923 : 4.5); (2.03451948076923 : 4.25); (1.4375646025641 : 4.25 : JumpStart); (1.27089793589744 : 4.25 : JumpEnd); (0.125 : 4.25); (0.125 : 17.9052555338542); (5.66666666666667 : 17.9052555338542 : JumpStart); (5.83333333333333 : 17.9052555338542 : JumpEnd); (8.75 : 17.9052555338542); (8.75 : 19.3185856119792); (8.91666666666667 : 19.3185856119792 : JumpStart); (9.08333333333333 : 19.3185856119792 : JumpEnd); (9.87589743589744 : 19.3185856119792 : JumpStart); (10.0425641025641 : 19.3185856119792 : JumpEnd); (10.4712820512821 : 19.3185856119792 : JumpStart); (10.6379487179487 : 19.3185856119792 : JumpEnd); (13.2916666666667 : 19.3185856119792 : JumpStart); (13.4583333333333 : 19.3185856119792 : JumpEnd); (15.968748 : 19.3185856119792); (15.968748 : 13.1265283203125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Speciality/Speciality_Service" />
+      <nodes>
+        <classShapeMoniker Id="896cf7d8-d945-451f-95fb-c9e088221865" />
+        <classShapeMoniker Id="82b9c1dd-60fc-4555-8d12-4b17a9750c39" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a6395063-9d3e-4cf2-8346-f2d33e7ba71f" absoluteBounds="3.125, 1.625, 2, 4.4631168619791666">
+      <DataClassMoniker Name="/HCISDrugStoreClassesDataContext/Vw_drgPatientDrug" />
+      <nestedChildShapes>
+        <elementListCompartment Id="88d54384-2275-4d50-ad91-151047d47d2e" absoluteBounds="3.14, 2.085, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a1363cb8-2c21-440e-8d78-2a7a0bb49ec5" absoluteBounds="12.375, 6.125, 2, 6.5784326171875005">
+      <DataClassMoniker Name="/HCISDrugStoreClassesDataContext/GivenServiceD" />
+      <nestedChildShapes>
+        <elementListCompartment Id="63d79fe1-7ff8-4a19-b491-5d5e4a2a945d" absoluteBounds="12.39, 6.585, 1.9700000000000002, 6.0184326171875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(17.65625 : 5.14589680989583); (17.65625 : 6.5); (16.6614605833333 : 6.5 : JumpStart); (16.4947939166667 : 6.5 : JumpEnd); (16.1692722083333 : 6.5 : JumpStart); (16.0026055416667 : 6.5 : JumpEnd); (15.6770838333333 : 6.5 : JumpStart); (15.5104171666667 : 6.5 : JumpEnd); (14.375 : 6.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/DrugFrequencyUsage/DrugFrequencyUsage_GivenServiceD" />
+      <nodes>
+        <classShapeMoniker Id="82fe3892-4dbb-4457-a028-b9194e051f81" />
+        <classShapeMoniker Id="a1363cb8-2c21-440e-8d78-2a7a0bb49ec5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.5 : 9.91421630859375); (14.375 : 9.91421630859375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Service/Service_GivenServiceD" />
+      <nodes>
+        <classShapeMoniker Id="82b9c1dd-60fc-4555-8d12-4b17a9750c39" />
+        <classShapeMoniker Id="a1363cb8-2c21-440e-8d78-2a7a0bb49ec5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 8.80267332259115); (5.75 : 8.80267332259115); (5.75 : 19.6935856119792); (13.375 : 19.6935856119792); (13.375 : 12.7034326171875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Staff/Staff_GivenServiceD" />
+      <nodes>
+        <classShapeMoniker Id="623b7726-f77d-49a4-ba57-4844551a3640" />
+        <classShapeMoniker Id="a1363cb8-2c21-440e-8d78-2a7a0bb49ec5" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ed610465-4410-47fb-8378-55dc659de398" absoluteBounds="9.25, 5.5, 2, 13.693585611979167">
+      <DataClassMoniker Name="/HCISDrugStoreClassesDataContext/GivenServiceM" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d3d3add4-b029-4c32-88ed-55d3019cfab7" absoluteBounds="9.265, 5.96, 1.9700000000000002, 13.133585611979166" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.25 : 9.41421630859375); (12.375 : 9.41421630859375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/GivenServiceM/GivenServiceM_GivenServiceD" />
+      <nodes>
+        <classShapeMoniker Id="ed610465-4410-47fb-8378-55dc659de398" />
+        <classShapeMoniker Id="a1363cb8-2c21-440e-8d78-2a7a0bb49ec5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.625 : 8.66948120117187); (8.78166666666667 : 8.66948120117187 : JumpStart); (8.94833333333333 : 8.66948120117187 : JumpEnd); (9.25 : 8.66948120117187)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Agenda/Agenda_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="a61c4162-752f-41d1-9e55-2dc72a84acd7" />
+        <classShapeMoniker Id="ed610465-4410-47fb-8378-55dc659de398" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.531252 : 0.5); (2.531252 : 0.34); (7.19791666666667 : 0.339999999999999 : JumpStart); (7.36458333333333 : 0.34 : JumpEnd); (10.535 : 0.34); (10.535 : 3.465); (10.465 : 3.465); (10.465 : 5.26); (10.3333333333333 : 5.26 : JumpStart); (10.1666666666667 : 5.26 : JumpEnd); (9.9374995 : 5.26); (9.9374995 : 5.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Department/Department_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="a737bf2b-be89-4263-a973-9420d5d48a08" />
+        <classShapeMoniker Id="ed610465-4410-47fb-8378-55dc659de398" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.95923076923077 : 19.1935856119792); (9.95923076923077 : 19.4435856119792); (10.5546153846154 : 19.4435856119792); (10.5546153846154 : 19.1935856119792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/GivenServiceM/GivenServiceM_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="ed610465-4410-47fb-8378-55dc659de398" />
+        <classShapeMoniker Id="ed610465-4410-47fb-8378-55dc659de398" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.625 : 3.625); (11.625 : 3.375); (10.6183333333333 : 3.375 : JumpStart); (10.4516666666667 : 3.375 : JumpEnd); (10.25 : 3.375); (10.25 : 5.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Insurance/Insurance_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="306e0716-004b-460f-b420-6cfd6be44c3b" />
+        <classShapeMoniker Id="ed610465-4410-47fb-8378-55dc659de398" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.125 : 15.4075132096355); (5.15103916666667 : 15.4075132096355 : JumpStart); (5.42708333333333 : 15.4075132096355 : JumpEnd); (5.66666666666667 : 15.4075132096355 : JumpStart); (5.83333333333333 : 15.4075132096355 : JumpEnd); (8.91666666666667 : 15.4075132096355 : JumpStart); (9.08333333333333 : 15.4075132096355 : JumpEnd); (9.25 : 15.4075132096355)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Person/Person_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="eebb03d1-e474-42e4-bd1f-95046fbbc319" />
+        <classShapeMoniker Id="ed610465-4410-47fb-8378-55dc659de398" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 12.810623660319); (9.25 : 12.810623660319)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/ServiceCategory/ServiceCategory_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="e173e2fa-9113-48a9-b5b6-90898b098b8b" />
+        <classShapeMoniker Id="ed610465-4410-47fb-8378-55dc659de398" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.34375 : 10.2228011067708); (5.34375 : 17.2450478255208); (5.66666666666667 : 17.2450478255208 : JumpStart); (5.83333333333333 : 17.2450478255208 : JumpEnd); (8.91666666666667 : 17.2450478255208 : JumpStart); (9.08333333333333 : 17.2450478255208 : JumpEnd); (9.25 : 17.2450478255208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Staff/Staff_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="623b7726-f77d-49a4-ba57-4844551a3640" />
+        <classShapeMoniker Id="ed610465-4410-47fb-8378-55dc659de398" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.4531275 : 10.2228011067708); (5.4531275 : 14.5507503613281); (5.66666666666667 : 14.5507503613281 : JumpStart); (5.83333333333333 : 14.5507503613281 : JumpEnd); (8.91666666666667 : 14.5507503613281 : JumpStart); (9.08333333333333 : 14.5507503613281 : JumpEnd); (9.25 : 14.5507503613281)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Staff/Staff_GivenServiceM1" />
+      <nodes>
+        <classShapeMoniker Id="623b7726-f77d-49a4-ba57-4844551a3640" />
+        <classShapeMoniker Id="ed610465-4410-47fb-8378-55dc659de398" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.2343725 : 10.2228011067708); (5.2343725 : 16.3262805175781); (5.26041666666667 : 16.3262805175781 : JumpStart); (5.42708333333333 : 16.3262805175781 : JumpEnd); (5.66666666666667 : 16.3262805175781 : JumpStart); (5.83333333333333 : 16.3262805175781 : JumpEnd); (8.91666666666667 : 16.3262805175781 : JumpStart); (9.08333333333333 : 16.3262805175781 : JumpEnd); (9.25 : 16.3262805175781)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Staff/Staff_GivenServiceM2" />
+      <nodes>
+        <classShapeMoniker Id="623b7726-f77d-49a4-ba57-4844551a3640" />
+        <classShapeMoniker Id="ed610465-4410-47fb-8378-55dc659de398" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5d9e9307-d9c8-4132-9137-444451e623cf" absoluteBounds="6, 3.125, 2, 5.4246240234375005">
+      <DataClassMoniker Name="/HCISDrugStoreClassesDataContext/Dossier" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e2041951-99c0-45f9-9979-4d192a2f7432" absoluteBounds="6.015, 3.585, 1.9700000000000002, 4.8646240234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8 : 6.3195849984976); (8.25 : 6.3195849984976); (8.25 : 8.82770914713542); (8 : 8.82770914713542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Dossier/Dossier_Payment" />
+      <nodes>
+        <classShapeMoniker Id="5d9e9307-d9c8-4132-9137-444451e623cf" />
+        <classShapeMoniker Id="6ae70392-7d65-4442-b37e-6cbb07f4c8d3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8 : 5.63); (8.13166666666667 : 5.63 : JumpStart); (8.29833333333333 : 5.63 : JumpEnd); (9.25 : 5.63)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Dossier/Dossier_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="5d9e9307-d9c8-4132-9137-444451e623cf" />
+        <classShapeMoniker Id="ed610465-4410-47fb-8378-55dc659de398" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3 : 0.80469); (7.19791666666667 : 0.804689999999999 : JumpStart); (7.36458333333333 : 0.80469 : JumpEnd); (7.640625 : 0.80469); (7.640625 : 3.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Department/Department_Dossier" />
+      <nodes>
+        <classShapeMoniker Id="a737bf2b-be89-4263-a973-9420d5d48a08" />
+        <classShapeMoniker Id="5d9e9307-d9c8-4132-9137-444451e623cf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.625 : 4.98415771484375); (10.5483333333333 : 4.98415771484375 : JumpStart); (10.3816666666667 : 4.98415771484375 : JumpEnd); (10.3333333333333 : 4.98415771484375 : JumpStart); (10.1666666666667 : 4.98415771484375 : JumpEnd); (8.29833333333333 : 4.98415771484375 : JumpStart); (8.13166666666667 : 4.98415771484375 : JumpEnd); (8 : 4.98415771484375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Insurance/Insurance_Dossier" />
+      <nodes>
+        <classShapeMoniker Id="306e0716-004b-460f-b420-6cfd6be44c3b" />
+        <classShapeMoniker Id="5d9e9307-d9c8-4132-9137-444451e623cf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.125 : 7.78125); (3.22466666666667 : 7.78125 : JumpStart); (3.39133333333333 : 7.78125 : JumpEnd); (4.41666666666667 : 7.78125 : JumpStart); (4.58333333333333 : 7.78125 : JumpEnd); (6 : 7.78125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Person/Person_Dossier" />
+      <nodes>
+        <classShapeMoniker Id="eebb03d1-e474-42e4-bd1f-95046fbbc319" />
+        <classShapeMoniker Id="5d9e9307-d9c8-4132-9137-444451e623cf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 8.21231201171875); (6 : 8.21231201171875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISDrugStoreClassesDataContext/Staff/Staff_Dossier" />
+      <nodes>
+        <classShapeMoniker Id="623b7726-f77d-49a4-ba57-4844551a3640" />
+        <classShapeMoniker Id="5d9e9307-d9c8-4132-9137-444451e623cf" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

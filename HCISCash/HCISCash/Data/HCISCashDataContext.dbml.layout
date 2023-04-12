@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 44, 25.5" name="HCISCashDataContext">
+  <DataContextMoniker Name="/HCISCashDataContextDataContext" />
+  <nestedChildShapes>
+    <classShape Id="8c868652-a944-4210-b3e4-b5d0a2d4a0b7" absoluteBounds="13.5, 3, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/Agenda" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cd721a2a-bf75-457b-8a31-a9b4de0c011c" absoluteBounds="13.515, 3.46, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a55ce674-23fe-43a6-9e16-054670bfa5a2" absoluteBounds="12.125, 7.5, 2, 2.9247054036458309">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/Reference" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7da9ab2f-ea20-4e4b-851c-8f3fc8869d19" absoluteBounds="12.14, 7.9600000000000009, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="de3665a4-7cfa-4d01-902e-805068cd3aa8" absoluteBounds="9.25, 18.125, 2, 2.3478011067708309">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/Tariff" />
+      <nestedChildShapes>
+        <elementListCompartment Id="68c9d37b-43ce-4869-abd2-de18c6b231d9" absoluteBounds="9.265, 18.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="aa432bd2-a930-486e-b92e-79717b494157" absoluteBounds="9.375, 7.375, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/Visit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3499a1ba-1637-49b8-bd0d-1c649b8743c3" absoluteBounds="9.39, 7.8350000000000009, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f8d407fe-e54b-486c-8d9e-3e27f3a136fe" absoluteBounds="0.75, 5.875, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/Speciality" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fcd786de-7329-48c0-818c-f36bec4b14e7" absoluteBounds="0.765, 6.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 6.47199625651042); (3.5 : 6.47199625651042); (3.875 : 5.14589680989583); (7.125 : 5.14589680989583); (7.125 : 5.98232259114583); (13.125 : 5.98232259114583); (13.125 : 7.5)]" manuallyRouted="true" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Speciality/Speciality_Reference" />
+      <nodes>
+        <classShapeMoniker Id="f8d407fe-e54b-486c-8d9e-3e27f3a136fe" />
+        <classShapeMoniker Id="a55ce674-23fe-43a6-9e16-054670bfa5a2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="00623422-893a-4807-9387-545cdc7b4846" absoluteBounds="6.5, 10.5, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/Staff" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3a5fa6df-3d30-4fc4-927b-b4fd18ca3418" absoluteBounds="6.515, 10.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.5 : 10.90625); (11.7916666666667 : 10.90625 : JumpStart); (12.0520858333333 : 10.90625 : JumpEnd); (14.8307285416667 : 10.90625 : JumpStart); (14.9973952083333 : 10.90625 : JumpEnd); (15.2382834375 : 10.90625); (15.2382834375 : 5.73240397135417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Staff/Staff_Agenda" />
+      <nodes>
+        <classShapeMoniker Id="00623422-893a-4807-9387-545cdc7b4846" />
+        <classShapeMoniker Id="8c868652-a944-4210-b3e4-b5d0a2d4a0b7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 10.6718725); (9.60416716666667 : 10.6718725 : JumpStart); (9.77083383333333 : 10.6718725 : JumpEnd); (11.7916666666667 : 10.6718725 : JumpStart); (12.0520858333333 : 10.6718725 : JumpEnd); (12.40625 : 10.6718725); (12.40625 : 10.4247054036458)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Staff/Staff_Reference" />
+      <nodes>
+        <classShapeMoniker Id="00623422-893a-4807-9387-545cdc7b4846" />
+        <classShapeMoniker Id="a55ce674-23fe-43a6-9e16-054670bfa5a2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.06899251302083); (2.75 : 7.2628382351888); (3.41304954723447 : 7.2628382351888); (3.03804954723447 : 12.4630354817708); (6.5 : 11.6739005533854); (6.125 : 11.6739005533854); (6.5 : 11.6739005533854)]" manuallyRouted="true" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Speciality/Speciality_Staff" />
+      <nodes>
+        <classShapeMoniker Id="f8d407fe-e54b-486c-8d9e-3e27f3a136fe" />
+        <classShapeMoniker Id="00623422-893a-4807-9387-545cdc7b4846" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5945c27e-b57a-47e7-9889-5a34c5d7ee52" absoluteBounds="9.5, 0.875, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/Department" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bd98a465-ed34-498f-912b-f52275275701" absoluteBounds="9.515, 1.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.5 : 1.76044840494792); (14.5 : 1.76044840494792); (14.5 : 3)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Department/Department_Agenda" />
+      <nodes>
+        <classShapeMoniker Id="5945c27e-b57a-47e7-9889-5a34c5d7ee52" />
+        <classShapeMoniker Id="8c868652-a944-4210-b3e4-b5d0a2d4a0b7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.5 : 1.50298725335537); (9.25 : 1.50298725335537); (9.25 : 2.0301696113782); (9.5 : 2.0301696113782)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Department/Department_Department" />
+      <nodes>
+        <classShapeMoniker Id="5945c27e-b57a-47e7-9889-5a34c5d7ee52" />
+        <classShapeMoniker Id="5945c27e-b57a-47e7-9889-5a34c5d7ee52" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="cd282f3f-494e-4c60-a6a6-2ce52023c5b2" absoluteBounds="29.125, 4.25, 2, 4.4631168619791666">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/View_Dossier" />
+      <nestedChildShapes>
+        <elementListCompartment Id="47873b01-fe24-485a-9f56-879f36cee17a" absoluteBounds="29.14, 4.71, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e11d6d18-7ac8-4293-9d8b-14320de0a547" absoluteBounds="5.25, 17.25, 2, 1.3862939453125">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/ServiceCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="45a64405-2a47-4382-8e87-a9652f931185" absoluteBounds="5.265, 17.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="441e4bc8-1b03-4ac6-87da-5dc813454fac" absoluteBounds="1.625, 14.375, 2, 9.6552555338541648">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/Person" />
+      <nestedChildShapes>
+        <elementListCompartment Id="518166a3-f920-4380-94ac-466a7edd2ae2" absoluteBounds="1.6399999999999997, 14.835, 1.9700000000000002, 9.0952555338541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.3124995 : 14.375); (3.3124995 : 12.6554182942708); (6.5 : 12.6554182942708)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Person/Person_Staff" />
+      <nodes>
+        <classShapeMoniker Id="441e4bc8-1b03-4ac6-87da-5dc813454fac" />
+        <classShapeMoniker Id="00623422-893a-4807-9387-545cdc7b4846" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.33423076923077 : 24.0302555338542); (2.33423076923077 : 24.2802555338542); (2.92961538461538 : 24.2802555338542); (2.92961538461538 : 24.0302555338542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Person/Person_Person" />
+      <nodes>
+        <classShapeMoniker Id="441e4bc8-1b03-4ac6-87da-5dc813454fac" />
+        <classShapeMoniker Id="441e4bc8-1b03-4ac6-87da-5dc813454fac" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.085 : 14.375); (2.085 : 14.125); (2.55576923076923 : 14.125); (2.55576923076923 : 14.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Person/Person_Person1" />
+      <nodes>
+        <classShapeMoniker Id="441e4bc8-1b03-4ac6-87da-5dc813454fac" />
+        <classShapeMoniker Id="441e4bc8-1b03-4ac6-87da-5dc813454fac" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3f70ceda-7aea-4006-b087-bbea99fde394" absoluteBounds="35, 1.625, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/ViewAngioBill" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dfdcde79-5502-4618-89d3-c0cfafb31782" absoluteBounds="35.015, 2.085, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="756ecc05-089e-46d3-84b3-dce9ec7f9eaa" absoluteBounds="16.625, 5.875, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/Discharge" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5a97eee5-0828-4f97-a99a-91a6de87622a" absoluteBounds="16.64, 6.335, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.5 : 11.1406275); (11.7916666666667 : 11.1406275 : JumpStart); (12.0520858333333 : 11.1406275 : JumpEnd); (14.8307285416667 : 11.1406275 : JumpStart); (14.9973952083333 : 11.1406275 : JumpEnd); (17.625 : 11.1406275); (17.625 : 9.18430826822917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Staff/Staff_Discharge" />
+      <nodes>
+        <classShapeMoniker Id="00623422-893a-4807-9387-545cdc7b4846" />
+        <classShapeMoniker Id="756ecc05-089e-46d3-84b3-dce9ec7f9eaa" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="62c7c65e-94a2-40af-a0ad-da1524968e2e" absoluteBounds="38.875, 14.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/Exeption" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0c5888a1-d167-40d0-a275-29f8f2120b52" absoluteBounds="38.89, 14.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="512bac35-08a1-45f7-99ed-eaccc434a658" absoluteBounds="41.75, 3.125, 2, 7.5399397786458326">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/Vw_KhadamatTashkhisi" />
+      <nestedChildShapes>
+        <elementListCompartment Id="85bb3572-c4a6-4eff-af07-0e2d00b97702" absoluteBounds="41.765, 3.585, 1.9700000000000002, 6.979939778645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="74c33c52-54f5-42ea-b3fe-1fdaa7abbe82" absoluteBounds="28.875, 13.5, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/View_RetireeBastari" />
+      <nestedChildShapes>
+        <elementListCompartment Id="87fc2c53-69d7-4368-9063-0cc9962bc3ad" absoluteBounds="28.89, 13.96, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="88990a02-d420-44e2-a2a6-5e146dca89b9" absoluteBounds="1, 3.125, 2, 1.9631982421875">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/SystemError" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7cf1834c-3d39-44ec-a2b7-d2eb825abb4d" absoluteBounds="1.0149999999999997, 3.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bd25016a-911c-46c6-83e4-ee0e69ba03e3" absoluteBounds="1, 0.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/Vw_SystemErrorRpt" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aab66ab0-32b5-4463-aa2f-ab3046e3534f" absoluteBounds="1.0150000000000001, 1.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="94a4cb2e-4e4a-4919-8d6f-8191ed1efd8c" absoluteBounds="38, 2.375, 2, 11.001365559895833">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/Vw_DosFinance" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a62512a9-e3b2-441c-a529-323afea4b8dd" absoluteBounds="38.015, 2.835, 1.9700000000000002, 10.441365559895832" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f5d1c7d3-21b9-43c8-a7b5-a29453d892e6" absoluteBounds="26.625, 3.625, 2, 13.308982747395833">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/GivenServiceM" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0266eb0d-ca59-45a7-8366-c260ae16ba75" absoluteBounds="26.64, 4.085, 1.9700000000000002, 12.748982747395832" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(26.79491875 : 3.625); (26.79491875 : 2.375); (22.4583333333333 : 2.375 : JumpStart); (22.2916666666667 : 2.375 : JumpEnd); (19.125 : 2.375); (19.125 : 9.68430826822917); (17.7083333333333 : 9.68430826822917 : JumpStart); (17.5416666666667 : 9.68430826822917 : JumpEnd); (15.8333333333333 : 9.68430826822917 : JumpStart); (15.6666666666667 : 9.68430826822917 : JumpEnd); (15.3216167708333 : 9.68430826822917 : JumpStart); (15.1549501041667 : 9.68430826822917 : JumpEnd); (14.9973952083333 : 9.68430826822917 : JumpStart); (14.8307285416667 : 9.68430826822917 : JumpEnd); (14.5 : 9.68430826822917); (14.5 : 8.96235270182292); (14.125 : 8.96235270182292)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/GivenServiceM/GivenServiceM_Reference" />
+      <nodes>
+        <classShapeMoniker Id="f5d1c7d3-21b9-43c8-a7b5-a29453d892e6" />
+        <classShapeMoniker Id="a55ce674-23fe-43a6-9e16-054670bfa5a2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(28.32226825 : 3.625); (28.32226825 : 3.375); (28.0403658333333 : 3.375 : JumpStart); (27.8736991666667 : 3.375 : JumpEnd); (27.8079430833333 : 3.375 : JumpStart); (27.6412764166667 : 3.375 : JumpEnd); (27.5755203333333 : 3.375 : JumpStart); (27.4088536666667 : 3.375 : JumpEnd); (27.3430975833333 : 3.375 : JumpStart); (27.1764309166667 : 3.375 : JumpEnd); (27.1106748333333 : 3.375 : JumpStart); (26.9440081666667 : 3.375 : JumpEnd); (26.8782520833333 : 3.375 : JumpStart); (26.7115854166667 : 3.375 : JumpEnd); (25.7083333333333 : 3.375 : JumpStart); (25.5416666666667 : 3.375 : JumpEnd); (25.375 : 3.375); (25.375 : 10.7997054036458); (25.3333333333333 : 10.7997054036458 : JumpStart); (25.1666666666667 : 10.7997054036458 : JumpEnd); (25.0833333333333 : 10.7997054036458 : JumpStart); (24.9166666666667 : 10.7997054036458 : JumpEnd); (24.0833333333333 : 10.7997054036458 : JumpStart); (23.9166666666667 : 10.7997054036458 : JumpEnd); (22.9895853333333 : 10.7997054036458 : JumpStart); (22.8229186666667 : 10.7997054036458 : JumpEnd); (22.4583333333333 : 10.7997054036458 : JumpStart); (22.2916666666667 : 10.7997054036458 : JumpEnd); (21.9270813333333 : 10.7997054036458 : JumpStart); (21.7604146666667 : 10.7997054036458 : JumpEnd); (17.7083333333333 : 10.7997054036458 : JumpStart); (17.5416666666667 : 10.7997054036458 : JumpEnd); (15.3216167708333 : 10.7997054036458 : JumpStart); (15.1549501041667 : 10.7997054036458 : JumpEnd); (14.9973952083333 : 10.7997054036458 : JumpStart); (14.8307285416667 : 10.7997054036458 : JumpEnd); (12.0520858333333 : 10.7997054036458 : JumpStart); (11.7916666666667 : 10.7997054036458 : JumpEnd); (9.6875005 : 10.7997054036458); (9.6875005 : 10.1074039713542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/GivenServiceM/GivenServiceM_Visit" />
+      <nodes>
+        <classShapeMoniker Id="f5d1c7d3-21b9-43c8-a7b5-a29453d892e6" />
+        <classShapeMoniker Id="aa432bd2-a930-486e-b92e-79717b494157" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.5 : 4.67870198567708); (15.6666666666667 : 4.67870198567708 : JumpStart); (15.8333333333333 : 4.67870198567708 : JumpEnd); (19.0416666666667 : 4.67870198567708 : JumpStart); (19.2083333333333 : 4.67870198567708 : JumpEnd); (22.2916666666667 : 4.67870198567708 : JumpStart); (22.4583333333333 : 4.67870198567708 : JumpEnd); (23.9166666666667 : 4.67870198567708 : JumpStart); (24.0833333333333 : 4.67870198567708 : JumpEnd); (25.1666666666667 : 4.67870198567708 : JumpStart); (25.3333333333333 : 4.67870198567708 : JumpEnd); (25.4166666666667 : 4.67870198567708 : JumpStart); (25.7083333333333 : 4.67870198567708 : JumpEnd); (26.625 : 4.67870198567708)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Agenda/Agenda_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="8c868652-a944-4210-b3e4-b5d0a2d4a0b7" />
+        <classShapeMoniker Id="f5d1c7d3-21b9-43c8-a7b5-a29453d892e6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.5 : 1.28647170247396); (27.72460975 : 1.28647170247396); (27.72460975 : 3.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Department/Department_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="5945c27e-b57a-47e7-9889-5a34c5d7ee52" />
+        <classShapeMoniker Id="f5d1c7d3-21b9-43c8-a7b5-a29453d892e6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(28.625 : 8.16188646834936); (28.875 : 8.16188646834936); (28.875 : 12.4979346078726); (28.625 : 12.4979346078726)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/GivenServiceM/GivenServiceM_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="f5d1c7d3-21b9-43c8-a7b5-a29453d892e6" />
+        <classShapeMoniker Id="f5d1c7d3-21b9-43c8-a7b5-a29453d892e6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.3125005 : 14.375); (2.3125005 : 13.75); (2.60416941666667 : 13.75 : JumpStart); (2.77083608333333 : 13.75 : JumpEnd); (3.22916616666667 : 13.75 : JumpStart); (3.39583283333333 : 13.75 : JumpEnd); (7.61783697916667 : 13.75 : JumpStart); (7.78450364583333 : 13.75 : JumpEnd); (8.04850432291667 : 13.75 : JumpStart); (8.21517098958333 : 13.75 : JumpEnd); (9.5 : 13.75); (9.5 : 11.5); (9.54166666666667 : 11.5 : JumpStart); (9.70833333333333 : 11.5 : JumpEnd); (11.7916666666667 : 11.5 : JumpStart); (12.0520858333333 : 11.5 : JumpEnd); (14.8307285416667 : 11.5 : JumpStart); (14.9973952083333 : 11.5 : JumpEnd); (21.7604146666667 : 11.5 : JumpStart); (21.9270813333333 : 11.5 : JumpEnd); (22.2916666666667 : 11.5 : JumpStart); (22.4583333333333 : 11.5 : JumpEnd); (22.8229186666667 : 11.5 : JumpStart); (22.9895853333333 : 11.5 : JumpEnd); (24.9166666666667 : 11.5 : JumpStart); (25.0833333333333 : 11.5 : JumpEnd); (25.625 : 11.5); (25.625 : 3.25); (26.7115854166667 : 3.25 : JumpStart); (26.8782520833333 : 3.25 : JumpEnd); (26.9440081666667 : 3.25 : JumpStart); (27.1106748333333 : 3.25 : JumpEnd); (27.25976425 : 3.25); (27.25976425 : 3.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Person/Person_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="441e4bc8-1b03-4ac6-87da-5dc813454fac" />
+        <classShapeMoniker Id="f5d1c7d3-21b9-43c8-a7b5-a29453d892e6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.125 : 8.19992435091146); (14.8307285416667 : 8.19992435091146 : JumpStart); (14.9973952083333 : 8.19992435091146 : JumpEnd); (15.1549501041667 : 8.19992435091146 : JumpStart); (15.3216167708333 : 8.19992435091146 : JumpEnd); (15.6666666666667 : 8.19992435091146 : JumpStart); (15.8333333333333 : 8.19992435091146 : JumpEnd); (16.375 : 8.19992435091146); (16.375 : 2.625); (19.0416666666667 : 2.625 : JumpStart); (19.2083333333333 : 2.625 : JumpEnd); (22.2916666666667 : 2.625 : JumpStart); (22.4583333333333 : 2.625 : JumpEnd); (26.7115854166667 : 2.625 : JumpStart); (26.8782520833333 : 2.625 : JumpEnd); (27.6412764166667 : 2.625 : JumpStart); (27.8079430833333 : 2.625 : JumpEnd); (27.9570325 : 2.625); (27.9570325 : 3.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Reference/Reference_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="a55ce674-23fe-43a6-9e16-054670bfa5a2" />
+        <classShapeMoniker Id="f5d1c7d3-21b9-43c8-a7b5-a29453d892e6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.25 : 17.7529854273742); (11.8541666666667 : 17.7529854273742 : JumpStart); (12.0208333333333 : 17.7529854273742 : JumpEnd); (14.8307285416667 : 17.7529854273742 : JumpStart); (14.9973952083333 : 17.7529854273742 : JumpEnd); (15.1666666666667 : 17.7529854273742 : JumpStart); (15.3333333333333 : 17.7529854273742 : JumpEnd); (21.125 : 17.7529854273742); (21.125 : 16.5); (21.7604146666667 : 16.5 : JumpStart); (21.9270813333333 : 16.5 : JumpEnd); (22.2916666666667 : 16.5 : JumpStart); (22.4583333333333 : 16.5 : JumpEnd); (22.8229186666667 : 16.5 : JumpStart); (22.9895853333333 : 16.5 : JumpEnd); (24.625 : 16.5); (24.625 : 20.3861311848958); (26.3854166666667 : 20.3861311848958 : JumpStart); (26.5520833333333 : 20.3861311848958 : JumpEnd); (27.7749028828125 : 20.3861311848958); (27.7749028828125 : 16.9339827473958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/ServiceCategory/ServiceCategory_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="e11d6d18-7ac8-4293-9d8b-14320de0a547" />
+        <classShapeMoniker Id="f5d1c7d3-21b9-43c8-a7b5-a29453d892e6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 11.3721066829427); (9.25 : 11.3721066829427); (9.25 : 11.5625); (9.29166666666667 : 11.5625 : JumpStart); (9.45833333333333 : 11.5625 : JumpEnd); (9.54166666666667 : 11.5625 : JumpStart); (9.70833333333333 : 11.5625 : JumpEnd); (11.8541666666667 : 11.5625 : JumpStart); (12.0520858333333 : 11.5625 : JumpEnd); (14.8307285416667 : 11.5625 : JumpStart); (14.9973952083333 : 11.5625 : JumpEnd); (21.7604146666667 : 11.5625 : JumpStart); (21.9270813333333 : 11.5625 : JumpEnd); (22.2916666666667 : 11.5625 : JumpStart); (22.4583333333333 : 11.5625 : JumpEnd); (22.8229186666667 : 11.5625 : JumpStart); (22.9895853333333 : 11.5625 : JumpEnd); (24 : 11.5625); (24 : 3.0625); (25.1666666666667 : 3.0625 : JumpStart); (25.3333333333333 : 3.0625 : JumpEnd); (26.7115854166667 : 3.0625 : JumpStart); (26.8782520833333 : 3.0625 : JumpEnd); (27.0273415 : 3.0625); (27.0273415 : 3.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Staff/Staff_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="00623422-893a-4807-9387-545cdc7b4846" />
+        <classShapeMoniker Id="f5d1c7d3-21b9-43c8-a7b5-a29453d892e6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 11.8848394908854); (9.41666666666667 : 11.8848394908854 : JumpStart); (9.58333333333333 : 11.8848394908854 : JumpEnd); (9.625 : 11.8848394908854); (9.625 : 11.3125); (11.7916666666667 : 11.3125 : JumpStart); (12.0520858333333 : 11.3125 : JumpEnd); (14.8307285416667 : 11.3125 : JumpStart); (14.9973952083333 : 11.3125 : JumpEnd); (21.7604146666667 : 11.3125 : JumpStart); (21.9270813333333 : 11.3125 : JumpEnd); (22.2916666666667 : 11.3125 : JumpStart); (22.4583333333333 : 11.3125 : JumpEnd); (22.8229186666667 : 11.3125 : JumpStart); (22.9895853333333 : 11.3125 : JumpEnd); (23.9166666666667 : 11.3125 : JumpStart); (24.0833333333333 : 11.3125 : JumpEnd); (24.9166666666667 : 11.3125 : JumpStart); (25.0833333333333 : 11.3125 : JumpEnd); (25.25 : 11.3125); (25.25 : 2.875); (26.7115854166667 : 2.875 : JumpStart); (26.8782520833333 : 2.875 : JumpEnd); (27.492187 : 2.875); (27.492187 : 3.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Staff/Staff_GivenServiceM1" />
+      <nodes>
+        <classShapeMoniker Id="00623422-893a-4807-9387-545cdc7b4846" />
+        <classShapeMoniker Id="f5d1c7d3-21b9-43c8-a7b5-a29453d892e6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 11.8848394908854); (9.375 : 11.8848394908854); (9.375 : 11.4375); (9.54166666666667 : 11.4375 : JumpStart); (9.70833333333333 : 11.4375 : JumpEnd); (11.7916666666667 : 11.4375 : JumpStart); (12.0520858333333 : 11.4375 : JumpEnd); (14.8307285416667 : 11.4375 : JumpStart); (14.9973952083333 : 11.4375 : JumpEnd); (21.7604146666667 : 11.4375 : JumpStart); (21.9270813333333 : 11.4375 : JumpEnd); (22.2916666666667 : 11.4375 : JumpStart); (22.4583333333333 : 11.4375 : JumpEnd); (22.8229186666667 : 11.4375 : JumpStart); (22.9895853333333 : 11.4375 : JumpEnd); (23.9166666666667 : 11.4375 : JumpStart); (24.0833333333333 : 11.4375 : JumpEnd); (24.9166666666667 : 11.4375 : JumpStart); (25.0833333333333 : 11.4375 : JumpEnd); (25.5 : 11.4375); (25.5 : 3.5); (25.5416666666667 : 3.5 : JumpStart); (25.7083333333333 : 3.5 : JumpEnd); (26.7115854166667 : 3.5 : JumpStart); (26.8782520833333 : 3.5 : JumpEnd); (26.9440081666667 : 3.5 : JumpStart); (27.1106748333333 : 3.5 : JumpEnd); (27.1764309166667 : 3.5 : JumpStart); (27.3430975833333 : 3.5 : JumpEnd); (27.492187 : 3.5); (27.492187 : 3.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Staff/Staff_GivenServiceM2" />
+      <nodes>
+        <classShapeMoniker Id="00623422-893a-4807-9387-545cdc7b4846" />
+        <classShapeMoniker Id="f5d1c7d3-21b9-43c8-a7b5-a29453d892e6" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6de9c52d-e6a3-4515-967c-e801ee2d8042" absoluteBounds="35.125, 7.5, 2, 9.6552555338541648">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/Vw_DosForSepa" />
+      <nestedChildShapes>
+        <elementListCompartment Id="907c6bf9-28b7-4f5c-8637-1a5d956ffb4f" absoluteBounds="35.14, 7.96, 1.9700000000000002, 9.0952555338541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="90ddf5b1-c90f-433f-b5fd-29f2090f1691" absoluteBounds="13, 19.375, 2, 5.4246240234375">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/Service" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c0d17e07-d631-47ee-b3d7-f525db9ad47f" absoluteBounds="13.015, 19.835, 1.9700000000000002, 4.8646240234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.914061875 : 19.375); (14.914061875 : 5.73240397135417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Service/Service_Agenda" />
+      <nodes>
+        <classShapeMoniker Id="90ddf5b1-c90f-433f-b5fd-29f2090f1691" />
+        <classShapeMoniker Id="8c868652-a944-4210-b3e4-b5d0a2d4a0b7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13 : 19.9239005533854); (11.25 : 19.9239005533854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Service/Service_Tariff" />
+      <nodes>
+        <classShapeMoniker Id="90ddf5b1-c90f-433f-b5fd-29f2090f1691" />
+        <classShapeMoniker Id="de3665a4-7cfa-4d01-902e-805068cd3aa8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.7092307692308 : 24.7996240234375); (13.7092307692308 : 25.0496240234375); (14.3046153846154 : 25.0496240234375); (14.3046153846154 : 24.7996240234375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Service/Service_Service" />
+      <nodes>
+        <classShapeMoniker Id="90ddf5b1-c90f-433f-b5fd-29f2090f1691" />
+        <classShapeMoniker Id="90ddf5b1-c90f-433f-b5fd-29f2090f1691" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.25 : 18.6362939453125); (6.25 : 22.6674620651042); (13 : 22.6674620651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/ServiceCategory/ServiceCategory_Service" />
+      <nodes>
+        <classShapeMoniker Id="e11d6d18-7ac8-4293-9d8b-14320de0a547" />
+        <classShapeMoniker Id="90ddf5b1-c90f-433f-b5fd-29f2090f1691" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.14224612825521); (3.50991480006374 : 6.14224612825521 : JumpStart); (3.67658146673041 : 6.14224612825521 : JumpEnd); (3.75 : 6.14224612825521); (3.75 : 10.4199039713542); (9.60416716666667 : 10.4199039713542 : JumpStart); (9.77083383333333 : 10.4199039713542 : JumpEnd); (9.91666666666667 : 10.4199039713542 : JumpStart); (10.0833333333333 : 10.4199039713542 : JumpEnd); (10.9791671666667 : 10.4199039713542 : JumpStart); (11.1458338333333 : 10.4199039713542 : JumpEnd); (11.875 : 10.4199039713542); (11.875 : 11.625); (11.8854191666667 : 11.625 : JumpStart); (12.0520858333333 : 11.625 : JumpEnd); (14.8307285416667 : 11.625 : JumpStart); (14.9973952083333 : 11.625 : JumpEnd); (15.25 : 11.625); (15.25 : 19); (14.9973952083333 : 19 : JumpStart); (14.8307285416667 : 19 : JumpEnd); (14 : 19); (14 : 19.375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Speciality/Speciality_Service" />
+      <nodes>
+        <classShapeMoniker Id="f8d407fe-e54b-486c-8d9e-3e27f3a136fe" />
+        <classShapeMoniker Id="90ddf5b1-c90f-433f-b5fd-29f2090f1691" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="8673efda-7e9a-4941-b5ab-571aaac4102f" absoluteBounds="38.875, 0.5, 2, 5.4246240234375">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/Vw_DosseirPayment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1c2cff33-3781-4bd6-8877-6666c9b9ab3c" absoluteBounds="38.89, 0.96, 1.9700000000000002, 4.8646240234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f9ed7879-de1f-4dfc-90b2-7141fdcdfef3" absoluteBounds="30, 0.75, 2, 11.7705712890625">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/Vw_DosFinanceSB" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fdf4c7c7-4981-49f1-a7b5-6eed29262188" absoluteBounds="30.015, 1.21, 1.9700000000000002, 11.2105712890625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f7cc2453-2286-47e9-ba14-4e8d20e49f6b" absoluteBounds="24.875, 13.75, 2, 6.3861311848958344">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/GivenServiceD" />
+      <nestedChildShapes>
+        <elementListCompartment Id="612e8188-8c80-4fa0-95ff-10c8114dc3c4" absoluteBounds="24.89, 14.21, 1.9700000000000002, 5.826131184895833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(27.29687325 : 16.9339827473958); (27.29687325 : 18.5350574661458); (26.875 : 18.5350574661458)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/GivenServiceM/GivenServiceM_GivenServiceD" />
+      <nodes>
+        <classShapeMoniker Id="f5d1c7d3-21b9-43c8-a7b5-a29453d892e6" />
+        <classShapeMoniker Id="f7cc2453-2286-47e9-ba14-4e8d20e49f6b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15 : 24.1241276041667); (26.46875 : 24.1241276041667); (26.46875 : 20.1361311848958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Service/Service_GivenServiceD" />
+      <nodes>
+        <classShapeMoniker Id="90ddf5b1-c90f-433f-b5fd-29f2090f1691" />
+        <classShapeMoniker Id="f7cc2453-2286-47e9-ba14-4e8d20e49f6b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.7011703125 : 12.8478011067708); (7.7011703125 : 16.0032055664063); (8.04850432291667 : 16.0032055664063 : JumpStart); (8.21517098958333 : 16.0032055664063 : JumpEnd); (11.8541666666667 : 16.0032055664063 : JumpStart); (12.0520858333333 : 16.0032055664063 : JumpEnd); (14.8307285416667 : 16.0032055664063 : JumpStart); (14.9973952083333 : 16.0032055664063 : JumpEnd); (15.1666666666667 : 16.0032055664063 : JumpStart); (15.3333333333333 : 16.0032055664063 : JumpEnd); (21.7604146666667 : 16.0032055664063 : JumpStart); (21.9270813333333 : 16.0032055664063 : JumpEnd); (22.2916666666667 : 16.0032055664063 : JumpStart); (22.4583333333333 : 16.0032055664063 : JumpEnd); (22.8229186666667 : 16.0032055664063 : JumpStart); (22.9895853333333 : 16.0032055664063 : JumpEnd); (24.875 : 16.0032055664063)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Staff/Staff_GivenServiceD" />
+      <nodes>
+        <classShapeMoniker Id="00623422-893a-4807-9387-545cdc7b4846" />
+        <classShapeMoniker Id="f7cc2453-2286-47e9-ba14-4e8d20e49f6b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="45d763e1-ace5-4d47-89ef-e4e36d812ee5" absoluteBounds="6, 1.125, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/Billing" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4acf2e83-25cb-4f5a-b2d9-b4073aeb6b91" absoluteBounds="6.015, 1.585, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2fef4c3c-4468-480a-b28b-a0042bada5c3" absoluteBounds="9.75, 11.75, 2, 3.1170068359375023">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/View_EzamiBastariNew" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d2be3e44-b6bf-4e2e-8680-9a23134436a9" absoluteBounds="9.765, 12.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fa747072-2851-4111-b9a0-a38e7623b089" absoluteBounds="40.375, 11.625, 2, 4.6554182942708326">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/VwPersonsCompany" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dffd44f5-6a41-4869-a469-f9c3d0b578d0" absoluteBounds="40.39, 12.085, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ff2aab63-2e5a-4f88-bb59-4f6ba4bc4404" absoluteBounds="4, 1, 2, 7.7322412109375005">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/View_IMPHO_Person" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bbb3a9b9-6f4d-4bb9-a799-771706bb5d9a" absoluteBounds="4.015, 1.46, 1.9700000000000002, 7.1722412109375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="44a8fe42-5688-40e8-9386-ed30d720f4ea" absoluteBounds="0.75, 8.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/ViewFinalSurgicalUnit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7adadcb9-ebd0-4e3c-b54c-40c9d99e880e" absoluteBounds="0.765, 9.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b35e6011-0293-4467-9371-148d0ae07cf7" absoluteBounds="12.75, 11.75, 2, 3.6939111328124987">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/ViewSurgeryBill" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5e6a7728-d83e-420e-8b07-65da7245cf1a" absoluteBounds="12.765, 12.21, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4ff8a576-5429-430d-b48a-313f3ca6d201" absoluteBounds="33.875, 3, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/ViewAnesthesiaBill" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ac43162e-3346-4388-9122-03c42e8039ee" absoluteBounds="33.89, 3.46, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a4d29e47-8dce-4d76-8a7b-af561d5b5638" absoluteBounds="4.5, 0.5, 2, 4.2708154296875">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/Vw_DrugEzami" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3851116f-24bf-497d-ae96-e8efaf3dfb4c" absoluteBounds="4.515, 0.96, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="acb6dace-8696-4c02-a246-c919ed4ce122" absoluteBounds="10.25, 6.875, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/Insurance" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7835fb5b-d5c7-4623-8434-41a677cc2dbe" absoluteBounds="10.265, 7.335, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.9375 : 10.1843082682292); (11.9375 : 18.9931977766927); (11.25 : 18.9931977766927)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Insurance/Insurance_Tariff" />
+      <nodes>
+        <classShapeMoniker Id="acb6dace-8696-4c02-a246-c919ed4ce122" />
+        <classShapeMoniker Id="de3665a4-7cfa-4d01-902e-805068cd3aa8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.0625005 : 10.1843082682292); (11.0625005 : 10.5497054036458); (11.7916666666667 : 10.5497054036458 : JumpStart); (12.0520858333333 : 10.5497054036458 : JumpEnd); (14.8307285416667 : 10.5497054036458 : JumpStart); (14.9973952083333 : 10.5497054036458 : JumpEnd); (15.1549501041667 : 10.5497054036458 : JumpStart); (15.3216167708333 : 10.5497054036458 : JumpEnd); (15.75 : 10.5497054036458); (15.75 : 3.3125); (16.2916666666667 : 3.3125 : JumpStart); (16.4583333333333 : 3.3125 : JumpEnd); (19.0416666666667 : 3.3125 : JumpStart); (19.2083333333333 : 3.3125 : JumpEnd); (22.2916666666667 : 3.3125 : JumpStart); (22.4583333333333 : 3.3125 : JumpEnd); (23.9166666666667 : 3.3125 : JumpStart); (24.0833333333333 : 3.3125 : JumpEnd); (25.1666666666667 : 3.3125 : JumpStart); (25.3333333333333 : 3.3125 : JumpEnd); (26.7115854166667 : 3.3125 : JumpStart); (26.8782520833333 : 3.3125 : JumpEnd); (26.9440081666667 : 3.3125 : JumpStart); (27.1106748333333 : 3.3125 : JumpEnd); (27.4088536666667 : 3.3125 : JumpStart); (27.5755203333333 : 3.3125 : JumpEnd); (27.6412764166667 : 3.3125 : JumpStart); (27.8079430833333 : 3.3125 : JumpEnd); (27.8736991666667 : 3.3125 : JumpStart); (28.0403658333333 : 3.3125 : JumpEnd); (28.139650375 : 3.3125); (28.139650375 : 3.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Insurance/Insurance_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="acb6dace-8696-4c02-a246-c919ed4ce122" />
+        <classShapeMoniker Id="f5d1c7d3-21b9-43c8-a7b5-a29453d892e6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.9592307692308 : 6.875); (10.9592307692308 : 6.625); (11.5546153846154 : 6.625); (11.5546153846154 : 6.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Insurance/Insurance_Insurance" />
+      <nodes>
+        <classShapeMoniker Id="acb6dace-8696-4c02-a246-c919ed4ce122" />
+        <classShapeMoniker Id="acb6dace-8696-4c02-a246-c919ed4ce122" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2d3aa82b-73c8-4ace-9c4a-d3724a68737f" absoluteBounds="25.75, 7.875, 2, 5.0400211588541657">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/Payment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="945ebcaf-0603-41b0-993c-6a88cd2024f5" absoluteBounds="25.765, 8.335, 1.9700000000000002, 4.4800211588541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(26.4592307692308 : 12.9150211588542); (26.4592307692308 : 13.1650211588542); (27.0546153846154 : 13.1650211588542); (27.0546153846154 : 12.9150211588542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Payment/Payment_Payment" />
+      <nodes>
+        <classShapeMoniker Id="2d3aa82b-73c8-4ace-9c4a-d3724a68737f" />
+        <classShapeMoniker Id="2d3aa82b-73c8-4ace-9c4a-d3724a68737f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.68750275 : 14.375); (2.68750275 : 11.1554996744792); (3.04900608493567 : 11.1554996744792 : JumpStart); (3.21567275160234 : 11.1554996744792 : JumpEnd); (6.25 : 11.1554996744792); (6.25 : 10.3574039713542); (7.41666666666667 : 10.3574039713542 : JumpStart); (7.58333333333333 : 10.3574039713542 : JumpEnd); (9.60416716666667 : 10.3574039713542 : JumpStart); (9.77083383333333 : 10.3574039713542 : JumpEnd); (9.91666666666667 : 10.3574039713542 : JumpStart); (10.0833333333333 : 10.3574039713542 : JumpEnd); (10.9791671666667 : 10.3574039713542 : JumpStart); (11.1458338333333 : 10.3574039713542 : JumpEnd); (11.875 : 10.3574039713542); (11.875 : 10.7372054036458); (11.8854191666667 : 10.7372054036458 : JumpStart); (12.0520858333333 : 10.7372054036458 : JumpEnd); (14.8307285416667 : 10.7372054036458 : JumpStart); (14.9973952083333 : 10.7372054036458 : JumpEnd); (15.1549501041667 : 10.7372054036458 : JumpStart); (15.3216167708333 : 10.7372054036458 : JumpEnd); (17.5416666666667 : 10.7372054036458 : JumpStart); (17.7083333333333 : 10.7372054036458 : JumpEnd); (21.7604146666667 : 10.7372054036458 : JumpStart); (21.9270813333333 : 10.7372054036458 : JumpEnd); (22.2916666666667 : 10.7372054036458 : JumpStart); (22.4583333333333 : 10.7372054036458 : JumpEnd); (22.8229186666667 : 10.7372054036458 : JumpStart); (22.9895853333333 : 10.7372054036458 : JumpEnd); (23.9166666666667 : 10.7372054036458 : JumpStart); (24.0833333333333 : 10.7372054036458 : JumpEnd); (24.9166666666667 : 10.7372054036458 : JumpStart); (25.0833333333333 : 10.7372054036458 : JumpEnd); (25.125 : 10.7372054036458); (25.125 : 9.67329182682291); (25.1666666666667 : 9.67329182682291 : JumpStart); (25.7083333333333 : 9.67329182682291 : JumpEnd); (25.75 : 9.67329182682291)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Person/Person_Payment" />
+      <nodes>
+        <classShapeMoniker Id="441e4bc8-1b03-4ac6-87da-5dc813454fac" />
+        <classShapeMoniker Id="2d3aa82b-73c8-4ace-9c4a-d3724a68737f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.5 : 10.5); (7.5 : 10.25); (9.60416716666667 : 10.25 : JumpStart); (9.77083383333333 : 10.25 : JumpEnd); (10 : 10.25); (10 : 10.6122054036458); (11.7916666666667 : 10.6122054036458 : JumpStart); (12.0520858333333 : 10.6122054036458 : JumpEnd); (14.8307285416667 : 10.6122054036458 : JumpStart); (14.9973952083333 : 10.6122054036458 : JumpEnd); (15.1549501041667 : 10.6122054036458 : JumpStart); (15.3216167708333 : 10.6122054036458 : JumpEnd); (17.5416666666667 : 10.6122054036458 : JumpStart); (17.7083333333333 : 10.6122054036458 : JumpEnd); (21.7604146666667 : 10.6122054036458 : JumpStart); (21.9270813333333 : 10.6122054036458 : JumpEnd); (22.2916666666667 : 10.6122054036458 : JumpStart); (22.4583333333333 : 10.6122054036458 : JumpEnd); (22.8229186666667 : 10.6122054036458 : JumpStart); (22.9895853333333 : 10.6122054036458 : JumpEnd); (23.9166666666667 : 10.6122054036458 : JumpStart); (24.0833333333333 : 10.6122054036458 : JumpEnd); (25 : 10.6122054036458); (25 : 12.2075100794271); (25.75 : 12.2075100794271)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Staff/Staff_Payment" />
+      <nodes>
+        <classShapeMoniker Id="00623422-893a-4807-9387-545cdc7b4846" />
+        <classShapeMoniker Id="2d3aa82b-73c8-4ace-9c4a-d3724a68737f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="12dbde98-7421-4ddd-8b6e-a4aaea078ab9" absoluteBounds="21.375, 16.75, 2, 6.0015283203125023">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/Dossier" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4d34918b-6279-4d0a-bc59-6a606d94a15c" absoluteBounds="21.39, 17.21, 1.9700000000000002, 5.4415283203125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(21.843748 : 16.75); (21.843748 : 7.52805135091145); (19.2083333333333 : 7.52805135091145 : JumpStart); (19.0416666666667 : 7.52805135091145 : JumpEnd); (18.625 : 7.52805135091145)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Dossier/Dossier_Discharge" />
+      <nodes>
+        <classShapeMoniker Id="12dbde98-7421-4ddd-8b6e-a4aaea078ab9" />
+        <classShapeMoniker Id="756ecc05-089e-46d3-84b3-dce9ec7f9eaa" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(23.375 : 21.5688297526042); (26.3854166666667 : 21.5688297526042 : JumpStart); (26.5520833333333 : 21.5688297526042 : JumpEnd); (28.2312039414063 : 21.5688297526042); (28.2312039414063 : 16.9339827473958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Dossier/Dossier_GivenServiceM" />
+      <nodes>
+        <classShapeMoniker Id="12dbde98-7421-4ddd-8b6e-a4aaea078ab9" />
+        <classShapeMoniker Id="f5d1c7d3-21b9-43c8-a7b5-a29453d892e6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(22.906252 : 16.75); (22.906252 : 8.73437325); (23.9166666666667 : 8.73437325 : JumpStart); (24.0833333333333 : 8.73437325 : JumpEnd); (25.5416666666667 : 8.73437325 : JumpStart); (25.7083333333333 : 8.73437325 : JumpEnd); (25.75 : 8.73437325)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Dossier/Dossier_Payment" />
+      <nodes>
+        <classShapeMoniker Id="12dbde98-7421-4ddd-8b6e-a4aaea078ab9" />
+        <classShapeMoniker Id="2d3aa82b-73c8-4ace-9c4a-d3724a68737f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.5 : 2.09897670247396); (14.4166666666667 : 2.09897670247396 : JumpStart); (14.5833333333333 : 2.09897670247396 : JumpEnd); (22.375 : 2.09897670247396); (22.375 : 16.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Department/Department_Dossier" />
+      <nodes>
+        <classShapeMoniker Id="5945c27e-b57a-47e7-9889-5a34c5d7ee52" />
+        <classShapeMoniker Id="12dbde98-7421-4ddd-8b6e-a4aaea078ab9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.9687525 : 10.1843082682292); (11.9687525 : 17.4298415828277); (14.8307285416667 : 17.4298415828277 : JumpStart); (14.9973952083333 : 17.4298415828277 : JumpEnd); (15.1666666666667 : 17.4298415828277 : JumpStart); (15.3333333333333 : 17.4298415828277 : JumpEnd); (21.0416666666667 : 17.4298415828277 : JumpStart); (21.2083333333333 : 17.4298415828277 : JumpEnd); (21.375 : 17.4298415828277)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Insurance/Insurance_Dossier" />
+      <nodes>
+        <classShapeMoniker Id="acb6dace-8696-4c02-a246-c919ed4ce122" />
+        <classShapeMoniker Id="12dbde98-7421-4ddd-8b6e-a4aaea078ab9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.625 : 16.8383804765625); (8.04850432291667 : 16.8383804765625 : JumpStart); (8.21517098958333 : 16.8383804765625 : JumpEnd); (11.8541666666667 : 16.8383804765625 : JumpStart); (12.0520858333333 : 16.8383804765625 : JumpEnd); (14.8307285416667 : 16.8383804765625 : JumpStart); (14.9973952083333 : 16.8383804765625 : JumpEnd); (15.1666666666667 : 16.8383804765625 : JumpStart); (15.3333333333333 : 16.8383804765625 : JumpEnd); (21.0416666666667 : 16.8383804765625 : JumpStart); (21.2083333333333 : 16.8383804765625 : JumpEnd); (21.375 : 16.8383804765625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Person/Person_Dossier" />
+      <nodes>
+        <classShapeMoniker Id="441e4bc8-1b03-4ac6-87da-5dc813454fac" />
+        <classShapeMoniker Id="12dbde98-7421-4ddd-8b6e-a4aaea078ab9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.13183765625 : 12.8478011067708); (8.13183765625 : 17.0441927382813); (11.8541666666667 : 17.0441927382813 : JumpStart); (12.0520858333333 : 17.0441927382813 : JumpEnd); (14.8307285416667 : 17.0441927382813 : JumpStart); (14.9973952083333 : 17.0441927382813 : JumpEnd); (15.1666666666667 : 17.0441927382813 : JumpStart); (15.3333333333333 : 17.0441927382813 : JumpEnd); (21.0416666666667 : 17.0441927382813 : JumpStart); (21.2083333333333 : 17.0441927382813 : JumpEnd); (21.375 : 17.0441927382813)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HCISCashDataContextDataContext/Staff/Staff_Dossier" />
+      <nodes>
+        <classShapeMoniker Id="00623422-893a-4807-9387-545cdc7b4846" />
+        <classShapeMoniker Id="12dbde98-7421-4ddd-8b6e-a4aaea078ab9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="b0a7f5c3-5ab3-4d46-8f72-34bc59763bb8" absoluteBounds="7.75, 4.125, 2, 4.6554182942708326">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/Vw_DossierBastari" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5183a5a4-487b-4a20-869e-f5ccceeedae1" absoluteBounds="7.7650000000000006, 4.585, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e4580d95-8e13-4bf8-b93f-c826ecadcef8" absoluteBounds="40.5, 19.625, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/Vw_CashPay" />
+      <nestedChildShapes>
+        <elementListCompartment Id="03e8026a-ce32-49bc-a406-d64ff13a62db" absoluteBounds="40.515, 20.085, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cf79e609-e712-46ba-93be-5f21342235a3" absoluteBounds="10.875, 3, 2, 2.5401025390625">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/Vw_OutDoorPatinetByInsurance" />
+      <nestedChildShapes>
+        <elementListCompartment Id="af809128-dc85-4fac-85e5-b2445a14bd74" absoluteBounds="10.89, 3.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="560d8ffe-edf6-4819-a4c4-c3007e90b3da" absoluteBounds="2.875, 0.625, 2, 4.0785139973958326">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/View_FalateghareSarepaei" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fb13bc7d-731b-4eb4-acdb-32e522f6dd20" absoluteBounds="2.89, 1.085, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6ac9f2da-d9c9-4a87-a6eb-c49542c5b0a2" absoluteBounds="32.125, 13.5, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/View_AllInsureBastari" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cb5f00fd-c9dd-463e-bab5-99ce6dd5775c" absoluteBounds="32.14, 13.96, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="af7b2ac9-e92d-4351-80c8-bfbe97ab86f4" absoluteBounds="3.5, 0.5, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/HCISCashDataContextDataContext/View_FalateghareSarepaei1" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6745eb3d-2577-4c4b-81c3-506cc088664e" absoluteBounds="3.515, 0.96, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

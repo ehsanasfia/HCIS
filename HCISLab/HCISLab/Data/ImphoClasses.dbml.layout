@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 10.375" name="ImphoClasses">
+  <DataContextMoniker Name="/ImphoClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="97e346b4-2c26-4eed-831f-5c141b22e0f1" absoluteBounds="3.5, 2, 2, 7.3476383463541657">
+      <DataClassMoniker Name="/ImphoClassesDataContext/Member" />
+      <nestedChildShapes>
+        <elementListCompartment Id="711342ac-482a-4a88-b310-958ba3d82001" absoluteBounds="3.515, 2.46, 1.9700000000000002, 6.7876383463541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6820e0e9-ce99-489f-8b8f-60c6734197cc" absoluteBounds="0.75, 1.25, 2, 8.8860498046875">
+      <DataClassMoniker Name="/ImphoClassesDataContext/Person1" />
+      <nestedChildShapes>
+        <elementListCompartment Id="53e36918-3883-406a-9b51-2b60e1268384" absoluteBounds="0.765, 1.71, 1.9700000000000002, 8.3260498046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 5.67381917317708); (3.5 : 5.67381917317708)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ImphoClassesDataContext/Person1/Person_Member" />
+      <nodes>
+        <classShapeMoniker Id="6820e0e9-ce99-489f-8b8f-60c6734197cc" />
+        <classShapeMoniker Id="97e346b4-2c26-4eed-831f-5c141b22e0f1" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

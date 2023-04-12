@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="عملکرد پزشکان" />
+  <DataSources>
+    <SqlDataSource ComponentName="dashboardSqlDataSource1">
+      <Name>SQL Data Source 1</Name>
+      <Connection Name="172.30.1.145_HCIS_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="172.30.1.145" />
+          <Parameter Name="database" Value="HCIS" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="artp" />
+          <Parameter Name="password" Value="506070" />
+        </Parameters>
+      </Connection>
+      <Query Type="SelectQuery" Name="Staff">
+        <Tables>
+          <Table Name="Staff" Meta="0|0|125|320" />
+          <Table Name="Person" Meta="240|30|125|1100" />
+          <Relation Type="Inner" Parent="Staff" Nested="Person">
+            <KeyColumn Parent="ID" Nested="ID" />
+          </Relation>
+        </Tables>
+        <Columns>
+          <Column Table="Person" Name="ID" />
+          <Column Table="Person" Name="FirstName" />
+          <Column Table="Person" Name="LastName" />
+        </Columns>
+        <Filter>[Staff.UserType] = 'دکتر' And [Staff.Hide] = False</Filter>
+      </Query>
+      <Query Type="StoredProcQuery" Name="Spu_DoctorAmalkard">
+        <Parameter Name="@F" Type="DevExpress.DataAccess.Expression">(System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)([Parameters.FromDate])</Parameter>
+        <Parameter Name="@T" Type="DevExpress.DataAccess.Expression">(System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)([Parameters.ToDate])</Parameter>
+        <Parameter Name="@DocID" Type="DevExpress.DataAccess.Expression">(System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)([Parameters.Doctors])</Parameter>
+        <ProcName>Spu_DoctorAmalkard</ProcName>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="Spu_DoctorAmalkard">
+            <Field Name="Doc" Type="String" />
+            <Field Name="TedadDaroo" Type="Int32" />
+            <Field Name="TedadNosakh" Type="Int32" />
+            <Field Name="TedadAghlam" Type="Int32" />
+            <Field Name="HadeaksarGhalam" Type="Int32" />
+            <Field Name="DarooTazrighi" Type="Int32" />
+            <Field Name="TakDaroo" Type="Int32" />
+            <Field Name="BishAz4Ghalam" Type="Int32" />
+            <Field Name="Visit" Type="Int32" />
+            <Field Name="Moshawere" Type="Int32" />
+            <Field Name="VisitBakhsh" Type="Int32" />
+            <Field Name="Erja" Type="Int32" />
+            <Field Name="Phisio" Type="Int32" />
+            <Field Name="Azmayeshgah" Type="Int32" />
+            <Field Name="CT" Type="Int32" />
+            <Field Name="Radio" Type="Int32" />
+            <Field Name="Sono" Type="Int32" />
+            <Field Name="MRI" Type="Int32" />
+            <Field Name="Sang" Type="Int32" />
+            <Field Name="Mamo" Type="Int32" />
+          </View>
+          <View Name="Staff">
+            <Field Name="ID" Type="Guid" />
+            <Field Name="FirstName" Type="String" />
+            <Field Name="LastName" Type="String" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+      <CalculatedFields>
+        <CalculatedField Name="Calculated Field 2" Expression="[FirstName] + ' ' + [LastName]" DataType="Auto" DataMember="Staff" />
+        <CalculatedField Name="Calculated Field 1" Expression="Iif([TedadNosakh] = 0, 0, [TedadAghlam] * 1.0 / [TedadNosakh])" DataType="Auto" DataMember="Spu_DoctorAmalkard" />
+      </CalculatedFields>
+    </SqlDataSource>
+  </DataSources>
+  <Parameters>
+    <Parameter Name="FromDate" Value="1397/04/10" />
+    <Parameter Name="ToDate" Value="1397/04/10" />
+    <Parameter Name="Doctors" Type="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <DynamicListLookUpSettings DataSourceName="dashboardSqlDataSource1" DataMember="Staff" ValueMember="ID" DisplayMember="Calculated Field 2" SortByMember="Calculated Field 2" />
+    </Parameter>
+  </Parameters>
+  <Items>
+    <Grid ComponentName="gridDashboardItem1" Name="دارو" DataSource="dashboardSqlDataSource1" DataMember="Spu_DoctorAmalkard">
+      <DataItems>
+        <Measure DataMember="TedadDaroo" UniqueName="DataItem0">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+        <Measure DataMember="TedadNosakh" UniqueName="DataItem1" />
+        <Measure DataMember="TedadAghlam" UniqueName="DataItem2">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+        <Measure DataMember="HadeaksarGhalam" UniqueName="DataItem3" />
+        <Measure DataMember="DarooTazrighi" UniqueName="DataItem4" />
+        <Measure DataMember="TakDaroo" UniqueName="DataItem5" />
+        <Measure DataMember="BishAz4Ghalam" UniqueName="DataItem6" />
+        <Measure DataMember="Calculated Field 1" UniqueName="DataItem7">
+          <NumericFormat FormatType="Number" Unit="Ones" />
+        </Measure>
+      </DataItems>
+      <GridColumns>
+        <GridMeasureColumn Name="تعداد دارو" Weight="69.963842975206617">
+          <Measure UniqueName="DataItem0" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="تعداد نسخ" FixedWidth="22.481707912635045" WidthType="FixedWidth">
+          <Measure UniqueName="DataItem1" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="تعداد اقلام" Weight="73.21797520661157">
+          <Measure UniqueName="DataItem2" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="حداکثر قلم" Weight="85.149793388429757">
+          <Measure UniqueName="DataItem3" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="دارو تزریقی" Weight="73.7603305785124">
+          <Measure UniqueName="DataItem4" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="تک دارو" Weight="62.370867768595041">
+          <Measure UniqueName="DataItem5" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="بیش از 4 قلم" Weight="77.014462809917362">
+          <Measure UniqueName="DataItem6" />
+        </GridMeasureColumn>
+        <GridMeasureColumn Name="میانگین اقلام در هر نسخه" Weight="83.522727272727266">
+          <Measure UniqueName="DataItem7" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions ColumnWidthMode="Manual" />
+    </Grid>
+    <Pie ComponentName="pieDashboardItem1" Name="نسخه ها" DataSource="dashboardSqlDataSource1" DataMember="Spu_DoctorAmalkard" LabelContentType="ArgumentAndValue" TooltipContentType="ArgumentAndValue">
+      <InteractivityOptions TargetDimensions="Series" />
+      <DataItems>
+        <Measure DataMember="Phisio" Name="فیزیوتراپی" UniqueName="DataItem2" />
+        <Measure DataMember="Azmayeshgah" Name="آزمایش" UniqueName="DataItem3" />
+        <Measure DataMember="CT" Name="CT" UniqueName="DataItem4" />
+        <Measure DataMember="Radio" Name="رادیوگرافی" UniqueName="DataItem5" />
+        <Measure DataMember="Sono" Name="سونوگرافی" UniqueName="DataItem6" />
+        <Measure DataMember="MRI" Name="MRI" UniqueName="DataItem7" />
+        <Measure DataMember="Sang" Name="سنگ شکن" UniqueName="DataItem8" />
+        <Measure DataMember="Mamo" Name="ماموگرافی" UniqueName="DataItem9" />
+      </DataItems>
+      <Values>
+        <Value UniqueName="DataItem2" />
+        <Value UniqueName="DataItem3" />
+        <Value UniqueName="DataItem4" />
+        <Value UniqueName="DataItem5" />
+        <Value UniqueName="DataItem6" />
+        <Value UniqueName="DataItem7" />
+        <Value UniqueName="DataItem8" />
+        <Value UniqueName="DataItem9" />
+      </Values>
+    </Pie>
+    <Pie ComponentName="pieDashboardItem2" Name="ویزیت" DataSource="dashboardSqlDataSource1" DataMember="Spu_DoctorAmalkard" LabelContentType="ArgumentAndValue" TooltipContentType="ArgumentAndValue">
+      <InteractivityOptions TargetDimensions="Series" />
+      <DataItems>
+        <Measure DataMember="Visit" Name="ویزیت" UniqueName="DataItem2" />
+        <Measure DataMember="Moshawere" Name="مشاوره" UniqueName="DataItem3" />
+        <Measure DataMember="VisitBakhsh" Name="ویزیت بخش" UniqueName="DataItem4" />
+        <Measure DataMember="Erja" Name="ارجاع" UniqueName="DataItem5" />
+      </DataItems>
+      <Values>
+        <Value UniqueName="DataItem2" />
+        <Value UniqueName="DataItem3" />
+        <Value UniqueName="DataItem4" />
+        <Value UniqueName="DataItem5" />
+      </Values>
+    </Pie>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup Orientation="Vertical">
+      <LayoutItem DashboardItem="gridDashboardItem1" Weight="30.398671096345517" />
+      <LayoutGroup Weight="69.60132890365449">
+        <LayoutItem DashboardItem="pieDashboardItem2" Weight="50.045004500450048" />
+        <LayoutItem DashboardItem="pieDashboardItem1" Weight="49.954995499549952" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

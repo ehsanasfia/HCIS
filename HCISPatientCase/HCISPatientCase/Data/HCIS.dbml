@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="HCIS" Class="HCISDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=HCIS;Integrated Security=True" SettingsObjectName="HCISPatientCase.Properties.Settings" SettingsPropertyName="HCISConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.PatientCase" Method="PatientCase">
+    <Parameter Name="NationalCode" Parameter="nationalCode" Type="System.String" DbType="NVarChar(10)" />
+    <ElementType Name="PatientCaseResult">
+      <Column Name="Pfirstname" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PlastName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NationalCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Category" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ChiefComplaint" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ago" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Since" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="DfirstName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DlastName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

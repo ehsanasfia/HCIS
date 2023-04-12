@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="کارانه پزشکان به تفکیک دسته بندی خدمان" />
+  <DataSources>
+    <SqlDataSource ComponentName="dashboardSqlDataSource1">
+      <Name>SQL Data Source 1</Name>
+      <Connection Name="172.30.1.145_HCIS_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="172.30.1.145" />
+          <Parameter Name="database" Value="HCIS" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="artp" />
+          <Parameter Name="password" Value="506070" />
+        </Parameters>
+      </Connection>
+      <Query Type="SelectQuery" Name="Vw_DoctorPaymentByCategory">
+        <Tables>
+          <Table Name="Vw_DoctorPaymentByCategory" Meta="0|0|125|140" />
+        </Tables>
+        <Columns>
+          <AllColumns Table="Vw_DoctorPaymentByCategory" />
+        </Columns>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="Vw_DoctorPaymentByCategory">
+            <Field Name="Count" Type="Double" />
+            <Field Name="CatName" Type="String" />
+            <Field Name="Year" Type="String" />
+            <Field Name="Month" Type="String" />
+            <Field Name="Doc" Type="String" />
+            <Field Name="Multiplier" Type="Double" />
+            <Field Name="Amount" Type="Double" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <TreeView ComponentName="treeViewDashboardItem1" Name="سال / ماه" DataSource="dashboardSqlDataSource1" DataMember="Vw_DoctorPaymentByCategory">
+      <DataItems>
+        <Dimension DataMember="Year" UniqueName="DataItem0" />
+        <Dimension DataMember="Month" UniqueName="DataItem1" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+        <Dimension UniqueName="DataItem1" />
+      </FilterDimensions>
+    </TreeView>
+    <Pie ComponentName="pieDashboardItem1" Name="به تفکیک دسته بندی خدمات" DataSource="dashboardSqlDataSource1" DataMember="Vw_DoctorPaymentByCategory" ShowPieCaptions="false">
+      <DataItems>
+        <Dimension DataMember="CatName" UniqueName="DataItem0" />
+        <Measure DataMember="Count" UniqueName="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem0" />
+      </Arguments>
+      <Values>
+        <Value UniqueName="DataItem1" />
+      </Values>
+    </Pie>
+    <ListBox ComponentName="listBoxDashboardItem1" Name="پزشکان" DataSource="dashboardSqlDataSource1" DataMember="Vw_DoctorPaymentByCategory">
+      <DataItems>
+        <Dimension DataMember="Doc" UniqueName="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+    <ListBox ComponentName="listBoxDashboardItem2" Name="دسته بندی خدمات" DataSource="dashboardSqlDataSource1" DataMember="Vw_DoctorPaymentByCategory">
+      <DataItems>
+        <Dimension DataMember="CatName" UniqueName="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension UniqueName="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+    <Chart ComponentName="chartDashboardItem1" Name="مبلغ نمودار میله ای" DataSource="dashboardSqlDataSource1" DataMember="Vw_DoctorPaymentByCategory">
+      <DataItems>
+        <Dimension DataMember="CatName" ColoringMode="Hue" UniqueName="DataItem0" />
+        <Measure DataMember="Count" UniqueName="DataItem1">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem0" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" />
+          <Series>
+            <Simple>
+              <Value UniqueName="DataItem1" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Grid ComponentName="gridDashboardItem1" Name="لیست کامل" DataSource="dashboardSqlDataSource1" DataMember="Vw_DoctorPaymentByCategory">
+      <DataItems>
+        <Dimension DataMember="Doc" UniqueName="DataItem0" />
+        <Dimension DataMember="Month" UniqueName="DataItem2" />
+        <Dimension DataMember="Year" UniqueName="DataItem3" />
+        <Measure DataMember="Count" UniqueName="DataItem4">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+        <Dimension DataMember="CatName" UniqueName="DataItem1" />
+      </DataItems>
+      <GridColumns>
+        <GridDimensionColumn Name="دستع بندی خدمات">
+          <Dimension UniqueName="DataItem1" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="پزشک">
+          <Dimension UniqueName="DataItem0" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="سال">
+          <Dimension UniqueName="DataItem3" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="ماه">
+          <Dimension UniqueName="DataItem2" />
+        </GridDimensionColumn>
+        <GridMeasureColumn Name="مبلغ">
+          <Measure UniqueName="DataItem4" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions EnableBandedRows="true" AllowGridCellMerge="true" />
+    </Grid>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutGroup Orientation="Vertical" Weight="71.040723981900456">
+        <LayoutItem DashboardItem="gridDashboardItem1" Weight="50" />
+        <LayoutGroup Weight="50">
+          <LayoutItem DashboardItem="pieDashboardItem1" Weight="35.541401273885349" />
+          <LayoutItem DashboardItem="chartDashboardItem1" Weight="64.458598726114644" />
+        </LayoutGroup>
+      </LayoutGroup>
+      <LayoutGroup Orientation="Vertical" Weight="28.959276018099548">
+        <LayoutItem DashboardItem="treeViewDashboardItem1" Weight="20.099667774086377" />
+        <LayoutItem DashboardItem="listBoxDashboardItem1" Weight="55.980066445182722" />
+        <LayoutItem DashboardItem="listBoxDashboardItem2" Weight="23.920265780730897" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

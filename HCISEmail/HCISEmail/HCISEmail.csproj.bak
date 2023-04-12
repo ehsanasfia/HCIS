@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{69E3449B-BFFA-4534-819A-5735BD95CFD1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HCISEmail</RootNamespace>
+    <AssemblyName>HCISEmail</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\Mail\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Mail</ProductName>
+    <PublisherName>Mg</PublisherName>
+    <SuiteName>Mail</SuiteName>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>0F5429FC29DB3956EA2FC7E18A8A441FC1AE1224</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>HCISEmail_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v18.2" />
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v18.2.Drawing, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v18.2.Core" />
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v18.2.Extensions, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\MainModule.cs" />
+    <Compile Include="Data\Emaildb.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Emaildb.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PartialClasses.cs" />
+    <Compile Include="Data\Sec.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sec.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\dlgChooseFolder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\dlgChooseFolder.Designer.cs">
+      <DependentUpon>dlgChooseFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\dlgFolder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\dlgFolder.designer.cs">
+      <DependentUpon>dlgFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\dlgMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\dlgMessage.designer.cs">
+      <DependentUpon>dlgMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\dlgNewRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\dlgNewRole.designer.cs">
+      <DependentUpon>dlgNewRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\dlgPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\dlgPassword.Designer.cs">
+      <DependentUpon>dlgPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\dlgUserRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\dlgUserRole.designer.cs">
+      <DependentUpon>dlgUserRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmFolder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmFolder.designer.cs">
+      <DependentUpon>frmFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmInbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmInbox.designer.cs">
+      <DependentUpon>frmInbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmUser.designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\dlgNewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\dlgNewUser.designer.cs">
+      <DependentUpon>dlgNewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Data\Emaildb.dbml.layout">
+      <DependentUpon>Emaildb.dbml</DependentUpon>
+    </None>
+    <None Include="Data\Sec.dbml.layout">
+      <DependentUpon>Sec.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Dialog\dlgChooseFolder.resx">
+      <DependentUpon>dlgChooseFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\dlgFolder.resx">
+      <DependentUpon>dlgFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\dlgMessage.resx">
+      <DependentUpon>dlgMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\dlgNewRole.resx">
+      <DependentUpon>dlgNewRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\dlgPassword.resx">
+      <DependentUpon>dlgPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\dlgUserRole.resx">
+      <DependentUpon>dlgUserRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmFolder.resx">
+      <DependentUpon>frmFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmInbox.resx">
+      <DependentUpon>frmInbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\dlgNewUser.resx">
+      <DependentUpon>dlgNewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Data\Emaildb.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Emaildb.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\Sec.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Sec.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HCISEmail_TemporaryKey.pfx" />
+    <None Include="Properties\DataSources\HCISEmail.Data.Definition.datasource" />
+    <None Include="Properties\DataSources\HCISEmail.Data.Department.datasource" />
+    <None Include="Properties\DataSources\HCISEmail.Data.sp_Email_Data_RecoveryResult.datasource" />
+    <None Include="Properties\DataSources\HCISEmail.Data.UserFolder.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Sec 18\SecurityLoginsAndAccessControl\SecurityLoginsAndAccessControl.vbproj">
+      <Project>{b07c6401-2d8d-4c7c-b785-2de29800a45f}</Project>
+      <Name>SecurityLoginsAndAccessControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resorces\PersianDate.dll" />
+    <Content Include="Resorces\PersianToolS.dll" />
+    <Content Include="Resorces\PersianToolsPack.dll" />
+    <Content Include="Resorces\Stimulsoft.Base.dll" />
+    <Content Include="Resorces\Stimulsoft.Controls.dll" />
+    <Content Include="Resorces\Stimulsoft.Controls.Win.dll" />
+    <Content Include="Resorces\Stimulsoft.Design.dll" />
+    <Content Include="Resorces\Stimulsoft.Editor.dll" />
+    <Content Include="Resorces\Stimulsoft.Report.Check.dll" />
+    <Content Include="Resorces\Stimulsoft.Report.Design.dll" />
+    <Content Include="Resorces\Stimulsoft.Report.dll" />
+    <Content Include="Resorces\Stimulsoft.Report.Helper.dll" />
+    <Content Include="Resorces\Stimulsoft.Report.Win.dll" />
+    <Content Include="Resorces\Stimulsoft.Report.Xbap.Design.dll" />
+    <Content Include="Resorces\Stimulsoft.Report.Xbap.dll" />
+    <None Include="Resources\Low16x16.png" />
+    <None Include="Resources\reply-message %281%29.png" />
+    <None Include="Resources\reply %281%29.png" />
+    <None Include="Resources\reply.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

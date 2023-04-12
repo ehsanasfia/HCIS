@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="ReaderDataset" targetNamespace="http://tempuri.org/ReaderDataset.xsd" xmlns:mstns="http://tempuri.org/ReaderDataset.xsd" xmlns="http://tempuri.org/ReaderDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="ReaderDataset" msdata:IsDataSet="true" msdata:MainDataTable="http_x003A__x002F__x002F_tempuri.org_x002F_ReaderDataset.xsd_x003A_OutXml" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="OutXml">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ValidCenter" msdata:Caption="IDValidCenter" type="xs:int" minOccurs="0" />
+              <xs:element name="DocDate" type="xs:int" minOccurs="0" />
+              <xs:element name="ServiceKindID" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="DocID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MedicalService" msdata:Caption="IDMedicalService" type="xs:int" minOccurs="0" />
+              <xs:element name="PayMent" msdata:Caption="TotalPayment" type="xs:int" minOccurs="0" />
+              <xs:element name="PersonnelNo" type="xs:int" minOccurs="0" />
+              <xs:element name="Relation" msdata:Caption="RelationOrderNo" type="xs:int" minOccurs="0" />
+              <xs:element name="ECode" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

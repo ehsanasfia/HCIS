@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="HCIS" Class="HCISDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=172.30.1.145;Initial Catalog=HCIS;Persist Security Info=True;User ID=artp" SettingsObjectName="GenerateAndConfirmSerialNumber.Properties.Settings" SettingsPropertyName="HCISConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.SerialNumber" Member="SerialNumbers">
+    <Type Name="SerialNumber">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RequestNumber" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="SerialNumber" Member="SerialNumber1" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Confirmation" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ConfirmTime" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="ConfirmDate" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

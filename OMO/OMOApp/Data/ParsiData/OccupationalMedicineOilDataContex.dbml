@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="OccupationalMedicineOil" Class="OccupationalMedicineOilDataContexDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=172.30.1.145;Initial Catalog=OccupationalMedicineOil;Persist Security Info=True;User ID=artp" SettingsObjectName="OMOApp.Properties.Settings" SettingsPropertyName="OccupationalMedicineOilConnectionString2" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Company" Member="Companies">
+    <Type Name="Company">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Responsible" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ResponsibleMobail" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Adreess" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="PostalCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="CreatorUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="LastModificator" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Association Name="Company_Introduction" Member="Introductions" ThisKey="ID" OtherKey="IDCompany" Type="Introduction" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReferenceFile" Member="ReferenceFiles">
+    <Type Name="ReferenceFile">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDIntroduction" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDDefinition" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PersonID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="AdmitDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ResultID" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ResultConditions" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ResultDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Conditiontext" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Advise" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CreatorUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatorUserFullName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Association Name="ReferenceFile_QA" Member="QAs" ThisKey="ID" OtherKey="ReferenceFileID" Type="QA" />
+      <Association Name="Definition_ReferenceFile" Member="Definition" ThisKey="IDDefinition" OtherKey="ID" Type="Definition" IsForeignKey="true" />
+      <Association Name="Introduction_ReferenceFile" Member="Introduction" ThisKey="IDIntroduction" OtherKey="ID" Type="Introduction" IsForeignKey="true" />
+      <Association Name="Person_ReferenceFile" Member="Person" ThisKey="PersonID" OtherKey="ID" Type="Person" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Definition" Member="Definitions">
+    <Type Name="Definition">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Definition_ReferenceFile" Member="ReferenceFiles" ThisKey="ID" OtherKey="IDDefinition" Type="ReferenceFile" />
+      <Association Name="Definition_Definition" Member="Definitions" ThisKey="ID" OtherKey="ParentID" Type="Definition" />
+      <Association Name="Definition_Definition" Member="Definition1" ThisKey="ParentID" OtherKey="ID" Type="Definition" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Introduction" Member="Introductions">
+    <Type Name="Introduction">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Number" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IDMedicalCenter" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastModificator" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="LastModificationUserFullName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreatorUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatorUserFullName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DateDo" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="IDCompany" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="Introduction_ReferenceFile" Member="ReferenceFiles" ThisKey="ID" OtherKey="IDIntroduction" Type="ReferenceFile" />
+      <Association Name="Company_Introduction" Member="Company" ThisKey="IDCompany" OtherKey="ID" Type="Company" IsForeignKey="true" />
+      <Association Name="MedicalCenter_Introduction" Member="MedicalCenter" ThisKey="IDMedicalCenter" OtherKey="ID" Type="MedicalCenter" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JobHistory" Member="JobHistories">
+    <Type Name="JobHistory">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PersonID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Post" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AssignedTask" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FromDate" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="ToDate" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Shift" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="JobChangeReason" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Association Name="Person_JobHistory" Member="Person" ThisKey="PersonID" OtherKey="ID" Type="Person" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MedicalCenter" Member="MedicalCenters">
+    <Type Name="MedicalCenter">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="MedicalCenter_Introduction" Member="Introductions" ThisKey="ID" OtherKey="IDMedicalCenter" Type="Introduction" />
+      <Association Name="MedicalCenter_MedicalCenter" Member="MedicalCenter2" ThisKey="ID" OtherKey="ID" Type="MedicalCenter" Cardinality="One" />
+      <Association Name="MedicalCenter_MedicalCenter" Member="MedicalCenter1" ThisKey="ID" OtherKey="ID" Type="MedicalCenter" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Person" Member="Persons">
+    <Type Name="Person">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PersonalNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NationalCode" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Sex" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FatherName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BirthCertificateNo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="BirthCertificateCityID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="BirthDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="BirthCityID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="EducationLicence" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MilitaryServiceState" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NaftJobExperience" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="PostalCode" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="MobileNumber" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Photo" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CreatorUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatorUserFullName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Association Name="Person_ReferenceFile" Member="ReferenceFiles" ThisKey="ID" OtherKey="PersonID" Type="ReferenceFile" />
+      <Association Name="Person_JobHistory" Member="JobHistories" ThisKey="ID" OtherKey="PersonID" Type="JobHistory" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QA" Member="QAs">
+    <Type Name="QA">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ReferenceFileID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="QuestionID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ResultYes" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ResultNumber" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ResultText" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ResultDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CreatorUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatorUserFullName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreationTime" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Association Name="ReferenceFile_QA" Member="ReferenceFile" ThisKey="ReferenceFileID" OtherKey="ID" Type="ReferenceFile" IsForeignKey="true" />
+      <Association Name="Question_QA" Member="Question" ThisKey="QuestionID" OtherKey="ID" Type="Question" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Question" Member="Questions">
+    <Type Name="Question">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDParent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Line" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Question_QA" Member="QAs" ThisKey="ID" OtherKey="QuestionID" Type="QA" />
+      <Association Name="Question_Question" Member="Questions" ThisKey="ID" OtherKey="IDParent" Type="Question" />
+      <Association Name="Question_Question" Member="Question1" ThisKey="IDParent" OtherKey="ID" Type="Question" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

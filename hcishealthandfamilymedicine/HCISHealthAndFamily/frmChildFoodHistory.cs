@@ -1,0 +1,174 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using DevExpress.XtraEditors;
+using HCISHealthAndFamily.Classes;
+using HCISHealthAndFamily.Data;
+using DevExpress.XtraEditors.Repository;
+
+namespace HCISHealthAndFamily
+{
+    public partial class frmChildFoodHistory : DevExpress.XtraEditors.XtraForm
+    {
+        HCISDataClassesDataContext dc = new HCISDataClassesDataContext();
+        List<QAPlus> lst;
+        List<RepositoryItem> lstItems;
+        RepositoryItemTextEdit DisabledTextEdit = new RepositoryItemTextEdit() { ReadOnly = true };
+        public frmChildFoodHistory()
+        {
+            InitializeComponent();
+            this.repositoryItemRadioGroup1.Columns = 3;
+            this.repositoryItemRadioGroup1.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(true, "دارد"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(false, "ندارد"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "پر نشده")});
+        }
+        
+        private void frmChildBirthConditions_Load(object sender, EventArgs e)
+        {
+            var gp = dc.QuestionnaireGroups.FirstOrDefault(x => x.Name == "سوابق تغذیه در دوران کودکی");
+            lst = new List<QAPlus>();
+
+            if (gp == null)
+                return;
+
+            var Quests = gp.Questionnaires.OrderBy(x => x.SortCol).ToList();
+            if (Quests == null)
+            {
+                lst = null;
+                qAPlusBindingSource.DataSource = lst;
+            }
+            else
+            {
+                lstItems = new List<RepositoryItem>();
+                //gridControl1.RepositoryItems.Clear();
+                foreach (var item in Quests)
+                {
+                    var qa = new QAPlus()
+                    {
+                        PQuestionnaire = item,
+                    };
+
+                    lst.Add(qa);
+
+                    if (item.Editor == "RadioGroup")
+                    {
+                        var a = new RepositoryItemRadioGroup();
+                        var answers = item.Answers.Split(',', '،');
+                        foreach (var ans in answers)
+                        {
+                            a.Items.Add(new DevExpress.XtraEditors.Controls.RadioGroupItem(ans, ans));
+                        }
+                        a.Tag = item.ID;
+                        gridControl1.RepositoryItems.Add(a);
+                        lstItems.Add(a);
+                    }
+                    else if (item.Editor == "ComboBox")
+                    {
+                        var a = new RepositoryItemComboBox();
+                        a.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+                        var answers = item.Answers.Split(',', '،');
+                        foreach (var ans in answers)
+                        {
+                            a.Items.Add(ans);
+                        }
+                        a.Tag = item.ID;
+                        gridControl1.RepositoryItems.Add(a);
+                        lstItems.Add(a);
+                    }
+                    else if (item.Editor == "MemoExEdit")
+                    {
+                        var a = new RepositoryItemMemoExEdit();
+                        a.Tag = item.ID;
+                        gridControl1.RepositoryItems.Add(a);
+                        lstItems.Add(a);
+                    }
+                    else if (item.Editor == "CheckedComboBoxEdit")
+                    {
+                        var a = new RepositoryItemCheckedComboBoxEdit();
+                        var answers = item.Answers.Split(',', '،');
+                        foreach (var ans in answers)
+                        {
+                            a.Items.Add(ans);
+                        }
+                        a.Tag = item.ID;
+                        gridControl1.RepositoryItems.Add(a);
+                        lstItems.Add(a);
+                    }
+                }
+            }
+
+            qAPlusBindingSource.DataSource = lst;
+            gridControl1.RefreshDataSource();
+
+
+        }
+
+        private void gridView1_CustomRowCellEdit(object sender, DevExpress.XtraGrid.Views.Grid.CustomRowCellEditEventArgs e)
+        {
+            QAPlus qap = gridView1.GetRow(e.RowHandle) as QAPlus;
+            if (e.Column == colEditor)
+            {
+                if (qap.PQuestionnaire.YesNo)
+                    e.RepositoryItem = DisabledTextEdit;
+                else
+                    e.RepositoryItem = lstItems.FirstOrDefault(x => (x.Tag as Guid?) != null && (x.Tag as Guid?) == (qap.PQuestionnaire.ID));
+            }
+            else if (e.Column == colResultCHK)
+            {
+                if (!qap.PQuestionnaire.YesNo)
+                {
+                    e.RepositoryItem = DisabledTextEdit;
+                }
+            }
+        }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("آیا از درستی اطلاعات وارد شده اطمینان دارید؟", "توجه", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign | MessageBoxOptions.RtlReading) != DialogResult.Yes)
+                return;
+            try
+            {
+                var gsm = dc.GivenServiceMs.FirstOrDefault(x => x.ID == MainModule.GSM_Set.ID);
+                if (gsm == null)
+                    return;
+
+                foreach (var item in lst)
+                {
+                    if (item.ResultCHK != null || !string.IsNullOrWhiteSpace(item.Description))
+                    {
+                        item.Questionnaire = item.PQuestionnaire;
+                        item.GivenServiceM = gsm;
+                        item.CreationDate = MainModule.GetPersianDate(DateTime.Now);
+                        item.CreationTime = DateTime.Now.ToString("HH:mm");
+                        item.CreationUser = MainModule.UserID;
+                        dc.QAPlus.InsertOnSubmit(item);
+                    }
+                }
+
+
+                dc.SubmitChanges();
+
+                lst = new List<QAPlus>();
+                qAPlusBindingSource.DataSource = lst;
+                gridControl1.RefreshDataSource();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "خطا در ثبت اطلاعات", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                return;
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+    }
+}

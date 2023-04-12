@@ -1,0 +1,1647 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{258D6425-D673-4F1C-88DF-D0A465356A53}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HCISManagementDashboard</RootNamespace>
+    <AssemblyName>HCISManagementDashboard</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\172.30.1.30\AsfiyaProjects\NewHIS\Manage\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\172.30.1.30\AsfiyaProjects\NewHIS\Manage\</InstallUrl>
+    <ProductName>Manage</ProductName>
+    <PublisherName>Artp</PublisherName>
+    <SuiteName>Artp</SuiteName>
+    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>A9198E2F4FB88D4500E1E4D6FA14DB75B53BC3ED</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>HCISManagementDashboard_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.BonusSkins.v16.1" />
+    <Reference Include="DevExpress.Charts.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v16.1.Win, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v16.1" />
+    <Reference Include="DevExpress.DataAccess.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v16.1.UI, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Map.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v16.1" />
+    <Reference Include="DevExpress.Sparkline.v16.1.Core" />
+    <Reference Include="DevExpress.Utils.v16.1.UI, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v16.1.Extensions, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v16.1.UI, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v16.1.Wizard, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v16.1" />
+    <Reference Include="DevExpress.XtraGauges.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v16.1.Presets, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v16.1.Win, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraMap.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v16.1.Extensions, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="PersianDate, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\PersianDate.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Base, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls.Win, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Controls.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Design, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Editor, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Check, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Report.Check.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Design, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Report.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Helper, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Report.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Win, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Report.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Xbap, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Report.Xbap.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Xbap.Design, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Stimulsoft.Report.Xbap.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\HCISDataClasses.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HCISDataClasses.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Data\IMPHOClasses.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IMPHOClasses.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Data\OcMedDataClasses.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OcMedDataClasses.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PartialClasses.cs" />
+    <Compile Include="Data\Security.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Security.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\BaseDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\BaseDialog.designer.cs">
+      <DependentUpon>BaseDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgChooseChildService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgChooseChildService.Designer.cs">
+      <DependentUpon>dlgChooseChildService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgChooseDr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgChooseDr.Designer.cs">
+      <DependentUpon>dlgChooseDr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgChoseService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgChoseService.Designer.cs">
+      <DependentUpon>dlgChoseService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgNtaionalCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgNtaionalCode.designer.cs">
+      <DependentUpon>dlgNtaionalCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgPerson.designer.cs">
+      <DependentUpon>dlgPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgPickDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgPickDate.Designer.cs">
+      <DependentUpon>dlgPickDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgSameCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgSameCode.designer.cs">
+      <DependentUpon>dlgSameCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgSameCodeInsure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgSameCodeInsure.designer.cs">
+      <DependentUpon>dlgSameCodeInsure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgSelectInsuree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgSelectInsuree.designer.cs">
+      <DependentUpon>dlgSelectInsuree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgStart.designer.cs">
+      <DependentUpon>dlgStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\dlgCountCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlgCountCategory.designer.cs">
+      <DependentUpon>dlgCountCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgSearchBastari1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgSearchBastari1.designer.cs">
+      <DependentUpon>dlgSearchBastari1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAdmitToConfirmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAdmitToConfirmDashboard.designer.cs">
+      <DependentUpon>frmAdmitToConfirmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDocVisitCountDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDocVisitCountDashboard.designer.cs">
+      <DependentUpon>frmDocVisitCountDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDosinsuracneDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDosinsuracneDashboard.designer.cs">
+      <DependentUpon>frmDosinsuracneDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLabWorkSheetList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLabWorkSheetList.designer.cs">
+      <DependentUpon>frmLabWorkSheetList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOver60.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOver60.designer.cs">
+      <DependentUpon>frmOver60.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDoctorWardVisit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDoctorWardVisit.designer.cs">
+      <DependentUpon>frmDoctorWardVisit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBastariPatientAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBastariPatientAll.Designer.cs">
+      <DependentUpon>frmBastariPatientAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDrugStoreMD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDrugStoreMD.Designer.cs">
+      <DependentUpon>frmDrugStoreMD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDrugStorePatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDrugStorePatient.Designer.cs">
+      <DependentUpon>frmDrugStorePatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDoctorAmalkardDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDoctorAmalkardDashboard.designer.cs">
+      <DependentUpon>frmDoctorAmalkardDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDrugStoreActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDrugStoreActivity.Designer.cs">
+      <DependentUpon>frmDrugStoreActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFDDentistVisit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFDDentistVisit.Designer.cs">
+      <DependentUpon>frmFDDentistVisit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAdmittedDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAdmittedDashboard.Designer.cs">
+      <DependentUpon>frmAdmittedDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCompanyDrug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCompanyDrug.designer.cs">
+      <DependentUpon>frmCompanyDrug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDaroBakhshDarkhast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDaroBakhshDarkhast.designer.cs">
+      <DependentUpon>frmDaroBakhshDarkhast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDentistIncomeByService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDentistIncomeByService.Designer.cs">
+      <DependentUpon>frmDentistIncomeByService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDashboardDesigner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDashboardDesigner.Designer.cs">
+      <DependentUpon>frmDashboardDesigner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDentistIncomeDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDentistIncomeDashboard.Designer.cs">
+      <DependentUpon>frmDentistIncomeDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFDCompanyDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFDCompanyDashboard.designer.cs">
+      <DependentUpon>frmFDCompanyDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFDDepartmentDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFDDepartmentDashboard.designer.cs">
+      <DependentUpon>frmFDDepartmentDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFDSCrazy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFDSCrazy.designer.cs">
+      <DependentUpon>frmFDSCrazy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFDMBMIFat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFDMBMIFat.designer.cs">
+      <DependentUpon>frmFDMBMIFat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFDSSmook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFDSSmook.designer.cs">
+      <DependentUpon>frmFDSSmook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFDSHyperlipid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFDSHyperlipid.designer.cs">
+      <DependentUpon>frmFDSHyperlipid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFDSHTN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFDSHTN.designer.cs">
+      <DependentUpon>frmFDSHTN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFDSDiabets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFDSDiabets.designer.cs">
+      <DependentUpon>frmFDSDiabets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFDSHeartProplem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFDSHeartProplem.designer.cs">
+      <DependentUpon>frmFDSHeartProplem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFDSIHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFDSIHD.designer.cs">
+      <DependentUpon>frmFDSIHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFDTeen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFDTeen.designer.cs">
+      <DependentUpon>frmFDTeen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFDFat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFDFat.designer.cs">
+      <DependentUpon>frmFDFat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFDLipid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFDLipid.designer.cs">
+      <DependentUpon>frmFDLipid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFDDiabet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFDDiabet.designer.cs">
+      <DependentUpon>frmFDDiabet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFDHTN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFDHTN.designer.cs">
+      <DependentUpon>frmFDHTN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFDMDocAndNurse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFDMDocAndNurse.designer.cs">
+      <DependentUpon>frmFDMDocAndNurse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFDSDocAndNurseIndicator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFDSDocAndNurseIndicator.designer.cs">
+      <DependentUpon>frmFDSDocAndNurseIndicator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFDSSherkatiBazneshastehIndicator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFDSSherkatiBazneshastehIndicator.designer.cs">
+      <DependentUpon>frmFDSSherkatiBazneshastehIndicator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFDInsuranceDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFDInsuranceDashboard.designer.cs">
+      <DependentUpon>frmFDInsuranceDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFDDoctorStandards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFDDoctorStandards.designer.cs">
+      <DependentUpon>frmFDDoctorStandards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFDSexDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFDSexDashboard.designer.cs">
+      <DependentUpon>frmFDSexDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFinanceDashboardBig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFinanceDashboardBig.Designer.cs">
+      <DependentUpon>frmFinanceDashboardBig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFinanceDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFinanceDashboard.Designer.cs">
+      <DependentUpon>frmFinanceDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTransportToSurgery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTransportToSurgery.designer.cs">
+      <DependentUpon>frmTransportToSurgery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmExportRedCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmExportRedCard.designer.cs">
+      <DependentUpon>frmExportRedCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMedicalSurgeryWardPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMedicalSurgeryWardPatient.designer.cs">
+      <DependentUpon>frmMedicalSurgeryWardPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPhysioPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPhysioPrice.Designer.cs">
+      <DependentUpon>frmPhysioPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDentistVisitByDepPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDentistVisitByDepPrice.Designer.cs">
+      <DependentUpon>frmDentistVisitByDepPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDentistVisitPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDentistVisitPrice.Designer.cs">
+      <DependentUpon>frmDentistVisitPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDrugALLpharmcy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDrugALLpharmcy.designer.cs">
+      <DependentUpon>frmDrugALLpharmcy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDrugCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDrugCompany.designer.cs">
+      <DependentUpon>frmDrugCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDrugOutOfpharmcy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDrugOutOfpharmcy.designer.cs">
+      <DependentUpon>frmDrugOutOfpharmcy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDrugP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDrugP.designer.cs">
+      <DependentUpon>frmDrugP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDrugStoreStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDrugStoreStock.designer.cs">
+      <DependentUpon>frmDrugStoreStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFullHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFullHistory.Designer.cs">
+      <DependentUpon>frmFullHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmHospitalOPDAndEmergencyCount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmHospitalOPDAndEmergencyCount.Designer.cs">
+      <DependentUpon>frmHospitalOPDAndEmergencyCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmHospitalOPDCount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmHospitalOPDCount.Designer.cs">
+      <DependentUpon>frmHospitalOPDCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmHReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmHReport.designer.cs">
+      <DependentUpon>frmHReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLabActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLabActivity.designer.cs">
+      <DependentUpon>frmLabActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPatientByClinic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPatientByClinic.Designer.cs">
+      <DependentUpon>frmPatientByClinic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPatientByWard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPatientByWard.Designer.cs">
+      <DependentUpon>frmPatientByWard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDentistPatientList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDentistPatientList.Designer.cs">
+      <DependentUpon>frmDentistPatientList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAllUsingAmount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAllUsingAmount.Designer.cs">
+      <DependentUpon>frmAllUsingAmount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDentistPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDentistPrice.Designer.cs">
+      <DependentUpon>frmDentistPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDoctorVisitByDetailSpecialDep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDoctorVisitByDetailSpecialDep.Designer.cs">
+      <DependentUpon>frmDoctorVisitByDetailSpecialDep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDoctorVisitByDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDoctorVisitByDetail.Designer.cs">
+      <DependentUpon>frmDoctorVisitByDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDiagnosticCity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDiagnosticCity.Designer.cs">
+      <DependentUpon>frmDiagnosticCity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDiagnosticPriceCity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDiagnosticPriceCity.Designer.cs">
+      <DependentUpon>frmDiagnosticPriceCity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDsByRequestedStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDsByRequestedStaff.Designer.cs">
+      <DependentUpon>frmDsByRequestedStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmIncomeByDep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmIncomeByDep.designer.cs">
+      <DependentUpon>frmIncomeByDep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmIncomeByService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmIncomeByService.Designer.cs">
+      <DependentUpon>frmIncomeByService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmNurseAction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNurseAction.Designer.cs">
+      <DependentUpon>frmNurseAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPDrug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPDrug.designer.cs">
+      <DependentUpon>frmPDrug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPriceB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPriceB.designer.cs">
+      <DependentUpon>frmPriceB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRDoctor.Designer.cs">
+      <DependentUpon>frmRDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRDoctorDrug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRDoctorDrug.designer.cs">
+      <DependentUpon>frmRDoctorDrug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReportM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReportM.designer.cs">
+      <DependentUpon>frmReportM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReportMDruSt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReportMDruSt.designer.cs">
+      <DependentUpon>frmReportMDruSt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmStock.designer.cs">
+      <DependentUpon>frmStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSurgeryWithSalamatBooklet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSurgeryWithSalamatBooklet.Designer.cs">
+      <DependentUpon>frmSurgeryWithSalamatBooklet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAnesthesiaBigReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAnesthesiaBigReport.Designer.cs">
+      <DependentUpon>frmAnesthesiaBigReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDiagnosticAdmitted.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDiagnosticAdmitted.Designer.cs">
+      <DependentUpon>frmDiagnosticAdmitted.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDiagnosticServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDiagnosticServices.Designer.cs">
+      <DependentUpon>frmDiagnosticServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmThinSurgery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmThinSurgery.Designer.cs">
+      <DependentUpon>frmThinSurgery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDoctorSurgery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDoctorSurgery.Designer.cs">
+      <DependentUpon>frmDoctorSurgery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRepetitivePatients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRepetitivePatients.Designer.cs">
+      <DependentUpon>frmRepetitivePatients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDoctorParacServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDoctorParacServices.Designer.cs">
+      <DependentUpon>frmDoctorParacServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDoctorTimesAndStandards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDoctorTimesAndStandards.Designer.cs">
+      <DependentUpon>frmDoctorTimesAndStandards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEmptyBedsByWard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEmptyBedsByWard.Designer.cs">
+      <DependentUpon>frmEmptyBedsByWard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBloodPressureRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBloodPressureRpt.designer.cs">
+      <DependentUpon>frmBloodPressureRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBMIrpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBMIrpt.designer.cs">
+      <DependentUpon>frmBMIrpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBreathingRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBreathingRpt.designer.cs">
+      <DependentUpon>frmBreathingRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCountInsurance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCountInsurance.Designer.cs">
+      <DependentUpon>frmCountInsurance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDiabetesRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDiabetesRpt.designer.cs">
+      <DependentUpon>frmDiabetesRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDoctorDiagnosisD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDoctorDiagnosisD.Designer.cs">
+      <DependentUpon>frmDoctorDiagnosisD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDoctorDiagnosisM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDoctorDiagnosisM.Designer.cs">
+      <DependentUpon>frmDoctorDiagnosisM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDentistServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDentistServices.Designer.cs">
+      <DependentUpon>frmDentistServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDoctorTestM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDoctorTestM.Designer.cs">
+      <DependentUpon>frmDoctorTestM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDoctorReference.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDoctorReference.Designer.cs">
+      <DependentUpon>frmDoctorReference.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDoctorDrug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDoctorDrug.Designer.cs">
+      <DependentUpon>frmDoctorDrug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmExpertiseRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmExpertiseRpt.designer.cs">
+      <DependentUpon>frmExpertiseRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmHearingRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmHearingRpt.designer.cs">
+      <DependentUpon>frmHearingRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmIncomeByDentists.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmIncomeByDentists.Designer.cs">
+      <DependentUpon>frmIncomeByDentists.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmIncomeWard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmIncomeWard.Designer.cs">
+      <DependentUpon>frmIncomeWard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmIncomeDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmIncomeDoctor.Designer.cs">
+      <DependentUpon>frmIncomeDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDoctorVisit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDoctorVisit.Designer.cs">
+      <DependentUpon>frmDoctorVisit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmIncomeDentist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmIncomeDentist.Designer.cs">
+      <DependentUpon>frmIncomeDentist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmIncomeUnits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmIncomeUnits.Designer.cs">
+      <DependentUpon>frmIncomeUnits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmIncomeDrugStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmIncomeDrugStore.Designer.cs">
+      <DependentUpon>frmIncomeDrugStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAdmitted.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAdmitted.Designer.cs">
+      <DependentUpon>frmAdmitted.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmIncomeInsurance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmIncomeInsurance.Designer.cs">
+      <DependentUpon>frmIncomeInsurance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmIncomeClinic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmIncomeClinic.Designer.cs">
+      <DependentUpon>frmIncomeClinic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAdmittedInsurance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAdmittedInsurance.Designer.cs">
+      <DependentUpon>frmAdmittedInsurance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAdmittedClinic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAdmittedClinic.Designer.cs">
+      <DependentUpon>frmAdmittedClinic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLDLrpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLDLrpt.designer.cs">
+      <DependentUpon>frmLDLrpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSmokingRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSmokingRpt.designer.cs">
+      <DependentUpon>frmSmokingRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmVisitInsurance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmVisitInsurance.Designer.cs">
+      <DependentUpon>frmVisitInsurance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmVisitSpecialDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmVisitSpecialDepartment.Designer.cs">
+      <DependentUpon>frmVisitSpecialDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RptDiagbyInsurance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RptDiagbyInsurance.Designer.cs">
+      <DependentUpon>RptDiagbyInsurance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RptKhadamatTashkhisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RptKhadamatTashkhisi.designer.cs">
+      <DependentUpon>RptKhadamatTashkhisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainModule.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Data\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Data\IMPHOClasses.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>IMPHOClasses.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\OcMedDataClasses.dbml.layout">
+      <DependentUpon>OcMedDataClasses.dbml</DependentUpon>
+    </None>
+    <None Include="Data\IMPHOClasses.dbml.layout">
+      <DependentUpon>IMPHOClasses.dbml</DependentUpon>
+    </None>
+    <None Include="Data\Security.dbml.layout">
+      <DependentUpon>Security.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Dialogs\BaseDialog.resx">
+      <DependentUpon>BaseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgChooseChildService.resx">
+      <DependentUpon>dlgChooseChildService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgChooseDr.resx">
+      <DependentUpon>dlgChooseDr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgChoseService.resx">
+      <DependentUpon>dlgChoseService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgNtaionalCode.resx">
+      <DependentUpon>dlgNtaionalCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgPerson.resx">
+      <DependentUpon>dlgPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgPickDate.resx">
+      <DependentUpon>dlgPickDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgSameCode.resx">
+      <DependentUpon>dlgSameCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgSameCodeInsure.resx">
+      <DependentUpon>dlgSameCodeInsure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgSelectInsuree.resx">
+      <DependentUpon>dlgSelectInsuree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgStart.resx">
+      <DependentUpon>dlgStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlgCountCategory.resx">
+      <DependentUpon>dlgCountCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgSearchBastari1.resx">
+      <DependentUpon>dlgSearchBastari1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAdmitToConfirmDashboard.resx">
+      <DependentUpon>frmAdmitToConfirmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDocVisitCountDashboard.resx">
+      <DependentUpon>frmDocVisitCountDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDosinsuracneDashboard.resx">
+      <DependentUpon>frmDosinsuracneDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLabWorkSheetList.resx">
+      <DependentUpon>frmLabWorkSheetList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOver60.resx">
+      <DependentUpon>frmOver60.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBastariPatientAll.resx">
+      <DependentUpon>frmBastariPatientAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDoctorWardVisit.resx">
+      <DependentUpon>frmDoctorWardVisit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDrugStoreMD.resx">
+      <DependentUpon>frmDrugStoreMD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDrugStorePatient.resx">
+      <DependentUpon>frmDrugStorePatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDoctorAmalkardDashboard.resx">
+      <DependentUpon>frmDoctorAmalkardDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDrugStoreActivity.resx">
+      <DependentUpon>frmDrugStoreActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFDDentistVisit.resx">
+      <DependentUpon>frmFDDentistVisit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAdmittedDashboard.resx">
+      <DependentUpon>frmAdmittedDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCompanyDrug.resx">
+      <DependentUpon>frmCompanyDrug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDaroBakhshDarkhast.resx">
+      <DependentUpon>frmDaroBakhshDarkhast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDentistIncomeByService.resx">
+      <DependentUpon>frmDentistIncomeByService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDashboardDesigner.resx">
+      <DependentUpon>frmDashboardDesigner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDentistIncomeDashboard.resx">
+      <DependentUpon>frmDentistIncomeDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFDCompanyDashboard.resx">
+      <DependentUpon>frmFDCompanyDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFDDepartmentDashboard.resx">
+      <DependentUpon>frmFDDepartmentDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFDSCrazy.resx">
+      <DependentUpon>frmFDSCrazy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFDMBMIFat.resx">
+      <DependentUpon>frmFDMBMIFat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFDSSmook.resx">
+      <DependentUpon>frmFDSSmook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFDSHyperlipid.resx">
+      <DependentUpon>frmFDSHyperlipid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFDSHTN.resx">
+      <DependentUpon>frmFDSHTN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFDSDiabets.resx">
+      <DependentUpon>frmFDSDiabets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFDSHeartProplem.resx">
+      <DependentUpon>frmFDSHeartProplem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFDSIHD.resx">
+      <DependentUpon>frmFDSIHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFDTeen.resx">
+      <DependentUpon>frmFDTeen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFDFat.resx">
+      <DependentUpon>frmFDFat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFDLipid.resx">
+      <DependentUpon>frmFDLipid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFDDiabet.resx">
+      <DependentUpon>frmFDDiabet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFDHTN.resx">
+      <DependentUpon>frmFDHTN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFDMDocAndNurse.resx">
+      <DependentUpon>frmFDMDocAndNurse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFDSDocAndNurseIndicator.resx">
+      <DependentUpon>frmFDSDocAndNurseIndicator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFDSSherkatiBazneshastehIndicator.resx">
+      <DependentUpon>frmFDSSherkatiBazneshastehIndicator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFDInsuranceDashboard.resx">
+      <DependentUpon>frmFDInsuranceDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFDDoctorStandards.resx">
+      <DependentUpon>frmFDDoctorStandards.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFDSexDashboard.resx">
+      <DependentUpon>frmFDSexDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFinanceDashboardBig.resx">
+      <DependentUpon>frmFinanceDashboardBig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFinanceDashboard.resx">
+      <DependentUpon>frmFinanceDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTransportToSurgery.resx">
+      <DependentUpon>frmTransportToSurgery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmExportRedCard.resx">
+      <DependentUpon>frmExportRedCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMedicalSurgeryWardPatient.resx">
+      <DependentUpon>frmMedicalSurgeryWardPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPhysioPrice.resx">
+      <DependentUpon>frmPhysioPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDentistVisitByDepPrice.resx">
+      <DependentUpon>frmDentistVisitByDepPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDentistVisitPrice.resx">
+      <DependentUpon>frmDentistVisitPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDrugALLpharmcy.resx">
+      <DependentUpon>frmDrugALLpharmcy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDrugCompany.resx">
+      <DependentUpon>frmDrugCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDrugOutOfpharmcy.resx">
+      <DependentUpon>frmDrugOutOfpharmcy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDrugP.resx">
+      <DependentUpon>frmDrugP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDrugStoreStock.resx">
+      <DependentUpon>frmDrugStoreStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFullHistory.resx">
+      <DependentUpon>frmFullHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmHospitalOPDAndEmergencyCount.resx">
+      <DependentUpon>frmHospitalOPDAndEmergencyCount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmHospitalOPDCount.resx">
+      <DependentUpon>frmHospitalOPDCount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmHReport.resx">
+      <DependentUpon>frmHReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLabActivity.resx">
+      <DependentUpon>frmLabActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPatientByClinic.resx">
+      <DependentUpon>frmPatientByClinic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPatientByWard.resx">
+      <DependentUpon>frmPatientByWard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDentistPatientList.resx">
+      <DependentUpon>frmDentistPatientList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAllUsingAmount.resx">
+      <DependentUpon>frmAllUsingAmount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDentistPrice.resx">
+      <DependentUpon>frmDentistPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDoctorVisitByDetailSpecialDep.resx">
+      <DependentUpon>frmDoctorVisitByDetailSpecialDep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDoctorVisitByDetail.resx">
+      <DependentUpon>frmDoctorVisitByDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDiagnosticCity.resx">
+      <DependentUpon>frmDiagnosticCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDiagnosticPriceCity.resx">
+      <DependentUpon>frmDiagnosticPriceCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDsByRequestedStaff.resx">
+      <DependentUpon>frmDsByRequestedStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmIncomeByDep.resx">
+      <DependentUpon>frmIncomeByDep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmIncomeByService.resx">
+      <DependentUpon>frmIncomeByService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmNurseAction.resx">
+      <DependentUpon>frmNurseAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPDrug.resx">
+      <DependentUpon>frmPDrug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPriceB.resx">
+      <DependentUpon>frmPriceB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRDoctor.resx">
+      <DependentUpon>frmRDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRDoctorDrug.resx">
+      <DependentUpon>frmRDoctorDrug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReportM.resx">
+      <DependentUpon>frmReportM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReportMDruSt.resx">
+      <DependentUpon>frmReportMDruSt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmStock.resx">
+      <DependentUpon>frmStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSurgeryWithSalamatBooklet.resx">
+      <DependentUpon>frmSurgeryWithSalamatBooklet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAnesthesiaBigReport.resx">
+      <DependentUpon>frmAnesthesiaBigReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDiagnosticAdmitted.resx">
+      <DependentUpon>frmDiagnosticAdmitted.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDiagnosticServices.resx">
+      <DependentUpon>frmDiagnosticServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmThinSurgery.resx">
+      <DependentUpon>frmThinSurgery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDoctorSurgery.resx">
+      <DependentUpon>frmDoctorSurgery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRepetitivePatients.resx">
+      <DependentUpon>frmRepetitivePatients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDoctorParacServices.resx">
+      <DependentUpon>frmDoctorParacServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDoctorTimesAndStandards.resx">
+      <DependentUpon>frmDoctorTimesAndStandards.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEmptyBedsByWard.resx">
+      <DependentUpon>frmEmptyBedsByWard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBloodPressureRpt.resx">
+      <DependentUpon>frmBloodPressureRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBreathingRpt.resx">
+      <DependentUpon>frmBreathingRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCountInsurance.resx">
+      <DependentUpon>frmCountInsurance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDiabetesRpt.resx">
+      <DependentUpon>frmDiabetesRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDoctorDiagnosisD.resx">
+      <DependentUpon>frmDoctorDiagnosisD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDoctorDiagnosisM.resx">
+      <DependentUpon>frmDoctorDiagnosisM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDentistServices.resx">
+      <DependentUpon>frmDentistServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDoctorTestM.resx">
+      <DependentUpon>frmDoctorTestM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDoctorReference.resx">
+      <DependentUpon>frmDoctorReference.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDoctorDrug.resx">
+      <DependentUpon>frmDoctorDrug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmExpertiseRpt.resx">
+      <DependentUpon>frmExpertiseRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmHearingRpt.resx">
+      <DependentUpon>frmHearingRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmIncomeByDentists.resx">
+      <DependentUpon>frmIncomeByDentists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmIncomeWard.resx">
+      <DependentUpon>frmIncomeWard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmIncomeDoctor.resx">
+      <DependentUpon>frmIncomeDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDoctorVisit.resx">
+      <DependentUpon>frmDoctorVisit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmIncomeDentist.resx">
+      <DependentUpon>frmIncomeDentist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmIncomeUnits.resx">
+      <DependentUpon>frmIncomeUnits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmIncomeDrugStore.resx">
+      <DependentUpon>frmIncomeDrugStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmIncomeInsurance.resx">
+      <DependentUpon>frmIncomeInsurance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmIncomeClinic.resx">
+      <DependentUpon>frmIncomeClinic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAdmittedInsurance.resx">
+      <DependentUpon>frmAdmittedInsurance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAdmittedClinic.resx">
+      <DependentUpon>frmAdmittedClinic.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Data\HCISDataClasses.dbml.layout">
+      <DependentUpon>HCISDataClasses.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Forms\frmAdmitted.resx">
+      <DependentUpon>frmAdmitted.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLDLrpt.resx">
+      <DependentUpon>frmLDLrpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSmokingRpt.resx">
+      <DependentUpon>frmSmokingRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmVisitInsurance.resx">
+      <DependentUpon>frmVisitInsurance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmVisitSpecialDepartment.resx">
+      <DependentUpon>frmVisitSpecialDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RptDiagbyInsurance.resx">
+      <DependentUpon>RptDiagbyInsurance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RptKhadamatTashkhisi.resx">
+      <DependentUpon>RptKhadamatTashkhisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Data\HCISDataClasses.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>HCISDataClasses.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\OcMedDataClasses.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>OcMedDataClasses.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\Security.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Security.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HCISManagementDashboard_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.AllDayDentistIncome.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.AllDayDepartment.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.AllDayDoctorDiagnosis.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.AllDayDoctorDiagnosisD.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.AllDayDoctorDrugCount.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.AllDayDoctorIncome.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.AllDayDoctorTestM.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.AllDayDoctorVisit.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.AllDayInsur.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.AllDayInsureIncome.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.AllDayReference.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.AllDaysClinicIncome.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.AllDayVisit.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.AllMonthVisit.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.DentistByMonthAndDay.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.DentistIncomeYearAndMonth.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.DentistServicesCount.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.DentistServicesYearAndMonth.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.DentistYearAndMonth.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.Department.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.DepartmentIncomeByMonthAndYear.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.DiagnosticServiceCount.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.DiagnosticServiceYearAndMonth.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.DoctorDiagnosisByYearAndMonth.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.DoctorDiagnosisDByYearAndMonth.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.DoctorDrugYearAndMonth.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.DoctorIncomeByYearAndMonth.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.DoctorReferenceByYearAndMonth.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.DoctorTestMbyYearAndMonth.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.DoctorVisitIncomeByYearAndMonth.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.Dossier.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.DrugStoreIncomeByMonthAndDay.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.DrugStoreInomeByYearAndMonth.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.EmptyBedCount.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.ICD10.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.IncomeDentistByYearAndMonth.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.Insurance.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.InsurancePatientCountAllCatByYearAndMonth.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.InsureIncomeByYearAndMonth.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.InsurenceByYear.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.InsurePatinetCountAllCat.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.Person.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.Service.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.Speciality.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.Spu_AllDayDoctorTestMResult.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.Spu_DoctorParacilicServicesResult.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.Spu_DoctorVisitResult.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.Spu_DoctorVisitSpecialDepResult.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.Spu_DsRequestedStaffResult.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.Spu_HospitalOPDCountResult.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.Spu_OPDAndEmergencyCountByInsuranceResult.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.Spu_PharmcyPatientResult.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.Spu_RepetitiveVisitsResult.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.Spu_VisitInsuranceResult.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.Staff.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.Tbl_Company.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.UnitIncomeByDay.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.UnitIncomeByYearAndMonth.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.View_SarpaeiServiceUnion.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.VwDoctorInstraction.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.Vw_BastariPatientAll.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.Vw_BigSurgeryReport.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.Vw_DentistVisitByDepPrice.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.Vw_DentistVisitPrice.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.Vw_DiagnosticPriceCity.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.Vw_DiagnosticServiceInsure.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.Vw_DiagnosticServiceZoneCount.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.Vw_DoctorInstructionPerson.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.Vw_DoctorSpecialityVisit.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.Vw_DrugStoreByCat.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.Vw_DrugStoreMDCount.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.Vw_KarkardeDocVisit.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.Vw_ThinSurgeryReport.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.WardIncome.datasource" />
+    <None Include="Properties\DataSources\HCISManagementDashboard.Data.WardIncomeByYearAndMonth.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SecurityLoginsAndAccessControl\SecurityLoginsAndAccessControl\SecurityLoginsAndAccessControl.vbproj">
+      <Project>{b07c6401-2d8d-4c7c-b785-2de29800a45f}</Project>
+      <Name>SecurityLoginsAndAccessControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\naft_logo.png" />
+    <Content Include="Resources\ConfirmToFullCount.xml" />
+    <Content Include="Resources\dash.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Dentist.xml" />
+    <Content Include="Resources\DentistVisit.xml" />
+    <None Include="Resources\DocAmalkard4.xml" />
+    <None Include="Resources\DocAmalkard6.xml" />
+    <Content Include="Resources\DocVisitCount.xml" />
+    <Content Include="Resources\DosInsurance.xml" />
+    <Content Include="Resources\FDcomp.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\FDdep.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\FDinsure.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\FDMBMIIndicator.xml" />
+    <Content Include="Resources\FDMDiabetIndicator.xml" />
+    <Content Include="Resources\FDMDocAndNursePopulation.xml" />
+    <Content Include="Resources\FDMHayperlidIndicator.xml" />
+    <Content Include="Resources\FDMHeartSP.xml" />
+    <Content Include="Resources\FDMHTNIndicator.xml" />
+    <Content Include="Resources\FDMPysichicSP.xml" />
+    <Content Include="Resources\FDMSmokeSP.xml" />
+    <Content Include="Resources\FDMTeenIndicator.xml" />
+    <Content Include="Resources\FDSDiabet.xml" />
+    <Content Include="Resources\FDSDocAndNursePopulation.xml" />
+    <Content Include="Resources\FDsex.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\FDsmoke.xml" />
+    <Content Include="Resources\FDSHTN.xml" />
+    <Content Include="Resources\FDSHyperlipid.xml" />
+    <Content Include="Resources\FDSIHD.xml" />
+    <Content Include="Resources\FDSPopulation.xml" />
+    <Content Include="Resources\FDVisits.xml" />
+    <Content Include="Resources\FD_BmiFat.xml" />
+    <None Include="Resources\MainxmlFAST.xml" />
+    <None Include="Resources\Mainxml.xml" />
+    <None Include="Resources\MainxmLast Version.xml" />
+    <None Include="Resources\MainxmWithoutGrid.xml" />
+    <None Include="Resources\MainxmWithoutGrid1.xml" />
+    <None Include="Resources\MainxmLast Version1.xml" />
+    <None Include="Resources\MainxmLast Version2.xml" />
+    <Content Include="Resources\PersianDate.dll" />
+    <Content Include="Resources\standardForBoss.xml" />
+    <Content Include="Resources\standardForCity.xml" />
+    <Content Include="Resources\standardForDep.xml" />
+    <Content Include="Resources\Stimulsoft.Base.dll" />
+    <Content Include="Resources\Stimulsoft.Controls.dll" />
+    <Content Include="Resources\Stimulsoft.Controls.Win.dll" />
+    <Content Include="Resources\Stimulsoft.Design.dll" />
+    <Content Include="Resources\Stimulsoft.Editor.dll" />
+    <Content Include="Resources\Stimulsoft.Report.Check.dll" />
+    <Content Include="Resources\Stimulsoft.Report.Design.dll" />
+    <Content Include="Resources\Stimulsoft.Report.dll" />
+    <Content Include="Resources\Stimulsoft.Report.Helper.dll" />
+    <Content Include="Resources\Stimulsoft.Report.Win.dll" />
+    <Content Include="Resources\Stimulsoft.Report.Xbap.Design.dll" />
+    <Content Include="Resources\Stimulsoft.Report.Xbap.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

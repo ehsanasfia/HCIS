@@ -1,0 +1,1492 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="0" />
+    <DataSources isList="true" count="9">
+      <Bills Ref="2" type="Stimulsoft.Report.Dictionary.StiBusinessObjectSource" isKey="true">
+        <Alias>Bills</Alias>
+        <Columns isList="true" count="62">
+          <value>Person,Accounting.Data.Person</value>
+          <value>ID,System.Int64</value>
+          <value>Date,System.String</value>
+          <value>Time,System.String</value>
+          <value>NationalCode,System.String</value>
+          <value>MedicalID,System.String</value>
+          <value>SID,System.Int32</value>
+          <value>RVUNationalID,System.Int32</value>
+          <value>CategoryID,System.Int32</value>
+          <value>Amount,System.Double</value>
+          <value>Insure,System.Int32</value>
+          <value>TechnicalK,System.Double</value>
+          <value>FaniK,System.Double</value>
+          <value>SumK,System.Double</value>
+          <value>PriceTypeID,System.Int32</value>
+          <value>KPrice,System.Double</value>
+          <value>CalculatedPrice,System.Double</value>
+          <value>InsurePart,System.Double</value>
+          <value>PatientPart,System.Double</value>
+          <value>ManualPrice,System.Double</value>
+          <value>ManualInsurePart,System.Double</value>
+          <value>ManualPatientPart,System.Double</value>
+          <value>DepID,System.Int32</value>
+          <value>TechnisianID,System.Int32</value>
+          <value>Doctor_ID,System.Int32</value>
+          <value>NurseID,System.Int32</value>
+          <value>ModificationDatetime,System.DateTime</value>
+          <value>Modificator,System.Int32</value>
+          <value>CreationDateTime,System.DateTime</value>
+          <value>CreatorID,System.Int32</value>
+          <value>HRID,System.Int32</value>
+          <value>PatientID,System.Int32</value>
+          <value>LabDID,System.Int32</value>
+          <value>PhmDID,System.Int32</value>
+          <value>RdDID,System.Int32</value>
+          <value>WrdID,System.Int32</value>
+          <value>WrdConsumeID,System.Int32</value>
+          <value>ClincalServiceID,System.Int32</value>
+          <value>PhyDID,System.Int32</value>
+          <value>SurgeryID,System.Int32</value>
+          <value>AngioDID,System.Int32</value>
+          <value>LeftID,System.Int32</value>
+          <value>AnesK,System.Double</value>
+          <value>Locked,System.Boolean</value>
+          <value>EnName,System.String</value>
+          <value>FaName,System.String</value>
+          <value>Payed,System.Boolean</value>
+          <value>FirstAssistantPrice,System.Double</value>
+          <value>SecondAssistantPrice,System.Double</value>
+          <value>ThirdAssistantPrice,System.Double</value>
+          <value>OnCallPrice,System.Double</value>
+          <value>FaniPrice,System.Double</value>
+          <value>BillMasterID,System.Int32</value>
+          <value>BillCategory,Accounting.Data.BillCategory</value>
+          <value>labPrescriptionD,Accounting.Data.labPrescriptionD</value>
+          <value>phmPrescriptionD,Accounting.Data.phmPrescriptionD</value>
+          <value>Patient,Accounting.Data.Patient</value>
+          <value>rdPrescriptionD,Accounting.Data.rdPrescriptionD</value>
+          <value>Doctor,Accounting.Data.Doctor</value>
+          <value>BillMaster,Accounting.Data.BillMaster</value>
+          <value>_ID,System.Int32</value>
+          <value>_Current,System.Object</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>Bills</Name>
+        <NameInSource>Bills</NameInSource>
+      </Bills>
+      <Bills_Person Ref="3" type="Stimulsoft.Report.Dictionary.StiBusinessObjectSource" isKey="true">
+        <Alias>Bills_Person</Alias>
+        <Columns isList="true" count="42">
+          <value>IDPerson,System.Int32</value>
+          <value>IsLocal,System.Byte</value>
+          <value>IDPersonType,System.Byte</value>
+          <value>MedicalID,System.String</value>
+          <value>NationalCode,System.String</value>
+          <value>Lastname,System.String</value>
+          <value>Firstname,System.String</value>
+          <value>FatherName,System.String</value>
+          <value>Sex,System.Byte</value>
+          <value>BirthDate,System.String</value>
+          <value>BirthPlace,System.String</value>
+          <value>IdentityNo,System.String</value>
+          <value>IdentityDate,System.String</value>
+          <value>IdentityPlace,System.String</value>
+          <value>IDMaritalStatus,System.Byte</value>
+          <value>IDReligion,System.Byte</value>
+          <value>HomePhone,System.String</value>
+          <value>WorkPhone,System.String</value>
+          <value>PostCode,System.String</value>
+          <value>EMail,System.String</value>
+          <value>Note,System.String</value>
+          <value>CreationDate,System.String</value>
+          <value>CreationTime,System.String</value>
+          <value>CreationOperator,System.String</value>
+          <value>LastModificationDate,System.String</value>
+          <value>LastModificationTime,System.String</value>
+          <value>LastModificationOperator,System.String</value>
+          <value>Deleted,System.Byte</value>
+          <value>rowguid,System.Guid</value>
+          <value>IsPrivate,System.Boolean</value>
+          <value>idp,System.Int32</value>
+          <value>CreationDateTime,System.DateTime</value>
+          <value>MedicalID_BAK,System.String</value>
+          <value>uniq,System.Guid</value>
+          <value>Insure,System.Byte</value>
+          <value>InsuranceNo,System.String</value>
+          <value>NewIDPerson,System.Guid</value>
+          <value>Active,System.Boolean</value>
+          <value>Member,Accounting.Data.Member</value>
+          <value>_ID,System.Int32</value>
+          <value>_parentID,System.Int32</value>
+          <value>_Current,System.Object</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>Bills_Person</Name>
+        <NameInSource>Bills_Person</NameInSource>
+      </Bills_Person>
+      <Bills_BillCategory Ref="4" type="Stimulsoft.Report.Dictionary.StiBusinessObjectSource" isKey="true">
+        <Alias>Bills_BillCategory</Alias>
+        <Columns isList="true" count="8">
+          <value>ID,System.Int32</value>
+          <value>Name,System.String</value>
+          <value>FaName,System.String</value>
+          <value>PriceArchives,System.Data.Linq.EntitySet`1[Accounting.Data.PriceArchive]</value>
+          <value>Bills,System.Data.Linq.EntitySet`1[Accounting.Data.Bill]</value>
+          <value>_ID,System.Int32</value>
+          <value>_parentID,System.Int32</value>
+          <value>_Current,System.Object</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>Bills_BillCategory</Name>
+        <NameInSource>Bills_BillCategory</NameInSource>
+      </Bills_BillCategory>
+      <Bills_labPrescriptionD Ref="5" type="Stimulsoft.Report.Dictionary.StiBusinessObjectSource" isKey="true">
+        <Alias>Bills_labPrescriptionD</Alias>
+        <Columns isList="true" count="15">
+          <value>ID,System.Int32</value>
+          <value>SerialNumber,System.Int32</value>
+          <value>Test_ID,System.Int16</value>
+          <value>Value,System.String</value>
+          <value>Normal,System.String</value>
+          <value>Confirm,System.Boolean</value>
+          <value>DepID,System.Byte</value>
+          <value>Print,System.Boolean</value>
+          <value>LastAccessOperation,System.String</value>
+          <value>Delete,System.Boolean</value>
+          <value>Bills,System.Data.Linq.EntitySet`1[Accounting.Data.Bill]</value>
+          <value>labPrescriptionM,Accounting.Data.labPrescriptionM</value>
+          <value>_ID,System.Int32</value>
+          <value>_parentID,System.Int32</value>
+          <value>_Current,System.Object</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>Bills_labPrescriptionD</Name>
+        <NameInSource>Bills_labPrescriptionD</NameInSource>
+      </Bills_labPrescriptionD>
+      <Bills_phmPrescriptionD Ref="6" type="Stimulsoft.Report.Dictionary.StiBusinessObjectSource" isKey="true">
+        <Alias>Bills_phmPrescriptionD</Alias>
+        <Columns isList="true" count="27">
+          <value>SerialNumber,System.Int32</value>
+          <value>iCode,System.Int16</value>
+          <value>Amount,System.Int32</value>
+          <value>NIS,System.Boolean</value>
+          <value>Date,System.String</value>
+          <value>Time,System.String</value>
+          <value>Price,System.Int32</value>
+          <value>Note,System.String</value>
+          <value>CreationTime,System.String</value>
+          <value>CreationDate,System.String</value>
+          <value>CreationOperator,System.String</value>
+          <value>LastModificationDate,System.String</value>
+          <value>LastModificationTime,System.String</value>
+          <value>LastModificationOperator,System.String</value>
+          <value>DepID,System.Byte</value>
+          <value>ID,System.Int32</value>
+          <value>Delete,System.Boolean</value>
+          <value>sIndex,System.Boolean</value>
+          <value>OldiCode,System.Int16</value>
+          <value>OldAmount,System.Int32</value>
+          <value>tazrighatNurse,System.String</value>
+          <value>TazrighAmount,System.Int32</value>
+          <value>Bills,System.Data.Linq.EntitySet`1[Accounting.Data.Bill]</value>
+          <value>phmPrescriptionM,Accounting.Data.phmPrescriptionM</value>
+          <value>_ID,System.Int32</value>
+          <value>_parentID,System.Int32</value>
+          <value>_Current,System.Object</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>Bills_phmPrescriptionD</Name>
+        <NameInSource>Bills_phmPrescriptionD</NameInSource>
+      </Bills_phmPrescriptionD>
+      <Bills_Patient Ref="7" type="Stimulsoft.Report.Dictionary.StiBusinessObjectSource" isKey="true">
+        <Alias>Bills_Patient</Alias>
+        <Columns isList="true" count="49">
+          <value>PationtID,System.Int32</value>
+          <value>MedicalID,System.String</value>
+          <value>ID,System.Int32</value>
+          <value>part_del,System.Byte</value>
+          <value>idUser,System.Int32</value>
+          <value>RegDate,System.String</value>
+          <value>RegTime,System.String</value>
+          <value>Visited,System.Boolean</value>
+          <value>Delete,System.Boolean</value>
+          <value>ReferentID,System.Byte</value>
+          <value>DoctorID,System.Byte</value>
+          <value>RefDate,System.String</value>
+          <value>time,System.String</value>
+          <value>CreationOperator,System.String</value>
+          <value>Visit,System.Boolean</value>
+          <value>CreationDateTime,System.DateTime</value>
+          <value>LastModificationOperator,System.String</value>
+          <value>LastModificationDate,System.DateTime</value>
+          <value>IDICD,System.Int32</value>
+          <value>Referant,System.Byte</value>
+          <value>ReferenceTo,System.Byte</value>
+          <value>NewCase,System.Boolean</value>
+          <value>EnterInClinic,System.Boolean</value>
+          <value>EnterInClinicTime,System.String</value>
+          <value>EnteranceOrder,System.Int16</value>
+          <value>VisitTime,System.String</value>
+          <value>ParentPatientID,System.Int32</value>
+          <value>LicenceStartDate,System.String</value>
+          <value>LicenceEndDate,System.String</value>
+          <value>Password,System.String</value>
+          <value>ChiefComplaint,System.String</value>
+          <value>FD,System.Int32</value>
+          <value>DDx1,System.Int32</value>
+          <value>DDx2,System.Int32</value>
+          <value>ParaClinics,System.String</value>
+          <value>SinceValue,System.Int32</value>
+          <value>SinceText,System.Int32</value>
+          <value>Note,System.String</value>
+          <value>IsRO,System.Boolean</value>
+          <value>RefrenceStatusID,System.Byte</value>
+          <value>IsRefrence,System.Boolean</value>
+          <value>IsCured,System.Boolean</value>
+          <value>UnderSuperVisionDuration,System.String</value>
+          <value>PrivatePatientPaidStatus,System.Boolean</value>
+          <value>Payed,System.Boolean</value>
+          <value>Bills,System.Data.Linq.EntitySet`1[Accounting.Data.Bill]</value>
+          <value>_ID,System.Int32</value>
+          <value>_parentID,System.Int32</value>
+          <value>_Current,System.Object</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>Bills_Patient</Name>
+        <NameInSource>Bills_Patient</NameInSource>
+      </Bills_Patient>
+      <Bills_rdPrescriptionD Ref="8" type="Stimulsoft.Report.Dictionary.StiBusinessObjectSource" isKey="true">
+        <Alias>Bills_rdPrescriptionD</Alias>
+        <Columns isList="true" count="17">
+          <value>ID,System.Int32</value>
+          <value>SerialNumber,System.Int32</value>
+          <value>ServiceID,System.Int32</value>
+          <value>Amount,System.Byte</value>
+          <value>Note,System.String</value>
+          <value>Kelishe,System.Byte</value>
+          <value>Position,System.String</value>
+          <value>Normal,System.Boolean</value>
+          <value>CreationDateTime,System.DateTime</value>
+          <value>CreationOperator,System.String</value>
+          <value>expose,System.Byte</value>
+          <value>member,System.String</value>
+          <value>Bills,System.Data.Linq.EntitySet`1[Accounting.Data.Bill]</value>
+          <value>rdPrescriptionM,Accounting.Data.rdPrescriptionM</value>
+          <value>_ID,System.Int32</value>
+          <value>_parentID,System.Int32</value>
+          <value>_Current,System.Object</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>Bills_rdPrescriptionD</Name>
+        <NameInSource>Bills_rdPrescriptionD</NameInSource>
+      </Bills_rdPrescriptionD>
+      <Bills_Doctor Ref="9" type="Stimulsoft.Report.Dictionary.StiBusinessObjectSource" isKey="true">
+        <Alias>Bills_Doctor</Alias>
+        <Columns isList="true" count="45">
+          <value>Doctor_ID,System.Int32</value>
+          <value>name,System.String</value>
+          <value>nezam,System.Int32</value>
+          <value>Clinic_ID,System.Byte</value>
+          <value>Speciality_ID,System.Byte</value>
+          <value>partid_,System.Byte</value>
+          <value>IdUser_,System.Int32</value>
+          <value>Nome_,System.String</value>
+          <value>Login_,System.String</value>
+          <value>Senha_,System.String</value>
+          <value>Email_,System.String</value>
+          <value>Privilegiado_,System.Int32</value>
+          <value>Tipo_,System.String</value>
+          <value>Perfil_,System.Int32</value>
+          <value>LastName,System.String</value>
+          <value>FirstName,System.String</value>
+          <value>urgent,System.Boolean</value>
+          <value>Delete,System.Boolean</value>
+          <value>Special,System.Boolean</value>
+          <value>DoctorID,System.Int32</value>
+          <value>UpSpeciality,System.Byte</value>
+          <value>Register,System.String</value>
+          <value>Address,System.String</value>
+          <value>Ext,System.Boolean</value>
+          <value>HasContract,System.Boolean</value>
+          <value>CreationDateTime,System.DateTime</value>
+          <value>CreationOperator,System.String</value>
+          <value>LastModificationOperator,System.String</value>
+          <value>Deleted,System.Boolean</value>
+          <value>Active,System.Boolean</value>
+          <value>Picture,System.Data.Linq.Binary</value>
+          <value>NationalCode,System.String</value>
+          <value>PostalCode,System.String</value>
+          <value>DrFullName,System.String</value>
+          <value>Selected,System.Boolean</value>
+          <value>ClinicalTVEnabled,System.Boolean</value>
+          <value>Hireddate,System.String</value>
+          <value>presenceInWard,System.Boolean</value>
+          <value>tblAngiographies,System.Data.Linq.EntitySet`1[Accounting.Data.tblAngiography]</value>
+          <value>Bills,System.Data.Linq.EntitySet`1[Accounting.Data.Bill]</value>
+          <value>labPrescriptionMs,System.Data.Linq.EntitySet`1[Accounting.Data.labPrescriptionM]</value>
+          <value>phmPrescriptionMs,System.Data.Linq.EntitySet`1[Accounting.Data.phmPrescriptionM]</value>
+          <value>_ID,System.Int32</value>
+          <value>_parentID,System.Int32</value>
+          <value>_Current,System.Object</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>Bills_Doctor</Name>
+        <NameInSource>Bills_Doctor</NameInSource>
+      </Bills_Doctor>
+      <Bills_BillMaster Ref="10" type="Stimulsoft.Report.Dictionary.StiBusinessObjectSource" isKey="true">
+        <Alias>Bills_BillMaster</Alias>
+        <Columns isList="true" count="23">
+          <value>Person,Accounting.Data.Person</value>
+          <value>ID,System.Int32</value>
+          <value>Date,System.String</value>
+          <value>Time,System.String</value>
+          <value>PayedPrice,System.Double</value>
+          <value>PaymentType,System.String</value>
+          <value>Descriptions,System.String</value>
+          <value>CreatorUserID,System.Int32</value>
+          <value>CreatorFullName,System.String</value>
+          <value>MedicalID,System.String</value>
+          <value>PersonFullName,System.String</value>
+          <value>Deleted,System.Boolean</value>
+          <value>BillType,System.String</value>
+          <value>PayedBillMasterID,System.Int32</value>
+          <value>ModificatorUserID,System.Int32</value>
+          <value>ModificationFullName,System.String</value>
+          <value>TransactionID,System.String</value>
+          <value>Bills,System.Data.Linq.EntitySet`1[Accounting.Data.Bill]</value>
+          <value>BillMasters,System.Data.Linq.EntitySet`1[Accounting.Data.BillMaster]</value>
+          <value>BillMaster1,Accounting.Data.BillMaster</value>
+          <value>_ID,System.Int32</value>
+          <value>_parentID,System.Int32</value>
+          <value>_Current,System.Object</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>Bills_BillMaster</Name>
+        <NameInSource>Bills_BillMaster</NameInSource>
+      </Bills_BillMaster>
+    </DataSources>
+    <Relations isList="true" count="8">
+      <Bills Ref="11" type="DataRelation" isKey="true">
+        <Alias>Bills</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>_parentID</value>
+        </ChildColumns>
+        <ChildSource isRef="3" />
+        <Dictionary isRef="1" />
+        <Name>Bills</Name>
+        <NameInSource>Bills_PersonRelation</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>_ID</value>
+        </ParentColumns>
+        <ParentSource isRef="2" />
+      </Bills>
+      <ParentBills_2 Ref="12" type="DataRelation" isKey="true">
+        <Alias>Bills</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>_parentID</value>
+        </ChildColumns>
+        <ChildSource isRef="4" />
+        <Dictionary isRef="1" />
+        <Name>ParentBills_2</Name>
+        <NameInSource>Bills_BillCategoryRelation</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>_ID</value>
+        </ParentColumns>
+        <ParentSource isRef="2" />
+      </ParentBills_2>
+      <ParentBills_2 Ref="13" type="DataRelation" isKey="true">
+        <Alias>Bills</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>_parentID</value>
+        </ChildColumns>
+        <ChildSource isRef="5" />
+        <Dictionary isRef="1" />
+        <Name>ParentBills_2</Name>
+        <NameInSource>Bills_labPrescriptionDRelation</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>_ID</value>
+        </ParentColumns>
+        <ParentSource isRef="2" />
+      </ParentBills_2>
+      <ParentBills_2 Ref="14" type="DataRelation" isKey="true">
+        <Alias>Bills</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>_parentID</value>
+        </ChildColumns>
+        <ChildSource isRef="6" />
+        <Dictionary isRef="1" />
+        <Name>ParentBills_2</Name>
+        <NameInSource>Bills_phmPrescriptionDRelation</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>_ID</value>
+        </ParentColumns>
+        <ParentSource isRef="2" />
+      </ParentBills_2>
+      <ParentBills_2 Ref="15" type="DataRelation" isKey="true">
+        <Alias>Bills</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>_parentID</value>
+        </ChildColumns>
+        <ChildSource isRef="7" />
+        <Dictionary isRef="1" />
+        <Name>ParentBills_2</Name>
+        <NameInSource>Bills_PatientRelation</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>_ID</value>
+        </ParentColumns>
+        <ParentSource isRef="2" />
+      </ParentBills_2>
+      <ParentBills_2 Ref="16" type="DataRelation" isKey="true">
+        <Alias>Bills</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>_parentID</value>
+        </ChildColumns>
+        <ChildSource isRef="8" />
+        <Dictionary isRef="1" />
+        <Name>ParentBills_2</Name>
+        <NameInSource>Bills_rdPrescriptionDRelation</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>_ID</value>
+        </ParentColumns>
+        <ParentSource isRef="2" />
+      </ParentBills_2>
+      <ParentBills_2 Ref="17" type="DataRelation" isKey="true">
+        <Alias>Bills</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>_parentID</value>
+        </ChildColumns>
+        <ChildSource isRef="9" />
+        <Dictionary isRef="1" />
+        <Name>ParentBills_2</Name>
+        <NameInSource>Bills_DoctorRelation</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>_ID</value>
+        </ParentColumns>
+        <ParentSource isRef="2" />
+      </ParentBills_2>
+      <ParentBills_2 Ref="18" type="DataRelation" isKey="true">
+        <Alias>Bills</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>_parentID</value>
+        </ChildColumns>
+        <ChildSource isRef="10" />
+        <Dictionary isRef="1" />
+        <Name>ParentBills_2</Name>
+        <NameInSource>Bills_BillMasterRelation</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>_ID</value>
+        </ParentColumns>
+        <ParentSource isRef="2" />
+      </ParentBills_2>
+    </Relations>
+    <Report isRef="0" />
+    <Resources isList="true" count="0" />
+    <Variables isList="true" count="5">
+      <value>,dt,dt,,System.String,,False,False,False,False</value>
+      <value>,username,username,,System.String,,False,False,False,False</value>
+      <value>,Insure,Insure,,System.String,,False,False,False,False</value>
+      <value>,persiannumber,persiannumber,,System.String,,False,False,False,False</value>
+      <value>,price,price,,System.String,,False,False,False,False</value>
+    </Variables>
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="19" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="5">
+        <PageFooterBand1 Ref="20" type="PageFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,8.82,7.72,1.4</ClientRectangle>
+          <Components isList="true" count="4">
+            <Text167 Ref="21" type="Text" isKey="true">
+              <Border>None;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5,0.38,2,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,13,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text167</Name>
+              <Page isRef="19" />
+              <Parent isRef="20" />
+              <Text>تهیه کننده</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+              <Type>Expression</Type>
+            </Text167>
+            <Text169 Ref="22" type="Text" isKey="true">
+              <Border>None;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5,0.7,2,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,13,Bold</Font>
+              <Guid>73677d4aedb442aa8f346fac803d7d06</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text169</Name>
+              <Page isRef="19" />
+              <Parent isRef="20" />
+              <Text>{username}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+              <Type>Expression</Type>
+            </Text169>
+            <Text170 Ref="23" type="Text" isKey="true">
+              <Border>None;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.8,0.38,2,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,13,Bold</Font>
+              <Guid>8ba5e7d9d03d49e38c522cdcdd8c654a</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text170</Name>
+              <Page isRef="19" />
+              <Parent isRef="20" />
+              <Text>تایید کننده</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+              <Type>Expression</Type>
+            </Text170>
+            <Text171 Ref="24" type="Text" isKey="true">
+              <Border>None;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.8,0.7,2,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,13,Bold</Font>
+              <Guid>0b7866f103d04a0da950a9f41333dacb</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text171</Name>
+              <Page isRef="19" />
+              <Parent isRef="20" />
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+              <Type>Expression</Type>
+            </Text171>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageFooterBand1</Name>
+          <Page isRef="19" />
+          <Parent isRef="19" />
+        </PageFooterBand1>
+        <ReportTitle Ref="25" type="ReportTitleBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.2,7.72,1.5</ClientRectangle>
+          <Components isList="true" count="2">
+            <ReportTitleText Ref="26" type="Text" isKey="true">
+              <Border>None;[134:50:47];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,7.72,1.5</ClientRectangle>
+              <ComponentStyle>Red 50%_Report_Title1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,14.25,Bold,Point,False,178</Font>
+              <Guid>28c33fa90d344afe9b01121819e62745</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>ReportTitleText</Name>
+              <Page isRef="19" />
+              <Parent isRef="25" />
+              <Text>صورتحساب بیمارستان بزرگ نفت اهواز</Text>
+              <TextBrush>[34:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Bottom</VertAlignment>
+            </ReportTitleText>
+            <Image1 Ref="27" type="Image" isKey="true">
+              <Border>None;[134:50:47];1;Solid;False;4;Black</Border>
+              <Brush>[255:253:215]</Brush>
+              <ClientRectangle>3.4,0.1,1.1,1.1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Guid>02c78160a27f4755b4e0d7084cd034c7</Guid>
+              <Image>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</Image>
+              <Margins>0,0,0,0</Margins>
+              <Name>Image1</Name>
+              <Page isRef="19" />
+              <Parent isRef="25" />
+            </Image1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>d98fa1cba523413dad462fafe3fcb10a</Guid>
+          <Name>ReportTitle</Name>
+          <Page isRef="19" />
+          <Parent isRef="19" />
+        </ReportTitle>
+        <HeaderBand2 Ref="28" type="HeaderBand" isKey="true">
+          <Brush>[242:242:242]</Brush>
+          <ClientRectangle>0,2.1,7.72,1</ClientRectangle>
+          <Components isList="true" count="18">
+            <Text40 Ref="29" type="Text" isKey="true">
+              <Border>All;Transparent;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7,0.1,0.7,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,11,Bold</Font>
+              <Guid>c427d65976ee43a5bf776e5a0d6fedf6</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text40</Name>
+              <Page isRef="19" />
+              <Parent isRef="28" />
+              <Text>: نام</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text40>
+            <Text44 Ref="30" type="Text" isKey="true">
+              <Border>All;Transparent;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.7,0.1,1.1,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,11,Bold</Font>
+              <Guid>5b52c620261f422094eccfc802c8a545</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text44</Name>
+              <Page isRef="19" />
+              <Parent isRef="28" />
+              <Text>: تاریخ صورتحساب</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text44>
+            <Text100 Ref="31" type="Text" isKey="true">
+              <Border>All;Transparent;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.5,0.4,0.7,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,11,Bold</Font>
+              <Guid>4c47ae960aaa416cabf3046bed67b796</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text100</Name>
+              <Page isRef="19" />
+              <Parent isRef="28" />
+              <Text>: متعهد</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text100>
+            <Text104 Ref="32" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.8,0.1,1.1,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,12</Font>
+              <Guid>30dce451781643d3a4d5f691a9ec5a74</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text104</Name>
+              <Page isRef="19" />
+              <Parent isRef="28" />
+              <Text>{Bills_Person.Firstname}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text104>
+            <Text105 Ref="33" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.8,0.4,1.1,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,12</Font>
+              <Guid>1704c304b43f4e1a920c93c714f46b38</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text105</Name>
+              <Page isRef="19" />
+              <Parent isRef="28" />
+              <Text>{Bills_Person.Lastname}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text105>
+            <Text109 Ref="34" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.4,1.7,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,12</Font>
+              <Guid>6c90ef87fccc40d7a83d5d27cf5db03c</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text109</Name>
+              <Page isRef="19" />
+              <Parent isRef="28" />
+              <Text>{Insure}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text109>
+            <Text114 Ref="35" type="Text" isKey="true">
+              <Border>All;Transparent;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.9,0.4,0.8,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,11,Bold</Font>
+              <Guid>54c7dc388da34c5c9a6f3c5c15dbbe25</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text114</Name>
+              <Page isRef="19" />
+              <Parent isRef="28" />
+              <Text>: نام خانوادگی</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text114>
+            <Text118 Ref="36" type="Text" isKey="true">
+              <Border>All;Transparent;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5,0.1,0.5,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,11,Bold</Font>
+              <Guid>07da4e063bce46109e91ad84c7d1ab87</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text118</Name>
+              <Page isRef="19" />
+              <Parent isRef="28" />
+              <Text>:کد ملی</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text118>
+            <Text138 Ref="37" type="Text" isKey="true">
+              <Border>None;[134:50:47];1;Solid;False;4;Black;True</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.4,0.1,1.3,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,12</Font>
+              <Guid>eb2a1dc829324a45a1a3af945f0b011a</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text138</Name>
+              <Page isRef="19" />
+              <Parent isRef="28" />
+              <Text>{Bills_Person.NationalCode}</Text>
+              <TextBrush>[63:63:63]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text138>
+            <Text140 Ref="38" type="Text" isKey="true">
+              <Border>None;[134:50:47];1;Solid;False;4;Black;True</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.1,1.7,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,10</Font>
+              <Guid>11fb0f4e7a524d17ac2591f624a7dba7</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text140</Name>
+              <Page isRef="19" />
+              <Parent isRef="28" />
+              <Text>{dt}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text140>
+            <Text165 Ref="39" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.4,0.4,1.3,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,12</Font>
+              <Guid>30ea4a577e824f148a3a0904d4f39592</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text165</Name>
+              <Page isRef="19" />
+              <Parent isRef="28" />
+              <Text>{Bills_Person.BirthDate}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text165>
+            <Text166 Ref="40" type="Text" isKey="true">
+              <Border>All;Transparent;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.7,0.4,0.8,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,11,Bold</Font>
+              <Guid>9cf144d90e464a39b1734940dc0533b0</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text166</Name>
+              <Page isRef="19" />
+              <Parent isRef="28" />
+              <Text>:تاریخ تولد</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text166>
+            <HeaderText8 Ref="41" type="Text" isKey="true">
+              <Border>None;[134:50:47];1;Solid;False;4;Black;True</Border>
+              <Brush>[234:150:147]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>2.9,0.7,1.2,0.2</ClientRectangle>
+              <ComponentStyle>Red 50%_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9.75,Bold,Point,False,178</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>2501e4f7a6c34367a35a96715a4981af</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderText8</Name>
+              <Page isRef="19" />
+              <Parent isRef="28" />
+              <Text>تعداد</Text>
+              <TextBrush>[34:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderText8>
+            <HeaderText9 Ref="42" type="Text" isKey="true">
+              <Border>None;[134:50:47];1;Solid;False;4;Black;True</Border>
+              <Brush>[234:150:147]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>4.1,0.7,3.1,0.2</ClientRectangle>
+              <ComponentStyle>Red 50%_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9.75,Bold,Point,False,178</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>3ffbe4ccc549498c92a9b4002cdce636</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderText9</Name>
+              <Page isRef="19" />
+              <Parent isRef="28" />
+              <Text>گروه خدمتی</Text>
+              <TextBrush>[34:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderText9>
+            <Text1 Ref="43" type="Text" isKey="true">
+              <Border>Right;[134:50:47];1;Solid;False;4;Black;True</Border>
+              <Brush>[234:150:147]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>7.2,0.7,0.51,0.2</ClientRectangle>
+              <ComponentStyle>Red 50%_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9.75,Bold,Point,False,178</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>7b8930b179e64503a875eb1a267f472a</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="19" />
+              <Parent isRef="28" />
+              <Text>ردیف</Text>
+              <TextBrush>[34:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+            <Text31 Ref="44" type="Text" isKey="true">
+              <Border>None;[134:50:47];1;Solid;False;4;Black;True</Border>
+              <Brush>[234:150:147]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>2,0.7,0.9,0.2</ClientRectangle>
+              <ComponentStyle>Red 50%_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9.75,Bold,Point,False,178</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>b61c8f24ac0e4d978510b84c169fc9c4</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text31</Name>
+              <Page isRef="19" />
+              <Parent isRef="28" />
+              <Text>جمع مبلغ</Text>
+              <TextBrush>[34:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text31>
+            <HeaderText6 Ref="45" type="Text" isKey="true">
+              <Border>None;[134:50:47];1;Solid;False;4;Black;True</Border>
+              <Brush>[234:150:147]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>1,0.7,1,0.2</ClientRectangle>
+              <ComponentStyle>Red 50%_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9.75,Bold,Point,False,178</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>e6618183e3f8412397439dbcac9d15c3</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderText6</Name>
+              <Page isRef="19" />
+              <Parent isRef="28" />
+              <Text>سهم سازمان</Text>
+              <TextBrush>[34:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderText6>
+            <HeaderText7 Ref="46" type="Text" isKey="true">
+              <Border>Left;[134:50:47];1;Solid;False;4;Black;True</Border>
+              <Brush>[234:150:147]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0.7,1,0.2</ClientRectangle>
+              <ComponentStyle>Red 50%_Header1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9.75,Bold,Point,False,178</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>ebe14ae23c754c28ac7fd128ba49e387</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderText7</Name>
+              <Page isRef="19" />
+              <Parent isRef="28" />
+              <Text>سهم بیمار</Text>
+              <TextBrush>[34:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderText7>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>HeaderBand2</Name>
+          <Page isRef="19" />
+          <Parent isRef="19" />
+        </HeaderBand2>
+        <DataBand2 Ref="47" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,3.5,7.72,0.3</ClientRectangle>
+          <Components isList="true" count="6">
+            <Text2 Ref="48" type="Text" isKey="true">
+              <Border>Top, Right, Bottom;[134:50:47];1;Solid;False;4;Black;True</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>7.2,0,0.51,0.3</ClientRectangle>
+              <ComponentStyle>Red 50%_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9.75,Regular,Point,False,178</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>39c843b924d442b8b032728be1c740ce</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="19" />
+              <Parent isRef="47" />
+              <Text>{Line}</Text>
+              <TextBrush>[34:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>SystemVariables</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text2>
+            <DataText9 Ref="49" type="Text" isKey="true">
+              <Border>Top, Bottom;[96:40:38];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>4.1,0,3.1,0.3</ClientRectangle>
+              <ComponentStyle>nonosh</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,9.75,Regular,Point,False,0</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>b0e327b64ce34627a32244e3c219d3e0</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataText9</Name>
+              <Page isRef="19" />
+              <Parent isRef="47" />
+              <Text>{Bills.FaName}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataText9>
+            <DataText8 Ref="50" type="Text" isKey="true">
+              <Border>Top, Bottom;[134:50:47];1;Solid;False;4;Black;True</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>2.9,0,1.2,0.3</ClientRectangle>
+              <ComponentStyle>Red 50%_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9.75,Regular,Point,False,178</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>cf3766e6bbda44f1a33a98e295091138</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataText8</Name>
+              <Page isRef="19" />
+              <Parent isRef="47" />
+              <Text>{Bills.Amount}</Text>
+              <TextBrush>[34:0:0]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataText8>
+            <Text30 Ref="51" type="Text" isKey="true">
+              <Border>Top, Bottom;[134:50:47];1;Solid;False;4;Black;True</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>2,0,0.9,0.3</ClientRectangle>
+              <ComponentStyle>Red 50%_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9.75,Regular,Point,False,178</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>e07f963694c64239b2a3779942b66e8a</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text30</Name>
+              <Page isRef="19" />
+              <Parent isRef="47" />
+              <Text>{Bills.ManualPrice}</Text>
+              <TextBrush>[34:0:0]</TextBrush>
+              <TextFormat Ref="52" type="NumberFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <TextOptions>,,RightToLeft=True,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text30>
+            <Text32 Ref="53" type="Text" isKey="true">
+              <Border>Top, Bottom;[134:50:47];1;Solid;False;4;Black;True</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>1,0,1,0.3</ClientRectangle>
+              <ComponentStyle>Red 50%_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9.75,Regular,Point,False,178</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>3f8fdc1b2dd747d6a03468704693f0ad</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text32</Name>
+              <Page isRef="19" />
+              <Parent isRef="47" />
+              <Text>{Bills.ManualInsurePart}</Text>
+              <TextBrush>[34:0:0]</TextBrush>
+              <TextFormat Ref="54" type="NumberFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <TextOptions>,,RightToLeft=True,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text32>
+            <DataText7 Ref="55" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;[134:50:47];1;Solid;False;4;Black;True</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,1,0.3</ClientRectangle>
+              <ComponentStyle>Red 50%_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,9.75,Regular,Point,False,178</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>a723be08eae449729c342219ded1b941</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataText7</Name>
+              <Page isRef="19" />
+              <Parent isRef="47" />
+              <Text>{Bills.ManualPatientPart}</Text>
+              <TextBrush>[34:0:0]</TextBrush>
+              <TextFormat Ref="56" type="NumberFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <TextOptions>,,RightToLeft=True,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataText7>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>Bills</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>DataBand2</Name>
+          <Page isRef="19" />
+          <Parent isRef="19" />
+          <Sort isList="true" count="0" />
+        </DataBand2>
+        <FooterBand2 Ref="57" type="FooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,4.2,7.72,0.3</ClientRectangle>
+          <Components isList="true" count="4">
+            <Text29 Ref="58" type="Text" isKey="true">
+              <Border>None;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.9,0,1.1,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,14,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text29</Name>
+              <Page isRef="19" />
+              <Parent isRef="57" />
+              <Text>: جمع مبالغ</Text>
+              <TextBrush>[63:63:63]</TextBrush>
+              <Type>Expression</Type>
+            </Text29>
+            <Text4 Ref="59" type="Text" isKey="true">
+              <Border>Top, Bottom;[134:50:47];1;Solid;False;4;Black;True</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>2,0,0.9,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,11.25,Bold,Point,False,178</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>1a6b2399f6574c5394867c3f9eea4188</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="19" />
+              <Parent isRef="57" />
+              <Text>{Sum(DataBand2,Bills.ManualPrice)}</Text>
+              <TextBrush>[34:0:0]</TextBrush>
+              <TextFormat Ref="60" type="NumberFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <TextOptions>,,RightToLeft=True,,WordWrap=True,A=0</TextOptions>
+              <Type>Totals</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text4>
+            <Text5 Ref="61" type="Text" isKey="true">
+              <Border>Top, Bottom;[134:50:47];1;Solid;False;4;Black;True</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>1,0,1,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,11.25,Bold,Point,False,178</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>28b4aac6628a43e49129cd9a95fd6bff</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="19" />
+              <Parent isRef="57" />
+              <Text>{Sum(DataBand2,Bills.ManualInsurePart)}</Text>
+              <TextBrush>[34:0:0]</TextBrush>
+              <TextFormat Ref="62" type="NumberFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <TextOptions>,,RightToLeft=True,,WordWrap=True,A=0</TextOptions>
+              <Type>Totals</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text5>
+            <Text6 Ref="63" type="Text" isKey="true">
+              <Border>Top, Left, Bottom;[134:50:47];1;Solid;False;4;Black;True</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,1,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Nazanin,11.25,Bold,Point,False,178</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>0093744c3e2f4e0da857809ca1c5e03a</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="19" />
+              <Parent isRef="57" />
+              <Text>{Sum(DataBand2,Bills.ManualPatientPart)}</Text>
+              <TextBrush>[34:0:0]</TextBrush>
+              <TextFormat Ref="64" type="NumberFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <TextOptions>,,RightToLeft=True,,WordWrap=True,A=0</TextOptions>
+              <Type>Totals</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text6>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>FooterBand2</Name>
+          <Page isRef="19" />
+          <Parent isRef="19" />
+        </FooterBand2>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>feeb7a4528d643d68d496aa411bd09b2</Guid>
+      <Margins>0.39,0.39,0.39,0.39</Margins>
+      <Name>Page1</Name>
+      <PageHeight>11</PageHeight>
+      <PageWidth>8.5</PageWidth>
+      <PaperSize>Letter</PaperSize>
+      <Report isRef="0" />
+      <Watermark Ref="65" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="66" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>rptA4</ReportAlias>
+  <ReportChanged>4/19/2017 5:47:49 PM</ReportChanged>
+  <ReportCreated>6/14/2015 2:31:40 PM</ReportCreated>
+  <ReportFile>rptA4</ReportFile>
+  <ReportGuid>7e55c7b026b64e69a9d78c7718072c5e</ReportGuid>
+  <ReportImage isNull="true" />
+  <ReportName>rptA4</ReportName>
+  <ReportUnit>Inches</ReportUnit>
+  <ReportVersion>2016.3.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class rptA4 : Stimulsoft.Report.StiReport
+    {
+        public rptA4()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="15">
+    <Red_x0020_50_x0025__Report_Title1 Ref="67" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[134:50:47];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red 50%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item59 Ref="68" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <Placement>ReportTitle</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item59>
+      </Conditions>
+      <Font>B Nazanin,14.25,Bold,Point,False,178</Font>
+      <Name>Red 50%_Report_Title1</Name>
+      <TextBrush>[34:0:0]</TextBrush>
+    </Red_x0020_50_x0025__Report_Title1>
+    <Red_x0020_50_x0025__Report_Title2 Ref="69" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[134:50:47];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red 50%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item61 Ref="70" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>ReportTitle</Placement>
+          <PlacementNestedLevel>2</PlacementNestedLevel>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item61>
+      </Conditions>
+      <Font>Arial,10,Bold</Font>
+      <Name>Red 50%_Report_Title2</Name>
+      <TextBrush>[34:0:0]</TextBrush>
+    </Red_x0020_50_x0025__Report_Title2>
+    <Red_x0020_50_x0025__Report_Summary1 Ref="71" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[134:50:47];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red 50%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item63 Ref="72" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <Placement>ReportSummary</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item63>
+      </Conditions>
+      <Font>Arial,12,Bold</Font>
+      <Name>Red 50%_Report_Summary1</Name>
+      <TextBrush>[34:0:0]</TextBrush>
+    </Red_x0020_50_x0025__Report_Summary1>
+    <Red_x0020_50_x0025__Report_Summary2 Ref="73" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[134:50:47];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red 50%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item65 Ref="74" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>ReportSummary</Placement>
+          <PlacementNestedLevel>2</PlacementNestedLevel>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item65>
+      </Conditions>
+      <Font>Arial,10,Bold</Font>
+      <Name>Red 50%_Report_Summary2</Name>
+      <TextBrush>[34:0:0]</TextBrush>
+    </Red_x0020_50_x0025__Report_Summary2>
+    <Red_x0020_50_x0025__Page_Header Ref="75" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[134:50:47];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red 50%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item67 Ref="76" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <Placement>PageHeader</Placement>
+          <Type>ComponentType, Placement</Type>
+        </Item67>
+      </Conditions>
+      <Font>B Nazanin,9.75,Regular,Point,False,178</Font>
+      <Name>Red 50%_Page_Header</Name>
+      <TextBrush>[34:0:0]</TextBrush>
+    </Red_x0020_50_x0025__Page_Header>
+    <Red_x0020_50_x0025__Page_Footer Ref="77" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[134:50:47];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red 50%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item69 Ref="78" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <Placement>PageFooter</Placement>
+          <Type>ComponentType, Placement</Type>
+        </Item69>
+      </Conditions>
+      <Font>Arial,10</Font>
+      <Name>Red 50%_Page_Footer</Name>
+      <TextBrush>[34:0:0]</TextBrush>
+    </Red_x0020_50_x0025__Page_Footer>
+    <Red_x0020_50_x0025__Group_Header1 Ref="79" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[134:50:47];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red 50%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item71 Ref="80" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>GroupHeader</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item71>
+      </Conditions>
+      <Font>B Nazanin,12.75,Bold,Point,False,178</Font>
+      <Name>Red 50%_Group_Header1</Name>
+      <TextBrush>[84:0:0]</TextBrush>
+    </Red_x0020_50_x0025__Group_Header1>
+    <Red_x0020_50_x0025__Group_Footer1 Ref="81" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[134:50:47];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red 50%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item73 Ref="82" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <Placement>GroupFooter</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item73>
+      </Conditions>
+      <Font>Arial,13,Bold</Font>
+      <Name>Red 50%_Group_Footer1</Name>
+      <TextBrush>[84:0:0]</TextBrush>
+    </Red_x0020_50_x0025__Group_Footer1>
+    <Red_x0020_50_x0025__Header1 Ref="83" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[134:50:47];1;Solid;False;4;Black;True</Border>
+      <Brush>[234:150:147]</Brush>
+      <CollectionName>Red 50%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item75 Ref="84" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>Header</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item75>
+      </Conditions>
+      <Font>B Nazanin,9.75,Bold,Point,False,178</Font>
+      <Name>Red 50%_Header1</Name>
+      <TextBrush>[34:0:0]</TextBrush>
+    </Red_x0020_50_x0025__Header1>
+    <Red_x0020_50_x0025__Data1 Ref="85" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[134:50:47];1;Solid;False;4;Black;True</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red 50%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item77 Ref="86" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>Data</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item77>
+      </Conditions>
+      <Font>B Nazanin,9.75,Regular,Point,False,178</Font>
+      <Name>Red 50%_Data1</Name>
+      <TextBrush>[34:0:0]</TextBrush>
+    </Red_x0020_50_x0025__Data1>
+    <Red_x0020_50_x0025__Data1_Odd_x0020_Style Ref="87" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[134:50:47];1;Solid;False;4;Black;True</Border>
+      <Brush>[255:255:255]</Brush>
+      <CollectionName>Red 50%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item79 Ref="88" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>DataOddStyle</Placement>
+          <Type>Placement, PlacementNestedLevel</Type>
+        </Item79>
+      </Conditions>
+      <Font>B Nazanin,9.75,Regular,Point,False,178</Font>
+      <Name>Red 50%_Data1_Odd Style</Name>
+      <TextBrush>[34:0:0]</TextBrush>
+    </Red_x0020_50_x0025__Data1_Odd_x0020_Style>
+    <Red_x0020_50_x0025__Data1_Even_x0020_Style Ref="89" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[134:50:47];1;Solid;False;4;Black;True</Border>
+      <Brush>[255:225:222]</Brush>
+      <CollectionName>Red 50%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item81 Ref="90" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>DataEvenStyle</Placement>
+          <Type>Placement, PlacementNestedLevel</Type>
+        </Item81>
+      </Conditions>
+      <Font>B Nazanin,9.75,Regular,Point,False,178</Font>
+      <Name>Red 50%_Data1_Even Style</Name>
+      <TextBrush>[34:0:0]</TextBrush>
+    </Red_x0020_50_x0025__Data1_Even_x0020_Style>
+    <Red_x0020_50_x0025__Footer1 Ref="91" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[134:50:47];1;Solid;False;4;Black;True</Border>
+      <Brush>[254:170:167]</Brush>
+      <CollectionName>Red 50%</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item83 Ref="92" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <Placement>Footer</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item83>
+      </Conditions>
+      <Font>B Nazanin,8.25,Regular,Point,False,178</Font>
+      <Name>Red 50%_Footer1</Name>
+      <TextBrush>[34:0:0]</TextBrush>
+    </Red_x0020_50_x0025__Footer1>
+    <nonosh Ref="93" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>Top, Bottom;[96:40:38];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Conditions isList="true" count="0" />
+      <Font>Arial,9.75,Regular,Point,False,0</Font>
+      <Name>nonosh</Name>
+      <TextBrush>Black</TextBrush>
+    </nonosh>
+    <Style1 Ref="94" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Brush>Transparent</Brush>
+      <Conditions isList="true" count="0" />
+      <Font>B Nazanin,8.25,Regular,Point,False,178</Font>
+      <Name>Style1</Name>
+      <TextBrush>Black</TextBrush>
+    </Style1>
+  </Styles>
+</StiSerializer>

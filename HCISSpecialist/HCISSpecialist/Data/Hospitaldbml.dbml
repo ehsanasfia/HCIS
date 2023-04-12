@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Hospital" Class="HospitaldbmlDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=172.30.40.110;Initial Catalog=Hospital;Persist Security Info=True;User ID=artp" SettingsObjectName="HCISSpecialist.Properties.Settings" SettingsPropertyName="HospitalConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Bill" Member="Bills">
+    <Type Name="Bill">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Time" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="NationalCode" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="MedicalID" Type="System.String" DbType="NChar(13)" CanBeNull="true" />
+      <Column Name="SID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RVUNationalID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Insure" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TechnicalK" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="FaniK" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SumK" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PriceTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KPrice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CalculatedPrice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="InsurePart" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PatientPart" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ManualPrice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ManualInsurePart" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ManualPatientPart" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DepID" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="TechnisianID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Doctor_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NurseID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModificationDatetime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modificator" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreationDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatorID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HRID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PatientID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LabDID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PhmDID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RdDID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WrdID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WrdConsumeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClincalServiceID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PhyDID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SurgeryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AngioDID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LeftID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AnesK" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Locked" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EnName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FaName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Payed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FirstAssistantPrice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SecondAssistantPrice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ThirdAssistantPrice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="OnCallPrice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="FaniPrice" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HospitalRecord" Member="HospitalRecords">
+    <Type Name="HospitalRecord">
+      <Column Name="HospitalRecord_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RelativeHID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MedicalID" Type="System.String" DbType="NChar(13)" CanBeNull="true" />
+      <Column Name="Amd_Type_ID" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Adm_Doctor_ID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Adm_Date" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="Adm_Time" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="Enterance_ID" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Wrd_Date" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="Wrd_Time" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="Bed_No" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="Checking" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Ward_ID" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="Primary_Ward_ID" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="Dis_Doctor_ID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Dis_CondionDisch_ID" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="Exit_ID" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AdmitInWard" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Discharge" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Condition_ID" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="Admit_Doctor_ID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Doctor_ID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="DiseaseProgress" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ClinicalExam" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="SurgicalProc" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="RcmdOnDisc" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Msg" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Disch_Date" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="Disch_Time" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="Cancel" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Insure1" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Insure2" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Insure3" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="CInsure" Type="System.Int16" DbType="SmallInt" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Age" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="ChildBirth" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="GaranteeNO" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CreationOperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastModificationDate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="LastModificationTime" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="LastModificationOperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="rowguid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Dis_Operator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Admit_Operator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HRLock" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IGParent" Type="System.Byte" DbType="TinyInt" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="RecordType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="Franchise" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="InsurerPaymentLimit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VacationInfo" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="serial" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="locationcode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="insuretype" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="expiredate" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="releation" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="introductioncode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="insureagent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="typeward" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DispatchTo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="agreeK" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="agreeC" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.CreateBill" Method="CreateBill">
+    <Parameter Name="HRID" Parameter="hRID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ResetAll" Parameter="resetAll" Type="System.Boolean" DbType="Bit" />
+  </Function>
+  <Function Name="dbo.CreateBillForStandingPatient" Method="CreateBillForStandingPatient">
+    <Parameter Name="MedicalID" Parameter="medicalID" Type="System.String" DbType="NChar(13)" />
+    <Parameter Name="ResetAll" Parameter="resetAll" Type="System.Boolean" DbType="Bit" />
+  </Function>
+</Database>
